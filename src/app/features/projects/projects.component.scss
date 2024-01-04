@@ -1,0 +1,39 @@
+@use "../../../variables";
+
+.panel {
+    background-color: rgba(256, 256, 256, 0.1);
+    border-radius: variables.$border-radius;
+    padding: 1rem;
+    margin: initial 1rem;
+    transition: background-color variables.$animation-duration-slow ease-in-out;
+}
+.panel:hover {
+    background-color: rgba(256, 256, 256, 0.15);
+}
+
+.maskable {
+    height: 100%;
+    width: 100%;
+    mask-size: 100%;
+}
+.github-mask {
+    mask-image: url("../../../assets/images/github.png");
+}
+.github-filled-mask {
+    mask-image: url("../../../assets/images/github-filled.png");
+}
+
+.badge {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-right: 0.4rem;
+    margin-left: 0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.technology {
+    background-color: variables.$medium-color;
+    color: variables.$dark-color;
+}

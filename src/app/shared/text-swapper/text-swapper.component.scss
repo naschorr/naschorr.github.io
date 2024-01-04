@@ -1,0 +1,25 @@
+:host {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+}
+
+.swap-option-container {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.swap-option {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.swap-option.active {
+    opacity: 1;
+    transition: opacity variables.$animation-duration-fast ease-in;
+}
+.swap-option.inactive {
+    opacity: 0;
+    transition: opacity variables.$animation-duration-fast ease-out;
+}

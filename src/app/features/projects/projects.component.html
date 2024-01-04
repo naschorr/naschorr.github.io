@@ -1,0 +1,45 @@
+<div class="bg-gradient-dark flex flex-col min-h-screen w-screen pb-1">
+    <header></header>
+
+    <div class="container mx-auto min-h-full px-3 flex flex-col grow">
+        <div    *ngFor="let project of projects; index as i;"
+                class="panel color-medium mt-3">
+            <div class="flex mb-1 items-center">
+                <h2 class="bg-gradient-feature clip-text grow">
+                    <a      [href]="project.url"
+                            target="_blank">
+                        {{project.name}}
+                    </a>
+                </h2>
+                <a      [href]="project.url"
+                        target="_blank"
+                        class="nav-container shrink-0"
+                        title="See it on GitHub!">
+                    <div class="bg-gradient-feature github-mask maskable nav-item"></div>
+                    <div class="bg-gradient-feature github-filled-mask maskable nav-item hoverable"></div>
+                </a>
+            </div>
+            <div class="mb-1">
+                <ng-container *ngFor="let paragraph of project.description; index as p;">
+                    <p  [innerHTML]="paragraph"
+                        class="mb-1"></p>
+                </ng-container>
+            </div>
+            <div    *ngIf="project.funFacts && project.funFacts.length > 0"
+                    class="mb-1">
+                <div>Fun Stats</div>
+                <ul     *ngFor="let fact of project.funFacts; index as f;"
+                        class="list-inside">
+                    <li>{{fact}}</li>
+                </ul>
+            </div>
+            <div class="mt-1">
+                <ng-container *ngFor="let technology of project.technologies; index as t;">
+                    <div class="badge technology bg-gradient-medium inline-block select-none">{{technology}}</div>
+                </ng-container>
+            </div>
+        </div>
+
+        <footer></footer>
+    </div>
+</div>

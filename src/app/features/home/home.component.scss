@@ -1,0 +1,18 @@
+@use "../../../variables";
+
+.icon {
+    filter: variables.$light-color-filter;
+}
+
+.logo {
+    height: 8rem;
+}
+
+.tagline {
+    color: variables.$light-text-color;
+    font: normal normal 1.5rem variables.$font-family, sans-serif;
+}
+.tagline .noun {
+    font-weight: bolder;
+    font-style: italic;
+}

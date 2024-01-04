@@ -1,0 +1,33 @@
+@use "../../../variables";
+
+:host {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    border-radius: 50%;
+    transition: box-shadow variables.$animation-duration-slow ease-in-out;
+}
+// todo: this REALLY should have a configurable color
+a.logo-container:hover {
+    box-shadow: 0 0 5px variables.$light-color;
+}
+.logo-container .logo {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    mask-image: url("../../../assets/images/avatar_circle.png");
+    mask-size: 100%;
+    z-index: 10;
+}
+.logo-container .bg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    border-radius: calc(50% + 1px); // little bit extra to prevent issues where the border pokes through the edges
+}

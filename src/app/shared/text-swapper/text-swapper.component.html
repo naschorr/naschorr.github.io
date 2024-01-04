@@ -1,0 +1,6 @@
+<div    class="swap-option-container"
+        [ngStyle]="{'width': widthPixels + 'px'}">
+    <span   *ngFor="let option of swapOptions; index as i;"
+            [ngClass]="{'active': option == activeOption, 'inactive': option != activeOption}"
+            class="swap-option">{{ option }}</span>
+</div>

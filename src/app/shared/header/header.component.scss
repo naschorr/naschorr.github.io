@@ -1,0 +1,17 @@
+@use "../../../variables";
+
+:host {
+    position: sticky;
+    top: 0;
+}
+
+.header-feature {
+    border-bottom: 2px solid variables.$light-color;
+}
+.header-dark {
+    border-bottom: 2px solid variables.$feature-color;
+}
+
+.icon {
+    filter: variables.$light-color-filter;
+}

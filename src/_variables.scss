@@ -1,0 +1,20 @@
+$feature-color: rgb(247, 148, 30);
+// https://codepen.io/sosuke/pen/Pjoqqp
+$feature-color-filter: brightness(0) saturate(100%) invert(57%) sepia(95%) saturate(426%) hue-rotate(347deg) brightness(96%) contrast(102%);
+$feature-gradient-color: rgb(238, 40, 36);
+$feature-gradient-color-filter: brightness(0) saturate(100%) invert(51%) sepia(93%) saturate(6125%) hue-rotate(344deg) brightness(90%) contrast(108%);
+$dark-color: rgb(29, 34, 42);
+$dark-gradient-color: rgb(15, 38, 63);
+$medium-color: rgb(212, 197, 183);
+$medium-gradient-color: rgb(239, 229, 215);
+$light-color: rgb(248, 248, 248);
+$light-color-filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(41%) hue-rotate(137deg) brightness(114%) contrast(95%);
+
+$light-text-color: $light-color;
+$dark-text-color: $dark-color;
+$font-family: "Urbanist";
+
+$border-radius: 0.1rem;
+
+$animation-duration-fast: 0.1s;
+$animation-duration-slow: 0.25s;

@@ -1,0 +1,36 @@
+<div class="bg-gradient-feature h-screen w-screen">
+    <div class="flex flex-col justify-center items-center w-full h-full">
+        <img src="../../../assets/images/avatar_circle.png" class="icon logo m-2"/>
+        <div class="m-2">
+            <span class="tagline">Nick makes <span class="noun">
+                <text-swapper [swapOptions]="actionNouns" [activeOption]="actionNoun"></text-swapper>
+            </span></span>
+        </div>
+        <div class="flex justify-between">
+            <a      href="https://github.com/naschorr"
+                    target="_blank"
+                    class="nav-container m-2"
+                    (mouseover)="actionNoun = 'code'"
+                    (mouseleave)="resetActionNoun()">
+                <img src="../../../assets/images/github.png" class="icon nav-item">
+                <img src="../../../assets/images/github-filled.png" class="icon nav-item hoverable">
+            </a>
+            <a      href="/projects"
+                    class="nav-container m-2"
+                    (mouseover)="actionNoun = 'projects'"
+                    (mouseleave)="resetActionNoun()">
+                <img src="../../../assets/images/flask.png" class="icon nav-item">
+                <img src="../../../assets/images/flask-filled.png" class="icon nav-item hoverable">
+            </a>
+            <a      href="https://www.printables.com/@naschorr_134538"
+                    target="_blank"
+                    class="nav-container m-2"
+                    (mouseover)="actionNoun = 'prints'"
+                    (mouseleave)="resetActionNoun()">
+                <img src="../../../assets/images/3d-printer.png" class="icon nav-item">
+                <img src="../../../assets/images/3d-printer-filled.png" class="icon nav-item hoverable">
+            </a>
+        </div>
+    </div>
+    <footer [isAbsolute]=true containerClasses="color-light m-1 pr-3"></footer>
+</div>
