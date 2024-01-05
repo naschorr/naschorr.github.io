@@ -10,10 +10,23 @@
     border-radius: 50%;
     transition: box-shadow variables.$animation-duration-slow ease-in-out;
 }
-// todo: this REALLY should have a configurable color
-a.logo-container:hover {
-    box-shadow: 0 0 5px variables.$light-color;
+
+// Normally this would be created dynamically, but there's no good way to add a hover style outside of the CSS
+// todo: maybe Tailwind's states might help out? https://tailwindcss.com/docs/hover-focus-and-other-states
+$logo-glow-spread-radius: 1rem;
+a.logo-container.hoverable-feature:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$feature-color;
 }
+a.logo-container.hoverable-dark:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$dark-color;
+}
+a.logo-container.hoverable-medium:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$medium-color;
+}
+a.logo-container.hoverable-light:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$light-color;
+}
+
 .logo-container .logo {
     position: absolute;
     top: 0;
