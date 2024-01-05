@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
 
 @Component({
@@ -9,5 +9,6 @@ import { LogoComponent } from '../logo/logo.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  @Input()
+  public title: string = "";
 }
