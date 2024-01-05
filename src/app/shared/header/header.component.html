@@ -1,9 +1,15 @@
-<div class="header-feature bg-gradient-feature w-full">
+<div class="header-blurred w-full pointer-events-none">
     <div class="container mx-auto flex justify-between">
+        <div class="flex items-center px-3 py-1 mx-4 pointer-events-auto grow">
+            <logo   href="./"
+                    size="1.5rem"
+                    containerClasses="mr-3 hoverable-feature"
+                    logoClasses="bg-gradient-feature"
+                    title="Home"></logo>
             <h1 class="bg-gradient-feature clip-text font-normal grow select-none">{{ title }}</h1>
         </div>
         <!-- todo: move all of these links to a single component, share with home page -->
-        <div class="flex items-center px-3 py-1 mx-3">
+        <div class="flex items-center px-3 py-1 mx-3 pointer-events-auto">
             <a      href="https://github.com/naschorr"
                     target="_blank"
                     class="nav-container inline-block m-2"
@@ -27,12 +33,3 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="header-dark bg-gradient-dark w-full">
-    <div class="container mx-auto">
-        <div class="flex items-center px-3 py-1 mx-4">
-            <logo href="./" size="1.5rem" containerClasses="mr-3"></logo>
-            <h1 class="bg-gradient-feature clip-text font-bold grow">Projects</h1>
-        </div>
-    </div>
-</div> -->

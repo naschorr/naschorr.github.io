@@ -1,8 +1,13 @@
 @use "../../../variables";
+@use "../../../mixins";
+@use "sass:color";
 
 :host {
     position: sticky;
     top: 0;
+    // Force the z-index up partially so that the header stays on top, but also to raise it above certain elements with
+    // mask-image applied to them
+    z-index: 100;
 }
 
 .header-feature {
@@ -11,7 +16,29 @@
 .header-dark {
     border-bottom: 2px solid variables.$feature-color;
 }
+.header-blurred {
+    @include mixins.bg-gradient(variables.$dark-color, variables.$dark-gradient-color);
+    border-image-source: linear-gradient(90deg, variables.$feature-color, variables.$feature-gradient-color);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-width: 2px;
+    border-image-slice: 1;
+}
+@supports (backdrop-filter: blur()) {
+    .header-blurred {
+        // Tweak the alpha of the gradient to make the title easier to read when blurring lighter colors
+        @include mixins.bg-gradient(
+            color.adjust(variables.$dark-color, $alpha:-0.5),
+            color.adjust(variables.$dark-gradient-color, $alpha:-0.2)
+        );
+        backdrop-filter: blur(variables.$blur-radius);
+    }
+}
 
 .icon {
+    filter: variables.$medium-color-filter;
+}
+.icon.hoverable {
     filter: variables.$light-color-filter;
 }
