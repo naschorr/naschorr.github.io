@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins";
 
 @tailwind base;
 @tailwind components;
@@ -22,17 +23,6 @@ html {
     h#{$i} {
         font-size: 2.5rem - $i * 0.5rem;
     }
-}
-
-// Mxins
-
-@mixin bg-gradient($start-color, $stop-color) {
-    background: $start-color;
-    background: linear-gradient(
-        45deg,
-        $start-color 0%,
-        $stop-color 100%
-    );
 }
 
 // Convenience styles
@@ -70,13 +60,16 @@ html {
 }
 
 .bg-gradient-feature {
-    @include bg-gradient(variables.$feature-color, variables.$feature-gradient-color);
+    @include mixins.bg-gradient(variables.$feature-color, variables.$feature-gradient-color);
 }
 .bg-gradient-dark {
-    @include bg-gradient(variables.$dark-color, variables.$dark-gradient-color);
+    @include mixins.bg-gradient(variables.$dark-color, variables.$dark-gradient-color);
 }
 .bg-gradient-medium {
-    @include bg-gradient(variables.$medium-color, variables.$medium-gradient-color);
+    @include mixins.bg-gradient(variables.$medium-color, variables.$medium-gradient-color);
+}
+.bg-gradient-light {
+    @include mixins.bg-gradient(variables.$light-color, variables.$light-color);
 }
 
 .horizontal-rule {

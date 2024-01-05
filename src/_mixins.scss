@@ -1,0 +1,10 @@
+@use "variables";
+
+@mixin bg-gradient($start-color, $stop-color) {
+    background: $start-color;
+    background: linear-gradient(
+        45deg,
+        $start-color 0%,
+        $stop-color 100%
+    );
+}
