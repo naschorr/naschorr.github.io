@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'header',
   standalone: true,
-  imports: [LogoComponent],
+  imports: [CommonModule, RouterModule, LogoComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

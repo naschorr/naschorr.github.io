@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { TextSwapperComponent } from '../../shared/text-swapper/text-swapper.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [TextSwapperComponent, FooterComponent],
+  imports: [TextSwapperComponent, FooterComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
