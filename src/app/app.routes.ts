@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+// todo: custom title strategy?
 export const routes: Routes = [
     {
         path: "",

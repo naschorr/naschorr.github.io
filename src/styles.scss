@@ -17,7 +17,38 @@ html {
     width: 100vw;
 }
 
-// Convenience overrides
+// Router Animations
+
+@keyframes enter {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes exit {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+::view-transition-old(root) {
+    animation: exit 0.1s ease 0s 1 normal forwards;
+}
+
+::view-transition-new(root) {
+    animation: enter 0.1s ease 0s 1 normal forwards;
+}
+
+
+// Convenience Overrides
 
 @for $i from 1 through 3 {
     h#{$i} {
@@ -32,11 +63,11 @@ a[routerLink] {
 // Styling
 
 @supports (background-clip: text) {
-.clip-text {
+    .clip-text {
         -moz-background-clip: text;
-    -webkit-background-clip: text;
-    background-clip: text !important;   // linear-gradient overrides this with background-clip: border-box
-    color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text !important;   // linear-gradient overrides this with background-clip: border-box
+        color: transparent;
     }
 }
 
@@ -136,7 +167,8 @@ ul li::before {
 .nav-container .nav-item:not(.hoverable) {
     opacity: 1;
 }
-.nav-container .nav-item:not(.hoverable):hover {
+.nav-container .nav-item:not(.hoverable):hover,
+.nav-container .nav-item:not(.hoverable).active {
     opacity: 0;
 }
 .nav-container .nav-item.hoverable {
@@ -144,6 +176,7 @@ ul li::before {
     top: 0;
     opacity: 0;
 }
-.nav-container .nav-item.hoverable:hover {
+.nav-container .nav-item.hoverable:hover,
+.nav-container .nav-item.hoverable.active{
     opacity: 1;
 }
