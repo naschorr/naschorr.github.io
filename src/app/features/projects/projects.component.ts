@@ -58,7 +58,6 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
     if (this._projectsChanged) {
       // Apply styles to dynamically loaded HTML
       const descriptionLinks = document.querySelectorAll(".description-container > p > a");
-      console.log(descriptionLinks);
       Array.from(descriptionLinks).forEach((element: Element) => {
         this._renderer.addClass(element, "bg-gradient-feature-short");
         this._renderer.addClass(element, "clip-text");
