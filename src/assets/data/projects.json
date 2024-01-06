@@ -24,7 +24,8 @@
         "description": [
             "Deep Rock Galactic (DRG) is an excellent co-op survival game, however it's got a major flaw: the game isn't cross platform. This makes it hard to play with friends who aren't on the same platform.",
             "Thus Deep Rock Galactic Save Syncer (DRGSS) was born! DRGSS is a user friendly desktop app that lets you sync your save files between Steam and Xbox installations of DRG without any fuss!",
-            "Designed to be as easy to use as possible, DRGSS provides a single click solution to get save files synced up between the platforms, while being transparent and fault tolerant to keep those precious save files safe."
+            "Designed to be as easy to use as possible, DRGSS provides a single click solution to get save files synced up between the platforms, while being transparent and fault tolerant to keep those precious save files safe.",
+            "Grab the latest release <a href='https://github.com/naschorr/deep-rock-galactic-save-syncer/releases' target='_blank'>here</a>!"
         ],
         "technologies": [
             "C#",
