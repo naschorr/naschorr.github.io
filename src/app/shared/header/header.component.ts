@@ -13,4 +13,16 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   @Input()
   public title: string = "";
+
+  // Lifecycle
+
+  constructor(
+      private _router: Router
+  ) { }
+
+  // Getters
+
+  get router(): Router {
+    return this._router;
+  }
 }

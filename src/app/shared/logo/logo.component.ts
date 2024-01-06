@@ -10,8 +10,6 @@ import { Component, Input } from '@angular/core';
 })
 export class LogoComponent {
   @Input()
-  public href: string | null = null;
-  @Input()
   public size: string = "2rem";
   @Input()
   public containerClasses: string = "";

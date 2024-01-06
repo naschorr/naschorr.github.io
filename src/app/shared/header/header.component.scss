@@ -30,6 +30,26 @@
     }
 }
 
+.logo-container {
+    border-radius: 50%;
+    transition: box-shadow variables.$animation-duration-slow ease-in-out;
+}
+// Normally this would be created dynamically, but there's no good way to add a hover style outside of the CSS
+// todo: maybe Tailwind's states might help out? https://tailwindcss.com/docs/hover-focus-and-other-states
+$logo-glow-spread-radius: 1rem;
+.logo-container.hoverable-feature:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$feature-color;
+}
+.logo-container.hoverable-dark:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$dark-color;
+}
+.logo-container.hoverable-medium:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$medium-color;
+}
+.logo-container.hoverable-light:hover {
+    box-shadow: 0 0 $logo-glow-spread-radius variables.$light-color;
+}
+
 .icon {
     filter: variables.$medium-color-filter;
 }
