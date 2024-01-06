@@ -12,7 +12,7 @@
 
 .header-blurred {
     @include mixins.bg-gradient(variables.$dark-color, variables.$dark-gradient-color);
-    border-image-source: linear-gradient(90deg, variables.$feature-color, variables.$feature-gradient-color);
+    border-image-source: linear-gradient(90deg, variables.$feature-color, variables.$feature-gradient-short-color);
     border-left: 0;
     border-right: 0;
     border-top: 0;
@@ -33,6 +33,3 @@
 .icon {
     filter: variables.$medium-color-filter;
 }
-// .icon.hoverable {
-//     filter: variables.$light-color-filter;
-// }
