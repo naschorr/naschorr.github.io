@@ -4,10 +4,11 @@
     <div class="container mx-auto min-h-full px-3 flex flex-col grow">
         <div    *ngFor="let project of projects; index as i;"
                 class="panel color-medium mt-3">
-            <div class="flex mb-2 items-center">
-                <h2 class="bg-gradient-feature clip-text grow">
+            <div class="flex justify-between mb-2 items-center">
+                <h2>
                     <a      [href]="project.url"
-                            target="_blank">
+                            target="_blank"
+                            class="bg-gradient-feature-short clip-text">
                         {{project.name}}
                     </a>
                 </h2>
@@ -15,8 +16,8 @@
                         target="_blank"
                         class="nav-container shrink-0 relative bottom-0.5"
                         title="See it on GitHub!">
-                    <div class="bg-gradient-feature github-mask maskable nav-item"></div>
-                    <div class="bg-gradient-feature github-filled-mask maskable nav-item hoverable"></div>
+                    <div class="bg-gradient-feature-short github-mask maskable nav-item"></div>
+                    <div class="bg-gradient-feature-short github-filled-mask maskable nav-item hoverable"></div>
                 </a>
             </div>
             <div class="description-container mb-2">

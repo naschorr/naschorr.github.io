@@ -1,26 +1,24 @@
 @use "../../../variables";
+@use "../../../mixins";
+@use "sass:color";
 
 .panel {
-    background-color: rgba(256, 256, 256, 0.1);
+    @include mixins.bg-gradient(
+        color.adjust(variables.$light-color, $alpha:-0.9),
+        color.adjust(variables.$light-gradient-color, $alpha:-0.9)
+    );
+    // background-color: color.adjust(variables.$light-color, $alpha:-0.9);
     border-radius: variables.$border-radius;
     padding: 1rem;
     margin: initial 1rem;
     transition: background-color variables.$animation-duration-slow ease-in-out;
 }
 .panel:hover {
-    background-color: rgba(256, 256, 256, 0.15);
-}
-
-.maskable {
-    height: 100%;
-    width: 100%;
-    mask-size: 100%;
-}
-.github-mask {
-    mask-image: url("../../../assets/images/github.png");
-}
-.github-filled-mask {
-    mask-image: url("../../../assets/images/github-filled.png");
+    @include mixins.bg-gradient(
+        color.adjust(variables.$light-color, $alpha:-0.85),
+        color.adjust(variables.$light-gradient-color, $alpha:-0.85)
+    );
+    // background-color: color.adjust(variables.$light-color, $alpha:-0.85);
 }
 
 .badge {

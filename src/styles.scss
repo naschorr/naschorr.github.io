@@ -62,6 +62,9 @@ html {
 .bg-gradient-feature {
     @include mixins.bg-gradient(variables.$feature-color, variables.$feature-gradient-color);
 }
+.bg-gradient-feature-short {
+    @include mixins.bg-gradient(variables.$feature-color, variables.$feature-gradient-short-color);
+}
 .bg-gradient-dark {
     @include mixins.bg-gradient(variables.$dark-color, variables.$dark-gradient-color);
 }

@@ -3,12 +3,14 @@ $feature-color: rgb(247, 148, 30);
 $feature-color-filter: brightness(0) saturate(100%) invert(57%) sepia(95%) saturate(426%) hue-rotate(347deg) brightness(96%) contrast(102%);
 $feature-gradient-color: rgb(238, 40, 36);
 $feature-gradient-color-filter: brightness(0) saturate(100%) invert(51%) sepia(93%) saturate(6125%) hue-rotate(344deg) brightness(90%) contrast(108%);
+$feature-gradient-short-color: rgb(242, 86, 33);    // Shorter end stop for the gradient, so the whole thing is less red
 $dark-color: rgb(29, 34, 42);
 $dark-gradient-color: rgb(15, 38, 63);
 $medium-color: rgb(212, 197, 183);
 $medium-color-filter: brightness(0) saturate(100%) invert(83%) sepia(9%) saturate(394%) hue-rotate(348deg) brightness(96%) contrast(90%);
 $medium-gradient-color: rgb(239, 229, 215);
 $light-color: rgb(248, 248, 248);
+$light-gradient-color: rgb(255, 255, 255);
 $light-color-filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(41%) hue-rotate(137deg) brightness(114%) contrast(95%);
 
 $light-text-color: $light-color;
