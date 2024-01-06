@@ -31,10 +31,13 @@ a[routerLink] {
 
 // Styling
 
+@supports (background-clip: text) {
 .clip-text {
+        -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text !important;   // linear-gradient overrides this with background-clip: border-box
     color: transparent;
+    }
 }
 
 .color-feature {
