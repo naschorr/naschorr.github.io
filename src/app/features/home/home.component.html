@@ -13,14 +13,18 @@
                     (mouseover)="actionNoun = 'code'"
                     (mouseleave)="resetActionNoun()">
                 <img src="../../../assets/images/github.png" class="icon nav-item">
-                <img src="../../../assets/images/github-filled.png" class="icon nav-item hoverable">
+                <img    src="../../../assets/images/github-filled.png"
+                        class="icon nav-item hoverable"
+                        [ngClass]="{'active': actionNoun == 'code'}">
             </a>
             <a      routerLink="/projects"
                     class="nav-container m-2"
                     (mouseover)="actionNoun = 'projects'"
                     (mouseleave)="resetActionNoun()">
                 <img src="../../../assets/images/flask.png" class="icon nav-item">
-                <img src="../../../assets/images/flask-filled.png" class="icon nav-item hoverable">
+                <img    src="../../../assets/images/flask-filled.png"
+                        class="icon nav-item hoverable"
+                        [ngClass]="{'active': actionNoun == 'projects'}">
             </a>
             <a      href="https://www.printables.com/@naschorr_134538"
                     target="_blank"
@@ -28,7 +32,9 @@
                     (mouseover)="actionNoun = 'prints'"
                     (mouseleave)="resetActionNoun()">
                 <img src="../../../assets/images/3d-printer.png" class="icon nav-item">
-                <img src="../../../assets/images/3d-printer-filled.png" class="icon nav-item hoverable">
+                <img    src="../../../assets/images/3d-printer-filled.png"
+                        class="icon nav-item hoverable"
+                        [ngClass]="{'active': actionNoun == 'prints'}">
             </a>
         </div>
     </div>
