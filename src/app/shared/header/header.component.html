@@ -1,6 +1,6 @@
 <div class="header-blurred w-full pointer-events-none">
     <div class="container mx-auto flex justify-between">
-        <div class="flex items-center px-3 py-1 mx-4 pointer-events-auto">
+        <div class="flex items-center pl-0 md:pl-3 py-1 mx-3 md:mx-4 pointer-events-auto">
             <a  routerLink=""
                 class="logo-container hoverable-feature mr-3">
                 <logo   size="1.5rem"
@@ -10,7 +10,7 @@
             <h1 class="bg-gradient-feature-short clip-text font-normal select-none">{{ title }}</h1>
         </div>
         <!-- todo: move all of these links to a single component, share with home page -->
-        <div class="flex items-center px-3 py-1 mx-3 pointer-events-auto">
+        <div class="flex items-center pr-0 md:pr-3 py-1 mx-2 md:mx-3 pointer-events-auto">
             <a      href="https://github.com/naschorr"
                     target="_blank"
                     class="nav-container inline-block m-2"
@@ -18,8 +18,7 @@
                 <div class="bg-gradient-medium github-mask maskable nav-item"></div>
                 <div class="bg-gradient-light github-filled-mask maskable nav-item hoverable"></div>
             </a>
-            <a      *ngIf="this.router.url !== '/projects'"
-                    routerLink="/projects"
+            <a      routerLink="/projects"
                     class="nav-container inline-block m-2"
                     title="Projects">
                 <div class="bg-gradient-medium flask-mask maskable nav-item"></div>

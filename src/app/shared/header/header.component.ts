@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
-import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'header',
@@ -13,16 +13,4 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   @Input()
   public title: string = "";
-
-  // Lifecycle
-
-  constructor(
-      private _router: Router
-  ) { }
-
-  // Getters
-
-  get router(): Router {
-    return this._router;
-  }
 }

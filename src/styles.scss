@@ -25,7 +25,11 @@ html {
     }
 }
 
-// Convenience styles
+a[routerLink] {
+    cursor: pointer;
+}
+
+// Styling
 
 .clip-text {
     -webkit-background-clip: text;
