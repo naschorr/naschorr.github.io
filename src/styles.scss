@@ -72,6 +72,30 @@ html {
     @include mixins.bg-gradient(variables.$light-color, variables.$light-color);
 }
 
+.maskable {
+    height: 100%;
+    width: 100%;
+    mask-size: 100%;
+}
+.github-mask {
+    mask-image: url("assets/images/github.png");
+}
+.github-filled-mask {
+    mask-image: url("assets/images/github-filled.png");
+}
+.flask-mask {
+    mask-image: url("assets/images/flask.png");
+}
+.flask-filled-mask {
+    mask-image: url("assets/images/flask-filled.png");
+}
+.printer-mask {
+    mask-image: url("assets/images/3d-printer.png");
+}
+.printer-filled-mask {
+    mask-image: url("assets/images/3d-printer-filled.png");
+}
+
 .horizontal-rule {
     width: 100%;
     height: 0.1rem;

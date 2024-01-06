@@ -10,12 +10,6 @@
     z-index: 100;
 }
 
-.header-feature {
-    border-bottom: 2px solid variables.$light-color;
-}
-.header-dark {
-    border-bottom: 2px solid variables.$feature-color;
-}
 .header-blurred {
     @include mixins.bg-gradient(variables.$dark-color, variables.$dark-gradient-color);
     border-image-source: linear-gradient(90deg, variables.$feature-color, variables.$feature-gradient-color);
@@ -30,7 +24,7 @@
         // Tweak the alpha of the gradient to make the title easier to read when blurring lighter colors
         @include mixins.bg-gradient(
             color.adjust(variables.$dark-color, $alpha:-0.5),
-            color.adjust(variables.$dark-gradient-color, $alpha:-0.2)
+            color.adjust(variables.$dark-gradient-color, $alpha:-0.8)
         );
         backdrop-filter: blur(variables.$blur-radius);
     }
@@ -39,6 +33,6 @@
 .icon {
     filter: variables.$medium-color-filter;
 }
-.icon.hoverable {
-    filter: variables.$light-color-filter;
-}
+// .icon.hoverable {
+//     filter: variables.$light-color-filter;
+// }
