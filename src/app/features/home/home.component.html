@@ -10,7 +10,7 @@
             <a      href="https://github.com/naschorr"
                     target="_blank"
                     class="nav-container m-2"
-                    (mouseover)="actionNoun = 'code'"
+                    (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
                     (mouseleave)="resetActionNoun()">
                 <img src="../../../assets/images/github.png" class="icon nav-item">
                 <img    src="../../../assets/images/github-filled.png"
@@ -19,7 +19,7 @@
             </a>
             <a      routerLink="/projects"
                     class="nav-container m-2"
-                    (mouseover)="actionNoun = 'projects'"
+                    (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
                     (mouseleave)="resetActionNoun()">
                 <img src="../../../assets/images/flask.png" class="icon nav-item">
                 <img    src="../../../assets/images/flask-filled.png"
@@ -29,7 +29,7 @@
             <a      href="https://www.printables.com/@naschorr_134538"
                     target="_blank"
                     class="nav-container m-2"
-                    (mouseover)="actionNoun = 'prints'"
+                    (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
                     (mouseleave)="resetActionNoun()">
                 <img src="../../../assets/images/3d-printer.png" class="icon nav-item">
                 <img    src="../../../assets/images/3d-printer-filled.png"
