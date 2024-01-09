@@ -1,11 +1,11 @@
 [
     {
         "name": "Hawking",
-        "url": "https://github.com/naschorr/hawking",
         "description": [
             "Hawking is a retro text-to-speech bot for Discord that lets users interact with each other using the text-to-speech engine made famous by Stephen Hawking.",
             "Add Hawking to your Discord server <a href='https://discordapp.com/oauth2/authorize?client_id=334894709292007424&scope=bot&permissions=53803072' target='_blank'>here</a>, or play around with it on my server <a href='https://discord.gg/JJqx8C4' target='_blank'>here</a>!"
         ],
+        "url": "https://github.com/naschorr/hawking",
         "funFacts": [
             "More than 2.6 million messages spoken",
             "Active in more than 2,700 servers"
@@ -20,13 +20,13 @@
     },
     {
         "name": "Deep Rock Galactic Save Syncer",
-        "url": "https://github.com/naschorr/deep-rock-galactic-save-syncer",
         "description": [
             "Deep Rock Galactic (DRG) is an excellent co-op survival game, however it's got a major flaw: the game isn't cross platform. This makes it hard to play with friends who aren't on the same platform.",
             "Thus Deep Rock Galactic Save Syncer (DRGSS) was born! DRGSS is a user friendly desktop app that lets you sync your save files between Steam and Xbox installations of DRG without any fuss!",
             "Designed to be as easy to use as possible, DRGSS provides a single click solution to get save files synced up between the platforms, while being transparent and fault tolerant to keep those precious save files safe.",
             "Grab the latest release <a href='https://github.com/naschorr/deep-rock-galactic-save-syncer/releases' target='_blank'>here</a>!"
         ],
+        "url": "https://github.com/naschorr/deep-rock-galactic-save-syncer",
         "technologies": [
             "C#",
             ".NET 7",
@@ -39,10 +39,10 @@
     },
     {
         "name": "Mail To SMS",
-        "url": "https://github.com/naschorr/mail-to-sms",
         "description": [
             "Programatically send out SMS messages using email!"
         ],
+        "url": "https://github.com/naschorr/mail-to-sms",
         "technologies": [
             "Python",
             "unittest",
@@ -52,10 +52,10 @@
     },
     {
         "name": "Spotify Scraper",
-        "url": "https://github.com/naschorr/spotify-scraper",
         "description": [
             "A Python API for getting the artist, song, and album art for the currently playing song on Spotify."
         ],
+        "url": "https://github.com/naschorr/spotify-scraper",
         "technologies": [
             "Python",
             "PyWin32"

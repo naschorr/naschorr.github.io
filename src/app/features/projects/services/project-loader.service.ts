@@ -26,11 +26,11 @@ export class ProjectLoaderService {
         const projectModels = projects.map((project: any) => {
           return new Project(
             project.name,
-            new URL(project.url),
             project.description,
-            project.funFacts,
-            project.images?.map((image: any) => new URL(image)),
-            project.technologies
+            new URL(project?.url),
+            project?.funFacts,
+            project?.images?.map((image: any) => new URL(image)),
+            project?.technologies
           );
         });
 

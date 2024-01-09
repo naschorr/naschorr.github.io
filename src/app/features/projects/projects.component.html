@@ -12,13 +12,15 @@
                         {{project.name}}
                     </a>
                 </h2>
-                <a      [href]="project.url"
-                        target="_blank"
-                        class="nav-container shrink-0 relative bottom-0.5"
-                        title="See it on GitHub!">
-                    <div class="bg-gradient-feature-short github-mask maskable nav-item"></div>
-                    <div class="bg-gradient-feature-short github-filled-mask maskable nav-item hoverable"></div>
-                </a>
+                <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
+                    <a      [href]="project.url"
+                            target="_blank"
+                            class="nav-container shrink-0 relative bottom-0.5"
+                            title="See it on GitHub!">
+                        <div class="bg-gradient-feature-short github-mask maskable nav-item"></div>
+                        <div class="bg-gradient-feature-short github-filled-mask maskable nav-item hoverable"></div>
+                    </a>
+                </ng-container>
             </div>
             <div class="description-container mb-2">
                 <ng-container *ngFor="let paragraph of project.description; index as p;">

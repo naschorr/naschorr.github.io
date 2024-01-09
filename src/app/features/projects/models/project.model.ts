@@ -1,7 +1,7 @@
 export class Project {
     private _name: string;
-    private _url: URL;
     private _description: string[];
+    private _url: URL | null;
     private _funFacts: string[] | null;
     private _images: URL[] | null;
     private _technologies: string[] | null;
@@ -10,15 +10,15 @@ export class Project {
 
     constructor(
             name: string,
-            url: URL,
             description: string[],
+            url?: URL,
             funFacts?: string[],
             images?: URL[],
             technologies?: string[]
     ) {
         this._name = name;
-        this._url = url;
         this._description = description;
+        this._url = url ?? null;
         this._funFacts = funFacts ?? null;
         this._images = images ?? null;
         this._technologies = technologies ?? null;
@@ -30,7 +30,7 @@ export class Project {
         return this._name;
     }
 
-    get url(): URL {
+    get url(): URL | null {
         return this._url;
     }
 

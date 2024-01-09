@@ -7,7 +7,6 @@
         color.adjust(variables.$light-color, $alpha:-0.9),
         color.adjust(variables.$light-gradient-color, $alpha:-0.9)
     );
-    // background-color: color.adjust(variables.$light-color, $alpha:-0.9);
     border-radius: variables.$border-radius;
     padding: 1rem;
     margin: initial 1rem;
@@ -18,7 +17,6 @@
         color.adjust(variables.$light-color, $alpha:-0.85),
         color.adjust(variables.$light-gradient-color, $alpha:-0.85)
     );
-    // background-color: color.adjust(variables.$light-color, $alpha:-0.85);
 }
 
 .badge {
