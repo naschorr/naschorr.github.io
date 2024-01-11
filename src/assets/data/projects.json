@@ -40,7 +40,7 @@
     {
         "name": "Mail To SMS",
         "description": [
-            "Programatically send out SMS messages using email!"
+            "Programatically send out SMS messages using email! Mail To SMS is simple to integrate, and offers an easy to use CLI to support scripting too."
         ],
         "url": "https://github.com/naschorr/mail-to-sms",
         "technologies": [
@@ -48,6 +48,18 @@
             "unittest",
             "Click",
             "PyPI"
+        ]
+    },
+    {
+        "name": "nickschorr.com",
+        "description": [
+            "You're looking at it right now! This is my personal website which is used to show off what I've been working on, link to the places that host my projects, and serve as a playground for general webdev fun."
+        ],
+        "url": "https://github.com/naschorr/nickschorr.com",
+        "technologies": [
+            "TypeScript",
+            "Angular 17",
+            "Tailwind CSS"
         ]
     },
     {
