@@ -1,6 +1,8 @@
 <div class="bg-gradient-feature h-screen w-screen">
     <div class="flex flex-col justify-center items-center w-full h-full">
-        <img src="../../../assets/images/avatar-circle.png" class="icon logo m-2"/>
+        <img    src="../../../assets/images/avatar-circle.png"
+                class="icon logo m-2"
+                alt="My personal logo, a solid circle with the shape of an uppercase N subtracted from it"/>
         <div class="m-2">
             <span class="tagline">Nick makes <span class="noun">
                 <text-swapper [swapOptions]="actionNouns" [activeOption]="actionNoun"></text-swapper>
@@ -12,29 +14,38 @@
                     class="nav-container m-2"
                     (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
                     (mouseleave)="resetActionNoun()">
-                <img src="../../../assets/images/github.png" class="icon nav-item">
+                <img    src="../../../assets/images/github.png"
+                        class="icon nav-item"
+                        alt="GitHub logo outlines">
                 <img    src="../../../assets/images/github-filled.png"
                         class="icon nav-item hoverable"
-                        [ngClass]="{'active': actionNoun == 'code'}">
+                        [ngClass]="{'active': actionNoun == 'code'}"
+                        alt="GitHub logo filled in">
             </a>
             <a      routerLink="/projects"
                     class="nav-container m-2"
                     (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
                     (mouseleave)="resetActionNoun()">
-                <img src="../../../assets/images/flask.png" class="icon nav-item">
+                <img    src="../../../assets/images/flask.png"
+                        class="icon nav-item"
+                        alt="Outlined image of a flask used in scientific experiments">
                 <img    src="../../../assets/images/flask-filled.png"
                         class="icon nav-item hoverable"
-                        [ngClass]="{'active': actionNoun == 'projects'}">
+                        [ngClass]="{'active': actionNoun == 'projects'}"
+                        alt="Filled in image of a flask used in scientific experiments">
             </a>
             <a      href="https://www.printables.com/@naschorr_134538"
                     target="_blank"
                     class="nav-container m-2"
                     (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
                     (mouseleave)="resetActionNoun()">
-                <img src="../../../assets/images/3d-printer.png" class="icon nav-item">
+                <img    src="../../../assets/images/3d-printer.png"
+                        class="icon nav-item"
+                        alt="Outlined image of a 3d printer">
                 <img    src="../../../assets/images/3d-printer-filled.png"
                         class="icon nav-item hoverable"
-                        [ngClass]="{'active': actionNoun == 'prints'}">
+                        [ngClass]="{'active': actionNoun == 'prints'}"
+                        alt="Filled in image of a 3d printer">
             </a>
         </div>
     </div>
