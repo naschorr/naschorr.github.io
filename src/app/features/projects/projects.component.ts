@@ -5,11 +5,12 @@ import { HeaderComponent } from '../../shared/header/header.component';
 import { LogoComponent } from '../../shared/logo/logo.component';
 import { Project } from './models/project.model';
 import { ProjectLoaderService } from './services/project-loader.service';
+import { ProjectComponent } from './components/project/project.component';
 
 @Component({
   selector: 'projects',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, LogoComponent],
+  imports: [HeaderComponent, FooterComponent, CommonModule, LogoComponent, ProjectComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

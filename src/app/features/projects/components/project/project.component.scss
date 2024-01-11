@@ -1,0 +1,29 @@
+@use "../../../../../variables";
+@use "../../../../../mixins";
+@use "sass:color";
+
+.panel {
+    background-color: color.adjust(variables.$light-color, $alpha:-0.9);
+    border-radius: variables.$border-radius;
+    padding: 1rem;
+    margin: initial 1rem;
+    transition: background-color variables.$animation-duration-fast ease-in-out;
+}
+.panel:hover {
+    background-color: color.adjust(variables.$light-color, $alpha:-0.85);
+}
+
+.badge {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-right: 0.4rem;
+    margin-left: 0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.technology {
+    background-color: variables.$medium-color;
+    color: variables.$dark-color;
+}

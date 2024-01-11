@@ -2,48 +2,10 @@
     <header title="Projects"></header>
 
     <div class="container mx-auto min-h-full px-3 flex flex-col grow">
-        <div    *ngFor="let project of projects; index as i;"
-                class="panel color-medium mt-3">
-            <div class="flex justify-between mb-2 items-center">
-                <h2>
-                    <a      [href]="project.url"
-                            target="_blank"
-                            class="bg-gradient-feature-short clip-text">
-                        {{project.name}}
-                    </a>
-                </h2>
-                <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
-                    <a      [href]="project.url"
-                            target="_blank"
-                            class="nav-container shrink-0 relative bottom-0.5"
-                            title="See it on GitHub!">
-                        <div class="bg-gradient-feature-short github-mask maskable nav-item"></div>
-                        <div class="bg-gradient-feature-short github-filled-mask maskable nav-item hoverable"></div>
-                    </a>
-                </ng-container>
-            </div>
-            <div class="description-container mb-2">
-                <ng-container *ngFor="let paragraph of project.description; index as p;">
-                    <p  [innerHTML]="paragraph"
-                        class="mb-2"></p>
-                </ng-container>
-            </div>
-            <div    *ngIf="project.funFacts && project.funFacts.length > 0"
-                    class="mb-2">
-                <div>Fun Stats:</div>
-                <ul     *ngFor="let fact of project.funFacts; index as f;"
-                        class="list-inside">
-                    <li>{{fact}}</li>
-                </ul>
-            </div>
-            <div class="">
-                <div>Tech Used:</div>
-                <ng-container *ngFor="let technology of project.technologies; index as t;">
-                    <div class="badge technology bg-gradient-medium inline-block select-none">{{technology}}</div>
-                </ng-container>
-            </div>
-        </div>
+        <ng-container *ngFor="let project of projects; index as i;">
+            <project [project]="project"></project>
+        </ng-container>
 
-        <footer></footer>
+        <footer containerClasses="color-light mt-3"></footer>
     </div>
 </div>
