@@ -61,6 +61,16 @@ a[routerLink] {
     cursor: pointer;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+    // Thanks to: https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/
+    * {
+        /* Very short durations means JavaScript that relies on events still works */
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
 // Styling
 
 @supports (background-clip: text) {
