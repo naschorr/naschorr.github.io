@@ -1,9 +1,11 @@
+import { Image } from "../../../shared/gallery/models/image.model";
+
 export class Project {
     private _name: string;
     private _description: string[];
     private _url: URL | null;
     private _funFacts: string[] | null;
-    private _images: URL[] | null;
+    private _images: Image[] | null;
     private _technologies: string[] | null;
 
     // Lifecycle
@@ -13,7 +15,7 @@ export class Project {
             description: string[],
             url?: URL,
             funFacts?: string[],
-            images?: URL[],
+            images?: Image[],
             technologies?: string[]
     ) {
         this._name = name;
@@ -42,7 +44,7 @@ export class Project {
         return this._funFacts;
     }
 
-    get images(): URL[] | null {
+    get images(): Image[] | null {
         return this._images;
     }
 

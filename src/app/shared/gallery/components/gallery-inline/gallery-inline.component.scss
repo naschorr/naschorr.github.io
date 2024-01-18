@@ -1,0 +1,22 @@
+@use "../../../../../variables";
+@use "../../../../../mixins";
+@use "sass:list";
+
+:host {
+    height: 100%;
+    width: 100%;
+}
+
+@for $i from 1 through length(variables.$breakpoints) {
+    $breakpoint: list.nth(variables.$breakpoints, $i);
+    @media(min-width: $breakpoint) {
+        .gallery-item {
+            height: 84px + $i * 12px;
+        }
+    }
+}
+
+.gallery-item img {
+    height: 100%;
+    object-fit: cover;
+}

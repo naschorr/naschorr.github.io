@@ -26,6 +26,38 @@
             "Designed to be as easy to use as possible, DRGSS provides a single click solution to get save files synced up between the platforms, while being transparent and fault tolerant to keep those precious save files safe.",
             "Grab the latest release <a href='https://github.com/naschorr/deep-rock-galactic-save-syncer/releases' target='_blank'>here</a>!"
         ],
+        "images": [
+            {
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.png",
+                "thumbnailUrl": "assets/images/projects/deep-rock-galactic-save-syncer/thumbnails/ui.png",
+                "description": ["The UI for Deep Rock Galactic Save Syncer. It's designed to be as simple to use as possible, note that it's instantly ready to sync your save files with a single click."],
+                "altText": "A screenshot of the Deep Rock Galactic Save Syncer UI."
+            },
+            {
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.png",
+                "thumbnailUrl": "assets/images/projects/deep-rock-galactic-save-syncer/thumbnails/ui-inspiration.png",
+                "description": ["A screenshot of the game's UI. I tried to make the UI for Deep Rock Galactic Save Syncer feel like it came from within the game itself."],
+                "altText": "A screenshot of the Deep Rock Galactic UI, used as inspiration."
+            },
+            {
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.png",
+                "thumbnailUrl": "assets/images/projects/deep-rock-galactic-save-syncer/thumbnails/ui-missing-xbox-save.png",
+                "description": [
+                    "I wanted to make sure that even if something went wrong, the user would be able to easily understand what happened.",
+                    "Here's an example of what happens when the Xbox save file is missing, and the user tries to sync it to Steam."
+                ],
+                "altText": "A screenshot of the Deep Rock Galactic Save Syncer UI, showing an error that the Xbox save file couldn't be found."
+            },
+            {
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.png",
+                "thumbnailUrl": "assets/images/projects/deep-rock-galactic-save-syncer/thumbnails/button-explainer.png",
+                "description": [
+                    "Since simplicity was the goal, I wanted to have a single place for the (sometimes infrequent) users to focus on to get the job done and provide meaningful information about the app. The end result was to leverage the button that was already there!",
+                    "Here's a rundown of the various states the button can be in, and what they all mean."
+                ],
+                "altText": "An image showing the various states the sync button can be in, and what they mean."
+            }
+        ],
         "url": "https://github.com/naschorr/deep-rock-galactic-save-syncer",
         "technologies": [
             "C#",

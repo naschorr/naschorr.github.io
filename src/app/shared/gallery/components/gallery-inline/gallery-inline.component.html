@@ -1,0 +1,8 @@
+<div class="gallery-container flex">
+    <ng-container *ngFor="let image of images; index as i;">
+        <div    [ngClass]="{'mr-1': i < images.length - 1}"
+                class="gallery-item">
+            <img [src]="image.thumbnailUrl" [alt]="image.altText" />
+        </div>
+    </ng-container>
+</div>

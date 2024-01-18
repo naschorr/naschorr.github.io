@@ -18,6 +18,10 @@
             </a>
         </ng-container>
     </div>
+    <div    *ngIf="!!project.images"
+            class="gallery-container mb-2">
+        <gallery-inline [images]="project.images"></gallery-inline>
+    </div>
     <div class="description-container mb-2">
         <ng-container *ngFor="let paragraph of project.description; index as p;">
             <p  [innerHTML]="paragraph"
