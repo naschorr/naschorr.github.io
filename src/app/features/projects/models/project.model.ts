@@ -6,7 +6,7 @@ export class Project {
     private _url: URL | null;
     private _funFacts: string[] | null;
     private _images: Image[] | null;
-    private _technologies: string[] | null;
+    private _technologies: string[];
 
     // Lifecycle
 
@@ -23,7 +23,7 @@ export class Project {
         this._url = url ?? null;
         this._funFacts = funFacts ?? null;
         this._images = images ?? null;
-        this._technologies = technologies ?? null;
+        this._technologies = technologies ?? [];
     }
 
     // Getters
@@ -48,7 +48,7 @@ export class Project {
         return this._images;
     }
 
-    get technologies(): string[] | null {
+    get technologies(): string[] {
         return this._technologies;
     }
 }
