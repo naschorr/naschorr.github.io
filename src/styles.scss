@@ -17,6 +17,10 @@ html {
     width: 100vw;
 }
 
+img {
+    border-radius: variables.$border-radius;
+}
+
 // Router Animations
 
 @keyframes enter {

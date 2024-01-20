@@ -1,1 +1,32 @@
-<p>gallery-lightbox works!</p>
+<div class="lighbox-container flex flex-col">
+    <div    class="close self-end cursor-pointer"
+            (click)="onCloseClick()">×</div>
+    <div class="gallery-container grow flex items-center">
+        <!-- todo: responsive prev/next interactions (go back to buttons over the sides of the active-image and hide the flanks?) -->
+        <!-- todo: skeletons -->
+        <!-- todo: skeletons use the thumbnails? while the full fat images are loading? -->
+        <!-- todo: thumbnails for the flanks, only load their big versions once the active-image has loaded (of course loading cached ones asap is fine) -->
+        <!-- todo: pretty broken on mobile, weird -->
+        <div    class="prev-image side-image cursor-pointer mr-3"
+                (click)="onPrevImageClick()">
+            <img [src]="prevImage?.url" [alt]="prevImage?.altText" />
+        </div>
+        <div class="active-image grow mx-3">
+            <img [src]="activeImage?.url" [alt]="activeImage?.altText" />
+            <div class="description-container color-light m-3 lg:mt-6">
+                <ng-container *ngFor="let description of activeImage?.description">
+                    <p class="text-center mb-2">{{ description }}</p>
+                </ng-container>
+            </div>
+        </div>
+        <div    class="next-image side-image cursor-pointer ml-3"
+                (click)="onNextImageClick()">
+            <img [src]="nextImage?.url" [alt]="nextImage?.altText" />
+        </div>
+    </div>
+    <!--
+        Really just a placeholder to prevent the gallery-container from growing until it hits the bottom of the modal,
+        this is the same height as the controls div at the top.
+    -->
+    <div class="footer"></div>
+</div>

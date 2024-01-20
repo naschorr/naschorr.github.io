@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { Image } from '../../models/image.model';
 import { GalleryManagerService } from '../../services/gallery-manager.service';
 
@@ -13,7 +13,10 @@ export class GalleryInlineComponent implements OnInit {
 
   // Lifecycle
 
-  constructor(private _galleryManagerService: GalleryManagerService) { }
+  constructor(
+    private _galleryManagerService: GalleryManagerService,
+    private _viewContainerRef: ViewContainerRef
+  ) { }
 
   ngOnInit() {
 
@@ -22,6 +25,6 @@ export class GalleryInlineComponent implements OnInit {
   // Methods
 
   onImageClick(image: Image, index: number) {
-    // this._galleryManagerService.openLightbox(image);
+    this._galleryManagerService.openLightbox(image, index, this.images, this._viewContainerRef);
   }
 }

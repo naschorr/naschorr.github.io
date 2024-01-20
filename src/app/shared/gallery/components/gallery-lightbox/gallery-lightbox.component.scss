@@ -1,0 +1,84 @@
+@use "../../../../../variables";
+@use "../../../../../mixins";
+
+:host {
+    pointer-events: none;
+}
+
+.lighbox-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 1000;  // Make sure it's at the top!
+
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+@supports (backdrop-filter: blur()) {
+    .lighbox-container {
+        backdrop-filter: blur(variables.$blur-radius);
+    }
+}
+
+.close {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 2rem;
+
+    font-size: 2.4rem;
+    line-height: 1.5rem;
+    color: variables.$medium-color;
+
+    transition: all variables.$animation-duration-fast ease-in-out;
+}
+.close:hover {
+    color: variables.$light-color;
+}
+
+.gallery-container img {
+    box-shadow: variables.$subtle-shadow;
+}
+
+$side-image-width: 3rem;
+.side-image {
+    max-width: $side-image-width;
+
+    // todo: breakpoint this?
+    height: 500px;
+}
+.side-image img {
+    height: 100%;
+    object-fit: cover;
+    
+    transition: all variables.$animation-duration-fast ease-in-out;
+}
+.side-image img:hover {
+    transform: scale(1.1);
+}
+.prev-image img {
+    object-position: right;
+}
+.next-image img {
+    object-position: left;
+}
+
+.active-image {
+    max-width: calc(100% - 2 * $side-image-width);
+}
+.active-image img {
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.description-container {
+
+}
+
+.footer {
+    height: 1.5rem;
+    margin: 2rem;
+}
