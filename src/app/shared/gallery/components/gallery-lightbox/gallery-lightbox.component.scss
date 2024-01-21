@@ -53,6 +53,7 @@ $side-image-width: 6rem;
 .side-image img {
     height: 100%;
     object-fit: cover;
+    position: relative;
     
     transition: all variables.$animation-duration-fast ease-in-out;
 }
@@ -79,7 +80,7 @@ $side-image-width: 6rem;
     object-fit:contain;
 
     // todo: breakpoint this?
-    height: 800px;
+    max-height: 800px;
 }
 
 .description-container {
