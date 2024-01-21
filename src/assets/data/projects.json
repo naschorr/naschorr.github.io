@@ -55,7 +55,7 @@
                 "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.png",
                 "thumbnailUrl": "assets/images/projects/deep-rock-galactic-save-syncer/thumbnails/button-explainer.png",
                 "description": [
-                    "Since simplicity was the goal, I wanted to have a single place for the (sometimes infrequent) users to focus on to get the job done and provide meaningful information about the app. The end result was to leverage the button that was already there!",
+                    "The big button at the bottom of the UI is meant to present a lot of information in a simple way to the user.",
                     "Here's a rundown of the various states the button can be in, and what they all mean."
                 ],
                 "altText": "An image showing the various states the sync button can be in, and what they mean."

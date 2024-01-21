@@ -1,5 +1,5 @@
 <div class="lighbox-container flex flex-col">
-    <div    class="close self-end cursor-pointer"
+    <div    class="close grow-0 self-end cursor-pointer"
             (click)="onCloseClick()">×</div>
     <div class="gallery-container grow flex items-center">
         <!-- todo: responsive prev/next interactions (go back to buttons over the sides of the active-image and hide the flanks?) -->
@@ -11,9 +11,11 @@
                 (click)="onPrevImageClick()">
             <img [src]="prevImage?.url" [alt]="prevImage?.altText" />
         </div>
-        <div class="active-image grow mx-3">
-            <img [src]="activeImage?.url" [alt]="activeImage?.altText" />
-            <div class="description-container color-light m-3 lg:mt-6">
+        <div class="active-image flex flex-col grow justify-center mx-3">
+            <img    class="grow"
+                    [src]="activeImage?.url"
+                    [alt]="activeImage?.altText" />
+            <div class="description-container color-light container mx-auto mt-3 mb-3 lg:mt-6">
                 <ng-container *ngFor="let description of activeImage?.description">
                     <p class="text-center mb-2">{{ description }}</p>
                 </ng-container>
@@ -28,5 +30,5 @@
         Really just a placeholder to prevent the gallery-container from growing until it hits the bottom of the modal,
         this is the same height as the controls div at the top.
     -->
-    <div class="footer"></div>
+    <div class="footer grow-0"></div>
 </div>

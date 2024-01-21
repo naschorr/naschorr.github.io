@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     z-index: 1000;  // Make sure it's at the top!
 
@@ -38,11 +38,12 @@
     color: variables.$light-color;
 }
 
-.gallery-container img {
+.gallery-container {
+    height: calc(100% - 2 * 3.5rem);
     box-shadow: variables.$subtle-shadow;
 }
 
-$side-image-width: 3rem;
+$side-image-width: 6rem;
 .side-image {
     max-width: $side-image-width;
 
@@ -58,20 +59,27 @@ $side-image-width: 3rem;
 .side-image img:hover {
     transform: scale(1.1);
 }
+
 .prev-image img {
     object-position: right;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .next-image img {
     object-position: left;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .active-image {
     max-width: calc(100% - 2 * $side-image-width);
 }
 .active-image img {
-    height: 100%;
     margin: auto;
-    object-fit: cover;
+    object-fit:contain;
+
+    // todo: breakpoint this?
+    height: 800px;
 }
 
 .description-container {
