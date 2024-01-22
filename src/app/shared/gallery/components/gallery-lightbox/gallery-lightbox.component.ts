@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { GalleryManagerService } from '../../services/gallery-manager.service';
 import { Image } from '../../models/image.model';
 
@@ -14,7 +14,9 @@ export class GalleryLightboxComponent implements OnInit {
 
   // Lifecycle
 
-  constructor(private _galleryManagerService: GalleryManagerService) { }
+  constructor(
+    private _galleryManagerService: GalleryManagerService
+  ) { }
 
   ngOnInit() {
     this._galleryManagerService.activeImage$.subscribe((image) => {

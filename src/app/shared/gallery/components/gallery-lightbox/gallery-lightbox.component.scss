@@ -1,5 +1,6 @@
 @use "../../../../../variables";
 @use "../../../../../mixins";
+@use "../../styling/_gallery_variables";
 
 :host {
     pointer-events: none;
@@ -43,48 +44,33 @@
     box-shadow: variables.$subtle-shadow;
 }
 
-$side-image-width: 6rem;
 .side-image {
-    max-width: $side-image-width;
-
-    // todo: breakpoint this?
-    height: 500px;
+    width: gallery_variables.$side-image-width;
+    height: gallery_variables.$side-image-height;
 }
-.side-image img {
+/*
+    Force these styles onto the image-display component, otherwise there'd have to be a bunch of logic in there to
+    handle specific styling and that doesn't really make sense
+*/
+::ng-deep .side-image img {
     height: 100%;
-    object-fit: cover;
-    position: relative;
+    object-fit: cover !important;
+    // position: relative;
     
     transition: all variables.$animation-duration-fast ease-in-out;
 }
-.side-image img:hover {
+::ng-deep .side-image img:hover {
     transform: scale(1.1);
 }
-
-.prev-image img {
+::ng-deep .prev-image img {
     object-position: right;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-.next-image img {
+::ng-deep .next-image img {
     object-position: left;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-}
-
-.active-image {
-    max-width: calc(100% - 2 * $side-image-width);
-}
-.active-image img {
-    margin: auto;
-    object-fit:contain;
-
-    // todo: breakpoint this?
-    max-height: 800px;
-}
-
-.description-container {
-
 }
 
 .footer {
