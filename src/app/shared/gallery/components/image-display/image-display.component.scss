@@ -15,22 +15,8 @@ img {
     width: 100%;
 }
 
-.active-height {
-    height: gallery_variables.$active-image-height;
-}
-.side-height {
-    height: gallery_variables.$side-image-height;
-}
-
 .image-display-container img {
     margin: auto;
     object-fit:contain;
     width: 100%
-}
-
-.active-max-height {
-    max-height: gallery_variables.$active-image-height;
-}
-.side-height {
-    max-height: gallery_variables.$side-image-height;
 }

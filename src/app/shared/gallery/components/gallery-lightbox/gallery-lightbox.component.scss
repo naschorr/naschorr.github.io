@@ -52,6 +52,9 @@
     Force these styles onto the image-display component, otherwise there'd have to be a bunch of logic in there to
     handle specific styling and that doesn't really make sense
 */
+::ng-deep .side-image .image-display-container {
+    height: gallery_variables.$side-image-height !important;
+}
 ::ng-deep .side-image img {
     height: 100%;
     object-fit: cover !important;
@@ -69,6 +72,9 @@
     object-position: left;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+::ng-deep .active-image .image-display-container img {
+    max-height: gallery_variables.$active-image-height !important;
 }
 
 .footer {

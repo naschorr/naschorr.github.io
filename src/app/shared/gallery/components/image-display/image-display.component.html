@@ -1,9 +1,13 @@
-<div class="image-display-container relative {{flavor}}-height">
-    <img    class="absolute top-0 left-0 {{flavor}}-max-height"
+<div    class="image-display-container relative"
+        [ngStyle]="{'height': imageHeight + 'px'}"
+        (window:resize)="onWindowResize()">
+    <img    #thumnailImage
+            class="absolute top-0 bottom-0 my-auto"
             [src]="image.thumbnailUrl"
             [alt]="image.altText" />
-    <img    *ngIf="canLoadFullResImage"
-            class="absolute top-0 left-0 {{flavor}}-max-height"
+    <img    #fullResImage
+            *ngIf="canLoadFullResImage"
+            class="absolute top-0 bottom-0 my-auto"
             [ngStyle]="{'opacity': isFullResImageLoaded ? 1 : 0}"
             (load)="onFullResImageLoaded()"
             [src]="image.url"
