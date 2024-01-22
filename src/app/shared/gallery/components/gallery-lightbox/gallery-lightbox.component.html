@@ -6,7 +6,8 @@
         <!-- todo: skeletons -->
         <!-- todo: pretty broken on mobile, weird -->
         <div    class="prev-image side-image cursor-pointer mr-3"
-                (click)="onPrevImageClick()">
+                (click)="onPrevImageClick()"
+                title="Previous Image">
             <image-display *ngIf="!!prevImage" [image]="prevImage" flavor="side"></image-display>
         </div>
         <div class="active-image flex flex-col grow justify-center mx-3">
@@ -18,7 +19,8 @@
             </div>
         </div>
         <div    class="next-image side-image cursor-pointer ml-3"
-                (click)="onNextImageClick()">
+                (click)="onNextImageClick()"
+                title="Next Image">
             <image-display *ngIf="!!nextImage" [image]="nextImage" flavor="side"></image-display>
         </div>
     </div>

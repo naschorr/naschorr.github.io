@@ -4,7 +4,11 @@
 
 
 img {
-    transition: opacity gallery_variables.$thumbnail-fade-out-duration ease-in-out;
+    /*
+        kinda hacky, but I don't think there's a way to build a hierarchy of transitions. Just gotta make sure that
+        transition that's being overridden listed first 
+    */
+    transition: variables.$transition-all-fast, opacity gallery_variables.$thumbnail-fade-out-duration ease-in-out;
 }
 
 .image-display-container {

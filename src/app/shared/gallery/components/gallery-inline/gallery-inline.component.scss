@@ -20,7 +20,7 @@
     height: 100%;
     object-fit: cover;
     box-shadow: variables.$subtle-shadow;
-    transition: all variables.$animation-duration-fast ease-in-out;
+    transition: variables.$transition-all-fast;
 }
 .gallery-item img:hover {
     transform: scale(1.1);

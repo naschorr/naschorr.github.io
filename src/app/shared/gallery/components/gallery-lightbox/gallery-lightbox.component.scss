@@ -33,7 +33,7 @@
     line-height: 1.5rem;
     color: variables.$medium-color;
 
-    transition: all variables.$animation-duration-fast ease-in-out;
+    transition: variables.$transition-all-fast;
 }
 .close:hover {
     color: variables.$light-color;
@@ -55,9 +55,7 @@
 ::ng-deep .side-image img {
     height: 100%;
     object-fit: cover !important;
-    // position: relative;
-    
-    transition: all variables.$animation-duration-fast ease-in-out;
+    transition: variables.$transition-all-fast;
 }
 ::ng-deep .side-image img:hover {
     transform: scale(1.1);
