@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Image } from '../../models/image.model';
 
 @Component({
@@ -10,6 +10,12 @@ export class ImageDisplayComponent {
   private _image!: Image;
   private _flavor!: string;
   private _isFullResImageLoaded: boolean = false;
+
+  @Input()
+  public canLoadFullResImage: boolean = false;
+
+  @Output()
+  public fullResImageLoadedEvent = new EventEmitter<void>();
 
   // Properties
 
@@ -46,5 +52,8 @@ export class ImageDisplayComponent {
 
   onFullResImageLoaded() {
     this._isFullResImageLoaded = true;
+    this.fullResImageLoadedEvent.emit();
+
+    console.log(`Full res image loaded ${this.flavor}`);
   }
 }

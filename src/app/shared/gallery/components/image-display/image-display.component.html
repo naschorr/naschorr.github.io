@@ -2,7 +2,8 @@
     <img    class="absolute top-0 left-0 {{flavor}}-max-height"
             [src]="image.thumbnailUrl"
             [alt]="image.altText" />
-    <img    class="absolute top-0 left-0 {{flavor}}-max-height"
+    <img    *ngIf="canLoadFullResImage"
+            class="absolute top-0 left-0 {{flavor}}-max-height"
             [ngStyle]="{'opacity': isFullResImageLoaded ? 1 : 0}"
             (load)="onFullResImageLoaded()"
             [src]="image.url"

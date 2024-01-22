@@ -8,10 +8,10 @@
         <div    class="prev-image side-image cursor-pointer mr-3"
                 (click)="onPrevImageClick()"
                 title="Previous Image">
-            <image-display *ngIf="!!prevImage" [image]="prevImage" flavor="side"></image-display>
+            <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded" flavor="side"></image-display>
         </div>
         <div class="active-image flex flex-col grow justify-center mx-3">
-            <image-display *ngIf="!!activeImage" [image]="activeImage" flavor="active"></image-display>
+            <image-display *ngIf="!!activeImage" [image]="activeImage" (fullResImageLoadedEvent)="onActiveImageLoaded()" [canLoadFullResImage]=true flavor="active"></image-display>
             <div class="description-container color-light container mx-auto mt-3 mb-3 lg:mt-6">
                 <ng-container *ngFor="let description of activeImage?.description">
                     <p class="text-center mb-2">{{ description }}</p>
@@ -21,7 +21,7 @@
         <div    class="next-image side-image cursor-pointer ml-3"
                 (click)="onNextImageClick()"
                 title="Next Image">
-            <image-display *ngIf="!!nextImage" [image]="nextImage" flavor="side"></image-display>
+            <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded" flavor="side"></image-display>
         </div>
     </div>
     <!--

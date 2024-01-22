@@ -11,6 +11,7 @@ export class GalleryLightboxComponent implements OnInit {
   private _activeImage!: Image | null;
   private _prevImage!: Image | null;
   private _nextImage!: Image | null;
+  private _isActiveImageLoaded: boolean = false;
 
   // Lifecycle
 
@@ -21,6 +22,7 @@ export class GalleryLightboxComponent implements OnInit {
   ngOnInit() {
     this._galleryManagerService.activeImage$.subscribe((image) => {
       this._activeImage = image;
+      this._isActiveImageLoaded = false;
     });
 
     this._galleryManagerService.nextImage$.subscribe((image) => {
@@ -46,6 +48,10 @@ export class GalleryLightboxComponent implements OnInit {
     return this._nextImage;
   }
 
+  get isActiveImageLoaded(): boolean {
+    return this._isActiveImageLoaded;
+  }
+
   // Methods
 
   onCloseClick() {
@@ -58,5 +64,9 @@ export class GalleryLightboxComponent implements OnInit {
 
   onPrevImageClick() {
     this._galleryManagerService.prevImage();
+  }
+
+  onActiveImageLoaded() {
+    this._isActiveImageLoaded = true;
   }
 }
