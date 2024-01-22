@@ -15,7 +15,7 @@
     z-index: 1000;  // Make sure it's at the top!
 
     pointer-events: all;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 @supports (backdrop-filter: blur()) {
@@ -43,7 +43,6 @@ $close-margin: 2rem;
 
 .gallery-container {
     height: calc(100% - 2 * ($close-size + 2 * $close-margin));
-    box-shadow: variables.$subtle-shadow;
 }
 
 .side-image {
