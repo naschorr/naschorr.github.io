@@ -1,7 +1,7 @@
 <div    class="image-display-container relative"
         [ngStyle]="{'height': imageHeight + 'px'}"
         (window:resize)="onWindowResize()">
-    <img    #thumnailImage
+    <img    #thumbnailImage
             class="absolute top-0 bottom-0 my-auto"
             [src]="image.thumbnailUrl"
             [alt]="image.altText" />

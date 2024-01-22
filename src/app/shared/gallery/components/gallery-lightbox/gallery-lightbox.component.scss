@@ -24,10 +24,12 @@
     }
 }
 
+$close-size: 1.5rem;
+$close-margin: 2rem;
 .close {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 2rem;
+    height: $close-size;
+    width: $close-size;
+    margin: $close-margin;
 
     font-size: 2.4rem;
     line-height: 1.5rem;
@@ -40,7 +42,7 @@
 }
 
 .gallery-container {
-    height: calc(100% - 2 * 3.5rem);
+    height: calc(100% - 2 * ($close-size + 2 * $close-margin));
     box-shadow: variables.$subtle-shadow;
 }
 
@@ -58,10 +60,10 @@
 ::ng-deep .side-image img {
     height: 100%;
     object-fit: cover !important;
-    transition: variables.$transition-all-fast;
 }
-::ng-deep .side-image img:hover {
+::ng-deep .side-image:hover img {
     transform: scale(1.1);
+    transition: variables.$transition-all-fast;
 }
 ::ng-deep .prev-image img {
     object-position: right;
@@ -78,6 +80,6 @@
 }
 
 .footer {
-    height: 1.5rem;
-    margin: 2rem;
+    height: $close-size;
+    margin: $close-margin;
 }

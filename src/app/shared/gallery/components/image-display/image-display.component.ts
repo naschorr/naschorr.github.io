@@ -17,7 +17,7 @@ export class ImageDisplayComponent implements AfterViewInit {
   @Output()
   public fullResImageLoadedEvent = new EventEmitter<void>();
 
-  @ViewChild('thumnailImage')
+  @ViewChild('thumbnailImage')
   public thumbnailImageView!: ElementRef;
   @ViewChild('fullResImage')
   public fullResImageView!: ElementRef;
