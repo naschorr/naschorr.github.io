@@ -42,6 +42,12 @@ $close-margin: 2rem;
 }
 
 .gallery-container {
+    /*
+        This is the main content pane for the lightbox, and sits between the close button (header?) and the footer which
+        are equally tall.
+        It's sized this way so that it'll be centered, and thus it's easy for it's contents to be centered relative to
+        the screen.
+    */
     height: calc(100% - 2 * ($close-size + 2 * $close-margin));
 }
 

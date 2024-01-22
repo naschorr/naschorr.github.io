@@ -3,7 +3,7 @@
             (click)="onCloseClick()">×</div>
     <div class="gallery-container grow flex items-center">
         <!-- todo: pretty broken on mobile, weird -->
-        <div    class="prev-image side-image cursor-pointer mr-3"
+        <div    class="prev-image side-image cursor-pointer mr-3 hidden lg:block"
                 (click)="onPrevImageClick()"
                 title="Previous Image">
             <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
@@ -16,7 +16,7 @@
                 </ng-container>
             </div>
         </div>
-        <div    class="next-image side-image cursor-pointer ml-3"
+        <div    class="next-image side-image cursor-pointer ml-3 hidden lg:block"
                 (click)="onNextImageClick()"
                 title="Next Image">
             <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
