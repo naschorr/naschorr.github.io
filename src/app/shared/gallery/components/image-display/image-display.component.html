@@ -1,5 +1,5 @@
 <div    class="image-display-container relative"
-        [ngStyle]="{'height': imageHeight + 'px'}"
+        [ngStyle]="{'height': imageHeight + 'px', 'width': imageWidth > 0 ? imageWidth + 'px' : 'auto'}"
         (window:resize)="onWindowResize()">
     <img    #thumbnailImage
             class="absolute top-0 bottom-0 my-auto"

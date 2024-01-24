@@ -51,38 +51,71 @@ $close-margin: 2rem;
     height: calc(100% - 2 * ($close-size + 2 * $close-margin));
 }
 
-.side-image {
-    width: gallery_variables.$side-image-width;
-    height: gallery_variables.$side-image-height;
+.side-nav-image {
+    width: gallery_variables.$side-nav-image-width;
+    height: gallery_variables.$side-nav-image-height;
+}
+.lower-nav-image {
+    height: gallery_variables.$lower-nav-image-height;
 }
 /*
     Force these styles onto the image-display component, otherwise there'd have to be a bunch of logic in there to
     handle specific styling and that doesn't really make sense
 */
-::ng-deep .side-image .image-display-container {
-    height: gallery_variables.$side-image-height !important;
+// Active image styles
+::ng-deep .active-image .image-display-container {
+    width: 100% !important;
 }
-::ng-deep .side-image img {
-    height: 100%;
+::ng-deep .active-image .image-display-container img {
+    max-height: gallery_variables.$active-image-height !important;
+    width: 100%;
+}
+
+// Side nav image styles
+::ng-deep .side-nav-image .image-display-container {
+    height: gallery_variables.$side-nav-image-height !important;
+    width: 100% !important;
+}
+::ng-deep .side-nav-image img {
     object-fit: cover !important;
 }
-::ng-deep .side-image:hover img {
-    transform: scale(1.1);
-    transition: variables.$transition-all-fast;
-}
-::ng-deep .prev-image img {
+::ng-deep .prev-image.side-nav-image img {
     object-position: right;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-::ng-deep .next-image img {
+::ng-deep .next-image.side-nav-image img {
     object-position: left;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-::ng-deep .active-image .image-display-container img {
-    max-height: gallery_variables.$active-image-height !important;
+
+// Lower nav image styles
+::ng-deep .lower-nav-image .image-display-container {
+    height: gallery_variables.$lower-nav-image-height !important;
 }
+::ng-deep .prev-image.lower-nav-image img {
+    object-position: left;
+}
+::ng-deep .next-image.lower-nav-image img {
+    object-position: right;
+}
+
+// Shared nav image styles
+::ng-deep .side-nav-image img,
+::ng-deep .lower-nav-image img {
+    height: 100%;
+}
+@media (pointer: fine) {
+    ::ng-deep .side-nav-image:hover img,
+    ::ng-deep .lower-nav-image:hover img {
+        transform: scale(1.1);
+        transition: variables.$transition-all-fast;
+    }
+}
+// ::ng-deep .lower-nav-image .image-display-container img:first-child {
+//     box-shadow: variables.$subtle-shadow;
+// }
 
 .footer {
     height: $close-size;

@@ -9,6 +9,7 @@ import { Image } from '../../models/image.model';
 export class ImageDisplayComponent implements AfterViewInit {
   private _image!: Image;
   private _isFullResImageLoaded: boolean = false;
+  private _imageWidth: number = 0;
   private _imageHeight: number = 0;
 
   @Input()
@@ -16,6 +17,8 @@ export class ImageDisplayComponent implements AfterViewInit {
 
   @Output()
   public fullResImageLoadedEvent = new EventEmitter<void>();
+  @Output()
+  public widthSetEvent = new EventEmitter<number>();
 
   @ViewChild('thumbnailImage')
   public thumbnailImageView!: ElementRef;
@@ -30,6 +33,7 @@ export class ImageDisplayComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.recalculateImageHeight();
+    this.recalculateImageWidth();
   }
 
   // Properties
@@ -48,17 +52,34 @@ export class ImageDisplayComponent implements AfterViewInit {
     return this._isFullResImageLoaded;
   }
 
+  get imageWidth(): number {
+    return this._imageWidth;
+  }
+
   get imageHeight(): number {
     return this._imageHeight;
   }
 
   // Methods
 
+  getActualWidthOfImagePixels(): number {
+    const thumbnailWidth = this.thumbnailImageView.nativeElement.offsetWidth;
+    const fullResWidth = this.fullResImageView?.nativeElement?.offsetWidth ?? 0;
+    
+    return Math.max(thumbnailWidth, fullResWidth);
+  }
+
   getActualHeightOfImagePixels(): number {
     const thumbnailHeight = this.thumbnailImageView.nativeElement.offsetHeight;
     const fullResHeight = this.fullResImageView?.nativeElement?.offsetHeight ?? 0;
     
     return Math.max(thumbnailHeight, fullResHeight);
+  }
+
+  recalculateImageWidth() {
+    this._imageWidth = this.getActualWidthOfImagePixels();
+    this._changeDetectorRef.detectChanges();
+    this.widthSetEvent.emit(this.imageWidth);
   }
 
   recalculateImageHeight() {
@@ -68,6 +89,7 @@ export class ImageDisplayComponent implements AfterViewInit {
 
   onWindowResize() {
     this.recalculateImageHeight();
+    this.recalculateImageWidth();
   }
 
   onFullResImageLoaded() {
@@ -75,5 +97,6 @@ export class ImageDisplayComponent implements AfterViewInit {
     this.fullResImageLoadedEvent.emit();
 
     this.recalculateImageHeight();
+    this.recalculateImageWidth();
   }
 }
