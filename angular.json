@@ -39,7 +39,7 @@
             "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/"
+                "src/styles/"
               ]
             }
           },
