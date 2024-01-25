@@ -1,6 +1,6 @@
 import { ComponentRef, Injectable, Renderer2, RendererFactory2, ViewContainerRef } from '@angular/core';
 import { GalleryModule } from '../gallery.module';
-import { Image } from '../models/image.model';
+import { ImageTextual } from '../../../shared/models/image-textual.model';
 import { BehaviorSubject } from 'rxjs';
 import { GalleryLightboxComponent } from '../components/gallery-lightbox/gallery-lightbox.component';
 
@@ -10,14 +10,14 @@ import { GalleryLightboxComponent } from '../components/gallery-lightbox/gallery
 export class GalleryManagerService {
   private _renderer: Renderer2;
 
-  private _activeGallery!: Image[] | null;
+  private _activeGallery!: ImageTextual[] | null;
   private _activeImageIndex!: number | null;
-  private _activeImage!: Image | null;
+  private _activeImage!: ImageTextual | null;
   private _galleryComponent!: ComponentRef<GalleryLightboxComponent> | null;
 
-  private _activeImageSubject = new BehaviorSubject<Image | null>(null);
-  private _nextImageSubject = new BehaviorSubject<Image | null>(null);
-  private _prevImageSubject = new BehaviorSubject<Image | null>(null);
+  private _activeImageSubject = new BehaviorSubject<ImageTextual | null>(null);
+  private _nextImageSubject = new BehaviorSubject<ImageTextual | null>(null);
+  private _prevImageSubject = new BehaviorSubject<ImageTextual | null>(null);
   public activeImage$ = this._activeImageSubject.asObservable();
   public nextImage$ = this._nextImageSubject.asObservable();
   public prevImage$ = this._prevImageSubject.asObservable();
@@ -33,7 +33,7 @@ export class GalleryManagerService {
 
   // Getters and Setters
 
-  get activeGallery(): Image[] | null {
+  get activeGallery(): ImageTextual[] | null {
     return this._activeGallery;
   }
 
@@ -41,7 +41,7 @@ export class GalleryManagerService {
     return this._activeImageIndex;
   }
 
-  get activeImage(): Image | null {
+  get activeImage(): ImageTextual | null {
     return this._activeImage;
   }
 
@@ -78,7 +78,7 @@ export class GalleryManagerService {
     return index % this.activeGallery!.length;
   }
 
-  openLightbox(image: Image, index: number, images: Image[], viewContainerRef: ViewContainerRef) {
+  openLightbox(image: ImageTextual, index: number, images: ImageTextual[], viewContainerRef: ViewContainerRef) {
     // Setup the context
     this._activeGallery = images;
     this._activeImageIndex = index;

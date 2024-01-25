@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
-import { Image } from '../../models/image.model';
+import { ImageTextual } from '../../../../shared/models/image-textual.model';
 import { GalleryManagerService } from '../../services/gallery-manager.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GalleryManagerService } from '../../services/gallery-manager.service';
 })
 export class GalleryInlineComponent implements OnInit {
   @Input()
-  public images: Image[] = [];
+  public images: ImageTextual[] = [];
 
   // Lifecycle
 
@@ -24,7 +24,7 @@ export class GalleryInlineComponent implements OnInit {
 
   // Methods
 
-  onImageClick(image: Image, index: number) {
+  onImageClick(image: ImageTextual, index: number) {
     this._galleryManagerService.openLightbox(image, index, this.images, this._viewContainerRef);
   }
 }

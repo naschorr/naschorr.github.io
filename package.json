@@ -9,8 +9,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "generate-thumbnails": "node src/scripts/thumbnail-generator.js",
-    "image-metadata-processor": "node src/scripts/image-metadata-processor.js"
+    "generate-thumbnails": "cd src/ && node scripts/thumbnail-generator.js",
+    "image-metadata-processor": "cd src/ && node scripts/image-metadata-processor.js"
   },
   "private": true,
   "dependencies": {

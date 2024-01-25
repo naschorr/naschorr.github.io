@@ -5,7 +5,7 @@ const path = require('node:path');
 const sharp = require('sharp');
 
 // Config
-const IMAGES_DIRECTORY_PATH = 'src/assets/images';
+const IMAGES_DIRECTORY_PATH = 'assets/images';
 
 
 function insertIntoObject(object, keys, value) {
@@ -43,19 +43,20 @@ const imageMetadata = {};
 // Extract metadata from the images and their thumbnails
 const promises = [];
 imageIterator.forEachImage((filePath) => {
-    const thumbnailFilePath = thumbnailHelpers.buildThumbnailFilePath(filePath);
+    const imageFilePath = thumbnailHelpers.normalizeFilePath(filePath);
+    const thumbnailFilePath = thumbnailHelpers.normalizeFilePath(thumbnailHelpers.buildThumbnailFilePath(imageFilePath));
 
     if (!fs.existsSync(thumbnailFilePath)) {
-        console.error(`Thumbnail for '${filePath}' does not exist at '${thumbnailFilePath}'`);
+        console.error(`Thumbnail for '${imageFilePath}' does not exist at '${thumbnailFilePath}'`);
         return;
     }
 
     promises.push(
-        sharp(filePath)
+        sharp(imageFilePath)
             .metadata()
             .then((metadata) => {
-                insertIntoObject(imageMetadata, [filePath, "fullRes"], {
-                    url: filePath,
+                insertIntoObject(imageMetadata, [imageFilePath, "fullRes"], {
+                    url: imageFilePath,
                     widthPx: metadata.width,
                     heightPx: metadata.height
                 });
@@ -66,7 +67,7 @@ imageIterator.forEachImage((filePath) => {
         sharp(thumbnailFilePath)
             .metadata()
             .then((metadata) => {
-                insertIntoObject(imageMetadata, [filePath, "thumbnail"], {
+                insertIntoObject(imageMetadata, [imageFilePath, "thumbnail"], {
                     url: thumbnailFilePath,
                     widthPx: metadata.width,
                     heightPx: metadata.height
@@ -84,5 +85,5 @@ Promise.all(promises).then(() => {
     }
 
     console.log(`Writing metadata file to '${metadataFilePath}'`);
-    fs.writeFileSync(metadataFilePath, JSON.stringify(imageMetadata, space=4));
+    fs.writeFileSync(metadataFilePath, JSON.stringify(imageMetadata, null, 4));
 });

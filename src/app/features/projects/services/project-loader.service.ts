@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Project } from '../models/project.model';
-import { Image } from '../../../shared/gallery/models/image.model';
+import { Image } from '../../../shared/models/image.model';
+import { ImageTextual } from '../../../shared/models/image-textual.model';
+import { ImageLoaderService } from '../../../shared/services/image-loader.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +16,11 @@ export class ProjectLoaderService {
 
   // Lifecycle
 
-  constructor() {
+  constructor(private _imageLoaderService: ImageLoaderService) {
     this.loadProjects();
+    this._imageLoaderService.images$.subscribe(images => {
+      this.loadProjects();
+    });
   }
 
   // Methods
@@ -31,7 +36,14 @@ export class ProjectLoaderService {
             new URL(project?.url),
             project?.funFacts,
             project?.images?.map(
-              (image: any) => this._buildImage(image)
+              (data: any) => {
+                const image = this._imageLoaderService.getImageByPath(data.url);
+                if (image) {
+                  return new ImageTextual(image, data.description, data.altText);
+                } else {
+                  return null;
+                }
+              }
             ).filter(
               (image: Image | null) => image !== null
             ),
@@ -41,31 +53,5 @@ export class ProjectLoaderService {
 
         this._projectsSubject.next(projectModels);
       });
-  }
-
-  private _buildUrl(url: string): URL {
-    try {
-      return new URL(url);  // Handle normal URLs
-    } catch (error) {
-      if (error instanceof TypeError) {
-        return new URL(`${location.origin}/${url}`);  // Handle relative ones too!
-      } else {
-        throw error;
-      }
-    }
-  }
-
-  private _buildImage(data: any): Image | null {
-    try {
-      return new Image(
-        this._buildUrl(data.url),
-        this._buildUrl(data.thumbnailUrl),
-        data.description,
-        data.altText
-      );
-    } catch (error) {
-      console.error(error);
-      return null;
-    }
   }
 }

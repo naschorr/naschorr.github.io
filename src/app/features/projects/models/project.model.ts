@@ -1,11 +1,11 @@
-import { Image } from "../../../shared/gallery/models/image.model";
+import { ImageTextual } from '../../../shared/models/image-textual.model';
 
 export class Project {
     private _name: string;
     private _description: string[];
     private _url: URL | null;
     private _funFacts: string[] | null;
-    private _images: Image[] | null;
+    private _images: ImageTextual[] | null;
     private _technologies: string[];
 
     // Lifecycle
@@ -15,7 +15,7 @@ export class Project {
             description: string[],
             url?: URL,
             funFacts?: string[],
-            images?: Image[],
+            images?: ImageTextual[],
             technologies?: string[]
     ) {
         this._name = name;
@@ -44,7 +44,7 @@ export class Project {
         return this._funFacts;
     }
 
-    get images(): Image[] | null {
+    get images(): ImageTextual[] | null {
         return this._images;
     }
 

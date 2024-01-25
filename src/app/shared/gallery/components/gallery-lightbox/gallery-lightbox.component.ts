@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { GalleryManagerService } from '../../services/gallery-manager.service';
-import { Image } from '../../models/image.model';
+import { ImageTextual } from '../../../../shared/models/image-textual.model';
 
 @Component({
   selector: 'gallery-lightbox',
@@ -8,9 +8,9 @@ import { Image } from '../../models/image.model';
   styleUrl: './gallery-lightbox.component.scss'
 })
 export class GalleryLightboxComponent implements OnInit {
-  private _activeImage!: Image | null;
-  private _prevImage!: Image | null;
-  private _nextImage!: Image | null;
+  private _activeImage!: ImageTextual | null;
+  private _prevImage!: ImageTextual | null;
+  private _nextImage!: ImageTextual | null;
   private _isActiveImageLoaded: boolean = false;
   private _lowerPrevNavImageWidth: number | null = null;
   private _lowerNextNavImageWidth: number | null = null;
@@ -38,15 +38,15 @@ export class GalleryLightboxComponent implements OnInit {
 
   // Properties
 
-  get activeImage(): Image | null {
+  get activeImage(): ImageTextual | null {
     return this._activeImage;
   }
 
-  get prevImage(): Image | null {
+  get prevImage(): ImageTextual | null {
     return this._prevImage;
   }
 
-  get nextImage(): Image | null {
+  get nextImage(): ImageTextual | null {
     return this._nextImage;
   }
 

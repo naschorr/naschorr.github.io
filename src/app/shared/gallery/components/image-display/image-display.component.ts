@@ -1,5 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { Image } from '../../models/image.model';
+import { ImageTextual } from '../../../../shared/models/image-textual.model';
 
 @Component({
   selector: 'image-display',
@@ -7,7 +7,7 @@ import { Image } from '../../models/image.model';
   styleUrl: './image-display.component.scss'
 })
 export class ImageDisplayComponent implements AfterViewInit {
-  private _image!: Image;
+  private _image!: ImageTextual;
   private _isFullResImageLoaded: boolean = false;
   private _imageWidth: number = 0;
   private _imageHeight: number = 0;
@@ -39,12 +39,12 @@ export class ImageDisplayComponent implements AfterViewInit {
   // Properties
 
   @Input()
-  set image(value: Image) {
+  set image(value: ImageTextual) {
     this._image = value;
     this._isFullResImageLoaded = false;
   }
 
-  get image(): Image {
+  get image(): ImageTextual {
     return this._image;
   }
 

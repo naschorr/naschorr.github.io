@@ -46,9 +46,18 @@ function buildThumbnailFilePath(filePath) {
     return path.join(path.dirname(filePath), split.join('.'));
 }
 
+/**
+ * Normalizes a filepath to use forward slashes.
+ * @param {string} filePath 
+ * @returns {string}
+ */
+function normalizeFilePath(filePath) {
+    return filePath.replace(/\\/g, '/');
+}
 
 module.exports = {
     isFilePathExcluded,
     isFileAlreadyThumbnail,
-    buildThumbnailFilePath
+    buildThumbnailFilePath,
+    normalizeFilePath
 };

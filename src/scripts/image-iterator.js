@@ -3,10 +3,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 // Config
-const IMAGES_DIRECTORY_PATH = 'src/assets/images';
+const IMAGES_DIRECTORY_PATH = 'assets/images';
 const EXCLUDE_DIRECTORY_PATHS = [
-    'src/assets/images/icons',
-    'src/assets/images/logos'
+    'assets/images/icons',
+    'assets/images/logos'
 ].map((excludePath) => path.normalize(excludePath));
 const IMAGE_FILE_EXTENSIONS = [
     'jpg',

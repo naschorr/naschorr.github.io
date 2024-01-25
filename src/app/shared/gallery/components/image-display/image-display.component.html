@@ -10,6 +10,6 @@
             class="absolute top-0 bottom-0 my-auto"
             [ngStyle]="{'opacity': isFullResImageLoaded ? 1 : 0}"
             (load)="onFullResImageLoaded()"
-            [src]="image.url"
+            [src]="image.fullResUrl"
             [alt]="image.altText" />
 </div>
