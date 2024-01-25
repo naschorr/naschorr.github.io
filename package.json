@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "prestart": "npm run generate-thumbnails",
+    "prestart": "npm run generate-thumbnails && npm run image-metadata-processor",
     "start": "ng serve --host 0.0.0.0",
-    "prebuild": "npm run generate-thumbnails",
+    "prebuild": "npm run generate-thumbnails && npm run image-metadata-processor",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "generate-thumbnails": "node src/scripts/thumbnail-generator.js"
+    "generate-thumbnails": "node src/scripts/thumbnail-generator.js",
+    "image-metadata-processor": "node src/scripts/image-metadata-processor.js"
   },
   "private": true,
   "dependencies": {
