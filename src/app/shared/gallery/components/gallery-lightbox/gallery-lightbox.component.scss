@@ -113,9 +113,11 @@ $close-margin: 2rem;
         transition: variables.$transition-all-fast;
     }
 }
-// ::ng-deep .lower-nav-image .image-display-container img:first-child {
-//     box-shadow: variables.$subtle-shadow;
-// }
+// ::ng-deep .active-image .image-display-container,
+::ng-deep .side-nav-image .image-display-container,
+::ng-deep .lower-nav-image .image-display-container {
+    box-shadow: variables.$subtle-shadow;
+}
 
 .footer {
     height: $close-size;

@@ -31,25 +31,16 @@
     -->
     <div class="footer grow-0 hidden lg:block"></div>
     <!-- Next/Prev navigation images for mobile, this replaces the footer -->
-    <div class="grow-0 flex block justify-between lg:hidden mt-6 mb-3 mx-3">
-        <div class="w-6/12">
-            <div    class="prev-image lower-nav-image cursor-pointer mr-3"
-                    [ngClass]="{'inline-block': !!lowerPrevNavImageWidth}"
-                    (click)="onPrevImageClick()"
-                    title="Previous Image">
-                <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded" (widthSetEvent)="lowerPrevNavImageWidth = $event"></image-display>
-            </div>
+    <div class="grow-0 flex justify-between lg:hidden mt-6 mb-3 mx-3">
+        <div    class="prev-image lower-nav-image cursor-pointer mr-3"
+                (click)="onPrevImageClick()"
+                title="Previous Image">
+            <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
         </div>
-        <div class="w-6/12">
-            <div    class="next-image lower-nav-image cursor-pointer ml-3"
-                    [ngClass]="{
-                        'inline-block': !!lowerNextNavImageWidth,
-                        'float-right': !!lowerNextNavImageWidth
-                    }"
-                    (click)="onNextImageClick()"
-                    title="Next Image">
-                <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded" (widthSetEvent)="lowerNextNavImageWidth = $event"></image-display>
-            </div>
+        <div    class="next-image lower-nav-image float-right cursor-pointer ml-3"
+                (click)="onNextImageClick()"
+                title="Next Image">
+            <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
         </div>
     </div>
 </div>

@@ -17,8 +17,6 @@ export class ImageDisplayComponent implements AfterViewInit {
 
   @Output()
   public fullResImageLoadedEvent = new EventEmitter<void>();
-  @Output()
-  public widthSetEvent = new EventEmitter<number>();
 
   @ViewChild('thumbnailImage')
   public thumbnailImageView!: ElementRef;
@@ -33,7 +31,6 @@ export class ImageDisplayComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.recalculateImageHeight();
-    this.recalculateImageWidth();
   }
 
   // Properties
@@ -62,13 +59,6 @@ export class ImageDisplayComponent implements AfterViewInit {
 
   // Methods
 
-  getActualWidthOfImagePixels(): number {
-    const thumbnailWidth = this.thumbnailImageView.nativeElement.offsetWidth;
-    const fullResWidth = this.fullResImageView?.nativeElement?.offsetWidth ?? 0;
-    
-    return Math.max(thumbnailWidth, fullResWidth);
-  }
-
   getActualHeightOfImagePixels(): number {
     const thumbnailHeight = this.thumbnailImageView.nativeElement.offsetHeight;
     const fullResHeight = this.fullResImageView?.nativeElement?.offsetHeight ?? 0;
@@ -76,20 +66,14 @@ export class ImageDisplayComponent implements AfterViewInit {
     return Math.max(thumbnailHeight, fullResHeight);
   }
 
-  recalculateImageWidth() {
-    this._imageWidth = this.getActualWidthOfImagePixels();
-    this._changeDetectorRef.detectChanges();
-    this.widthSetEvent.emit(this.imageWidth);
-  }
-
   recalculateImageHeight() {
     this._imageHeight = this.getActualHeightOfImagePixels();
+    this._imageWidth = this._imageHeight * this.image.aspectRatio;
     this._changeDetectorRef.detectChanges();
   }
 
   onWindowResize() {
     this.recalculateImageHeight();
-    this.recalculateImageWidth();
   }
 
   onFullResImageLoaded() {
@@ -97,6 +81,5 @@ export class ImageDisplayComponent implements AfterViewInit {
     this.fullResImageLoadedEvent.emit();
 
     this.recalculateImageHeight();
-    this.recalculateImageWidth();
   }
 }

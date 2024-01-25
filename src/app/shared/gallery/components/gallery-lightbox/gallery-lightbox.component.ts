@@ -12,8 +12,6 @@ export class GalleryLightboxComponent implements OnInit {
   private _prevImage!: ImageTextual | null;
   private _nextImage!: ImageTextual | null;
   private _isActiveImageLoaded: boolean = false;
-  private _lowerPrevNavImageWidth: number | null = null;
-  private _lowerNextNavImageWidth: number | null = null;
 
   // Lifecycle
 
@@ -52,22 +50,6 @@ export class GalleryLightboxComponent implements OnInit {
 
   get isActiveImageLoaded(): boolean {
     return this._isActiveImageLoaded;
-  }
-
-  get lowerPrevNavImageWidth(): number | null {
-    return this._lowerPrevNavImageWidth;
-  }
-
-  set lowerPrevNavImageWidth(value: number | null) {
-    this._lowerPrevNavImageWidth = value;
-  }
-
-  get lowerNextNavImageWidth(): number | null {
-    return this._lowerNextNavImageWidth;
-  }
-
-  set lowerNextNavImageWidth(value: number | null) {
-    this._lowerNextNavImageWidth = value;
   }
 
   // Methods
