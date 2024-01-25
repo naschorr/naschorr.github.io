@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "npm run generate-thumbnails",
     "start": "ng serve --host 0.0.0.0",
+    "prebuild": "npm run generate-thumbnails",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generate-thumbnails": "node src/scripts/thumbnail-generator.js"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.0.0",
+    "sharp": "^0.33.2",
     "typescript": "~5.2.2"
   }
 }
