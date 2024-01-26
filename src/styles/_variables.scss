@@ -12,6 +12,7 @@ $medium-gradient-color: rgb(239, 229, 215);
 $light-color: rgb(248, 248, 248);
 $light-gradient-color: rgb(255, 255, 255);
 $light-color-filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(41%) hue-rotate(137deg) brightness(114%) contrast(95%);
+$dark-trans-color: rgba(0, 0, 0, 0.6);
 
 $light-text-color: $light-color;
 $dark-text-color: $dark-color;

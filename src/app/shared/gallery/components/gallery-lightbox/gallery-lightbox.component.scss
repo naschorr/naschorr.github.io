@@ -15,7 +15,7 @@
     z-index: 1000;  // Make sure it's at the top!
 
     pointer-events: all;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: variables.$dark-trans-color;
 
 }
 @supports (backdrop-filter: blur()) {
@@ -89,6 +89,10 @@ $close-margin: 2rem;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+.text-panel {
+    background-color: variables.$dark-trans-color;
+    border-radius: variables.$border-radius;
+}
 
 // Lower nav image styles
 ::ng-deep .lower-nav-image .image-display-container {
@@ -107,8 +111,8 @@ $close-margin: 2rem;
     height: 100%;
 }
 @media (pointer: fine) {
-    ::ng-deep .side-nav-image:hover img,
-    ::ng-deep .lower-nav-image:hover img {
+    ::ng-deep .side-nav-image:hover,
+    ::ng-deep .lower-nav-image:hover {
         transform: scale(1.1);
         transition: variables.$transition-all-fast;
     }
