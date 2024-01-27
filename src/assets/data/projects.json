@@ -3,7 +3,7 @@
         "name": "Hawking",
         "description": [
             "Hawking is a retro text-to-speech bot for Discord that lets users interact with each other using the text-to-speech engine made famous by Stephen Hawking.",
-            "Add Hawking to your Discord server <a href='https://discordapp.com/oauth2/authorize?client_id=334894709292007424&scope=bot&permissions=53803072' target='_blank'>here</a>, or play around with it on my server <a href='https://discord.gg/JJqx8C4' target='_blank'>here</a>!"
+            "Give it a shot and <a href='https://discordapp.com/oauth2/authorize?client_id=334894709292007424&scope=bot&permissions=53803072' target='_blank'>add Hawking your Discord server</a> now, or play around with it on <a href='https://discord.gg/JJqx8C4' target='_blank'>my server</a>!"
         ],
         "url": "https://github.com/naschorr/hawking",
         "funFacts": [
@@ -24,7 +24,7 @@
             "Deep Rock Galactic (DRG) is an excellent co-op survival game, however it's got a major flaw: the game isn't cross platform. This makes it hard to play with friends who aren't on the same platform.",
             "Thus Deep Rock Galactic Save Syncer (DRGSS) was born! DRGSS is a user friendly desktop app that lets you sync your save files between Steam and Xbox installations of DRG without any fuss!",
             "Designed to be as easy to use as possible, DRGSS provides a single click solution to get save files synced up between the platforms, while being transparent and fault tolerant to keep those precious save files safe.",
-            "Grab the latest release <a href='https://github.com/naschorr/deep-rock-galactic-save-syncer/releases' target='_blank'>here</a>!"
+            "Grab the <a href='https://github.com/naschorr/deep-rock-galactic-save-syncer/releases' target='_blank'>latest release</a>!"
         ],
         "images": [
             {
