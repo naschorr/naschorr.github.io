@@ -12,6 +12,7 @@ const IMAGE_FILE_EXTENSIONS = [
     'jpg',
     'jpeg',
     'png',
+    'avif'
 ];
 
 

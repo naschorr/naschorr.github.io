@@ -28,7 +28,7 @@
         ],
         "images": [
             {
-                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.png",
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
                 "description": [
                     "The UI for Deep Rock Galactic Save Syncer, designed it to be as simple to use as possible.",
                     "Note that it's instantly ready to sync your save files with a single click of that big button at the bottom!"
@@ -36,12 +36,12 @@
                 "altText": "A screenshot of the Deep Rock Galactic Save Syncer UI."
             },
             {
-                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.png",
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
                 "description": ["A screenshot of the game's UI. I tried to make the UI for Deep Rock Galactic Save Syncer feel like it came from within the game itself."],
                 "altText": "A screenshot of the Deep Rock Galactic UI, used as inspiration."
             },
             {
-                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.png",
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif",
                 "description": [
                     "I wanted to make sure that even if something went wrong, the user would be able to easily understand what happened.",
                     "Here's an example of what happens when the Xbox save file is missing, and the user tries to sync it to Steam."
@@ -49,7 +49,7 @@
                 "altText": "A screenshot of the Deep Rock Galactic Save Syncer UI, showing an error that the Xbox save file couldn't be found."
             },
             {
-                "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.png",
+                "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
                 "description": [
                     "The big button at the bottom of the UI is meant to present a lot of information in a simple way to the user.",
                     "Here's a rundown of the various states the button can be in, and what they all mean."
