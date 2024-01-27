@@ -9,7 +9,8 @@
                 title="Previous Image">
             <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
             <div class="text-panel text-end absolute color-light bottom-0 right-0 m-2 p-2">
-                Previous
+                <span class="hidden xl:block">Previous</span>
+                <span class="block xl:hidden">Prev</span>
             </div>
         </div>
         <div class="active-image flex flex-col grow justify-center mx-3">

@@ -10,7 +10,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     z-index: 1000;  // Make sure it's at the top!
 
@@ -117,7 +117,6 @@ $close-margin: 2rem;
         transition: variables.$transition-all-fast;
     }
 }
-// ::ng-deep .active-image .image-display-container,
 ::ng-deep .side-nav-image .image-display-container,
 ::ng-deep .lower-nav-image .image-display-container {
     box-shadow: variables.$subtle-shadow;
