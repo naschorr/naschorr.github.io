@@ -1,0 +1,50 @@
+{
+    "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
+            "widthPx": 246,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
+            "widthPx": 1597,
+            "heightPx": 972
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
+            "widthPx": 267,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
+            "widthPx": 1920,
+            "heightPx": 1080
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif",
+            "widthPx": 1035,
+            "heightPx": 818
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.thumbnail.avif",
+            "widthPx": 190,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
+            "widthPx": 1032,
+            "heightPx": 837
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
+            "widthPx": 185,
+            "heightPx": 150
+        }
+    }
+}
