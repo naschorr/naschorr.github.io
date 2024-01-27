@@ -86,12 +86,13 @@
         "description": [
             "You're looking at it right now! This is my personal website which is used to show off what I've been working on, link to the places that host my projects, and serve as a playground for general webdev fun."
         ],
-        "url": "https://github.com/naschorr/nickschorr.com",
+        "url": "https://github.com/naschorr/naschorr.github.io",
         "technologies": [
             "TypeScript",
             "Angular 17",
             "Tailwind CSS",
-            "npm CLI"
+            "npm CLI",
+            "Cloudflare"
         ]
     },
     {
