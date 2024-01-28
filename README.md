@@ -12,6 +12,6 @@ Just merge the changes into the `main` branch. The `.github/workflows/angular_bu
 ## Deployment (Manual)
 - `cd` to the root directory
 - Make sure the Angular CLI GH Pages package is installed: `ng add angular-cli-ghpages`
-- `ng deploy --base-href=/`
+- `ng deploy`
 
 This builds the app and pushes it to the `gh-pages` branch on GitHub. GitHub Pages is already configured to serve from that branch, and has it's custom domain set up to serve from `nickschorr.com` as well.
