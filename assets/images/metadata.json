@@ -36,15 +36,15 @@
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
-            "widthPx": 1032,
-            "heightPx": 837
-        },
         "thumbnail": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
             "widthPx": 185,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
+            "widthPx": 1032,
+            "heightPx": 837
         }
     }
 }
