@@ -1,14 +1,14 @@
 {
     "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
-            "widthPx": 1597,
-            "heightPx": 972
-        },
         "thumbnail": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
             "widthPx": 246,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
+            "widthPx": 1597,
+            "heightPx": 972
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
