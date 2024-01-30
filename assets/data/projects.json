@@ -3,7 +3,7 @@
         "name": "Hawking",
         "description": [
             "Hawking is a retro text-to-speech bot for Discord that lets users interact with each other using the text-to-speech engine made famous by Stephen Hawking.",
-            "Give it a shot and <a href='https://discordapp.com/oauth2/authorize?client_id=334894709292007424&scope=bot&permissions=53803072' target='_blank'>add Hawking your Discord server</a> now, or play around with it on <a href='https://discord.gg/JJqx8C4' target='_blank'>my server</a>!"
+            "Give it a shot and <a href='https://discordapp.com/oauth2/authorize?client_id=334894709292007424&scope=bot&permissions=53803072' target='_blank'>add Hawking your Discord server</a> now, or <a href='https://discord.gg/JJqx8C4' target='_blank'>play around with it on my server</a>!"
         ],
         "url": "https://github.com/naschorr/hawking",
         "funFacts": [
