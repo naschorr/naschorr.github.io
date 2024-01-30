@@ -24,27 +24,27 @@
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif",
-            "widthPx": 1035,
-            "heightPx": 818
-        },
         "thumbnail": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.thumbnail.avif",
             "widthPx": 190,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif",
+            "widthPx": 1035,
+            "heightPx": 818
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
-            "widthPx": 1032,
-            "heightPx": 837
-        },
         "thumbnail": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
             "widthPx": 185,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
+            "widthPx": 1032,
+            "heightPx": 837
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
@@ -108,15 +108,15 @@
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif",
-            "widthPx": 1902,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.thumbnail.avif",
             "widthPx": 238,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif",
+            "widthPx": 1902,
+            "heightPx": 1200
         }
     }
 }
