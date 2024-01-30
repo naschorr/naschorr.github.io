@@ -106,5 +106,57 @@
             "Python",
             "PyWin32"
         ]
+    },
+    {
+        "name": "Harbor Freight Storage Bin Upgrade",
+        "description": [
+            "Harbor Freight sells a 20-bin parts storage case that's almost perfect for organizing small parts. The only issue is that the bins that come with the case are of poor quality, and aren't sized properly for lots of small parts.",
+            "This work in progress project is a set of 3D printable bins that are designed to perfectly fit in the case, a set of labels to list the contents of each bin, and a set of alignment grids that slot into the case itself to keep the bins in place. Additionally, new labels can be generated on the fly with a script that takes in a list of JSON objects, and outputs a STL file corresponding to each label."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
+                "description": [
+                    "Here's a bunch of bins filled with M3 hardware, labelled with custom tags generated programatically."
+                ],
+                "altText": "A photo of an assortment of custom bins filled with M3 hardware."
+            },
+            {
+                "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif",
+                "description": [
+                    "Here's a closer look at a small bin full of M3 16mm countersunk screws."
+                ],
+                "altText": "A photo of a small bin full of M3 16mm countersunk screws."
+            },
+            {
+                "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif",
+                "description": [
+                    "The bins themselves are designed to use the alignment features of the case itself. This helps to secure them from the top, and when combined with my alignment grids below, prevents them from moving around at all."
+                ],
+                "altText": "A photo of a small bin full of M3 16mm countersunk screws, but with the lid closed."
+            },
+            {
+                "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
+                "description": [
+                    "Bins come in a variety of sizes, to help store all kinds of different parts.",
+                    "Here's a double-wide bin filled with M8 knobs and M8 100mm carriage bolts."
+                ],
+                "altText": "A photo of a large bin filled with M8 knobs and M8 100mm carriage bolts."
+            },
+            {
+                "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif",
+                "description": [
+                    "Labels can be swapped out easily, just pop them out by pressing a screwdriver or an M4 or smaller bolt through the hole in the back."
+                ],
+                "altText": "A photo of a small bin having it's label removed with a screwdriver pushed through the hole in the back."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion 360",
+            "OpenSCAD",
+            "Python",
+            "Pydantic"
+        ]
     }
 ]

@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const sharp = require('sharp');
 
 // Config
-const THUMBNAIL_HEIGHT = 150;
+const THUMBNAIL_HEIGHT_PX = 150;
 
 
 // Perform the thumbnail generation
@@ -17,7 +17,7 @@ imageIterator.forEachImage((filePath) => {
     }
 
     sharp(filePath)
-        .resize(null, THUMBNAIL_HEIGHT)
+        .resize(null, THUMBNAIL_HEIGHT_PX)
         .toFile(thumbnailFilePath)
         .then(() => console.log(`Generated thumbnail for '${filePath}' as '${thumbnailFilePath}' with height=${THUMBNAIL_HEIGHT}`))
         .catch((error) => console.error(error));

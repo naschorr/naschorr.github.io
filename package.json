@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "prestart": "npm run image-format-converter && npm run generate-thumbnails && npm run image-metadata-processor",
+    "prestart": "npm run image-resizer && npm run image-format-converter && npm run generate-thumbnails && npm run image-metadata-processor",
     "start": "ng serve --host 0.0.0.0",
-    "prebuild": "npm run image-format-converter && npm run generate-thumbnails && npm run image-metadata-processor",
+    "prebuild": "npm run image-resizer && npm run image-format-converter && npm run generate-thumbnails && npm run image-metadata-processor",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "image-resizer": "cd src/ && node scripts/image-resizer.js",
     "image-format-converter": "cd src/ && node scripts/image-format-converter.js",
     "generate-thumbnails": "cd src/ && node scripts/thumbnail-generator.js",
     "image-metadata-processor": "cd src/ && node scripts/image-metadata-processor.js"

@@ -33,7 +33,7 @@ export class ProjectLoaderService {
           return new Project(
             project.name,
             project.description,
-            new URL(project?.url),
+            project?.url ? new URL(project?.url) : null,
             project?.funFacts,
             project?.images?.map(
               (data: any) => {

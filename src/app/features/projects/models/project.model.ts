@@ -13,10 +13,10 @@ export class Project {
     constructor(
             name: string,
             description: string[],
-            url?: URL,
-            funFacts?: string[],
-            images?: ImageTextual[],
-            technologies?: string[]
+            url?: URL | null,
+            funFacts?: string[] | null,
+            images?: ImageTextual[] | null,
+            technologies?: string[] | null
     ) {
         this._name = name;
         this._description = description;
