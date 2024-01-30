@@ -19,6 +19,6 @@ imageIterator.forEachImage((filePath) => {
     sharp(filePath)
         .resize(null, THUMBNAIL_HEIGHT_PX)
         .toFile(thumbnailFilePath)
-        .then(() => console.log(`Generated thumbnail for '${filePath}' as '${thumbnailFilePath}' with height=${THUMBNAIL_HEIGHT}`))
+        .then(() => console.log(`Generated thumbnail for '${filePath}' as '${thumbnailFilePath}' with height=${THUMBNAIL_HEIGHT_PX}`))
         .catch((error) => console.error(error));
 });
