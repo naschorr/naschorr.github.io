@@ -5,7 +5,7 @@
             <a      *ngIf="!!project.url; else projectUrlExists"
                     [href]="project.url"
                     target="_blank"
-                    class="bg-gradient-feature-short clip-text">
+                    class="bg-gradient-feature-short clip-text underline-feature-gradient">
                 {{project.name}}
             </a>
             <ng-template #projectUrlExists>

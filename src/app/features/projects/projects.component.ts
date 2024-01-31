@@ -63,6 +63,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
         this._renderer.addClass(element, "bg-gradient-feature-short");
         this._renderer.addClass(element, "clip-text");
         this._renderer.addClass(element, "font-semibold");
+        this._renderer.addClass(element, "underline-feature-gradient");
       });
 
       this._projectsChanged = false;

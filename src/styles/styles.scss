@@ -239,3 +239,35 @@ ul li::before {
     50%{background-position: 100% 50%}
     100%{background-position: 0% 50%}
 }
+
+@media (pointer: fine) {
+    /*
+        This is a massive hack to work around the fact that clip-text doesn't play nice with text-decoration. Basically,
+        we need to make our own underline and leverage ::after psuedoelements and their border-bottom.
+    */
+    .underline-feature-gradient {
+        position: relative;
+    }
+
+    .underline-feature-gradient:after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+
+        border-image-source: linear-gradient(90deg, variables.$feature-color, variables.$feature-gradient-short-color);
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-width: 1px;
+        border-image-slice: 1;
+
+        opacity: 0;
+        transition: opacity variables.$animation-duration-fast ease-in-out;
+    }
+
+    .underline-feature-gradient:hover:after {
+        opacity: 1;
+    }
+}
