@@ -110,7 +110,7 @@
     {
         "name": "Harbor Freight Storage Bin Upgrade",
         "description": [
-            "Harbor Freight sells a 20-bin parts storage case that's almost perfect for organizing small parts. The only issue is that the bins that come with the case are of poor quality, and aren't sized properly for lots of small parts.",
+            "Harbor Freight sells a <a href='https://www.harborfreight.com/20-Bin-Medium-Portable-Parts-Storage-Case-93928.html'>20-bin parts storage case</a> that's almost perfect for organizing small parts. The only issue is that the bins that come with the case are of poor quality, and aren't sized properly for lots of small parts.",
             "This work in progress project is a set of 3D printable bins that are designed to perfectly fit in the case, a set of labels to list the contents of each bin, and a set of alignment grids that slot into the case itself to keep the bins in place. Additionally, new labels can be generated on the fly with a script that takes in a list of JSON objects, and outputs a STL file corresponding to each label."
         ],
         "images": [
