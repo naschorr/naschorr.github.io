@@ -3,11 +3,12 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { TextSwapperComponent } from '../../shared/text-swapper/text-swapper.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { LogoComponent } from '../../shared/logo/logo.component';
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [TextSwapperComponent, FooterComponent, CommonModule, RouterModule],
+  imports: [TextSwapperComponent, FooterComponent, CommonModule, RouterModule, LogoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
