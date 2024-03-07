@@ -111,10 +111,13 @@ $close-margin: 2rem;
     height: 100%;
 }
 @media (pointer: fine) {
+    ::ng-deep .side-nav-image,
+    ::ng-deep .lower-nav-image {
+        transition: variables.$transition-all-fast;
+    }
     ::ng-deep .side-nav-image:hover,
     ::ng-deep .lower-nav-image:hover {
         transform: scale(1.1);
-        transition: variables.$transition-all-fast;
     }
 }
 ::ng-deep .side-nav-image .image-display-container,
