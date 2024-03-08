@@ -198,13 +198,6 @@ ul li::before {
 }
 
 .skeleton {
-    background-color: variables.$medium-color;
-    background-image: linear-gradient(90deg, variables.$medium-color-filter 0px, variables.$medium-color 40px, variables.$medium-color-filter 80px);
-    background-size: 100%;
-    animation: skeleton 1.5s ease-in-out infinite;
-}
-
-.skeleton {
     // handle opacity here, otherwise the whole element will be transparent
     background: repeating-linear-gradient(
         -45deg,
@@ -221,7 +214,8 @@ ul li::before {
     -moz-animation: skeleton 5s ease-in-out infinite;
     animation: skeleton 5s ease-in-out infinite;
 
-    box-shadow: 0 0 0 0.1rem variables.$medium-color inset;
+    box-shadow: 0 0 0 0.1rem color.adjust(variables.$medium-color, $alpha:-0.85) inset;
+    border-radius: variables.$border-radius * 2;
 }
 
 @-webkit-keyframes skeleton {
