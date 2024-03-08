@@ -1,14 +1,14 @@
 <div class="gallery-container flex">
     <ng-container *ngFor="let image of images; index as i;">
         <!--
-            Subtract 0.001 from the aspect ratio to force it down a bit and thus slightly shrink the resulting width.
+            Subtract 0.01 from the aspect ratio to force it down a bit and thus slightly shrink the resulting width.
             Sometimes it's 1px too wide, so this nasty hack fixes it
         -->
         <div    [ngClass]="{'mr-2': i < images.length - 1}"
                 [ngStyle]="{
                     'width': 'auto',
                     'height': image.thumbnailHeightPx + ' px',
-                    'aspect-ratio': image.aspectRatio - 0.001
+                    'aspect-ratio': image.aspectRatio - 0.01
                 }"
                 class="gallery-item skeleton">
             <img    [src]="image.thumbnailUrl"
