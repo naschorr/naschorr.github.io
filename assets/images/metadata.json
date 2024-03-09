@@ -1,14 +1,14 @@
 {
     "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
-            "widthPx": 246,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
             "widthPx": 1597,
             "heightPx": 972
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
+            "widthPx": 246,
+            "heightPx": 150
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
@@ -48,27 +48,27 @@
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
-            "widthPx": 176,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
             "widthPx": 1409,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
+            "widthPx": 176,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.thumbnail.avif",
-            "widthPx": 202,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif",
             "widthPx": 1612,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.thumbnail.avif",
+            "widthPx": 202,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif": {
@@ -83,18 +83,6 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif",
-            "widthPx": 1407,
-            "heightPx": 1200
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.thumbnail.avif",
-            "widthPx": 176,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif": {
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
@@ -104,6 +92,18 @@
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.thumbnail.avif",
             "widthPx": 203,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif",
+            "widthPx": 1407,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.thumbnail.avif",
+            "widthPx": 176,
             "heightPx": 150
         }
     },
