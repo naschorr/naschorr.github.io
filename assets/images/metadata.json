@@ -48,15 +48,15 @@
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
-            "widthPx": 1409,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
             "widthPx": 176,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
+            "widthPx": 1409,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif": {
@@ -83,18 +83,6 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
-            "widthPx": 1626,
-            "heightPx": 1200
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.thumbnail.avif",
-            "widthPx": 203,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif": {
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif",
@@ -104,6 +92,18 @@
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.thumbnail.avif",
             "widthPx": 176,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
+            "widthPx": 1626,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.thumbnail.avif",
+            "widthPx": 203,
             "heightPx": 150
         }
     },
