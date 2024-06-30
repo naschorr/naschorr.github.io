@@ -1,25 +1,25 @@
 {
-    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
+    "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
         "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
-            "widthPx": 267,
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
+            "widthPx": 246,
             "heightPx": 150
         },
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
-            "widthPx": 1920,
-            "heightPx": 1080
-        }
-    },
-    "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
             "widthPx": 1597,
             "heightPx": 972
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
+            "widthPx": 1920,
+            "heightPx": 1080
         },
         "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
-            "widthPx": 246,
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
+            "widthPx": 267,
             "heightPx": 150
         }
     },
@@ -35,18 +35,6 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
-            "widthPx": 1409,
-            "heightPx": 1200
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
-            "widthPx": 176,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
         "thumbnail": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
@@ -57,6 +45,18 @@
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
             "widthPx": 1032,
             "heightPx": 837
+        }
+    },
+    "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
+            "widthPx": 176,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
+            "widthPx": 1409,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif": {
@@ -108,15 +108,15 @@
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.thumbnail.avif",
-            "widthPx": 238,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif",
             "widthPx": 1902,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.thumbnail.avif",
+            "widthPx": 238,
+            "heightPx": 150
         }
     }
 }
