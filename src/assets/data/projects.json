@@ -89,7 +89,7 @@
         "url": "https://github.com/naschorr/naschorr.github.io",
         "technologies": [
             "TypeScript",
-            "Angular 17",
+            "Angular 18",
             "Tailwind CSS",
             "npm CLI",
             "Cloudflare",
@@ -131,7 +131,8 @@
             {
                 "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif",
                 "description": [
-                    "The bins themselves are designed to use the alignment features of the case itself. This helps to secure them from the top, and when combined with my alignment grids below, prevents them from moving around at all."
+                    "The bins themselves are designed to use the alignment features of the case itself.",
+                    "This helps to secure them from the top, and when combined with my alignment grids below, prevents them from moving around at all."
                 ],
                 "altText": "A photo of a small bin full of M3 16mm countersunk screws, but with the lid closed."
             },
@@ -139,7 +140,7 @@
                 "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
                 "description": [
                     "Bins come in a variety of sizes, to help store all kinds of different parts.",
-                    "Here's a double-wide bin filled with M8 knobs and M8 100mm carriage bolts."
+                    "Here's a extra-large bin filled with M8 knobs and M8 100mm carriage bolts."
                 ],
                 "altText": "A photo of a large bin filled with M8 knobs and M8 100mm carriage bolts."
             },
