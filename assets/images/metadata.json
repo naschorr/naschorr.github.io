@@ -1,16 +1,4 @@
 {
-    "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
-            "widthPx": 246,
-            "heightPx": 150
-        },
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
-            "widthPx": 1597,
-            "heightPx": 972
-        }
-    },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
@@ -21,6 +9,18 @@
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
             "widthPx": 267,
             "heightPx": 150
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
+            "widthPx": 246,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
+            "widthPx": 1597,
+            "heightPx": 972
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif": {
@@ -36,15 +36,27 @@
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
-            "widthPx": 185,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
             "widthPx": 1032,
             "heightPx": 837
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
+            "widthPx": 185,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
+            "widthPx": 2090,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
+            "widthPx": 261,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
@@ -95,18 +107,6 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
-            "widthPx": 1626,
-            "heightPx": 1200
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.thumbnail.avif",
-            "widthPx": 203,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif": {
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif",
@@ -116,6 +116,18 @@
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.thumbnail.avif",
             "widthPx": 238,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
+            "widthPx": 1626,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.thumbnail.avif",
+            "widthPx": 203,
             "heightPx": 150
         }
     }

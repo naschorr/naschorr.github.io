@@ -7,7 +7,7 @@
         ],
         "url": "https://github.com/naschorr/hawking",
         "funFacts": [
-            "More than 2.6 million messages spoken",
+            "More than 2.8 million messages spoken",
             "Active in more than 2,800 servers"
         ],
         "technologies": [
@@ -71,7 +71,7 @@
     {
         "name": "Mail To SMS",
         "description": [
-            "Programatically send out SMS messages using email! Mail To SMS is simple to integrate, and offers an easy to use CLI to support scripting too."
+            "Programmatically send out SMS messages using email! Mail To SMS is simple to integrate, and offers an easy to use CLI to support scripting too."
         ],
         "url": "https://github.com/naschorr/mail-to-sms",
         "technologies": [
@@ -140,7 +140,7 @@
                 "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif",
                 "description": [
                     "Bins come in a variety of sizes, to help store all kinds of different parts.",
-                    "Here's a extra-large bin filled with M8 knobs and M8 100mm carriage bolts."
+                    "Here's an extra-large bin filled with M8 knobs and M8 100mm carriage bolts."
                 ],
                 "altText": "A photo of a large bin filled with M8 knobs and M8 100mm carriage bolts."
             },
@@ -149,7 +149,14 @@
                 "description": [
                     "Labels can be swapped out easily, just pop them out by pressing a screwdriver or an M4 or smaller bolt through the hole in the back."
                 ],
-                "altText": "A photo of a small bin having it's label removed with a screwdriver pushed through the hole in the back."
+                "altText": "A photo of a small bin having its label removed with a screwdriver pushed through the hole in the back."
+            },
+            {
+                "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
+                "description": [
+                    "The bins themselves are designed for both ease of use, and ease of printing."
+                ],
+                "altText": "An infographic of a cutaway of a single bin, showing some of the features of the design."
             }
         ],
         "url": null,
