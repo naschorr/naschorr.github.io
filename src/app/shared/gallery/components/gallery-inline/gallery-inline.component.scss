@@ -7,6 +7,11 @@
     width: 100%;
 }
 
+.gallery-container {
+    overflow-y: visible;
+    overflow-x: clip;
+}
+
 @for $i from 1 through length(variables.$breakpoints) {
     $breakpoint: list.nth(variables.$breakpoints, $i);
     @media(min-width: $breakpoint) {
