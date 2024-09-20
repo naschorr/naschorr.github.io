@@ -1,6 +1,7 @@
 @use "variables";
 @use "mixins";
 @use "../../styling/_gallery_variables";
+@use "../../styling/gallery_styles.scss";
 
 :host {
     pointer-events: none;
@@ -106,23 +107,29 @@ $close-margin: 2rem;
 }
 
 // Shared nav image styles
-::ng-deep .side-nav-image img,
-::ng-deep .lower-nav-image img {
-    height: 100%;
-}
-@media (pointer: fine) {
-    ::ng-deep .side-nav-image,
-    ::ng-deep .lower-nav-image {
+::ng-deep .nav-image {
+    position: relative;
+    z-index: 1; // New stacking context, so the psuedo element's z-index can be lowered
+    
+    img {
+        height: 100%;
+    }
+
+    .image-display-container {
+        box-shadow: variables.$subtle-shadow;
         transition: variables.$transition-all-fast;
     }
-    ::ng-deep .side-nav-image:hover,
-    ::ng-deep .lower-nav-image:hover {
-        transform: scale(1.1);
+    &:hover .image-display-container {
+        box-shadow: none;
     }
-}
-::ng-deep .side-nav-image .image-display-container,
-::ng-deep .lower-nav-image .image-display-container {
-    box-shadow: variables.$subtle-shadow;
+
+    // Kinda hacky, but it works
+    .pseudo-border {
+        @extend .pseudo-border;
+    }
+    &:hover .pseudo-border {
+        opacity: 1;
+    }
 }
 
 .footer {

@@ -1,4 +1,4 @@
-<div class="gallery-container flex">
+<div class="flex">
     <ng-container *ngFor="let image of images; index as i;">
         <!--
             Subtract 0.01 from the aspect ratio to force it down a bit and thus slightly shrink the resulting width.
@@ -10,11 +10,12 @@
                     'height': image.thumbnailHeightPx + ' px',
                     'aspect-ratio': image.aspectRatio - 0.01
                 }"
-                class="gallery-item skeleton">
+                (click)="onImageClick(image, i)"
+                class="gallery-item skeleton cursor-pointer">
+            <div class="pseudo-border"></div>
             <img    [src]="image.thumbnailUrl"
                     [alt]="image.altText"
-                    (click)="onImageClick(image, i)"
-                    class="cursor-pointer" />
+                    class="h-full w-full" />
         </div>
     </ng-container>
 </div>

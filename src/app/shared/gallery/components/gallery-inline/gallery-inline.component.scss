@@ -1,15 +1,12 @@
 @use "variables";
 @use "mixins";
+@use "styles";
 @use "sass:list";
+@use "../../styling/gallery_styles.scss";
 
 :host {
     height: 100%;
     width: 100%;
-}
-
-.gallery-container {
-    overflow-y: visible;
-    overflow-x: clip;
 }
 
 @for $i from 1 through length(variables.$breakpoints) {
@@ -21,12 +18,23 @@
     }
 }
 
-.gallery-item img {
-    height: 100%;
-    object-fit: cover;
-    box-shadow: variables.$subtle-shadow;
-    transition: variables.$transition-all-fast;
-}
-.gallery-item img:hover {
-    transform: scale(1.1);
+.gallery-item {
+    position: relative;
+    z-index: 1; // New stacking context, so the psuedo element's z-index can be lowered
+    
+    img {
+        box-shadow: variables.$subtle-shadow;
+        transition: variables.$transition-all-fast;
+    }
+    &:hover img {
+        box-shadow: none;
+    }
+
+    // Kinda hacky, but it works
+    .pseudo-border {
+        @extend .pseudo-border;
+    }
+    &:hover .pseudo-border {
+        opacity: 1;
+    }
 }
