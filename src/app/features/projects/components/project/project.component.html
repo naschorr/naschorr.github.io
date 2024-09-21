@@ -24,16 +24,18 @@
             </a>
         </ng-container>
     </div>
+
     <div    *ngIf="!!project.images"
             class="gallery-container mb-3">
         <gallery-inline [images]="project.images"></gallery-inline>
     </div>
+
     <div class="description-container mb-3">
         <ng-container *ngFor="let paragraph of project.description; index as p;">
-            <p  [innerHTML]="paragraph"
-                class="mb-1"></p>
+            <p  [innerHTML]="paragraph"></p>
         </ng-container>
     </div>
+
     <div    *ngIf="project.funFacts && project.funFacts.length > 0"
             class="mb-3">
         <div>Fun Stats:</div>
@@ -42,6 +44,7 @@
             <li>{{fact}}</li>
         </ul>
     </div>
+
     <div class="">
         <div>Tech Used:</div>
         <ng-container *ngFor="let technology of project.technologies; index as t;">
