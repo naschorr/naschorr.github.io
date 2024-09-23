@@ -5,12 +5,16 @@
 .panel {
     background-color: color.adjust(variables.$light-color, $alpha:-0.9);
     border-radius: variables.$border-radius;
-    padding: 1rem;
-    margin: initial 1rem;
+    padding: variables.$project-panel-padding;
     transition: background-color variables.$animation-duration-fast ease-in-out;
 }
 .panel:hover {
     background-color: color.adjust(variables.$light-color, $alpha:-0.85);
+}
+
+.gallery-container {
+    margin-left: -(variables.$project-panel-padding);
+    margin-right: -(variables.$project-panel-padding);
 }
 
 .badge {
