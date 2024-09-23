@@ -1,7 +1,8 @@
 @use "variables";
 @use "mixins";
+@use "styles";
 @use "../../styling/_gallery_variables";
-@use "../../styling/gallery_styles.scss";
+@use "../../styling/pseudo_border";
 
 :host {
     pointer-events: none;
@@ -126,6 +127,14 @@ $close-margin: 2rem;
     // Kinda hacky, but it works
     .pseudo-border {
         @extend .pseudo-border;
+
+        // Hide it by default (and set a consistent transition)
+        opacity: 0;
+        transition: variables.$transition-all-fast;
+
+        // Color it and make it visually consistent
+        @extend .bg-gradient-feature;
+        border-radius: variables.$border-radius;
     }
     &:hover .pseudo-border {
         opacity: 1;

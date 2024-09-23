@@ -43,3 +43,5 @@ Thumbs.db
 
 # Ignore generated files
 **/assets/images/metadata.json
+**/stats.json
+**/stats.html
