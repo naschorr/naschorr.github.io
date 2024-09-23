@@ -2,7 +2,7 @@
 @use "mixins";
 @use "styles";
 @use "sass:list";
-@use "../../styling/gallery_styles" as gallery_styles;
+@use "../../styling/pseudo_border";
 
 :host {
     height: 100%;
@@ -76,6 +76,14 @@ $gallery-margin: 0.375rem;  // tailwind: m-1.5
     // Kinda hacky, but it works
     .pseudo-border {
         @extend .pseudo-border;
+
+        // Hide it by default (and set a consistent transition)
+        opacity: 0;
+        transition: variables.$transition-all-fast;
+
+        // Color it and make it visually consistent
+        @extend .bg-gradient-feature;
+        border-radius: variables.$border-radius;
     }
     &:hover .pseudo-border {
         opacity: 1;
