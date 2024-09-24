@@ -18,7 +18,7 @@
     }
     ::-webkit-scrollbar-thumb {
         border-radius: variables.$border-radius;
-        background-color: variables.$medium-color;
+        @extend .bg-gradient-medium;
     }
     ::-webkit-scrollbar-button {
         width: calc(variables.$project-panel-padding / 2);    // Each project has a padding of 1rem, but there's buttons on each side
@@ -82,7 +82,7 @@ $gallery-margin: 0.375rem;  // tailwind: m-1.5
         transition: variables.$transition-all-fast;
 
         // Color it and make it visually consistent
-        @extend .bg-gradient-feature;
+        @extend .bg-gradient-feature-short;
         border-radius: variables.$border-radius;
     }
     &:hover .pseudo-border {
