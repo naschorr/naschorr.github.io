@@ -12,15 +12,15 @@
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
-            "widthPx": 267,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
             "widthPx": 1920,
             "heightPx": 1080
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
+            "widthPx": 267,
+            "heightPx": 150
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif": {
@@ -36,27 +36,27 @@
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
-            "widthPx": 185,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
             "widthPx": 1032,
             "heightPx": 837
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
+            "widthPx": 185,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
-            "widthPx": 261,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
             "widthPx": 2090,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
+            "widthPx": 261,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
