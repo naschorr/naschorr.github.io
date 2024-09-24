@@ -1,6 +1,3 @@
-// @use "variables";
-// @use "mixins";
-// @use "styles";
 @use "gallery_variables" as gallery_variables;
 
 .pseudo-border {
@@ -12,14 +9,6 @@
     bottom: -(gallery_variables.$img-psuedo-border-distance);
     padding: gallery_variables.$img-psuedo-border-distance;
     z-index: -1;
-
-    // // Hide it by default (and set a consistent transition)
-    // opacity: 0;
-    // transition: variables.$transition-all-fast;
-
-    // // Color it and make it visually consistent
-    // @extend .bg-gradient-feature;
-    // border-radius: variables.$border-radius;
 
     // Perform a frame clip, so we only see the outer stripe (thanks: https://bennettfeely.com/clippy/)
     clip-path: polygon(

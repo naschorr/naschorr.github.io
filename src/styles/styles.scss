@@ -269,4 +269,11 @@ ul li::before {
     .underline-feature-gradient:hover:after {
         opacity: 1;
     }
+
+    h1 .underline-feature-gradient:after {
+        border-width: 3px;
+    }
+    h2 .underline-feature-gradient:after {
+        border-width: 2px;
+    }
 }

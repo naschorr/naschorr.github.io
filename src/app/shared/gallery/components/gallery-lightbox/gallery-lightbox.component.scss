@@ -133,7 +133,7 @@ $close-margin: 2rem;
         transition: variables.$transition-all-fast;
 
         // Color it and make it visually consistent
-        @extend .bg-gradient-feature;
+        @extend .bg-gradient-feature-short;
         border-radius: variables.$border-radius;
     }
     &:hover .pseudo-border {
