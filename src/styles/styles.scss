@@ -234,6 +234,7 @@ ul li::before {
     */
     .underline-feature-gradient {
         position: relative;
+        white-space: nowrap;
     }
 
     .underline-feature-gradient:after {
