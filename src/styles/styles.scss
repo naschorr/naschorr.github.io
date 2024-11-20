@@ -215,28 +215,16 @@ ul li::before {
     );
     background-size: 200% 200%;
 
-    -webkit-animation: skeleton 5s ease-in-out infinite;
-    -moz-animation: skeleton 5s ease-in-out infinite;
     animation: skeleton 5s ease-in-out infinite;
 
     box-shadow: 0 0 0 0.1rem color.adjust(variables.$medium-color, $alpha:-0.85) inset;
     border-radius: variables.$border-radius * 2;
 }
 
-@-webkit-keyframes skeleton {
-    0%{background-position: 0% 50%}
-    50%{background-position: 100% 50%}
-    100%{background-position: 0% 50%}
-}
-@-moz-keyframes skeleton {
-    0%{background-position: 0% 50%}
-    50%{background-position: 100% 50%}
-    100%{background-position: 0% 50%}
-}
 @keyframes skeleton {
-    0%{background-position: 0% 50%}
-    50%{background-position: 100% 50%}
-    100%{background-position: 0% 50%}
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
 }
 
 @media (pointer: fine) {
