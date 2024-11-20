@@ -31,6 +31,7 @@ export class ProjectLoaderService {
       .then(projects => {
         const projectModels = projects.map((project: any) => {
           return new Project(
+            project.id,
             project.name,
             project.description,
             project?.url ? new URL(project?.url) : null,

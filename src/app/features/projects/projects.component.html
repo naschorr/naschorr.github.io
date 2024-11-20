@@ -3,7 +3,7 @@
 
     <div class="container mx-auto min-h-full px-3 flex flex-col grow">
         <ng-container *ngFor="let project of projects; index as i;">
-            <project [project]="project"></project>
+            <project [project]="project" [flash]="requestedProjectId == project.id"></project>
         </ng-container>
 
         <footer containerClasses="color-light mt-3"></footer>
