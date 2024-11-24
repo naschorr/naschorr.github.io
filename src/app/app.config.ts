@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, RouterFeatures, withHashLocation, withInMemoryScrolling, withViewTransitions } from '@angular/router';
+import { provideRouter, RouterFeatures, withHashLocation, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
 
