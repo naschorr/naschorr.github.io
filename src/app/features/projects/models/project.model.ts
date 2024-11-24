@@ -1,6 +1,7 @@
 import { ImageTextual } from '../../../shared/models/image-textual.model';
 
 export class Project {
+    private _id: string;
     private _name: string;
     private _description: string[];
     private _url: URL | null;
@@ -11,6 +12,7 @@ export class Project {
     // Lifecycle
 
     constructor(
+            id: string,
             name: string,
             description: string[],
             url?: URL | null,
@@ -18,6 +20,7 @@ export class Project {
             images?: ImageTextual[] | null,
             technologies?: string[] | null
     ) {
+        this._id = id;
         this._name = name;
         this._description = description;
         this._url = url ?? null;
@@ -27,6 +30,10 @@ export class Project {
     }
 
     // Getters
+
+    get id(): string {
+        return this._id;
+    }
 
     get name(): string {
         return this._name;

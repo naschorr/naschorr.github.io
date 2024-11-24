@@ -1,7 +1,10 @@
 <div    *ngIf="!!project"
-        class="panel color-medium mt-3">
+        class="panel color-medium mt-3"
+        [ngClass]="{'flash': flash}"
+        (mouseover)="onProjectHover()"
+        (click)="onProjectClick()">
     <div class="flex justify-between mb-2 items-center">
-        <h2>
+        <h2 [id]="project.id">
             <a      *ngIf="!!project.url; else projectUrlExists"
                     [href]="project.url"
                     target="_blank"

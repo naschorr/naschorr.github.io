@@ -1,10 +1,24 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withDebugTracing, withHashLocation, withViewTransitions } from '@angular/router';
+import { provideRouter, RouterFeatures, withHashLocation, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
 
-export const appConfig: ApplicationConfig = {
+// Expose a flag to denote if we're using hash routing
+export const USE_HASH_ROUTING = true;
+
+// Build up the router features array
+const ROUTER_FEATURES: RouterFeatures[] = [
+  withViewTransitions(),
+];
+if (USE_HASH_ROUTING) {
+  ROUTER_FEATURES.push(withHashLocation());
+}
+
+export const APP_CONFIG: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withViewTransitions(), withHashLocation())
+    provideRouter(
+      routes,
+      ...ROUTER_FEATURES
+    )
   ]
 };
