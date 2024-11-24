@@ -1,5 +1,6 @@
 [
     {
+        "id": "hawking",
         "name": "Hawking",
         "description": [
             "Hawking is a retro text-to-speech bot for Discord that lets users interact with each other using the text-to-speech engine made famous by Stephen Hawking.",
@@ -19,6 +20,7 @@
         ]
     },
     {
+        "id": "drgss",
         "name": "Deep Rock Galactic Save Syncer",
         "description": [
             "Deep Rock Galactic (DRG) is an excellent co-op survival game, however it's got a major flaw: the game isn't cross platform. This makes it hard to play with friends who aren't on the same platform.",
@@ -69,6 +71,7 @@
         ]
     },
     {
+        "id": "mail-to-sms",
         "name": "Mail To SMS",
         "description": [
             "Programmatically send out SMS messages using email! Mail To SMS is simple to integrate, and offers an easy to use CLI to support scripting too."
@@ -82,6 +85,7 @@
         ]
     },
     {
+        "id": "website",
         "name": "nickschorr.com",
         "description": [
             "You're looking at it right now! This is my personal website which is used to show off what I've been working on, link to the places that host my projects, and serve as a playground for general webdev fun."
@@ -97,6 +101,7 @@
         ]
     },
     {
+        "id": "spotify-scraper",
         "name": "Spotify Scraper",
         "description": [
             "A Python API for getting the artist, song, and album art for the currently playing song on Spotify."
@@ -108,8 +113,10 @@
         ]
     },
     {
-        "name": "Harbor Freight Storage Bin Upgrade",
+        "id": "parts-organizer",
+        "name": "Small Parts Organizer Ecosystem",
         "description": [
+            "Affordable, modular, customizable 3D printed small parts organizers!",
             "Harbor Freight sells a <a href='https://www.harborfreight.com/20-Bin-Medium-Portable-Parts-Storage-Case-93928.html' target='_blank'>20-bin parts storage case</a> that's almost perfect for organizing small parts. The only issue is that the bins that come with the case are of poor quality, and aren't sized properly for lots of small parts.",
             "This work in progress project is a set of 3D printable bins that are designed to perfectly fit in the case, a set of labels to list the contents of each bin, and a set of alignment grids that slot into the case itself to keep the bins in place. Additionally, new labels can be generated on the fly with a script that takes in a list of JSON objects, and outputs a STL file corresponding to each label."
         ],
