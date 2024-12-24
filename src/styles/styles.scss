@@ -335,4 +335,20 @@ ul li::before {
     &:hover::after {
         opacity: 1;
     }
+
+    // Optionally update the clip-path to use a circular frame instead of the default rectangle
+    &.circular::after {
+        clip-path: circle(50%) !important;
+        mask-mode: alpha;
+        mask-composite: subtract;
+
+        // These percentages are basically magic, I dunno why they work
+        mask-image: radial-gradient(
+            circle at center,
+            transparent 0%,
+            transparent calc(65% - variables.$psuedo-border-radius),
+            black calc(75% - variables.$psuedo-border-radius),
+            black 100%
+        );
+    }
 }
