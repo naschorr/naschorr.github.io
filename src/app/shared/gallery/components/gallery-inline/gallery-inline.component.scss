@@ -18,7 +18,7 @@
     }
     ::-webkit-scrollbar-thumb {
         border-radius: variables.$border-radius;
-        @extend .bg-gradient-medium;
+        @extend .bg-gradient-light;
     }
     ::-webkit-scrollbar-button {
         width: calc(variables.$project-panel-padding / 2);    // Each project has a padding of 1rem, but there's buttons on each side
@@ -28,7 +28,7 @@
     // Fallback for browsers that don't support the fancy scrollbar
     :host {
         scrollbar-width: thin;
-        scrollbar-color: variables.$medium-color transparent;
+        scrollbar-color: variables.$light-color transparent;
     }
 }
 

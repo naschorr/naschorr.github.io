@@ -1,21 +1,13 @@
 <div    *ngIf="!!project"
-        class="panel color-medium mt-3"
+        class="panel color-light mt-3"
         [ngClass]="{'flash': flash}"
         (mouseover)="onProjectHover()"
         (click)="onProjectClick()">
     <div class="flex justify-between mb-2 items-center">
         <h2 [id]="project.id">
-            <a      *ngIf="!!project.url; else projectUrlExists"
-                    [href]="project.url"
-                    target="_blank"
-                    class="bg-gradient-feature-short clip-text underline-feature-gradient">
+            <span class="bg-gradient-light clip-text">
                 {{project.name}}
-            </a>
-            <ng-template #projectUrlExists>
-                <span class="bg-gradient-feature-short clip-text">
-                    {{project.name}}
-                </span>
-            </ng-template>
+            </span>
         </h2>
         <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
             <a      [href]="project.url"
