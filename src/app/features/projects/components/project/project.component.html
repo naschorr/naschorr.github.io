@@ -31,9 +31,9 @@
         </ul>
     </div>
 
-    <div class="flex flex-row">
+    <div class="flex flex-col md:flex-row">
         <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
-            <div class="shrink mr-5">   <!-- Should be mr-3, but mr-5 looks better visually -->
+            <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
                 <div>Check It Out:</div>
                 <a      [href]="project.url"
                         target="_blank">
