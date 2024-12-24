@@ -18,48 +18,39 @@
         </div>
 
 
-        <div class="flex justify-center mt-5 md:mt-10 link-container">
+        <div class="flex justify-center mt-5 md:mt-10">
             <div class="w-full md:w-10/12 lg:w-8/12 xl:w-7/12 2xl:6/12 grid grid-cols-1 md:grid-cols-3 gap-5">
 
                 <a      href="https://github.com/naschorr"
                         target="_blank"
-                        class="w-full button bg-gradient-light pseudo-border"
+                        class="w-full"
                         (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
                         (mouseleave)="resetActionNoun()">
-                    <div class="shrink">
-                        <img    src="assets/images/icons/github-filled.png"
-                                class="filter-dark-color"
-                                [ngClass]="{'active': actionNoun == 'code'}"
-                                alt="GitHub logo">
-                    </div>
-                    <div class="grow text-center mx-3">GitHub</div>
+                    <image-button   contentHeight="1.25rem"
+                                    imagePath="assets/images/icons/github-filled.png"
+                                    imageAltText="GitHub logo"
+                                    text="GitHub"></image-button>
                 </a>
 
                 <a      routerLink="/projects"
-                        class="w-full button bg-gradient-light pseudo-border"
+                        class="w-full"
                         (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
                         (mouseleave)="resetActionNoun()">
-                    <div class="shrink">
-                        <img    src="assets/images/icons/flask-filled.png"
-                                class="filter-dark-color"
-                                [ngClass]="{'active': actionNoun == 'projects'}"
-                                alt="Filled in image of a flask used in scientific experiments">
-                    </div>
-                    <div class="grow text-center mx-3">Projects</div>
+                    <image-button   contentHeight="1.25rem"
+                                    imagePath="assets/images/icons/flask-filled.png"
+                                    imageAltText="Filled in image of a flask used in scientific experiments"
+                                    text="Projects"></image-button>
                 </a>
 
                 <a      href="https://www.printables.com/@naschorr_134538"
                         target="_blank"
-                        class="w-full button bg-gradient-light pseudo-border"
+                        class="w-full"
                         (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
                         (mouseleave)="resetActionNoun()">
-                    <div class="shrink">
-                        <img    src="assets/images/icons/3d-printer-filled.png"
-                                class="filter-dark-color"
-                                [ngClass]="{'active': actionNoun == 'prints'}"
-                                alt="Filled in image of a 3d printer">
-                    </div>
-                    <div class="grow text-center mx-3">3D Printing</div>
+                    <image-button   contentHeight="1.25rem"
+                                    imagePath="assets/images/icons/3d-printer-filled.png"
+                                    imageAltText="Filled in image of a 3d printer"
+                                    text="3D Printing"></image-button>
                 </a>
 
             </div>

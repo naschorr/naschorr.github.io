@@ -209,14 +209,18 @@ ul li::before {
     opacity: 1;
 }
 
-.button {
+.button, .button-lg {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border-radius: variables.$border-radius;
-    padding: 0.5rem 1rem;
+    padding: variables.$button-padding;
     cursor: pointer;
+}
+.button-sm {
+    @extend .button;
+    padding: variables.$button-sm-padding;
 }
 
 .panel {

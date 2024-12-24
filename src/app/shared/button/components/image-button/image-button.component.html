@@ -1,0 +1,12 @@
+
+<div class="flex flex-row {{buttonClass}} bg-gradient-light pseudo-border">
+    <div    class="shrink"
+            [ngStyle]="{'height': contentHeight, 'width': contentHeight}">
+        <img    [src]="imagePath"
+                class="filter-dark-color"
+                height="100%"
+                [alt]="imageAltText">
+    </div>
+    <div    class="grow text-center mx-3 color-dark"
+            [ngStyle]="{'font-size': contentHeight}">{{text}}</div>
+</div>

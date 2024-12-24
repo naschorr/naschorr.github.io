@@ -4,11 +4,12 @@ import { TextSwapperComponent } from '../../shared/text-swapper/text-swapper.com
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LogoComponent } from '../../shared/logo/logo.component';
+import { ImageButtonComponent } from '../../shared/button/components/image-button/image-button.component';
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [TextSwapperComponent, FooterComponent, CommonModule, RouterModule, LogoComponent],
+  imports: [TextSwapperComponent, FooterComponent, CommonModule, RouterModule, LogoComponent, ImageButtonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

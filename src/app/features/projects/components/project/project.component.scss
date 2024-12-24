@@ -22,15 +22,13 @@
 }
 
 .badge {
-    margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     margin-left: 0;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-}
-
-.technology {
-    border: variables.$border-width solid variables.$light-color;
+    padding: variables.$button-sm-padding;
+    border-radius: variables.$border-radius;
+    font-size: variables.$button-sm-content-size;
+    vertical-align: middle;
+    outline: variables.$border-width solid variables.$light-color;
+    outline-offset: -(variables.$border-width);
     color: variables.$light-color;
 }
