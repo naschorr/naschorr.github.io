@@ -10,8 +10,6 @@ import { Component, Input } from '@angular/core';
 })
 export class LogoComponent {
   @Input()
-  public size: string = "2rem";
-  @Input()
   public containerClasses: string = "";
   @Input()
   public logoClasses: string = "bg-gradient-feature";

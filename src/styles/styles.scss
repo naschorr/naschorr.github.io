@@ -289,3 +289,50 @@ ul li::before {
         border-width: 2px;
     }
 }
+
+.pseudo-border {
+    // Displays a feature gradient (short) border away from the element this class is applied to on hover
+
+    position: relative; // The pseudo element needs to be absolutely positioned relative to this element
+    z-index: 1; // New stacking context, so the psuedo element's z-index can be lowered
+
+    &::after {
+        // Make sure it can show up
+        content: "";
+
+        // Expand the element to beyond the size of the contained element
+        position: absolute;
+        top: -(variables.$psuedo-border-distance);
+        left: -(variables.$psuedo-border-distance);
+        right: -(variables.$psuedo-border-distance);
+        bottom: -(variables.$psuedo-border-distance);
+        padding: variables.$psuedo-border-distance;
+        z-index: -1;
+
+        // Perform a frame clip, so we only see the outer stripe (thanks: https://bennettfeely.com/clippy/)
+        clip-path: polygon(
+            0% 0%,
+            0% 100%,
+            variables.$psuedo-border-radius 100%,
+            variables.$psuedo-border-radius variables.$psuedo-border-radius,
+            calc(100% - variables.$psuedo-border-radius) variables.$psuedo-border-radius,
+            calc(100% - variables.$psuedo-border-radius) calc(100% - variables.$psuedo-border-radius),
+            variables.$psuedo-border-radius calc(100% - variables.$psuedo-border-radius),
+            variables.$psuedo-border-radius 100%,
+            100% 100%,
+            100% 0%
+        );
+
+        // Hide it by default (and set a consistent transition)
+        opacity: 0;
+        transition: variables.$transition-all-fast;
+
+        // Color it and make it visually consistent
+        @extend .bg-gradient-feature-short;
+        border-radius: variables.$border-radius;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
