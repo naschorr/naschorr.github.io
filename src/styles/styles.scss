@@ -263,7 +263,7 @@ ul li::before {
     .underline-feature-gradient:after {
         content: "";
         position: absolute;
-        bottom: 3px;
+        bottom: 0;
         left: 0;
         width: 100%;
 
@@ -271,7 +271,7 @@ ul li::before {
         border-left: 0;
         border-right: 0;
         border-top: 0;
-        border-width: 1px;
+        border-width: variables.$border-width;
         border-image-slice: 1;
 
         opacity: 0;
@@ -280,13 +280,6 @@ ul li::before {
 
     .underline-feature-gradient:hover:after {
         opacity: 1;
-    }
-
-    h1 .underline-feature-gradient:after {
-        border-width: 3px;
-    }
-    h2 .underline-feature-gradient:after {
-        border-width: 2px;
     }
 }
 
@@ -302,23 +295,23 @@ ul li::before {
 
         // Expand the element to beyond the size of the contained element
         position: absolute;
-        top: -(variables.$psuedo-border-distance);
-        left: -(variables.$psuedo-border-distance);
-        right: -(variables.$psuedo-border-distance);
-        bottom: -(variables.$psuedo-border-distance);
-        padding: variables.$psuedo-border-distance;
+        top: -(variables.$psuedo-border-outer-distance);
+        left: -(variables.$psuedo-border-outer-distance);
+        right: -(variables.$psuedo-border-outer-distance);
+        bottom: -(variables.$psuedo-border-outer-distance);
+        padding: variables.$psuedo-border-outer-distance;
         z-index: -1;
 
         // Perform a frame clip, so we only see the outer stripe (thanks: https://bennettfeely.com/clippy/)
         clip-path: polygon(
             0% 0%,
             0% 100%,
-            variables.$psuedo-border-radius 100%,
-            variables.$psuedo-border-radius variables.$psuedo-border-radius,
-            calc(100% - variables.$psuedo-border-radius) variables.$psuedo-border-radius,
-            calc(100% - variables.$psuedo-border-radius) calc(100% - variables.$psuedo-border-radius),
-            variables.$psuedo-border-radius calc(100% - variables.$psuedo-border-radius),
-            variables.$psuedo-border-radius 100%,
+            variables.$psuedo-border-width 100%,
+            variables.$psuedo-border-width variables.$psuedo-border-width,
+            calc(100% - variables.$psuedo-border-width) variables.$psuedo-border-width,
+            calc(100% - variables.$psuedo-border-width) calc(100% - variables.$psuedo-border-width),
+            variables.$psuedo-border-width calc(100% - variables.$psuedo-border-width),
+            variables.$psuedo-border-width 100%,
             100% 100%,
             100% 0%
         );
@@ -346,8 +339,8 @@ ul li::before {
         mask-image: radial-gradient(
             circle at center,
             transparent 0%,
-            transparent calc(65% - variables.$psuedo-border-radius),
-            black calc(75% - variables.$psuedo-border-radius),
+            transparent calc(65% - variables.$psuedo-border-width),
+            black calc(75% - variables.$psuedo-border-width),
             black 100%
         );
     }

@@ -34,6 +34,7 @@ $dark-text-color: $dark-color;
 $font-family: "Urbanist";
 
 $border-radius: 0.2rem;
+$border-width: 2px;
 
 $animation-duration-fast: 0.1s;
 $animation-duration-slow: 0.25s;
@@ -48,5 +49,5 @@ $project-panel-padding: 1rem;
 $panel-background-color: color.adjust($light-color, $alpha:-0.9);
 $panel-active-background-color: color.adjust($light-color, $alpha:-0.85);
 
-$psuedo-border-distance: 4px;
-$psuedo-border-radius: 2px;
+$psuedo-border-outer-distance: 4px;
+$psuedo-border-width: $border-width;
