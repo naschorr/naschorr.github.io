@@ -24,7 +24,7 @@
 
     <div    *ngIf="project.funFacts && project.funFacts.length > 0"
             class="mb-3">
-        <div>Fun Stats:</div>
+        <div>Fun stats:</div>
         <ul     *ngFor="let fact of project.funFacts; index as f;"
                 class="list-inside">
             <li>{{fact}}</li>
@@ -34,7 +34,7 @@
     <div class="flex flex-col md:flex-row">
         <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
             <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
-                <div>Check It Out:</div>
+                <div>{{repoLinkAttentionGrabber}}</div>
                 <a      [href]="project.url"
                         target="_blank">
                     <image-button   buttonClass="button-sm"
@@ -46,7 +46,7 @@
             </div>
         </ng-container>
         <div class="grow">
-            <div>Tech Used:</div>
+            <div>Tech used:</div>
             <ng-container *ngFor="let technology of project.technologies; index as t;">
                 <div    class="badge inline-block select-none"
                         [ngClass]="{
