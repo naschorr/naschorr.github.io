@@ -1,53 +1,73 @@
 @use "variables";
+@use "sass:list";
+@use "sass:map";
 
 
-span {
-    color: variables.$light-text-color;
-}
+$name-factor: 0.7;
+$base-logo: 7rem;
+$sm-logo: 8rem;
+$md-logo: 10rem;
+$config: (
+    0px: (
+        "logo": $base-logo,
+        "name": 4rem,
+        "name-left-offset": 0px,
+        "tagline": 1.5rem
+    ),
+    variables.$sm: (
+        "logo": $sm-logo,
+        "name": $sm-logo * $name-factor,
+        "name-left-offset": 0px,
+        "tagline": $sm-logo * (1 - $name-factor)
+    ),
+    variables.$md: (
+        "logo": $md-logo,
+        "name": $md-logo * $name-factor,
+        "name-left-offset": -4px,
+        "tagline": $md-logo * (1 - $name-factor)
+    )
+);
 
-/*
-    Breakpoint/Logo/Name/Tagline size relationship:
+@for $i from 1 through length($config) {
+    $key: list.nth(map-keys($config), $i);
+    $value: list.nth($config, $i);
 
-    base->sm
-        logo: 6rem
-        name: 4.2rem
-        tagline: 1.8rem
-    sm->md
-        logo: 8rem
-        name: 5.6rem
-        tagline: 2.4rem
-    md->
-        logo: 10rem
-        name: 7rem
-        tagline: 3rem
-*/
+    @media(min-width: $key) {
+        .logo-container {
+            height: map-get($config, $key, "logo");
+            width: map-get($config, $key, "logo");
+        }
 
-.name-container {
-    /*
-        Frustrating workaround for some leading space on the N glyph in my chosen font
-        https://stackoverflow.com/questions/28809771/left-space-on-first-letter-css
-    */
-    position: relative;
-    left: -4px;
+        .name-container {
+            /*
+                Frustrating workaround for some leading space on the N glyph in my chosen font
+                https://stackoverflow.com/questions/28809771/left-space-on-first-letter-css
+            */
+            position: relative;
+            left: map-get($config, $key, "name-left-offset");
+            color: variables.$light-text-color;
+        
+            .name {
+                font-style: normal;
+                font-weight: 900;
+                font-size: map-get($config, $key, "name");
+                font-family: variables.$font-family, sans-serif;
+                line-height: 1;
+            }
+        }
 
-    .name {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 7rem;
-        font-family: variables.$font-family, sans-serif;
-        line-height: 1;
-    }
-}
-
-.tagline {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 3rem;
-    font-family: variables.$font-family, sans-serif;
-
-    .noun {
-        font-weight: bold;
-        font-style: italic;
+        .tagline {
+            font-style: normal;
+            font-weight: normal;
+            font-size: map-get($config, $key, "tagline");;
+            font-family: variables.$font-family, sans-serif;
+            color: variables.$light-text-color;
+        
+            .noun {
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
     }
 }
 

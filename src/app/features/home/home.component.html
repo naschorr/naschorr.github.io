@@ -2,10 +2,10 @@
     <div class="md:container mx-auto">
 
         <div class="flex flex-col md:flex-row justify-center items-center my-5 md:my-10">
-            <div class="md:mr-5">
-                <logo size="10rem" containerClasses="m-2"></logo>
+            <div class="md:mr-5 logo-container">
+                <logo></logo>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col mt-5 md:mt-0">
                 <div class="name-container">
                     <span class="name">Nick</span>
                 </div>
@@ -18,7 +18,7 @@
         </div>
 
 
-        <div class="flex justify-center my-5 md:my-10 link-container">
+        <div class="flex justify-center mt-5 md:mt-10 link-container">
             <div class="w-full md:w-10/12 lg:w-8/12 xl:w-7/12 2xl:6/12 grid grid-cols-1 md:grid-cols-3 gap-5">
 
                 <a      href="https://github.com/naschorr"
@@ -32,7 +32,7 @@
                                 [ngClass]="{'active': actionNoun == 'code'}"
                                 alt="GitHub logo">
                     </div>
-                    <div class="grow text-center">GitHub</div>
+                    <div class="grow text-center mx-3">GitHub</div>
                 </a>
 
                 <a      routerLink="/projects"
@@ -45,7 +45,7 @@
                                 [ngClass]="{'active': actionNoun == 'projects'}"
                                 alt="Filled in image of a flask used in scientific experiments">
                     </div>
-                    <div class="grow text-center">Projects</div>
+                    <div class="grow text-center mx-3">Projects</div>
                 </a>
 
                 <a      href="https://www.printables.com/@naschorr_134538"
@@ -59,7 +59,7 @@
                                 [ngClass]="{'active': actionNoun == 'prints'}"
                                 alt="Filled in image of a 3d printer">
                     </div>
-                    <div class="grow text-center">3D Printing</div>
+                    <div class="grow text-center mx-3">3D Printing</div>
                 </a>
 
             </div>
@@ -67,6 +67,5 @@
 
 
     </div>
-
 </div>
 <footer [isAbsolute]=true containerClasses="color-light m-1 px-3"></footer>
