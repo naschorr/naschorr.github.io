@@ -43,7 +43,7 @@
     <div class="">
         <div>Tech Used:</div>
         <ng-container *ngFor="let technology of project.technologies; index as t;">
-            <div    class="badge technology bg-gradient-medium inline-block select-none"
+            <div    class="badge technology inline-block select-none"
                     [ngClass]="{
                         'mr-0': t == project.technologies.length - 1,
                         'mr-1': t < project.technologies.length - 1

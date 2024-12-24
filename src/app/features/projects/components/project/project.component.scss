@@ -31,6 +31,6 @@
 }
 
 .technology {
-    @include mixins.bg-gradient(variables.$light-color, variables.$light-gradient-color);
-    color: variables.$dark-color;
+    border: variables.$border-width solid variables.$light-color;
+    color: variables.$light-color;
 }
