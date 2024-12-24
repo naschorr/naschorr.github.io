@@ -27,8 +27,9 @@
     padding: variables.$button-sm-padding;
     border-radius: variables.$border-radius;
     font-size: variables.$button-sm-content-size;
+    line-height: 1;
     vertical-align: middle;
-    outline: variables.$border-width solid variables.$light-color;
+    outline: 1px solid variables.$light-color;
     outline-offset: -(variables.$border-width);
     color: variables.$light-color;
 }
