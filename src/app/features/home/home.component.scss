@@ -1,18 +1,65 @@
 @use "variables";
 
-.icon {
-    filter: variables.$light-color-filter;
+
+span {
+    color: variables.$light-text-color;
 }
 
-.logo {
-    height: 8rem;
+/*
+    Breakpoint/Logo/Name/Tagline size relationship:
+
+    base->sm
+        logo: 6rem
+        name: 4.2rem
+        tagline: 1.8rem
+    sm->md
+        logo: 8rem
+        name: 5.6rem
+        tagline: 2.4rem
+    md->
+        logo: 10rem
+        name: 7rem
+        tagline: 3rem
+*/
+
+.name-container {
+    /*
+        Frustrating workaround for some leading space on the N glyph in my chosen font
+        https://stackoverflow.com/questions/28809771/left-space-on-first-letter-css
+    */
+    position: relative;
+    left: -4px;
+
+    .name {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 7rem;
+        font-family: variables.$font-family, sans-serif;
+        line-height: 1;
+    }
 }
 
 .tagline {
-    color: variables.$light-text-color;
-    font: normal normal 1.5rem variables.$font-family, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    font-family: variables.$font-family, sans-serif;
+
+    .noun {
+        font-weight: bold;
+        font-style: italic;
+    }
 }
-.tagline .noun {
-    font-weight: bolder;
-    font-style: italic;
+
+.link-container {
+    color: variables.$dark-color;
+    font-size: 1.25rem;
+
+    img {
+        height: 1.25rem;
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+    }
 }

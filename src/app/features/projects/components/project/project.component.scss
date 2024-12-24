@@ -2,26 +2,18 @@
 @use "mixins";
 @use "sass:color";
 
-$panel-background-color: color.adjust(variables.$light-color, $alpha:-0.9);
-$panel-active-background-color: color.adjust(variables.$light-color, $alpha:-0.85);
 
-.panel {
-    background-color: $panel-background-color;
-    border-radius: variables.$border-radius;
-    padding: variables.$project-panel-padding;
-    transition: background-color variables.$animation-duration-fast ease-in-out;
-}
 .panel:hover {
-    background-color: $panel-active-background-color;
+    background-color: variables.$panel-active-background-color;
 }
 
 .panel.flash {
     animation: 1s ease-in-out 0s 5 flash;
 }
 @keyframes flash {
-    0% { background-color: $panel-background-color }
-    50% { background-color: $panel-active-background-color }
-    100% { background-color: $panel-background-color }
+    0% { background-color: variables.$panel-background-color }
+    50% { background-color: variables.$panel-active-background-color }
+    100% { background-color: variables.$panel-background-color }
 }
 
 .gallery-container {

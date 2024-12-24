@@ -1,51 +1,72 @@
-<div class="bg-gradient-dark h-screen w-screen">
-    <div class="flex flex-col justify-center items-center w-full h-full">
-        <logo size="8rem" containerClasses="m-2"></logo>
-        <div class="m-2">
-            <span class="tagline">Nick makes <span class="noun">
-                <text-swapper [swapOptions]="actionNouns" [activeOption]="actionNoun"></text-swapper>
-            </span></span>
+<div class="bg-gradient-dark min-h-screen w-screen flex flex-col justify-center px-2 md:px-10">
+    <div class="md:container mx-auto">
+
+        <div class="flex flex-col md:flex-row justify-center items-center my-5 md:my-10">
+            <div class="md:mr-5">
+                <logo size="10rem" containerClasses="m-2"></logo>
+            </div>
+            <div class="flex flex-col">
+                <div class="name-container">
+                    <span class="name">Nick</span>
+                </div>
+                <div class="flex flex-row">
+                    <span class="tagline">makes <span class="noun">
+                        <text-swapper [swapOptions]="actionNouns" [activeOption]="actionNoun"></text-swapper>
+                    </span></span>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-between">
-            <a      href="https://github.com/naschorr"
-                    target="_blank"
-                    class="nav-container m-2"
-                    (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
-                    (mouseleave)="resetActionNoun()">
-                <img    src="assets/images/icons/github.png"
-                        class="icon nav-item"
-                        alt="GitHub logo outlines">
-                <img    src="assets/images/icons/github-filled.png"
-                        class="icon nav-item hoverable"
-                        [ngClass]="{'active': actionNoun == 'code'}"
-                        alt="GitHub logo filled in">
-            </a>
-            <a      routerLink="/projects"
-                    class="nav-container m-2"
-                    (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
-                    (mouseleave)="resetActionNoun()">
-                <img    src="assets/images/icons/flask.png"
-                        class="icon nav-item"
-                        alt="Outlined image of a flask used in scientific experiments">
-                <img    src="assets/images/icons/flask-filled.png"
-                        class="icon nav-item hoverable"
-                        [ngClass]="{'active': actionNoun == 'projects'}"
-                        alt="Filled in image of a flask used in scientific experiments">
-            </a>
-            <a      href="https://www.printables.com/@naschorr_134538"
-                    target="_blank"
-                    class="nav-container m-2"
-                    (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
-                    (mouseleave)="resetActionNoun()">
-                <img    src="assets/images/icons/3d-printer.png"
-                        class="icon nav-item"
-                        alt="Outlined image of a 3d printer">
-                <img    src="assets/images/icons/3d-printer-filled.png"
-                        class="icon nav-item hoverable"
-                        [ngClass]="{'active': actionNoun == 'prints'}"
-                        alt="Filled in image of a 3d printer">
-            </a>
+
+
+        <div class="flex justify-center my-5 md:my-10 link-container">
+            <div class="w-full md:w-10/12 lg:w-8/12 xl:w-7/12 2xl:6/12 grid grid-cols-1 md:grid-cols-3 gap-5">
+
+                <a      href="https://github.com/naschorr"
+                        target="_blank"
+                        class="w-full button bg-gradient-light"
+                        (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
+                        (mouseleave)="resetActionNoun()">
+                    <div class="shrink">
+                        <img    src="assets/images/icons/github-filled.png"
+                                class="filter-dark-color"
+                                [ngClass]="{'active': actionNoun == 'code'}"
+                                alt="GitHub logo">
+                    </div>
+                    <div class="grow text-center">GitHub</div>
+                </a>
+
+                <a      routerLink="/projects"
+                        class="w-full button bg-gradient-light"
+                        (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
+                        (mouseleave)="resetActionNoun()">
+                    <div class="shrink">
+                        <img    src="assets/images/icons/flask-filled.png"
+                                class="filter-dark-color"
+                                [ngClass]="{'active': actionNoun == 'projects'}"
+                                alt="Filled in image of a flask used in scientific experiments">
+                    </div>
+                    <div class="grow text-center">Projects</div>
+                </a>
+
+                <a      href="https://www.printables.com/@naschorr_134538"
+                        target="_blank"
+                        class="w-full button bg-gradient-light"
+                        (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
+                        (mouseleave)="resetActionNoun()">
+                    <div class="shrink">
+                        <img    src="assets/images/icons/3d-printer-filled.png"
+                                class="filter-dark-color"
+                                [ngClass]="{'active': actionNoun == 'prints'}"
+                                alt="Filled in image of a 3d printer">
+                    </div>
+                    <div class="grow text-center">3D Printing</div>
+                </a>
+
+            </div>
         </div>
+
+
     </div>
-    <footer [isAbsolute]=true containerClasses="color-light m-1 px-3"></footer>
+
 </div>
+<footer [isAbsolute]=true containerClasses="color-light m-1 px-3"></footer>

@@ -131,7 +131,14 @@ a[routerLink] {
     @include mixins.bg-gradient(variables.$medium-color, variables.$medium-gradient-color);
 }
 .bg-gradient-light {
-    @include mixins.bg-gradient(variables.$light-color, variables.$light-color);
+    @include mixins.bg-gradient(variables.$light-color, variables.$light-gradient-color);
+}
+
+.filter-light-color {
+    filter: variables.$light-color-filter;
+}
+.filter-dark-color {
+    filter: variables.$dark-color-filter;
 }
 
 .maskable {
@@ -202,6 +209,23 @@ ul li::before {
     opacity: 1;
 }
 
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: variables.$border-radius;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.panel {
+    background-color: variables.$panel-background-color;
+    border-radius: variables.$border-radius;
+    padding: variables.$project-panel-padding;
+    transition: background-color variables.$animation-duration-fast ease-in-out;
+}
+
 .skeleton {
     // handle opacity here, otherwise the whole element will be transparent
     background: repeating-linear-gradient(
@@ -220,7 +244,6 @@ ul li::before {
     box-shadow: 0 0 0 0.1rem color.adjust(variables.$medium-color, $alpha:-0.85) inset;
     border-radius: variables.$border-radius * 2;
 }
-
 @keyframes skeleton {
     0% { background-position: 0% 50% }
     50% { background-position: 100% 50% }
