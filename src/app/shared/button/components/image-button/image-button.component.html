@@ -1,5 +1,5 @@
 
-<div class="flex flex-row {{buttonClass}} bg-gradient-light pseudo-border">
+<div class="flex flex-row {{buttonFlavor}} bg-gradient-light pseudo-border {{containerClasses.join(' ')}}">
     <div    class="shrink"
             [ngStyle]="{'height': contentHeight, 'width': contentHeight}">
         <img    [src]="imagePath"

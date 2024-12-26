@@ -10,7 +10,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageButtonComponent {
   @Input()
-  public buttonClass: string = "button"
+  public buttonFlavor: string = "button"
+
+  @Input()
+  public containerClasses: string[] = [];
 
   @Input()
   public contentHeight: string = "1.5rem";

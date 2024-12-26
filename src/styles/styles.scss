@@ -324,12 +324,17 @@ ul li::before {
         opacity: 0;
         transition: variables.$transition-all-fast;
 
-        // Color it and make it visually consistent
-        @extend .bg-gradient-feature-short;
+        // Visual styling
         border-radius: variables.$border-radius;
     }
 
+    // Show the psuedo-border on hover and when the `active` class is applied (and style for the situation!)
     &:hover::after {
+        @extend .bg-gradient-feature;
+        opacity: 1;
+    }
+    &:not(:hover).active::after {
+        @extend .bg-gradient-light;
         opacity: 1;
     }
 

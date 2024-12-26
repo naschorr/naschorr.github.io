@@ -26,7 +26,8 @@
                         class="w-full"
                         (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
                         (mouseleave)="resetActionNoun()">
-                    <image-button   contentHeight="1.25rem"
+                    <image-button   [containerClasses]="actionNoun === 'code' ? ['active'] : []"
+                                    contentHeight="1.25rem"
                                     imagePath="assets/images/icons/github-filled.png"
                                     imageAltText="GitHub logo"
                                     text="GitHub">
@@ -37,7 +38,8 @@
                         class="w-full"
                         (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
                         (mouseleave)="resetActionNoun()">
-                    <image-button   contentHeight="1.25rem"
+                    <image-button   [containerClasses]="actionNoun === 'projects' ? ['active'] : []"
+                                    contentHeight="1.25rem"
                                     imagePath="assets/images/icons/flask-filled.png"
                                     imageAltText="Filled in image of a flask used in scientific experiments"
                                     text="Projects">
@@ -49,7 +51,8 @@
                         class="w-full"
                         (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
                         (mouseleave)="resetActionNoun()">
-                    <image-button   contentHeight="1.25rem"
+                    <image-button   [containerClasses]="actionNoun === 'prints' ? ['active'] : []"
+                                    contentHeight="1.25rem"
                                     imagePath="assets/images/icons/3d-printer-filled.png"
                                     imageAltText="Filled in image of a 3d printer"
                                     text="3D Printing">
