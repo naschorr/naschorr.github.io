@@ -1,24 +1,45 @@
+@use "sass:color";
+
+
+// TailwindCSS's default breakpoints, make sure these stay in sync with the tailwind.config.js if things change!
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;   // aka 2xl
+$breakpoints: $sm, $md, $lg, $xl, $xxl;
+
 $feature-color: rgb(247, 148, 30);
 // https://codepen.io/sosuke/pen/Pjoqqp
 $feature-color-filter: brightness(0) saturate(100%) invert(57%) sepia(95%) saturate(426%) hue-rotate(347deg) brightness(96%) contrast(102%);
 $feature-gradient-color: rgb(238, 40, 36);
 $feature-gradient-color-filter: brightness(0) saturate(100%) invert(51%) sepia(93%) saturate(6125%) hue-rotate(344deg) brightness(90%) contrast(108%);
 $feature-gradient-short-color: rgb(242, 86, 33);    // Shorter end stop for the gradient, so the whole thing is less red
+
 $dark-color: rgb(29, 34, 42);
+$dark-color-filter: invert(10%) sepia(15%) saturate(952%) hue-rotate(178deg) brightness(92%) contrast(92%);
 $dark-gradient-color: rgb(15, 38, 63);
+$dark-trans-color: rgba(0, 0, 0, 0.6);
+
 $medium-color: rgb(212, 197, 183);
 $medium-color-filter: brightness(0) saturate(100%) invert(83%) sepia(9%) saturate(394%) hue-rotate(348deg) brightness(96%) contrast(90%);
 $medium-gradient-color: rgb(239, 229, 215);
+
 $light-color: rgb(248, 248, 248);
 $light-gradient-color: rgb(255, 255, 255);
 $light-color-filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(41%) hue-rotate(137deg) brightness(114%) contrast(95%);
-$dark-trans-color: rgba(0, 0, 0, 0.6);
 
 $light-text-color: $light-color;
 $dark-text-color: $dark-color;
 $font-family: "Urbanist";
 
 $border-radius: 0.2rem;
+$border-width: 2px;
+
+$button-padding: 0.6rem 1rem;
+$button-content-size: 1.25rem;
+$button-sm-padding: 0.4rem 0.7rem;
+$button-sm-content-size: 1rem;
 
 $animation-duration-fast: 0.1s;
 $animation-duration-slow: 0.25s;
@@ -27,10 +48,11 @@ $transition-all-slow: all $animation-duration-slow ease-in-out;
 
 $blur-radius: 0.5rem;
 
-// TailwindCSS's default breakpoints
-$breakpoints: 640px, 768px, 1024px, 1280px, 1536px;
-
 $subtle-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 
-// Feature specific variables
 $project-panel-padding: 1rem;
+$panel-background-color: color.adjust($light-color, $alpha:-0.9);
+$panel-active-background-color: color.adjust($light-color, $alpha:-0.85);
+
+$psuedo-border-outer-distance: 4px;
+$psuedo-border-width: $border-width;

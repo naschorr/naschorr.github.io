@@ -16,12 +16,11 @@
     position: absolute;
     left: 0;
     top: 0;
+    transition: opacity variables.$animation-duration-fast ease-in;
 }
 .swap-option.active {
     opacity: 1;
-    transition: opacity variables.$animation-duration-fast ease-in;
 }
 .swap-option.inactive {
     opacity: 0;
-    transition: opacity variables.$animation-duration-fast ease-out;
 }

@@ -12,8 +12,7 @@
                     'aspect-ratio': image.aspectRatio - 0.01
                 }"
                 (click)="onImageClick(image, i)"
-                class="gallery-item skeleton cursor-pointer">
-            <div class="pseudo-border"></div>
+                class="gallery-item skeleton cursor-pointer pseudo-border">
             <img    [src]="image.thumbnailUrl"
                     [alt]="image.altText"
                     class="h-full w-full" />

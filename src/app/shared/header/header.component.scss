@@ -16,7 +16,7 @@
     border-left: 0;
     border-right: 0;
     border-top: 0;
-    border-width: 2px;
+    border-width: variables.$border-width;
     border-image-slice: 1;
 }
 @supports (backdrop-filter: blur()) {

@@ -2,7 +2,6 @@
 @use "mixins";
 @use "styles";
 @use "sass:list";
-@use "../../styling/pseudo_border";
 
 :host {
     height: 100%;
@@ -18,7 +17,7 @@
     }
     ::-webkit-scrollbar-thumb {
         border-radius: variables.$border-radius;
-        @extend .bg-gradient-medium;
+        @extend .bg-gradient-light;
     }
     ::-webkit-scrollbar-button {
         width: calc(variables.$project-panel-padding / 2);    // Each project has a padding of 1rem, but there's buttons on each side
@@ -28,7 +27,7 @@
     // Fallback for browsers that don't support the fancy scrollbar
     :host {
         scrollbar-width: thin;
-        scrollbar-color: variables.$medium-color transparent;
+        scrollbar-color: variables.$light-color transparent;
     }
 }
 
@@ -62,30 +61,11 @@ $gallery-margin: 0.375rem;  // tailwind: m-1.5
 }
 
 .gallery-item {
-    position: relative;
-    z-index: 1; // New stacking context, so the psuedo element's z-index can be lowered
-    
     img {
         box-shadow: variables.$subtle-shadow;
         transition: variables.$transition-all-fast;
     }
     &:hover img {
         box-shadow: none;
-    }
-
-    // Kinda hacky, but it works
-    .pseudo-border {
-        @extend .pseudo-border;
-
-        // Hide it by default (and set a consistent transition)
-        opacity: 0;
-        transition: variables.$transition-all-fast;
-
-        // Color it and make it visually consistent
-        @extend .bg-gradient-feature-short;
-        border-radius: variables.$border-radius;
-    }
-    &:hover .pseudo-border {
-        opacity: 1;
     }
 }

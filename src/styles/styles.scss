@@ -131,7 +131,14 @@ a[routerLink] {
     @include mixins.bg-gradient(variables.$medium-color, variables.$medium-gradient-color);
 }
 .bg-gradient-light {
-    @include mixins.bg-gradient(variables.$light-color, variables.$light-color);
+    @include mixins.bg-gradient(variables.$light-color, variables.$light-gradient-color);
+}
+
+.filter-light-color {
+    filter: variables.$light-color-filter;
+}
+.filter-dark-color {
+    filter: variables.$dark-color-filter;
 }
 
 .maskable {
@@ -202,6 +209,27 @@ ul li::before {
     opacity: 1;
 }
 
+.button, .button-lg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: variables.$border-radius;
+    padding: variables.$button-padding;
+    cursor: pointer;
+}
+.button-sm {
+    @extend .button;
+    padding: variables.$button-sm-padding;
+}
+
+.panel {
+    background-color: variables.$panel-background-color;
+    border-radius: variables.$border-radius;
+    padding: variables.$project-panel-padding;
+    transition: background-color variables.$animation-duration-fast ease-in-out;
+}
+
 .skeleton {
     // handle opacity here, otherwise the whole element will be transparent
     background: repeating-linear-gradient(
@@ -220,7 +248,6 @@ ul li::before {
     box-shadow: 0 0 0 0.1rem color.adjust(variables.$medium-color, $alpha:-0.85) inset;
     border-radius: variables.$border-radius * 2;
 }
-
 @keyframes skeleton {
     0% { background-position: 0% 50% }
     50% { background-position: 100% 50% }
@@ -240,7 +267,7 @@ ul li::before {
     .underline-feature-gradient:after {
         content: "";
         position: absolute;
-        bottom: 3px;
+        bottom: 0;
         left: 0;
         width: 100%;
 
@@ -248,7 +275,7 @@ ul li::before {
         border-left: 0;
         border-right: 0;
         border-top: 0;
-        border-width: 1px;
+        border-width: variables.$border-width;
         border-image-slice: 1;
 
         opacity: 0;
@@ -258,11 +285,75 @@ ul li::before {
     .underline-feature-gradient:hover:after {
         opacity: 1;
     }
+}
 
-    h1 .underline-feature-gradient:after {
-        border-width: 3px;
+.pseudo-border {
+    // Displays a feature gradient (short) border away from the element this class is applied to on hover
+
+    position: relative; // The pseudo element needs to be absolutely positioned relative to this element
+    z-index: 1; // New stacking context, so the psuedo element's z-index can be lowered
+
+    &::after {
+        // Make sure it can show up
+        content: "";
+
+        // Don't let it affect the pointer (mostly to prevent weird mouseover effects)
+        pointer-events: none;
+
+        // Expand the element to beyond the size of the contained element
+        position: absolute;
+        top: -(variables.$psuedo-border-outer-distance);
+        left: -(variables.$psuedo-border-outer-distance);
+        right: -(variables.$psuedo-border-outer-distance);
+        bottom: -(variables.$psuedo-border-outer-distance);
+        padding: variables.$psuedo-border-outer-distance;
+        z-index: -1;
+
+        // Perform a frame clip, so we only see the outer stripe (thanks: https://bennettfeely.com/clippy/)
+        clip-path: polygon(
+            0% 0%,
+            0% 100%,
+            variables.$psuedo-border-width 100%,
+            variables.$psuedo-border-width variables.$psuedo-border-width,
+            calc(100% - variables.$psuedo-border-width) variables.$psuedo-border-width,
+            calc(100% - variables.$psuedo-border-width) calc(100% - variables.$psuedo-border-width),
+            variables.$psuedo-border-width calc(100% - variables.$psuedo-border-width),
+            variables.$psuedo-border-width 100%,
+            100% 100%,
+            100% 0%
+        );
+
+        // Hide it by default (and set a consistent transition)
+        opacity: 0;
+        transition: variables.$transition-all-fast;
+
+        // Visual styling
+        border-radius: variables.$border-radius;
     }
-    h2 .underline-feature-gradient:after {
-        border-width: 2px;
+
+    // Show the psuedo-border on hover and when the `active` class is applied (and style for the situation!)
+    &:hover::after {
+        @extend .bg-gradient-feature;
+        opacity: 1;
+    }
+    &:not(:hover).active::after {
+        @extend .bg-gradient-light;
+        opacity: 1;
+    }
+
+    // Optionally update the clip-path to use a circular frame instead of the default rectangle
+    &.circular::after {
+        clip-path: circle(50%) !important;
+        mask-mode: alpha;
+        mask-composite: subtract;
+
+        // These percentages are basically magic, I dunno why they work
+        mask-image: radial-gradient(
+            circle at center,
+            transparent 0%,
+            transparent calc(65% - variables.$psuedo-border-width),
+            black calc(75% - variables.$psuedo-border-width),
+            black 100%
+        );
     }
 }

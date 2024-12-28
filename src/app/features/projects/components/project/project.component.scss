@@ -2,26 +2,18 @@
 @use "mixins";
 @use "sass:color";
 
-$panel-background-color: color.adjust(variables.$light-color, $alpha:-0.9);
-$panel-active-background-color: color.adjust(variables.$light-color, $alpha:-0.85);
 
-.panel {
-    background-color: $panel-background-color;
-    border-radius: variables.$border-radius;
-    padding: variables.$project-panel-padding;
-    transition: background-color variables.$animation-duration-fast ease-in-out;
-}
 .panel:hover {
-    background-color: $panel-active-background-color;
+    background-color: variables.$panel-active-background-color;
 }
 
 .panel.flash {
     animation: 1s ease-in-out 0s 5 flash;
 }
 @keyframes flash {
-    0% { background-color: $panel-background-color }
-    50% { background-color: $panel-active-background-color }
-    100% { background-color: $panel-background-color }
+    0% { background-color: variables.$panel-background-color }
+    50% { background-color: variables.$panel-active-background-color }
+    100% { background-color: variables.$panel-background-color }
 }
 
 .gallery-container {
@@ -30,15 +22,14 @@ $panel-active-background-color: color.adjust(variables.$light-color, $alpha:-0.8
 }
 
 .badge {
-    margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     margin-left: 0;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-}
-
-.technology {
-    background-color: variables.$medium-color;
-    color: variables.$dark-color;
+    padding: variables.$button-sm-padding;
+    border-radius: variables.$border-radius;
+    font-size: variables.$button-sm-content-size;
+    line-height: 1;
+    vertical-align: middle;
+    outline: 1px solid variables.$light-color;
+    outline-offset: -(variables.$border-width);
+    color: variables.$light-color;
 }

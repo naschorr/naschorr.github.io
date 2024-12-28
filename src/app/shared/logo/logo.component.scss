@@ -1,27 +1,35 @@
 @use "variables";
 
+
 :host {
     display: flex;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .logo-container {
     position: relative;
-}
-.logo-container .logo {
-    position: absolute;
-    top: 0;
     height: 100%;
     width: 100%;
-    mask-image: url("../../../assets/images/logos/avatar-circle.png");
-    mask-size: 100%;
-    z-index: 10;
-}
-.logo-container .bg {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9;
-    border-radius: calc(50% + 1px); // little bit extra to prevent issues where the border pokes through the edges
+
+    .logo {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        // This image is just an inlined version of src\assets\images\logos\avatar-circle.mini.svg to prevent pop in.
+        mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='188.976' height='5cm' viewBox='0 0 5 5'><g style='display:inline'><path d='m3.107 2.873.358-2.68a2.5 2.5 0 0 0-2.62 4.18L1.36.51l.583.085Z'/><path d='m1.908 2.22-.346 2.597A2.5 2.5 0 0 0 4.18.65l-.525 3.927-.584-.078z'/></g></svg>");
+        mask-size: 100%;
+        z-index: 10;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+        border-radius: calc(50% + 1px); // little bit extra to prevent issues where the border pokes through the edges
+    }
 }

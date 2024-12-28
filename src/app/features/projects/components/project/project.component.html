@@ -1,31 +1,14 @@
 <div    *ngIf="!!project"
-        class="panel color-medium mt-3"
+        class="panel color-light mt-3"
         [ngClass]="{'flash': flash}"
         (mouseover)="onProjectHover()"
         (click)="onProjectClick()">
     <div class="flex justify-between mb-2 items-center">
         <h2 [id]="project.id">
-            <a      *ngIf="!!project.url; else projectUrlExists"
-                    [href]="project.url"
-                    target="_blank"
-                    class="bg-gradient-feature-short clip-text underline-feature-gradient">
+            <span class="bg-gradient-light clip-text">
                 {{project.name}}
-            </a>
-            <ng-template #projectUrlExists>
-                <span class="bg-gradient-feature-short clip-text">
-                    {{project.name}}
-                </span>
-            </ng-template>
+            </span>
         </h2>
-        <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
-            <a      [href]="project.url"
-                    target="_blank"
-                    class="nav-container shrink-0 relative bottom-0.5"
-                    title="See it on GitHub!">
-                <div class="bg-gradient-feature-short github-mask maskable nav-item"></div>
-                <div class="bg-gradient-feature-short github-filled-mask maskable nav-item hoverable"></div>
-            </a>
-        </ng-container>
     </div>
 
     <div    *ngIf="!!project.images"
@@ -41,21 +24,37 @@
 
     <div    *ngIf="project.funFacts && project.funFacts.length > 0"
             class="mb-3">
-        <div>Fun Stats:</div>
+        <div>Fun stats:</div>
         <ul     *ngFor="let fact of project.funFacts; index as f;"
                 class="list-inside">
             <li>{{fact}}</li>
         </ul>
     </div>
 
-    <div class="">
-        <div>Tech Used:</div>
-        <ng-container *ngFor="let technology of project.technologies; index as t;">
-            <div    class="badge technology bg-gradient-medium inline-block select-none"
-                    [ngClass]="{
-                        'mr-0': t == project.technologies.length - 1,
-                        'mr-1': t < project.technologies.length - 1
-                    }">{{technology}}</div>
+    <div class="flex flex-col md:flex-row">
+        <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
+            <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
+                <div>{{repoLinkAttentionGrabber}}</div>
+                <a      [href]="project.url"
+                        target="_blank">
+                    <image-button   buttonFlavor="button-sm"
+                                    contentHeight="1rem"
+                                    imagePath="assets/images/icons/github-filled.png"
+                                    imageAltText="GitHub logo"
+                                    text="GitHub">
+                    </image-button>
+                </a>
+            </div>
         </ng-container>
+        <div class="grow">
+            <div>Tech used:</div>
+            <ng-container *ngFor="let technology of project.technologies; index as t;">
+                <div    class="badge inline-block select-none"
+                        [ngClass]="{
+                            'mr-0': t == project.technologies.length - 1,
+                            'mr-1': t < project.technologies.length - 1
+                        }">{{technology}}</div>
+            </ng-container>
+        </div>
     </div>
 </div>
