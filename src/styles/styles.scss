@@ -297,6 +297,9 @@ ul li::before {
         // Make sure it can show up
         content: "";
 
+        // Don't let it affect the pointer (mostly to prevent weird mouseover effects)
+        pointer-events: none;
+
         // Expand the element to beyond the size of the contained element
         position: absolute;
         top: -(variables.$psuedo-border-outer-distance);
