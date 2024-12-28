@@ -1,1 +1,0 @@
-import{ia as t,ja as o,ka as r}from"./chunk-K355HK3T.js";var i=[{path:"",pathMatch:"full",loadChildren:()=>import("./chunk-5VF3QA7Z.js")},{path:"projects",loadChildren:()=>import("./chunk-CWWCLEXR.js")},{path:"pid",loadChildren:()=>import("./chunk-D2QI3DZ5.js")},{path:"**",redirectTo:""}];var e=!0,p=[r()];e&&p.push(o());var d={providers:[t(i,...p)]};export{e as a,d as b};
