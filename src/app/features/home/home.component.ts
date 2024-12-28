@@ -140,7 +140,7 @@ export class HomeComponent implements OnInit {
     return taglines[randomIndex];
   }
 
-  handleLinkFlavorMouseOver(linkFlavor: LinkFlavor) {
+  onLinkMouseOver(linkFlavor: LinkFlavor) {
     if (!this._activeLinkMouseoverActive) {
       this.tagline = this.getRandomTagline(linkFlavor);
       this.activeLinkFlavor = linkFlavor;
@@ -150,7 +150,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  handleLinkFlavorMouseExit() {
+  onLinkMouseExit() {
     if (this._activeLinkMouseoverActive) {
       this.tagline = this.DEFAULT_TAGLINE;
       this.activeLinkFlavor = null;

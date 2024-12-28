@@ -24,8 +24,8 @@
                 <a      href="https://github.com/naschorr"
                         target="_blank"
                         class="w-full"
-                        (mouseover)="handleLinkFlavorMouseOver(linkFlavorEnum.CODE)"
-                        (mouseleave)="handleLinkFlavorMouseExit()">
+                        (mouseover)="onLinkMouseOver(linkFlavorEnum.CODE)"
+                        (mouseleave)="onLinkMouseExit()">
                     <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.CODE ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/github-filled.png"
@@ -36,8 +36,8 @@
 
                 <a      routerLink="/projects"
                         class="w-full"
-                        (mouseover)="handleLinkFlavorMouseOver(linkFlavorEnum.PORTFOLIO)"
-                        (mouseleave)="handleLinkFlavorMouseExit()">
+                        (mouseover)="onLinkMouseOver(linkFlavorEnum.PORTFOLIO)"
+                        (mouseleave)="onLinkMouseExit()">
                     <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PORTFOLIO ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/flask-filled.png"
@@ -49,8 +49,8 @@
                 <a      href="https://www.printables.com/@naschorr_134538"
                         target="_blank"
                         class="w-full"
-                        (mouseover)="handleLinkFlavorMouseOver(linkFlavorEnum.PRINT)"
-                        (mouseleave)="handleLinkFlavorMouseExit()">
+                        (mouseover)="onLinkMouseOver(linkFlavorEnum.PRINT)"
+                        (mouseleave)="onLinkMouseExit()">
                     <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PRINT ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/3d-printer-filled.png"
