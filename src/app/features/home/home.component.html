@@ -1,16 +1,16 @@
 <div class="bg-gradient-dark min-h-screen w-screen flex flex-col justify-center px-2 md:px-10">
-    <div class="md:container mx-auto">
+    <div class="md:container mx-auto my-2 md:my-10">
 
-        <div class="flex flex-col md:flex-row justify-center items-center my-5 md:my-10">
+        <div class="flex flex-col md:flex-row justify-center items-center mb-5 md:mb-10">
             <div class="md:mr-5 logo-container">
                 <logo></logo>
             </div>
             <div class="flex flex-col mt-5 md:mt-0">
-                <div class="name-container">
+                <div class="flex justify-center md:justify-normal name-container">
                     <span class="name">Nick</span>
                 </div>
-                <div class="flex flex-row">
-                    <span class="tagline">
+                <div class="flex flex-row md:w-0">
+                    <span class="flex justify-center md:justify-normal tagline">
                         <text-swapper [swapOptions]="taglines" [activeOption]="tagline"></text-swapper>
                     </span>
                 </div>
