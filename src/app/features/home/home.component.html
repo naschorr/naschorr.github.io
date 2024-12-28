@@ -10,9 +10,9 @@
                     <span class="name">Nick</span>
                 </div>
                 <div class="flex flex-row">
-                    <span class="tagline">makes <span class="noun">
-                        <text-swapper [swapOptions]="actionNouns" [activeOption]="actionNoun"></text-swapper>
-                    </span></span>
+                    <span class="tagline">
+                        <text-swapper [swapOptions]="taglines" [activeOption]="tagline"></text-swapper>
+                    </span>
                 </div>
             </div>
         </div>
@@ -24,9 +24,9 @@
                 <a      href="https://github.com/naschorr"
                         target="_blank"
                         class="w-full"
-                        (mouseover)="actionNoun = 'code'; stopActionNounCycling();"
-                        (mouseleave)="resetActionNoun()">
-                    <image-button   [containerClasses]="actionNoun === 'code' ? ['active'] : []"
+                        (mouseover)="handleLinkFlavorMouseOver(linkFlavorEnum.CODE)"
+                        (mouseleave)="handleLinkFlavorMouseExit()">
+                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.CODE ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/github-filled.png"
                                     imageAltText="GitHub logo"
@@ -36,9 +36,9 @@
 
                 <a      routerLink="/projects"
                         class="w-full"
-                        (mouseover)="actionNoun = 'projects'; stopActionNounCycling();"
-                        (mouseleave)="resetActionNoun()">
-                    <image-button   [containerClasses]="actionNoun === 'projects' ? ['active'] : []"
+                        (mouseover)="handleLinkFlavorMouseOver(linkFlavorEnum.PORTFOLIO)"
+                        (mouseleave)="handleLinkFlavorMouseExit()">
+                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PORTFOLIO ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/flask-filled.png"
                                     imageAltText="Filled in image of a flask used in scientific experiments"
@@ -49,9 +49,9 @@
                 <a      href="https://www.printables.com/@naschorr_134538"
                         target="_blank"
                         class="w-full"
-                        (mouseover)="actionNoun = 'prints'; stopActionNounCycling();"
-                        (mouseleave)="resetActionNoun()">
-                    <image-button   [containerClasses]="actionNoun === 'prints' ? ['active'] : []"
+                        (mouseover)="handleLinkFlavorMouseOver(linkFlavorEnum.PRINT)"
+                        (mouseleave)="handleLinkFlavorMouseExit()">
+                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PRINT ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/3d-printer-filled.png"
                                     imageAltText="Filled in image of a 3d printer"

@@ -46,7 +46,7 @@ $config: (
             position: relative;
             left: map-get($config, $key, "name-left-offset");
             color: variables.$light-text-color;
-        
+
             .name {
                 font-style: normal;
                 font-weight: 900;
@@ -62,11 +62,6 @@ $config: (
             font-size: map-get($config, $key, "tagline");;
             font-family: variables.$font-family, sans-serif;
             color: variables.$light-text-color;
-        
-            .noun {
-                font-weight: bold;
-                font-style: italic;
-            }
         }
     }
 }

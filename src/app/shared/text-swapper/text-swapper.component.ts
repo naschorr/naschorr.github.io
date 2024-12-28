@@ -15,7 +15,7 @@ export class TextSwapperComponent implements AfterViewInit {
   public activeOption: string = "";
 
   private _changeDetectorRef: ChangeDetectorRef;
-  private _widthPixels: number = 75; // Guess to get started
+  private _widthPixels: number = 150; // Guess to get started
 
   // Lifecycle
 

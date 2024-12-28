@@ -15,14 +15,20 @@ import { LinkFlavor } from './enums/link-flavor.enum';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  private _taglineMap!: {};
-  private _taglineCycleInterval!: ReturnType<typeof setInterval>;
+  private readonly TAGLINE_FLAVOR_COUNT!: number;
+  private readonly TAGLINE_MAX_COUNT!: number;
   private readonly DEFAULT_TAGLINE = "makes stuff";
-  private readonly NOUN_CYCLE_TIME_MS = 1500;
+  private readonly TAGLINE_CYCLE_TIME_MS = 2000;
+  private _taglineMap!: { [key in string]: string[] };
+  private _taglineCycleInterval!: ReturnType<typeof setInterval>;
+  private _tagline: string = this.DEFAULT_TAGLINE;
+  private _activeLinkFlavor: LinkFlavor | null = null;
+  private _activeLinkMouseoverActive: boolean = false;
 
   // Lifecycle
 
   constructor() {
+    // Configure the tagline map
     this._taglineMap = {
       [LinkFlavor.CODE]: [
         "writes code",
@@ -40,55 +46,116 @@ export class HomeComponent implements OnInit {
         "designs devices"
       ]
     }
+
+    // Get the total number of tagline flavors
+    this.TAGLINE_FLAVOR_COUNT = Object.keys(this._taglineMap).length;
+
+    // Get the total number of taglines avaiable
+    let taglineMaxCount = 0;
+    Object.values(this._taglineMap).forEach((strings) => {
+      taglineMaxCount += strings.length;
+    });
+    this.TAGLINE_MAX_COUNT = taglineMaxCount;
   }
 
   ngOnInit(): void {
-    let taglineIndex = 1;  // Start at 1 since it's already set to the default tagline
+    let taglineIndex = 0;  // Show the default tagline first
+    let defaultTaglineShown = true;
     this._taglineCycleInterval = setInterval(() => {
-      this.actionNoun = this.actionNouns[nounIndex];
-      nounIndex = (nounIndex + 1) % this.actionNouns.length;
-    }, this.NOUN_CYCLE_TIME_MS);
+      // After a cycle of one tagline from each flavor, reset to the default tagline
+      if (taglineIndex % this.TAGLINE_FLAVOR_COUNT === 0 && !defaultTaglineShown) {
+        this.tagline = this.DEFAULT_TAGLINE;
+        this.activeLinkFlavor = null;
+
+        defaultTaglineShown = true;
+        return;
+      }
+
+      // Reset the default tagline flag
+      if (defaultTaglineShown) {
+        defaultTaglineShown = false
+      }
+
+      // Get and then set the tagline from the map
+      const linkFlavor = Object.keys(this._taglineMap)[taglineIndex % this.TAGLINE_FLAVOR_COUNT];
+      const index = Math.floor(taglineIndex / this.TAGLINE_FLAVOR_COUNT);
+      this.tagline = this._taglineMap[linkFlavor][index];
+      this.activeLinkFlavor = linkFlavor as LinkFlavor;
+
+      // Increment the index for future lookups
+      taglineIndex = (taglineIndex + 1) % this.taglineMaxCount;
+    }, this.TAGLINE_CYCLE_TIME_MS);
   }
 
-  // Properties
+  // Get/Set
 
-  get actionNoun(): string {
-    return this._actionNoun;
+  get linkFlavorEnum() {
+    return LinkFlavor;
   }
 
-  set actionNoun(value: string) {
-    if (this.actionNouns.includes(value)) {
-      this._actionNoun = value;
+  get taglineMaxCount(): number {
+    return this.TAGLINE_MAX_COUNT;
+  }
+
+  get tagline(): string {
+    return this._tagline;
+  }
+
+  set tagline(tagline: string) {
+    this._tagline = tagline;
+  }
+
+  get taglines(): string[] {
+    const taglines = [];
+
+    taglines.push(this.DEFAULT_TAGLINE);
+    for (let i = 0; i < this.TAGLINE_MAX_COUNT; i++) {
+      taglines.push(this.getTagline(i));
     }
+
+    return taglines;
+  }
+
+  get activeLinkFlavor(): LinkFlavor | null {
+    return this._activeLinkFlavor;
+  }
+
+  set activeLinkFlavor(linkFlavor: LinkFlavor | null) {
+    this._activeLinkFlavor = linkFlavor;
   }
 
   // Methods
 
   getTagline(index: number): string {
-    const keys = Object.keys(this._taglineMap);
-    if (index % keys.length + 1 === 0) {
-      return this.DEFAULT_TAGLINE;
-    }
-
-    const linkFlavor = keys[index % keys.length];
-    const taglineIndex = Math.floor(index / keys.length);
+    const linkFlavor = Object.keys(this._taglineMap)[index % this.TAGLINE_FLAVOR_COUNT];
+    const taglineIndex = Math.floor(index / this.TAGLINE_FLAVOR_COUNT);
 
     return this._taglineMap[linkFlavor][taglineIndex];
+  }
 
-    count %= this._taglineMap[flavor].length + 1;
+  getRandomTagline(linkFlavor: LinkFlavor): string {
+    const taglines = this._taglineMap[linkFlavor];
+    const randomIndex = Math.floor(Math.random() * taglines.length);
 
-    if (count === 0) {
-      return this.DEFAULT_TAGLINE;
+    return taglines[randomIndex];
+  }
+
+  handleLinkFlavorMouseOver(linkFlavor: LinkFlavor) {
+    if (!this._activeLinkMouseoverActive) {
+      this.tagline = this.getRandomTagline(linkFlavor);
+      this.activeLinkFlavor = linkFlavor;
+      clearInterval(this._taglineCycleInterval);
+
+      this._activeLinkMouseoverActive = true;
     }
-
-    return this._taglineMap[flavor][count];
   }
 
-  resetTagline() {
-    this.actionNoun = this.DEFAULT_NOUN;
-  }
+  handleLinkFlavorMouseExit() {
+    if (this._activeLinkMouseoverActive) {
+      this.tagline = this.DEFAULT_TAGLINE;
+      this.activeLinkFlavor = null;
 
-  stopActionNounCycling() {
-    clearInterval(this._taglineCycleInterval);
+      this._activeLinkMouseoverActive = false;
+    }
   }
 }
