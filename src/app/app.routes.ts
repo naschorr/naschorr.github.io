@@ -8,7 +8,7 @@ export const routes: Routes = [
         loadChildren: () => import("./features/home/home.routes")
     },
     {
-        path: "projects",
+        path: "portfolio",
         loadChildren: () => import("./features/projects/projects.routes")
     },
     {
