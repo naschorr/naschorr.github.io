@@ -173,5 +173,63 @@
             "Python",
             "Pydantic"
         ]
+    },
+    {
+        "id": "nixie-clock-case",
+        "name": "Minimal Nixie Tube Clock Case",
+        "description": [
+            "A small UK based company sells this excellent <a href='https://www.pvelectronics.co.uk/index.php?main_page=product_info&cPath=21&products_id=71' target='_blank'>DIY nixie tube clock kit</a> based around the IN-14 nixie tube. The problem is that their official case options don't really fit my vibe, so I decided to design my own!",
+            "This is a clean, minimal case that's designed for really easy printing, minimal post-processing and easy assembly. As a bonus, it has extra space for the official <a href='https://www.pvelectronics.co.uk/index.php?main_page=product_info&cPath=9&products_id=318' target='_blank'> Wifi NTP sync module</a> that the company offers and storage slots for the nixie tube quick change PCBs that the clock uses."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/nixie-clock/case_front.avif",
+                "description": [
+                    "The clock installed into the case."
+                ],
+                "altText": "A photo of the case from the front, the clock is on and is displaying random numbers."
+            },
+            {
+                "url": "assets/images/projects/nixie-clock/case_rear.avif",
+                "description": [
+                    "The clock case from the rear, with the Wifi NTP sync module installed and connected."
+                ],
+                "altText": "A photo of the case from the rear, with the Wifi NTP sync module installed."
+            },
+            {
+                "url": "assets/images/projects/nixie-clock/parts_needed.avif",
+                "description": [
+                    "The parts needed to assemble the case.",
+                    "The case_top part uses M3 threaded inserts, and weight is added using 24 lead fishing weights and hot glue.",
+                    "The case_bottom part uses 6mm countersunk M3 screws to secure the QTC PCBs in place, and 12mm countersunk M3 screws to connect the top and bottom parts together. Small 1/2 inch rubber feet have been added to keep the clock from sliding around."
+                ],
+                "altText": "A top-down photo of the printed parts and store-bought parts needed to build this clock case."
+            },
+            {
+                "url": "assets/images/projects/nixie-clock/case_bottom_inside.avif",
+                "description": [
+                    "The assembled bottom of the case, showing the QTC PCBs installed and secured."
+                ],
+                "altText": "A photo of the inside of the bottom of the clock case, with QTC PCBs installed."
+            },
+            {
+                "url": "assets/images/projects/nixie-clock/clock_installation.avif",
+                "description": [
+                    "Here's the clock and Wifi NTP sync module installed into the top of the case."
+                ],
+                "altText": "A photo of the inside of the case, with the clock and Wifi NTP sync module installed."
+            },
+            {
+                "url": "assets/images/projects/nixie-clock/case_bottom.avif",
+                "description": [
+                    "The bottom of the assembled clock case."
+                ],
+                "altText": "A photo of the bottom of the assembled clock case."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion 360"
+        ]
     }
 ]

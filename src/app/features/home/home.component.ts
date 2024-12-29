@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
         "writes docs"
       ],
       [LinkFlavor.PORTFOLIO]: [
-        "designs projects",
+        "develops projects",
         "solves problems",
         "builds solutions"
       ],
