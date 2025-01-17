@@ -8,7 +8,7 @@
     <img    #fullResImage
             *ngIf="canLoadFullResImage"
             class="absolute top-0 bottom-0 my-auto"
-            [ngStyle]="{'opacity': isFullResImageLoaded ? 1 : 0}"
+            [ngStyle]="{'opacity': image.fullResLoaded ? 1 : 0}"
             (load)="onFullResImageLoaded()"
             [src]="image.fullResUrl"
             [alt]="image.altText" />

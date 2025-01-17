@@ -8,7 +8,6 @@ import { ImageTextual } from '../../../../shared/models/image-textual.model';
 })
 export class ImageDisplayComponent implements AfterViewInit {
   private _image!: ImageTextual;
-  private _isFullResImageLoaded: boolean = false;
   private _imageWidth: number = 0;
   private _imageHeight: number = 0;
 
@@ -38,15 +37,10 @@ export class ImageDisplayComponent implements AfterViewInit {
   @Input()
   set image(value: ImageTextual) {
     this._image = value;
-    this._isFullResImageLoaded = false;
   }
 
   get image(): ImageTextual {
     return this._image;
-  }
-
-  get isFullResImageLoaded(): boolean {
-    return this._isFullResImageLoaded;
   }
 
   get imageWidth(): number {
@@ -62,7 +56,7 @@ export class ImageDisplayComponent implements AfterViewInit {
   getActualHeightOfImagePixels(): number {
     const thumbnailHeight = this.thumbnailImageView.nativeElement.offsetHeight;
     const fullResHeight = this.fullResImageView?.nativeElement?.offsetHeight ?? 0;
-    
+
     return Math.max(thumbnailHeight, fullResHeight);
   }
 
@@ -77,7 +71,7 @@ export class ImageDisplayComponent implements AfterViewInit {
   }
 
   onFullResImageLoaded() {
-    this._isFullResImageLoaded = true;
+    this.image.fullResLoaded = true;
     this.fullResImageLoadedEvent.emit();
 
     this.recalculateImageHeight();
