@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       [LinkFlavor.CODE]: [
         "writes code",
         "designs tools",
-        "writes docs"
+        "reads the docs"
       ],
       [LinkFlavor.PORTFOLIO]: [
         "develops projects",
@@ -41,9 +41,9 @@ export class HomeComponent implements OnInit {
         "builds solutions"
       ],
       [LinkFlavor.PRINT]: [
-        "makes prints",
-        "creates models",
-        "designs devices"
+        "designs solutions",
+        "makes models",
+        "prints prototypes"
       ]
     }
 
