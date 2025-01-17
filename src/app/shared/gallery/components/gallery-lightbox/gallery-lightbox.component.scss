@@ -98,6 +98,8 @@ $close-margin: 2rem;
 .text-panel {
     background-color: variables.$dark-trans-color;
     border-radius: variables.$border-radius;
+    padding: variables.$button-sm-padding;
+    line-height: 1;
 }
 
 // Lower nav image styles

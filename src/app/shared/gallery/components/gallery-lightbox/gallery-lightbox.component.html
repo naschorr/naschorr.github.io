@@ -8,7 +8,7 @@
                 (click)="onPrevImageClick()"
                 title="Previous Image">
             <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel text-end absolute color-light bottom-0 right-0 m-2 leading-none px-3 py-2">
+            <div class="text-panel text-end absolute color-light bottom-0 right-0 m-2">
                 <span class="hidden xl:block">Previous</span>
                 <span class="block xl:hidden">Prev</span>
             </div>
@@ -27,7 +27,7 @@
                 (click)="onNextImageClick()"
                 title="Next Image">
             <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel absolute color-light bottom-0 left-0 m-2 leading-none px-3 py-2">
+            <div class="text-panel absolute color-light bottom-0 left-0 m-2">
                 Next
             </div>
         </div>
@@ -43,7 +43,7 @@
                 (click)="onPrevImageClick()"
                 title="Previous Image">
             <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel text-end absolute color-light bottom-0 left-0 m-2 leading-none px-3 py-2">
+            <div class="text-panel text-end absolute color-light bottom-0 left-0 m-2">
                 Previous
             </div>
         </div>
@@ -51,7 +51,7 @@
                 (click)="onNextImageClick()"
                 title="Next Image">
             <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel absolute color-light bottom-0 right-0 m-2 leading-none px-3 py-2">
+            <div class="text-panel absolute color-light bottom-0 right-0 m-2">
                 Next
             </div>
         </div>
