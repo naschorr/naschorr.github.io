@@ -233,19 +233,19 @@ ul li::before {
 .skeleton {
     // handle opacity here, otherwise the whole element will be transparent
     background: repeating-linear-gradient(
-        -45deg,
-        color.adjust(variables.$medium-color, $alpha:-0.85),
-        color.adjust(variables.$medium-color, $alpha:-0.85) 2.5%,
-        color.adjust(variables.$medium-color, $alpha:-0.5) 22.5%,
-        color.adjust(variables.$medium-color, $alpha:-0.5) 27.5%,
-        color.adjust(variables.$medium-color, $alpha:-0.85) 47.5%,
-        color.adjust(variables.$medium-color, $alpha:-0.85) 50%
+        45deg,
+        color.adjust(variables.$light-color, $alpha:-0.9),
+        color.adjust(variables.$light-color, $alpha:-0.9) 2.5%,
+        color.adjust(variables.$light-color, $alpha:-0.45) 22.5%,
+        color.adjust(variables.$light-color, $alpha:-0.45) 27.5%,
+        color.adjust(variables.$light-color, $alpha:-0.9) 47.5%,
+        color.adjust(variables.$light-color, $alpha:-0.9) 50%
     );
     background-size: 200% 200%;
 
     animation: skeleton 5s ease-in-out infinite;
 
-    box-shadow: 0 0 0 0.1rem color.adjust(variables.$medium-color, $alpha:-0.85) inset;
+    box-shadow: 0 0 0 0.1rem color.adjust(variables.$light-color, $alpha:-0.9) inset;
     border-radius: variables.$border-radius * 2;
 }
 @keyframes skeleton {
