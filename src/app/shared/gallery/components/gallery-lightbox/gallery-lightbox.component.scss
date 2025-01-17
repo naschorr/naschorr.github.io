@@ -52,6 +52,11 @@ $close-margin: 2rem;
     height: calc(100% - 2 * ($close-size + 2 * $close-margin));
 }
 
+.description-container {
+    background-color: variables.$dark-trans-color;
+    border-radius: variables.$border-radius;
+}
+
 .side-nav-image {
     width: gallery_variables.$side-nav-image-width;
     height: gallery_variables.$side-nav-image-height;
@@ -93,6 +98,8 @@ $close-margin: 2rem;
 .text-panel {
     background-color: variables.$dark-trans-color;
     border-radius: variables.$border-radius;
+    padding: variables.$button-sm-padding;
+    line-height: 1;
 }
 
 // Lower nav image styles

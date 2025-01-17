@@ -24,6 +24,10 @@ export class GalleryInlineComponent implements OnInit {
 
   // Methods
 
+  onThumbnailImageLoaded(image: ImageTextual) {
+    image.thumbnailLoaded = true;
+  }
+
   onImageClick(image: ImageTextual, index: number) {
     this._galleryManagerService.openLightbox(image, index, this.images, this._viewContainerRef);
   }

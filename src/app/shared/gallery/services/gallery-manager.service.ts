@@ -98,7 +98,6 @@ export class GalleryManagerService {
     this._activeImageIndex = null;
     this._setActiveImage(null);
 
-
     // Destroy the lightbox modal
     this._galleryComponent?.destroy();
     this._galleryComponent = null;
