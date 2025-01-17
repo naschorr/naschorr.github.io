@@ -19,7 +19,7 @@ html {
     line-height: 1.4;
 }
 
-p {
+p:not(:last-child) {
     margin-bottom: 0.375rem;    // mb-1.5
 }
 

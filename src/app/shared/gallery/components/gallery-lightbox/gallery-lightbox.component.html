@@ -16,9 +16,9 @@
         <div class="active-image flex flex-col grow justify-center mx-3">
             <!-- Main image and it's description -->
             <image-display *ngIf="!!activeImage" [image]="activeImage" (fullResImageLoadedEvent)="onActiveImageLoaded()" [canLoadFullResImage]=true></image-display>
-            <div class="description-container color-light container mx-auto mt-3 lg:mt-6">
+            <div class="description-container color-light container mx-auto mt-3 lg:mt-6 px-5 py-3">
                 <ng-container *ngFor="let description of activeImage?.description">
-                    <p class="text-center mb-2">{{ description }}</p>
+                    <p>{{ description }}</p>
                 </ng-container>
             </div>
         </div>
