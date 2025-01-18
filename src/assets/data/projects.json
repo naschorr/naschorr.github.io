@@ -231,5 +231,49 @@
         "technologies": [
             "Autodesk Fusion 360"
         ]
+    },
+    {
+        "id": "mtb-inflator-carrier",
+        "name": "CO2 Inflator Carrier for Mountain Bike Steer Tubes",
+        "description": [
+            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/'>Bontrager Air Rush Elite inflator</a> inside your <a href='https://www.sram.com/en/rockshox/series/recon'>RockShox Recon</a> steer tube (or potentially other forks with a 1.5\" tapered steer tube)!",
+            "Mountain bikes don't usually have a ton of storage space on them, so I designed this carrier to fit inside the normally wasted space of a bike's steer tube. As a bonus, this assembly holds the CO2 cartridge and inflator in place using magnets, so they're easy to reach if you need them in a hurry."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier/in_use.avif",
+                "description": [
+                    "The inflator carrier in use, with just the handle poking out of the bottom of the mountain bike's steer tube."
+                ],
+                "altText": "A photo of the inflator carrier in use, with just the handle poking out of the bottom of the mountain bike's steer tube."
+            },
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier/assembly.avif",
+                "description": [
+                    "A render of the completed assembly. On the left is the Bontrager inflator, clipped into it's holder. The holder is screwed onto the CO2 cartridge. The CO2 cartridge is magnetically attached to the CO2 cartridge mount, which is screwed into the compression plug assembly.",
+                    "The total package is slim, easy to assemble, and easy to print."
+                ],
+                "altText": "A photo of the entire CO2 inflator assembly with it's magnetic mount and compression plug for the steer tube."
+            },
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif",
+                "description": [
+                    "A close up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
+                ],
+                "altText": "A close photo up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
+            },
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif",
+                "description": [
+                    "A close up of the CO2 cartridge mount and compression plug assembly.",
+                    "During assembly, the compression plug's screw is tightened which brings two wedges together. This causes the wedges to expand, and drive the o-rings into the inside of the steer tube, locking it in place."
+                ],
+                "altText": "A close up of the CO2 cartridge mount and compression plug assembly."
+            }
+        ],
+        "url": "https://www.printables.com/model/1153275",
+        "technologies": [
+            "Autodesk Fusion 360"
+        ]
     }
 ]

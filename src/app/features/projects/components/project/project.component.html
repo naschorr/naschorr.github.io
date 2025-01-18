@@ -32,6 +32,7 @@
     </div>
 
     <div class="flex flex-col md:flex-row">
+
         <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
             <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
                 <div>{{repoLinkAttentionGrabber}}</div>
@@ -46,6 +47,21 @@
                 </a>
             </div>
         </ng-container>
+        <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('printables')">
+            <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
+                <div>{{repoLinkAttentionGrabber}}</div>
+                <a      [href]="project.url"
+                        target="_blank">
+                    <image-button   buttonFlavor="button-sm"
+                                    contentHeight="1rem"
+                                    imagePath="assets/images/icons/printables.svg"
+                                    imageAltText="Printables logo"
+                                    text="Printables">
+                    </image-button>
+                </a>
+            </div>
+        </ng-container>
+
         <div class="grow">
             <div>Tech used:</div>
             <ng-container *ngFor="let technology of project.technologies; index as t;">
