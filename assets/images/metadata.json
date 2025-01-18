@@ -11,6 +11,18 @@
             "heightPx": 150
         }
     },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
+            "widthPx": 1920,
+            "heightPx": 1080
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
+            "widthPx": 267,
+            "heightPx": 150
+        }
+    },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif": {
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif",
@@ -21,18 +33,6 @@
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.thumbnail.avif",
             "widthPx": 190,
             "heightPx": 150
-        }
-    },
-    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
-            "widthPx": 267,
-            "heightPx": 150
-        },
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
-            "widthPx": 1920,
-            "heightPx": 1080
         }
     },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
@@ -47,18 +47,6 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
-            "widthPx": 2090,
-            "heightPx": 1200
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
-            "widthPx": 261,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
@@ -68,6 +56,18 @@
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
             "widthPx": 176,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
+            "widthPx": 2090,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
+            "widthPx": 261,
             "heightPx": 150
         }
     },
@@ -144,26 +144,14 @@
         }
     },
     "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.thumbnail.avif",
-            "widthPx": 131,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif",
             "widthPx": 925,
             "heightPx": 1060
-        }
-    },
-    "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif",
-            "widthPx": 875,
-            "heightPx": 1052
         },
         "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.thumbnail.avif",
-            "widthPx": 125,
+            "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.thumbnail.avif",
+            "widthPx": 131,
             "heightPx": 150
         }
     },
@@ -179,15 +167,39 @@
             "heightPx": 150
         }
     },
+    "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif",
+            "widthPx": 875,
+            "heightPx": 1052
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.thumbnail.avif",
+            "widthPx": 125,
+            "heightPx": 150
+        }
+    },
     "assets/images/projects/nixie-clock/case_bottom.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/nixie-clock/case_bottom.avif",
+            "widthPx": 2044,
+            "heightPx": 1200
+        },
         "thumbnail": {
             "url": "assets/images/projects/nixie-clock/case_bottom.thumbnail.avif",
             "widthPx": 256,
             "heightPx": 150
+        }
+    },
+    "assets/images/projects/nixie-clock/case_bottom_inside.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/nixie-clock/case_bottom_inside.thumbnail.avif",
+            "widthPx": 267,
+            "heightPx": 150
         },
         "fullRes": {
-            "url": "assets/images/projects/nixie-clock/case_bottom.avif",
-            "widthPx": 2044,
+            "url": "assets/images/projects/nixie-clock/case_bottom_inside.avif",
+            "widthPx": 2138,
             "heightPx": 1200
         }
     },
@@ -203,40 +215,28 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/nixie-clock/case_bottom_inside.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/nixie-clock/case_bottom_inside.avif",
-            "widthPx": 2138,
-            "heightPx": 1200
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/nixie-clock/case_bottom_inside.thumbnail.avif",
-            "widthPx": 267,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/nixie-clock/case_rear.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/nixie-clock/case_rear.thumbnail.avif",
-            "widthPx": 264,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/nixie-clock/case_rear.avif",
             "widthPx": 2114,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/nixie-clock/case_rear.thumbnail.avif",
+            "widthPx": 264,
+            "heightPx": 150
         }
     },
     "assets/images/projects/nixie-clock/clock_installation.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/nixie-clock/clock_installation.thumbnail.avif",
-            "widthPx": 321,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/nixie-clock/clock_installation.avif",
             "widthPx": 2567,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/nixie-clock/clock_installation.thumbnail.avif",
+            "widthPx": 321,
+            "heightPx": 150
         }
     },
     "assets/images/projects/nixie-clock/parts_needed.avif": {
