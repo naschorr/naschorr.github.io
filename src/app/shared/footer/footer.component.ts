@@ -15,10 +15,19 @@ export class FooterComponent {
   public containerClasses: string = "color-light"
 
   private _currentYear: number = new Date().getFullYear();
+  private _infoExpanded: boolean = false;
 
   // Getters
 
   get currentYear(): number {
     return this._currentYear;
+  }
+
+  get infoExpanded(): boolean {
+    return this._infoExpanded;
+  }
+
+  set infoExpanded(value: boolean) {
+    this._infoExpanded = value;
   }
 }
