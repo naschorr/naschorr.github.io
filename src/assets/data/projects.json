@@ -8,7 +8,7 @@
         ],
         "url": "https://github.com/naschorr/hawking",
         "funFacts": [
-            "More than 2.8 million messages spoken",
+            "More than 3 million messages spoken",
             "Active in more than 2,800 servers"
         ],
         "technologies": [
@@ -39,7 +39,9 @@
             },
             {
                 "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
-                "description": ["A screenshot of the game's UI. I tried to make the UI for Deep Rock Galactic Save Syncer feel like it came from within the game itself."],
+                "description": [
+                    "A screenshot of the game's UI. I tried to make the UI for Deep Rock Galactic Save Syncer feel like it came from within the game itself."
+                ],
                 "altText": "A screenshot of the Deep Rock Galactic UI, used as inspiration."
             },
             {
