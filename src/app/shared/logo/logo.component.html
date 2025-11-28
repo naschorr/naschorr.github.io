@@ -1,5 +1,7 @@
 <div    class="logo-container {{ containerClasses }}">
-    <div class="logo {{ logoClasses }}"></div>
-    <div    *ngIf="!hideBg"
-            class="bg {{ bgClasses }}"></div>
+  <div class="logo {{ logoClasses }}"></div>
+  @if (!hideBg) {
+    <div
+    class="bg {{ bgClasses }}"></div>
+  }
 </div>

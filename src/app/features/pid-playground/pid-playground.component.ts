@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 import type { EChartsOption, SeriesOption } from 'echarts';
@@ -12,10 +12,9 @@ import { PIDContainer } from './models/pid-container'
     templateUrl: './pid-playground.component.html',
     styleUrl: './pid-playground.component.scss',
     imports: [
-        CommonModule,
-        RouterOutlet,
-        NgxEchartsDirective
-    ],
+    RouterOutlet,
+    NgxEchartsDirective
+],
     providers: [
         provideEcharts()
     ]

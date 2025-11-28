@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'logo',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './logo.component.html',
     styleUrl: './logo.component.scss'
 })

@@ -1,76 +1,78 @@
-<div    *ngIf="!!project"
-        class="panel color-light mt-3"
-        [ngClass]="{'flash': flash}"
-        (mouseover)="onProjectHover()"
-        (click)="onProjectClick()">
+@if (!!project) {
+  <div
+    class="panel color-light mt-3"
+    [ngClass]="{'flash': flash}"
+    (mouseover)="onProjectHover()"
+    (click)="onProjectClick()">
     <div class="flex justify-between mb-2 items-center">
-        <h2 [id]="project.id">
-            <span class="bg-gradient-light clip-text">
-                {{project.name}}
-            </span>
-        </h2>
+      <h2 [id]="project.id">
+        <span class="bg-gradient-light clip-text">
+          {{project.name}}
+        </span>
+      </h2>
     </div>
-
-    <div    *ngIf="!!project.images"
-            class="gallery-container mb-3">
+    @if (!!project.images) {
+      <div
+        class="gallery-container mb-3">
         <gallery-inline [images]="project.images"></gallery-inline>
-    </div>
-
+      </div>
+    }
     <div class="description-container mb-3">
-        <ng-container *ngFor="let paragraph of project.description; index as p;">
-            <p  [innerHTML]="paragraph"></p>
-        </ng-container>
+      @for (paragraph of project.description; track paragraph; let p = $index) {
+        <p  [innerHTML]="paragraph"></p>
+      }
     </div>
-
-    <div    *ngIf="project.funFacts && project.funFacts.length > 0"
-            class="mb-3">
+    @if (project.funFacts && project.funFacts.length > 0) {
+      <div
+        class="mb-3">
         <div>Fun stats:</div>
-        <ul     *ngFor="let fact of project.funFacts; index as f;"
-                class="list-inside">
+        @for (fact of project.funFacts; track fact; let f = $index) {
+          <ul
+            class="list-inside">
             <li>{{fact}}</li>
-        </ul>
-    </div>
-
+          </ul>
+        }
+      </div>
+    }
     <div class="flex flex-col md:flex-row">
-
-        <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('github')">
-            <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
-                <div>{{repoLinkAttentionGrabber}}</div>
-                <a      [href]="project.url"
-                        target="_blank">
-                    <image-button   buttonFlavor="button-sm"
-                                    contentHeight="1rem"
-                                    imagePath="assets/images/icons/github-filled.png"
-                                    imageAltText="GitHub logo"
-                                    text="GitHub">
-                    </image-button>
-                </a>
-            </div>
-        </ng-container>
-        <ng-container *ngIf="!!project.url && project.url.hostname.toLowerCase().includes('printables')">
-            <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
-                <div>{{repoLinkAttentionGrabber}}</div>
-                <a      [href]="project.url"
-                        target="_blank">
-                    <image-button   buttonFlavor="button-sm"
-                                    contentHeight="1rem"
-                                    imagePath="assets/images/icons/printables.svg"
-                                    imageAltText="Printables logo"
-                                    text="Printables">
-                    </image-button>
-                </a>
-            </div>
-        </ng-container>
-
-        <div class="grow">
-            <div>Tech used:</div>
-            <ng-container *ngFor="let technology of project.technologies; index as t;">
-                <div    class="badge inline-block select-none"
+      @if (!!project.url && project.url.hostname.toLowerCase().includes('github')) {
+        <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
+          <div>{{repoLinkAttentionGrabber}}</div>
+          <a      [href]="project.url"
+            target="_blank">
+            <image-button   buttonFlavor="button-sm"
+              contentHeight="1rem"
+              imagePath="assets/images/icons/github-filled.png"
+              imageAltText="GitHub logo"
+              text="GitHub">
+            </image-button>
+          </a>
+        </div>
+      }
+      @if (!!project.url && project.url.hostname.toLowerCase().includes('printables')) {
+        <div class="shrink mr-0 md:mr-5 mb-3 md:mb-0">   <!-- Should be mr-3, but mr-5 looks better visually -->
+          <div>{{repoLinkAttentionGrabber}}</div>
+          <a      [href]="project.url"
+            target="_blank">
+            <image-button   buttonFlavor="button-sm"
+              contentHeight="1rem"
+              imagePath="assets/images/icons/printables.svg"
+              imageAltText="Printables logo"
+              text="Printables">
+            </image-button>
+          </a>
+        </div>
+      }
+      <div class="grow">
+        <div>Tech used:</div>
+        @for (technology of project.technologies; track technology; let t = $index) {
+          <div    class="badge inline-block select-none"
                         [ngClass]="{
                             'mr-0': t == project.technologies.length - 1,
                             'mr-1': t < project.technologies.length - 1
                         }">{{technology}}</div>
-            </ng-container>
-        </div>
+        }
+      </div>
     </div>
-</div>
+  </div>
+}

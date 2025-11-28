@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, Renderer2 } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
@@ -10,7 +10,7 @@ import { FragmentManagerService } from '../../shared/services/fragment-manager.s
 
 @Component({
     selector: 'projects',
-    imports: [HeaderComponent, FooterComponent, CommonModule, ProjectComponent],
+    imports: [HeaderComponent, FooterComponent, ProjectComponent],
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.scss'
 })
