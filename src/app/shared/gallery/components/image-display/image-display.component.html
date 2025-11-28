@@ -1,15 +1,16 @@
 <div    class="image-display-container relative"
-        [ngStyle]="{'height': imageHeight + 'px', 'width': imageWidth > 0 ? imageWidth + 'px' : 'auto'}"
-        (window:resize)="onWindowResize()">
-    <img    #thumbnailImage
-            class="absolute top-0 bottom-0 my-auto"
-            [src]="image.thumbnailUrl"
-            [alt]="image.altText" />
-    <img    #fullResImage
-            *ngIf="canLoadFullResImage"
-            class="absolute top-0 bottom-0 my-auto"
-            [ngStyle]="{'opacity': image.fullResLoaded ? 1 : 0}"
-            (load)="onFullResImageLoaded()"
-            [src]="image.fullResUrl"
-            [alt]="image.altText" />
-</div>
+  [ngStyle]="{'height': imageHeight + 'px', 'width': imageWidth > 0 ? imageWidth + 'px' : 'auto'}"
+  (window:resize)="onWindowResize()">
+  <img    #thumbnailImage
+    class="absolute top-0 bottom-0 my-auto"
+    [src]="image.thumbnailUrl"
+    [alt]="image.altText" />
+    @if (canLoadFullResImage) {
+      <img    #fullResImage
+        class="absolute top-0 bottom-0 my-auto"
+        [ngStyle]="{'opacity': image.fullResLoaded ? 1 : 0}"
+        (load)="onFullResImageLoaded()"
+        [src]="image.fullResUrl"
+        [alt]="image.altText" />
+    }
+  </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 import type { EChartsOption, SeriesOption } from 'echarts';
@@ -8,18 +8,16 @@ import { PID } from '../../../libraries/pid.ts/pid'
 import { PIDContainer } from './models/pid-container'
 
 @Component({
-  selector: 'pid-playground',
-  standalone: true,
-  templateUrl: './pid-playground.component.html',
-  styleUrl: './pid-playground.component.scss',
-  imports: [
-    CommonModule,
+    selector: 'pid-playground',
+    templateUrl: './pid-playground.component.html',
+    styleUrl: './pid-playground.component.scss',
+    imports: [
     RouterOutlet,
     NgxEchartsDirective
-  ],
-  providers:[
-    provideEcharts()
-  ]
+],
+    providers: [
+        provideEcharts()
+    ]
 })
 export class PidPlaygroundComponent implements OnInit {
   options!: EChartsOption;

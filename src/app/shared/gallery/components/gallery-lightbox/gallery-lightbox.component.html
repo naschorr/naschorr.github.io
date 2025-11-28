@@ -1,59 +1,69 @@
 <div class="lighbox-container flex flex-col">
-    <div    class="close grow-0 self-end cursor-pointer"
-            (click)="onCloseClick()">×</div>
-    <!-- Content panel for the lightbox -->
-    <div class="gallery-container grow flex items-center">
-        <!-- Prev navigation image for larger screens -->
-        <div    class="prev-image nav-image side-nav-image cursor-pointer relative mr-3 hidden lg:block pseudo-border"
-                (click)="onPrevImageClick()"
-                title="Previous Image">
-            <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel text-end absolute color-light bottom-0 right-0 m-2">
-                <span class="hidden xl:block">Previous</span>
-                <span class="block xl:hidden">Prev</span>
-            </div>
-        </div>
-        <div class="active-image flex flex-col grow justify-center mx-3">
-            <!-- Main image and it's description -->
-            <image-display *ngIf="!!activeImage" [image]="activeImage" (fullResImageLoadedEvent)="onActiveImageLoaded()" [canLoadFullResImage]=true></image-display>
-            <div class="description-container color-light container mx-auto mt-3 lg:mt-6 px-5 py-3">
-                <ng-container *ngFor="let description of activeImage?.description">
-                    <p>{{ description }}</p>
-                </ng-container>
-            </div>
-        </div>
-        <!-- Next navigation image for larger screens -->
-        <div    class="next-image nav-image side-nav-image cursor-pointer relative ml-3 hidden lg:block pseudo-border"
-                (click)="onNextImageClick()"
-                title="Next Image">
-            <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel absolute color-light bottom-0 left-0 m-2">
-                Next
-            </div>
-        </div>
+  <div    class="close grow-0 self-end cursor-pointer"
+  (click)="onCloseClick()">×</div>
+  <!-- Content panel for the lightbox -->
+  <div class="gallery-container grow flex items-center">
+    <!-- Prev navigation image for larger screens -->
+    <div    class="prev-image nav-image side-nav-image cursor-pointer relative mr-3 hidden lg:block pseudo-border"
+      (click)="onPrevImageClick()"
+      title="Previous Image">
+      @if (!!prevImage) {
+        <image-display [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
+      }
+      <div class="text-panel text-end absolute color-light bottom-0 right-0 m-2">
+        <span class="hidden xl:block">Previous</span>
+        <span class="block xl:hidden">Prev</span>
+      </div>
     </div>
-    <!--
-        Really just a placeholder to prevent the gallery-container from growing until it hits the bottom of the modal,
-        this is the same height as the controls div at the top.
-    -->
-    <div class="footer grow-0 hidden lg:block"></div>
-    <!-- Next/Prev navigation images for mobile, this replaces the footer -->
-    <div class="grow-0 flex justify-between lg:hidden mt-6 mb-3 mx-3">
-        <div    class="prev-image relative nav-image lower-nav-image cursor-pointer mr-3 pseudo-border"
-                (click)="onPrevImageClick()"
-                title="Previous Image">
-            <image-display *ngIf="!!prevImage" [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel text-end absolute color-light bottom-0 left-0 m-2">
-                Previous
-            </div>
-        </div>
-        <div    class="next-image relative nav-image lower-nav-image float-right cursor-pointer ml-3 pseudo-border"
-                (click)="onNextImageClick()"
-                title="Next Image">
-            <image-display *ngIf="!!nextImage" [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
-            <div class="text-panel absolute color-light bottom-0 right-0 m-2">
-                Next
-            </div>
-        </div>
+    <div class="active-image flex flex-col grow justify-center mx-3">
+      <!-- Main image and it's description -->
+      @if (!!activeImage) {
+        <image-display [image]="activeImage" (fullResImageLoadedEvent)="onActiveImageLoaded()" [canLoadFullResImage]=true></image-display>
+      }
+      <div class="description-container color-light container mx-auto mt-3 lg:mt-6 px-5 py-3">
+        @for (description of activeImage?.description; track description) {
+          <p>{{ description }}</p>
+        }
+      </div>
     </div>
+    <!-- Next navigation image for larger screens -->
+    <div    class="next-image nav-image side-nav-image cursor-pointer relative ml-3 hidden lg:block pseudo-border"
+      (click)="onNextImageClick()"
+      title="Next Image">
+      @if (!!nextImage) {
+        <image-display [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
+      }
+      <div class="text-panel absolute color-light bottom-0 left-0 m-2">
+        Next
+      </div>
+    </div>
+  </div>
+  <!--
+  Really just a placeholder to prevent the gallery-container from growing until it hits the bottom of the modal,
+  this is the same height as the controls div at the top.
+  -->
+  <div class="footer grow-0 hidden lg:block"></div>
+  <!-- Next/Prev navigation images for mobile, this replaces the footer -->
+  <div class="grow-0 flex justify-between lg:hidden mt-6 mb-3 mx-3">
+    <div    class="prev-image relative nav-image lower-nav-image cursor-pointer mr-3 pseudo-border"
+      (click)="onPrevImageClick()"
+      title="Previous Image">
+      @if (!!prevImage) {
+        <image-display [image]="prevImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
+      }
+      <div class="text-panel text-end absolute color-light bottom-0 left-0 m-2">
+        Previous
+      </div>
+    </div>
+    <div    class="next-image relative nav-image lower-nav-image float-right cursor-pointer ml-3 pseudo-border"
+      (click)="onNextImageClick()"
+      title="Next Image">
+      @if (!!nextImage) {
+        <image-display [image]="nextImage" [canLoadFullResImage]="isActiveImageLoaded"></image-display>
+      }
+      <div class="text-panel absolute color-light bottom-0 right-0 m-2">
+        Next
+      </div>
+    </div>
+  </div>
 </div>

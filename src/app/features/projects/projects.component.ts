@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, Renderer2 } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
@@ -9,11 +9,10 @@ import { FragmentScrollerService } from '../../shared/services/fragment-scroller
 import { FragmentManagerService } from '../../shared/services/fragment-manager.service';
 
 @Component({
-  selector: 'projects',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, ProjectComponent],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'projects',
+    imports: [HeaderComponent, FooterComponent, ProjectComponent],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit, AfterContentChecked {
   private _projects!: Project[];

@@ -2,17 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { TextSwapperComponent } from '../../shared/text-swapper/text-swapper.component';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 import { LogoComponent } from '../../shared/logo/logo.component';
 import { ImageButtonComponent } from '../../shared/button/components/image-button/image-button.component';
 import { LinkFlavor } from './enums/link-flavor.enum';
 
 @Component({
-  selector: 'home',
-  standalone: true,
-  imports: [TextSwapperComponent, FooterComponent, CommonModule, RouterModule, LogoComponent, ImageButtonComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'home',
+    imports: [TextSwapperComponent, FooterComponent, RouterModule, LogoComponent, ImageButtonComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
   private readonly TAGLINE_FLAVOR_COUNT!: number;

@@ -3,9 +3,10 @@ import { GalleryManagerService } from '../../services/gallery-manager.service';
 import { ImageTextual } from '../../../../shared/models/image-textual.model';
 
 @Component({
-  selector: 'gallery-lightbox',
-  templateUrl: './gallery-lightbox.component.html',
-  styleUrl: './gallery-lightbox.component.scss'
+    selector: 'gallery-lightbox',
+    templateUrl: './gallery-lightbox.component.html',
+    styleUrl: './gallery-lightbox.component.scss',
+    standalone: false
 })
 export class GalleryLightboxComponent implements OnInit {
   private _activeImage!: ImageTextual | null;
