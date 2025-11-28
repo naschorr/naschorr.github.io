@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'header',
-  standalone: true,
-  imports: [CommonModule, RouterModule, LogoComponent],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'header',
+    imports: [CommonModule, RouterModule, LogoComponent],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   @Input()

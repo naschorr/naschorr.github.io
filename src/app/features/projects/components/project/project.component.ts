@@ -6,11 +6,10 @@ import { FragmentManagerService } from '../../../../shared/services/fragment-man
 import { ImageButtonComponent } from '../../../../shared/button/components/image-button/image-button.component';
 
 @Component({
-  selector: 'project',
-  standalone: true,
-  imports: [CommonModule, GalleryModule, ImageButtonComponent],
-  templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
+    selector: 'project',
+    imports: [CommonModule, GalleryModule, ImageButtonComponent],
+    templateUrl: './project.component.html',
+    styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
   @Input()
