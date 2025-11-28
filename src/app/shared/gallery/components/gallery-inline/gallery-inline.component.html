@@ -1,24 +1,24 @@
 <div class="gallery-inline-container flex">
-    <div class="psuedo-gallery-item"></div>
-    <ng-container *ngFor="let image of images; index as i;">
-        <!--
-            Subtract 0.01 from the aspect ratio to force it down a bit and thus slightly shrink the resulting width.
-            Sometimes it's 1px too wide, so this nasty hack fixes it
-        -->
-        <div    [ngClass]="{'mr-2': i < images.length - 1}"
+  <div class="psuedo-gallery-item"></div>
+  @for (image of images; track image; let i = $index) {
+    <!--
+    Subtract 0.01 from the aspect ratio to force it down a bit and thus slightly shrink the resulting width.
+    Sometimes it's 1px too wide, so this nasty hack fixes it
+    -->
+    <div    [ngClass]="{'mr-2': i < images.length - 1}"
                 [ngStyle]="{
                     'width': 'auto',
                     'height': image.thumbnailHeightPx + ' px',
                     'aspect-ratio': image.aspectRatio - 0.01
                 }"
-                (click)="onImageClick(image, i)"
-                class="gallery-item skeleton cursor-pointer pseudo-border">
-            <img    [src]="image.thumbnailUrl"
-                    [alt]="image.altText"
-                    (load)="onThumbnailImageLoaded(image)"
-                    [ngStyle]="{'opacity': image.thumbnailLoaded ? 1 : 0}"
-                    class="h-full w-full" />
-        </div>
-    </ng-container>
+      (click)="onImageClick(image, i)"
+      class="gallery-item skeleton cursor-pointer pseudo-border">
+      <img    [src]="image.thumbnailUrl"
+        [alt]="image.altText"
+        (load)="onThumbnailImageLoaded(image)"
+        [ngStyle]="{'opacity': image.thumbnailLoaded ? 1 : 0}"
+        class="h-full w-full" />
+      </div>
+    }
     <div class="psuedo-gallery-item"></div>
-</div>
+  </div>
