@@ -1,6 +1,6 @@
 {
   "name": "nickschorr.com",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "scripts": {
     "ng": "ng",
     "prestart": "npm run image-resizer && npm run image-format-converter && npm run generate-thumbnails && npm run image-metadata-processor",
