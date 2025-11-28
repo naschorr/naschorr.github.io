@@ -8,18 +8,17 @@ import { PID } from '../../../libraries/pid.ts/pid'
 import { PIDContainer } from './models/pid-container'
 
 @Component({
-  selector: 'pid-playground',
-  standalone: true,
-  templateUrl: './pid-playground.component.html',
-  styleUrl: './pid-playground.component.scss',
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    NgxEchartsDirective
-  ],
-  providers:[
-    provideEcharts()
-  ]
+    selector: 'pid-playground',
+    templateUrl: './pid-playground.component.html',
+    styleUrl: './pid-playground.component.scss',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        NgxEchartsDirective
+    ],
+    providers: [
+        provideEcharts()
+    ]
 })
 export class PidPlaygroundComponent implements OnInit {
   options!: EChartsOption;

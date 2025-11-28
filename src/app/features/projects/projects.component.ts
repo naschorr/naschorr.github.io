@@ -9,11 +9,10 @@ import { FragmentScrollerService } from '../../shared/services/fragment-scroller
 import { FragmentManagerService } from '../../shared/services/fragment-manager.service';
 
 @Component({
-  selector: 'projects',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, ProjectComponent],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'projects',
+    imports: [HeaderComponent, FooterComponent, CommonModule, ProjectComponent],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit, AfterContentChecked {
   private _projects!: Project[];

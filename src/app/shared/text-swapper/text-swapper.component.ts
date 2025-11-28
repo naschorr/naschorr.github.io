@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, Input, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'text-swapper',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './text-swapper.component.html',
-  styleUrl: './text-swapper.component.scss'
+    selector: 'text-swapper',
+    imports: [CommonModule],
+    templateUrl: './text-swapper.component.html',
+    styleUrl: './text-swapper.component.scss'
 })
 export class TextSwapperComponent implements AfterViewInit {
   @Input()

@@ -3,9 +3,10 @@ import { ImageTextual } from '../../../../shared/models/image-textual.model';
 import { GalleryManagerService } from '../../services/gallery-manager.service';
 
 @Component({
-  selector: 'gallery-inline',
-  templateUrl: './gallery-inline.component.html',
-  styleUrl: './gallery-inline.component.scss'
+    selector: 'gallery-inline',
+    templateUrl: './gallery-inline.component.html',
+    styleUrl: './gallery-inline.component.scss',
+    standalone: false
 })
 export class GalleryInlineComponent implements OnInit {
   @Input()

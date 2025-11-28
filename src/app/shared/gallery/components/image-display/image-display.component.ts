@@ -2,9 +2,10 @@ import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, EventEmitter, 
 import { ImageTextual } from '../../../../shared/models/image-textual.model';
 
 @Component({
-  selector: 'image-display',
-  templateUrl: './image-display.component.html',
-  styleUrl: './image-display.component.scss'
+    selector: 'image-display',
+    templateUrl: './image-display.component.html',
+    styleUrl: './image-display.component.scss',
+    standalone: false
 })
 export class ImageDisplayComponent implements AfterViewInit {
   private _image!: ImageTextual;
