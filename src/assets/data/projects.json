@@ -94,8 +94,8 @@
         ],
         "url": "https://github.com/naschorr/naschorr.github.io",
         "technologies": [
+            "Angular 20",
             "TypeScript",
-            "Angular 18",
             "Tailwind CSS",
             "npm CLI",
             "Cloudflare",
