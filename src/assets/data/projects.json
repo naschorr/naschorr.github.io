@@ -1,6 +1,7 @@
 [
     {
         "id": "hawking",
+        "flavor": "code",
         "name": "Hawking",
         "description": [
             "Hawking is a retro text-to-speech bot for Discord that lets users interact with each other using the text-to-speech engine made famous by Stephen Hawking.",
@@ -21,6 +22,7 @@
     },
     {
         "id": "drgss",
+        "flavor": "code",
         "name": "Deep Rock Galactic Save Syncer",
         "description": [
             "Deep Rock Galactic (DRG) is an excellent co-op survival game, however it's got a major flaw: the game isn't cross platform. This makes it hard to play with friends who aren't on the same platform.",
@@ -74,6 +76,7 @@
     },
     {
         "id": "mail-to-sms",
+        "flavor": "code",
         "name": "Mail To SMS",
         "description": [
             "Programmatically send out SMS messages using email! Mail To SMS is simple to integrate, and offers an easy to use CLI to support scripting too."
@@ -88,6 +91,7 @@
     },
     {
         "id": "website",
+        "flavor": "code",
         "name": "nickschorr.com",
         "description": [
             "You're looking at it right now! This is my personal website which is used to show off what I've been working on, link to the places that host my projects, and serve as a playground for general webdev fun."
@@ -104,6 +108,7 @@
     },
     {
         "id": "spotify-scraper",
+        "flavor": "code",
         "name": "Spotify Scraper",
         "description": [
             "A Python API for getting the artist, song, and album art for the currently playing song on Spotify."
@@ -116,6 +121,7 @@
     },
     {
         "id": "parts-organizer",
+        "flavor": "3dprint",
         "name": "Small Parts Organizer Ecosystem",
         "description": [
             "Affordable, modular, customizable 3D printed small parts organizers!",
@@ -178,6 +184,7 @@
     },
     {
         "id": "nixie-clock-case",
+        "flavor": "3dprint",
         "name": "Minimal Nixie Tube Clock Case",
         "description": [
             "A small UK based company sells this excellent <a href='https://www.pvelectronics.co.uk/index.php?main_page=product_info&cPath=21&products_id=71' target='_blank'>DIY nixie tube clock kit</a> based around the IN-14 nixie tube. The problem is that their official case options don't really fit my vibe, so I decided to design my own!",
@@ -236,6 +243,7 @@
     },
     {
         "id": "mtb-inflator-carrier",
+        "flavor": "3dprint",
         "name": "CO2 Inflator Carrier for Mountain Bike Steer Tubes",
         "description": [
             "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/'>Bontrager Air Rush Elite inflator</a> inside your <a href='https://www.sram.com/en/rockshox/series/recon'>RockShox Recon</a> steer tube (or potentially other forks with a 1.5\" tapered steer tube)!",

@@ -1,7 +1,9 @@
 import { ImageTextual } from '../../../shared/models/image-textual.model';
+import { ProjectFlavor } from './project-flavor.enum';
 
 export class Project {
     private _id: string;
+    private _flavor: ProjectFlavor;
     private _name: string;
     private _description: string[];
     private _url: URL | null;
@@ -13,6 +15,7 @@ export class Project {
 
     constructor(
             id: string,
+            flavor: ProjectFlavor,
             name: string,
             description: string[],
             url?: URL | null,
@@ -21,6 +24,7 @@ export class Project {
             technologies?: string[] | null
     ) {
         this._id = id;
+        this._flavor = flavor;
         this._name = name;
         this._description = description;
         this._url = url ?? null;
@@ -33,6 +37,10 @@ export class Project {
 
     get id(): string {
         return this._id;
+    }
+
+    get flavor(): ProjectFlavor {
+        return this._flavor;
     }
 
     get name(): string {
