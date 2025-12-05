@@ -1,6 +1,10 @@
 <div class="bg-gradient-dark flex flex-col min-h-screen w-screen pb-1">
   <header title="Portfolio"></header>
 
+  <div class="container mx-auto px-3">
+    <project-filter></project-filter>
+  </div>
+
   <div class="container mx-auto min-h-full px-3 flex flex-col grow">
     @for (project of projects; track project; let i = $index) {
       <project [project]="project" [flash]="requestedProjectId == project.id"></project>

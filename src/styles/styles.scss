@@ -223,6 +223,31 @@ ul li::before {
     padding: variables.$button-sm-padding;
 }
 
+.badge {
+    margin-bottom: 0.2rem;
+    margin-left: 0;
+    padding: variables.$button-sm-padding;
+    border-radius: variables.$border-radius;
+    font-size: variables.$button-sm-content-size;
+    line-height: 1;
+    vertical-align: middle;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: -(variables.$border-width);
+
+    &.light {
+        color: variables.$dark-color;
+        background-color: variables.$light-color;
+        outline: none;
+    }
+
+    &.dark {
+        color: variables.$light-color;
+        background-color: none; // Assuming normal dark background -- TODO: Update to play nice with darkreader?
+        outline-color: variables.$light-color;
+    }
+}
+
 .panel {
     background-color: variables.$panel-background-color;
     border-radius: variables.$border-radius;

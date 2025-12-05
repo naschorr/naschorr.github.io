@@ -1,0 +1,39 @@
+<div class="color-light">
+    Filters
+</div>
+
+<div class="color-light">
+    Project type:
+</div>
+@for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
+    <div class="badge cursor-pointer inline-block mr-1 last:mr-0"
+        [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
+        (click)="onFilterClick(filter)">
+        @switch (filter.name) {
+            @case (projectFlavor.CODE) {
+                Code
+            }
+            @case (projectFlavor.PRINT) {
+                3D Print
+            }
+            @default {
+                {{ filter.name | titlecase }}
+            }
+        }
+    </div>
+}
+
+@for (category of availablePropertyFilters.keys(); track category) {
+    @if (category !== projectProperty.FLAVOR) {
+        <div class="color-light">
+            {{ category | titlecase }}:
+        </div>
+        @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
+            <div class="badge cursor-pointer inline-block mr-1 last:mr-0"
+                [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
+                (click)="onFilterClick(filter)">
+                {{ filter.name }}
+            </div>
+        }
+    }
+}

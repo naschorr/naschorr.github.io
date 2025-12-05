@@ -1,0 +1,97 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { ProjectLoaderService } from './project-loader.service';
+import { Project } from '../models/project.model';
+import { ProjectProperty } from '../models/project-property.enum';
+import { PropertyFilter } from '../models/property-filter.model';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ProjectFilterService {
+  private _allProjects: Project[] = [];
+  private _filteredProjectsSubject: BehaviorSubject<Project[]> = new BehaviorSubject<Project[]>([]);
+  // Set of all available and selected project flavors and features
+  private _availablePropertyFiltersSubject: BehaviorSubject<Map<string, Map<string, PropertyFilter>>> = new BehaviorSubject(new Map());
+  private _selectedPropertyFiltersSubject: BehaviorSubject<Set<string>> = new BehaviorSubject(new Set());
+
+  public filteredProjects$ = this._filteredProjectsSubject.asObservable();
+  public availablePropertyFilters$ = this._availablePropertyFiltersSubject.asObservable();
+  public selectedPropertyFilters$ = this._selectedPropertyFiltersSubject.asObservable();
+
+  constructor(private _projectLoaderService: ProjectLoaderService) {
+    this._projectLoaderService.projects$.subscribe((projects) => {
+      // Reset data when projects change
+      this._allProjects = projects;
+      this._availablePropertyFiltersSubject.value.clear();
+      // TODO: This should really apply existing selected filters when projects change instead of clearing them.
+      this._selectedPropertyFiltersSubject.value.clear();
+
+      // Rebuild available filter data
+      projects.forEach((project: Project) => {
+        this.populatePropertyFilter(ProjectProperty.FLAVOR, project.flavor);
+
+        (project.technologies || []).forEach((tech: string) => {
+          this.populatePropertyFilter(ProjectProperty.TECHNOLOGIES, tech);
+        });
+      });
+
+      // Emit available filter data
+      this._availablePropertyFiltersSubject.next(this._availablePropertyFiltersSubject.value);
+      this._filteredProjectsSubject.next(this._allProjects); // TODO: Same as above, this should keep existing filters.
+    });
+  }
+
+  public onToggleFilter(propertyFilter: PropertyFilter): void {
+    if (this._selectedPropertyFiltersSubject.value.has(propertyFilter.key)) {
+      this._selectedPropertyFiltersSubject.value.delete(propertyFilter.key);
+    } else {
+      this._selectedPropertyFiltersSubject.value.add(propertyFilter.key);
+    }
+
+    this._selectedPropertyFiltersSubject.next(this._selectedPropertyFiltersSubject.value);
+
+    this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
+  }
+
+  private populatePropertyFilter(category: ProjectProperty, name: string) {
+    let filterMap = this._availablePropertyFiltersSubject.value.get(category);
+    if (!filterMap) {
+      filterMap = new Map<string, PropertyFilter>();
+      this._availablePropertyFiltersSubject.value.set(category, filterMap);
+    }
+    let propertyFilter = filterMap.get(name);
+    if (!propertyFilter) {
+      propertyFilter = new PropertyFilter(category, name, 0);
+      filterMap.set(name, propertyFilter);
+    }
+    propertyFilter.incrementCount();
+  }
+
+  private applyFilters(projects: Project[]): Project[] {
+    // Handle case where no filters are selected
+    if (this._selectedPropertyFiltersSubject.value.size === 0) {
+      return projects;
+    }
+
+    const filtered = projects.filter((project: Project) => {
+      return Array.from(this._selectedPropertyFiltersSubject.value).every((filterKey: string) => {
+        const [category, name] = filterKey.split('/');
+        const value = project[category as keyof Project];
+
+        // Normalize strings and lists of strings so we only need to check it once
+        let normalizedValue = [];
+        if (Array.isArray(value)) {
+          normalizedValue = value;
+        } else {
+          normalizedValue = [value];
+        }
+
+        // Actually do the filtering
+        return normalizedValue.some(value => name == value);
+      });
+    });
+
+    return filtered;
+  }
+}

@@ -66,11 +66,7 @@
       <div class="grow">
         <div>Tech used:</div>
         @for (technology of project.technologies; track technology; let t = $index) {
-          <div    class="badge inline-block select-none"
-                        [ngClass]="{
-                            'mr-0': t == project.technologies.length - 1,
-                            'mr-1': t < project.technologies.length - 1
-                        }">{{technology}}</div>
+          <div class="badge dark inline-block select-none mr-1 last:mr-0">{{technology}}</div>
         }
       </div>
     </div>
