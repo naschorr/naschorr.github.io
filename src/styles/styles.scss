@@ -224,7 +224,9 @@ ul li::before {
 }
 
 .badge {
-    margin-bottom: 0.2rem;
+    @apply mr-2;
+    @apply mb-2;
+    margin-top: 0;
     margin-left: 0;
     padding: variables.$button-sm-padding;
     border-radius: variables.$border-radius;
@@ -233,18 +235,36 @@ ul li::before {
     vertical-align: middle;
     outline-width: 1px;
     outline-style: solid;
-    outline-offset: -(variables.$border-width);
+    outline-offset: -(variables.$border-width/2);
 
     &.light {
         color: variables.$dark-color;
         background-color: variables.$light-color;
-        outline: none;
+        outline-color: variables.$light-color;
     }
 
     &.dark {
         color: variables.$light-color;
-        background-color: none; // Assuming normal dark background -- TODO: Update to play nice with darkreader?
+        background-color: transparent; // Assuming normal dark background -- TODO: Update to play nice with darkreader?
         outline-color: variables.$light-color;
+    }
+}
+
+.badge-container {
+    // Contains a .badge class with additional div content next to it
+
+    @extend .badge;
+    padding: 0;
+
+    .badge {
+        margin: 0;
+    }
+
+    .badge + div {
+        vertical-align: middle;
+        padding: variables.$button-sm-padding;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 

@@ -6,7 +6,7 @@
     Project type:
 </div>
 @for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
-    <div class="badge cursor-pointer inline-block mr-1 last:mr-0"
+    <button class="badge pseudo-border inline-block cursor-pointer last:mr-0"
         [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
         (click)="onFilterClick(filter)">
         @switch (filter.name) {
@@ -20,7 +20,7 @@
                 {{ filter.name | titlecase }}
             }
         }
-    </div>
+    </button>
 }
 
 @for (category of availablePropertyFilters.keys(); track category) {
@@ -29,11 +29,24 @@
             {{ category | titlecase }}:
         </div>
         @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
-            <div class="badge cursor-pointer inline-block mr-1 last:mr-0"
-                [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
-                (click)="onFilterClick(filter)">
-                {{ filter.name }}
-            </div>
+            @if (filter.count > 1) {
+                <button class="badge-container dark pseudo-border inline-block cursor-pointer last:mr-0"
+                    (click)="onFilterClick(filter)">
+                    <div class="badge inline-block"
+                        [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'">
+                        {{ filter.name }}
+                    </div>
+                    <div class="inline-block">
+                        {{ filter.count }}
+                    </div>
+                </button>
+            } @else {
+                <button class="badge pseudo-border inline-block cursor-pointer last:mr-0"
+                    [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
+                    (click)="onFilterClick(filter)">
+                    {{ filter.name }}
+                </button>
+            }
         }
     }
 }
