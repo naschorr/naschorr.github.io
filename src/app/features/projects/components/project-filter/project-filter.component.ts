@@ -19,7 +19,7 @@ export class ProjectFilterComponent {
 
   constructor(private _projectFilterService: ProjectFilterService) {
     this._projectFilterService.availablePropertyFilters$.subscribe((filters) => {
-      this.availablePropertyFilters = filters;
+      this.availablePropertyFilters = this.sortFiltersByCount(filters);
     });
 
     this._projectFilterService.selectedPropertyFilters$.subscribe((selectedFilters) => {
@@ -27,9 +27,25 @@ export class ProjectFilterComponent {
     });
   }
 
-  // private sortFiltersByCount(filters: Map<string, Set<string>>): Map<string, Set<string>> {
+  private sortFiltersByCount(filters: Map<string, Map<string, PropertyFilter>>): Map<string, Map<string, PropertyFilter>> {
+    const sortedFilters = new Map<string, Map<string, PropertyFilter>>();
 
-  // }
+    for (const [category, filterMap] of filters.entries()) {
+      const sortedArray = Array.from(filterMap.entries());
+      sortedArray.sort(([keyA, a], [keyB, b]) => {
+        // Sort by count descending
+        if (b.count !== a.count) {
+          return b.count - a.count;
+        }
+        // If counts are equal, sort alphabetically by key
+        return keyA.localeCompare(keyB);
+      });
+
+      sortedFilters.set(category, new Map(sortedArray));
+    }
+
+    return sortedFilters;
+  }
 
   public onFilterClick(propertyFilter: PropertyFilter): void {
     this._projectFilterService.onToggleFilter(propertyFilter);
