@@ -6,7 +6,7 @@
     Project type:
 </div>
 @for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
-    <button class="badge pseudo-border inline-block cursor-pointer last:mr-0"
+    <button class="badge pseudo-border last:mr-0"
         [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
         (click)="onFilterClick(filter)">
         @switch (filter.name) {
@@ -30,7 +30,7 @@
         </div>
         @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
             @if (filter.count > 1) {
-                <button class="badge-container dark pseudo-border inline-block cursor-pointer last:mr-0"
+                <button class="badge-container dark pseudo-border last:mr-0"
                     (click)="onFilterClick(filter)">
                     <div class="badge inline-block"
                         [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'">
@@ -41,7 +41,7 @@
                     </div>
                 </button>
             } @else {
-                <button class="badge pseudo-border inline-block cursor-pointer last:mr-0"
+                <button class="badge pseudo-border last:mr-0"
                     [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
                     (click)="onFilterClick(filter)">
                     {{ filter.name }}
