@@ -50,11 +50,12 @@ $blur-radius: 0.5rem;
 
 $subtle-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 
-$project-panel-padding: 1rem;
+$container-max-width: $lg;
+$container-padding: 1rem;
+
+$project-panel-padding: $container-padding;
 $panel-background-color: color.adjust($light-color, $alpha:-0.9);
 $panel-active-background-color: color.adjust($light-color, $alpha:-0.85);
 
 $psuedo-border-outer-distance: 4px;
 $psuedo-border-width: $border-width;
-
-$container-max-width: $lg;

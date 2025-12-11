@@ -17,7 +17,6 @@ project-filter {
         // Weird behavior happens if we don't bump this media query down by 1px
         @apply container;
         @apply mx-auto;
-        @apply px-3;
     }
 }
 
