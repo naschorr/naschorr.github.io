@@ -81,6 +81,32 @@ a[routerLink] {
     }
 }
 
+@media (min-width: variables.$sm) {
+    .container {
+        max-width: variables.$sm;
+    }
+}
+@media (min-width: variables.$md) {
+    .container {
+        max-width: variables.$md;
+    }
+}
+@media (min-width: variables.$lg) {
+    .container {
+        max-width: variables.$container-max-width;
+    }
+}
+@media (min-width: variables.$xl) {
+    .container {
+        max-width: variables.$container-max-width;
+    }
+}
+@media (min-width: variables.$xxl) {
+    .container {
+        max-width: variables.$container-max-width;
+    }
+}
+
 // Styling
 
 @supports (background-clip: text) {

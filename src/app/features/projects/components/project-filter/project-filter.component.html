@@ -1,52 +1,53 @@
-<div class="color-light">
-    Filters
-</div>
+<div class="w-full">
+    <h2 class="color-light">
+        Filters
+    </h2>
+    <div class="color-light">
+        Project type:
+    </div>
+    @for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
+        <button class="badge pseudo-border last:mr-0"
+            [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
+            (click)="onFilterClick(filter)">
+            @switch (filter.name) {
+                @case (projectFlavor.CODE) {
+                    Code
+                }
+                @case (projectFlavor.PRINT) {
+                    3D Print
+                }
+                @default {
+                    {{ filter.name | titlecase }}
+                }
+            }
+        </button>
+    }
 
-<div class="color-light">
-    Project type:
-</div>
-@for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
-    <button class="badge pseudo-border last:mr-0"
-        [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
-        (click)="onFilterClick(filter)">
-        @switch (filter.name) {
-            @case (projectFlavor.CODE) {
-                Code
-            }
-            @case (projectFlavor.PRINT) {
-                3D Print
-            }
-            @default {
-                {{ filter.name | titlecase }}
-            }
-        }
-    </button>
-}
-
-@for (category of availablePropertyFilters.keys(); track category) {
-    @if (category !== projectProperty.FLAVOR) {
-        <div class="color-light">
-            {{ category | titlecase }}:
-        </div>
-        @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
-            @if (filter.count > 1) {
-                <button class="badge-container dark pseudo-border last:mr-0"
-                    (click)="onFilterClick(filter)">
-                    <div class="badge inline-block"
-                        [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'">
+    @for (category of availablePropertyFilters.keys(); track category) {
+        @if (category !== projectProperty.FLAVOR) {
+            <div class="color-light">
+                {{ category | titlecase }}:
+            </div>
+            @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
+                @if (filter.count > 1) {
+                    <button class="badge-container dark pseudo-border last:mr-0"
+                        (click)="onFilterClick(filter)">
+                        <div class="badge inline-block"
+                            [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'">
+                            {{ filter.name }}
+                        </div>
+                        <div class="inline-block">
+                            {{ filter.count }}
+                        </div>
+                    </button>
+                } @else {
+                    <button class="badge pseudo-border last:mr-0"
+                        [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
+                        (click)="onFilterClick(filter)">
                         {{ filter.name }}
-                    </div>
-                    <div class="inline-block">
-                        {{ filter.count }}
-                    </div>
-                </button>
-            } @else {
-                <button class="badge pseudo-border last:mr-0"
-                    [ngClass]="selectedPropertyFilters.has(filter.key) ? 'light' : 'dark'"
-                    (click)="onFilterClick(filter)">
-                    {{ filter.name }}
-                </button>
+                    </button>
+                }
             }
         }
     }
-}
+</div>
