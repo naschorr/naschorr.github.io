@@ -176,7 +176,7 @@
         ],
         "url": null,
         "technologies": [
-            "Autodesk Fusion 360",
+            "Autodesk Fusion",
             "OpenSCAD",
             "Python",
             "Pydantic"
@@ -238,7 +238,7 @@
         ],
         "url": null,
         "technologies": [
-            "Autodesk Fusion 360"
+            "Autodesk Fusion"
         ]
     },
     {
@@ -283,7 +283,7 @@
         ],
         "url": "https://www.printables.com/model/1153275",
         "technologies": [
-            "Autodesk Fusion 360"
+            "Autodesk Fusion"
         ]
     }
 ]
