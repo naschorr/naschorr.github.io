@@ -10,12 +10,9 @@
       @for (project of projects; track project; let i = $index) {
         <project [project]="project" [flash]="requestedProjectId == project.id"></project>
       }
+      <footer containerClasses="container color-light mx-auto mt-3"></footer>
     </main>
 
     <div id="secondary-gutter" class="flex-1 shrink-[3]"></div>
-  </div>
-
-  <div class="container px-3 mx-auto">
-    <footer containerClasses="color-light mt-3"></footer>
   </div>
 </div>
