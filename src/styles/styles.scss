@@ -167,6 +167,11 @@ a[routerLink] {
     filter: variables.$dark-color-filter;
 }
 
+.animate-opacity, 
+.animate-opacity-fast {
+    transition: opacity variables.$animation-duration-fast ease-in-out;
+}
+
 .maskable {
     height: 100%;
     width: 100%;
@@ -427,4 +432,9 @@ ul li::before {
             black 100%
         );
     }
+}
+
+expando-button {
+    height: 1.25rem;
+    width: 1.25rem;
 }

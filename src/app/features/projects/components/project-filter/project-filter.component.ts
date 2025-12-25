@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectProperty } from '../../models/project-property.enum';
 import { ProjectFlavor } from '../../models/project-flavor.enum';
 import { PropertyFilter } from '../../models/property-filter.model';
+import { BreakpointService } from '../../../../shared/services/breakpoint.service';
 
 @Component({
   selector: 'project-filter',
@@ -14,16 +15,28 @@ import { PropertyFilter } from '../../models/property-filter.model';
 export class ProjectFilterComponent {
   public projectProperty = ProjectProperty;
   public projectFlavor = ProjectFlavor;
+  public isCollapsed = false;
   public availablePropertyFilters: Map<string, Map<string, PropertyFilter>> = new Map();
-  public selectedPropertyFilters: Set<string> = new Set();
+  public selectedPropertyFilters: Set<PropertyFilter> = new Set();
 
-  constructor(private _projectFilterService: ProjectFilterService) {
+  constructor(
+    private _projectFilterService: ProjectFilterService,
+    private _breakpointService: BreakpointService
+  ) {
     this._projectFilterService.availablePropertyFilters$.subscribe((filters) => {
       this.availablePropertyFilters = this.sortFiltersByCount(filters);
     });
 
     this._projectFilterService.selectedPropertyFilters$.subscribe((selectedFilters) => {
       this.selectedPropertyFilters = selectedFilters;
+    });
+
+    this._breakpointService.currentBreakpoint$.subscribe(() => {
+      if (this._breakpointService.isXl() || this._breakpointService.isXxl()) {
+        this.isCollapsed = false;
+      } else {
+        this.isCollapsed = true;
+      }
     });
   }
 
@@ -49,5 +62,9 @@ export class ProjectFilterComponent {
 
   public onFilterClick(propertyFilter: PropertyFilter): void {
     this._projectFilterService.onToggleFilter(propertyFilter);
+  }
+
+  public onExpandoClick(): void {
+    this.isCollapsed = !this.isCollapsed;
   }
 }

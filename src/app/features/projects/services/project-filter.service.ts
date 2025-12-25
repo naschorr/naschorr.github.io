@@ -13,7 +13,7 @@ export class ProjectFilterService {
   private _filteredProjectsSubject: BehaviorSubject<Project[]> = new BehaviorSubject<Project[]>([]);
   // Set of all available and selected project flavors and features
   private _availablePropertyFiltersSubject: BehaviorSubject<Map<string, Map<string, PropertyFilter>>> = new BehaviorSubject(new Map());
-  private _selectedPropertyFiltersSubject: BehaviorSubject<Set<string>> = new BehaviorSubject(new Set());
+  private _selectedPropertyFiltersSubject: BehaviorSubject<Set<PropertyFilter>> = new BehaviorSubject(new Set());
 
   public filteredProjects$ = this._filteredProjectsSubject.asObservable();
   public availablePropertyFilters$ = this._availablePropertyFiltersSubject.asObservable();
@@ -43,14 +43,13 @@ export class ProjectFilterService {
   }
 
   public onToggleFilter(propertyFilter: PropertyFilter): void {
-    if (this._selectedPropertyFiltersSubject.value.has(propertyFilter.key)) {
-      this._selectedPropertyFiltersSubject.value.delete(propertyFilter.key);
+    if (this._selectedPropertyFiltersSubject.value.has(propertyFilter)) {
+      this._selectedPropertyFiltersSubject.value.delete(propertyFilter);
     } else {
-      this._selectedPropertyFiltersSubject.value.add(propertyFilter.key);
+      this._selectedPropertyFiltersSubject.value.add(propertyFilter);
     }
 
     this._selectedPropertyFiltersSubject.next(this._selectedPropertyFiltersSubject.value);
-
     this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
   }
 
@@ -75,9 +74,8 @@ export class ProjectFilterService {
     }
 
     const filtered = projects.filter((project: Project) => {
-      return Array.from(this._selectedPropertyFiltersSubject.value).every((filterKey: string) => {
-        const [category, name] = filterKey.split('/');
-        const value = project[category as keyof Project];
+      return Array.from(this._selectedPropertyFiltersSubject.value).every((filter: PropertyFilter) => {
+        const value = project[filter.category as keyof Project];
 
         // Normalize strings and lists of strings so we only need to check it once
         let normalizedValue = [];
@@ -88,7 +86,7 @@ export class ProjectFilterService {
         }
 
         // Actually do the filtering
-        return normalizedValue.some(value => name == value);
+        return normalizedValue.some(value => filter.name == value);
       });
     });
 
