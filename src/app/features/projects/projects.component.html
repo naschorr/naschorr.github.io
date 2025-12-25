@@ -10,9 +10,15 @@
       @for (project of projects; track project; let i = $index) {
         <project [project]="project" [flash]="requestedProjectId == project.id"></project>
       }
-      <footer containerClasses="container color-light mx-auto mt-3"></footer>
+      @if (projects.length === 0) {
+        <div class="color-light text-center mt-6">
+          <span class="opacity-70">No projects match the selected filters.</span>
+        </div>
+      }
     </main>
 
     <div id="secondary-gutter" class="flex-1 shrink-[3]"></div>
   </div>
+
+  <footer containerClasses="container color-light mx-auto mt-3"></footer>
 </div>
