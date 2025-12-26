@@ -20,7 +20,7 @@ html {
 }
 
 p:not(:last-child) {
-    margin-bottom: 0.375rem;    // mb-1.5
+    @apply mb-1;
 }
 
 img, .skeleton {
@@ -78,6 +78,32 @@ a[routerLink] {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
+    }
+}
+
+@media (min-width: variables.$sm) {
+    .container {
+        max-width: variables.$sm;
+    }
+}
+@media (min-width: variables.$md) {
+    .container {
+        max-width: variables.$md;
+    }
+}
+@media (min-width: variables.$lg) {
+    .container {
+        max-width: variables.$container-max-width;
+    }
+}
+@media (min-width: variables.$xl) {
+    .container {
+        max-width: variables.$container-max-width;
+    }
+}
+@media (min-width: variables.$xxl) {
+    .container {
+        max-width: variables.$container-max-width;
     }
 }
 
@@ -139,6 +165,11 @@ a[routerLink] {
 }
 .filter-dark-color {
     filter: variables.$dark-color-filter;
+}
+
+.animate-opacity, 
+.animate-opacity-fast {
+    transition: opacity variables.$animation-duration-fast ease-in-out;
 }
 
 .maskable {
@@ -221,6 +252,51 @@ ul li::before {
 .button-sm {
     @extend .button;
     padding: variables.$button-sm-padding;
+}
+
+.badge {
+    @apply mr-2;
+    @apply mb-2;
+    margin-top: 0;
+    margin-left: 0;
+    padding: variables.$button-sm-padding;
+    border-radius: variables.$border-radius;
+    font-size: variables.$button-sm-content-size;
+    line-height: 1;
+    vertical-align: middle;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: -(variables.$border-width/2);
+
+    &.light {
+        color: variables.$dark-color;
+        background-color: variables.$light-color;
+        outline-color: variables.$light-color;
+    }
+
+    &.dark {
+        color: variables.$light-color;
+        background-color: transparent; // Assuming normal dark background -- TODO: Update to play nice with darkreader?
+        outline-color: variables.$light-color;
+    }
+}
+
+.badge-container {
+    // Contains a .badge class with additional div content next to it
+
+    @extend .badge;
+    padding: 0;
+
+    .badge {
+        margin: 0;
+    }
+
+    .badge + div {
+        vertical-align: middle;
+        padding: variables.$button-sm-padding;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 .panel {
@@ -356,4 +432,9 @@ ul li::before {
             black 100%
         );
     }
+}
+
+expando-button {
+    height: 1.25rem;
+    width: 1.25rem;
 }

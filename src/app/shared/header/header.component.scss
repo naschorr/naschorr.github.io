@@ -30,6 +30,13 @@
     }
 }
 
+.container > div {
+    @media (min-width: variables.$xl) {
+        padding-left: variables.$container-padding;
+        padding-right: variables.$container-padding;
+    }
+}
+
 .logo-container {
     border-radius: 50%;
     transition: box-shadow variables.$animation-duration-slow ease-in-out;

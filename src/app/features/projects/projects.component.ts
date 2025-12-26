@@ -3,28 +3,35 @@ import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, Renderer2 } 
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { Project } from './models/project.model';
-import { ProjectLoaderService } from './services/project-loader.service';
 import { ProjectComponent } from './components/project/project.component';
 import { FragmentScrollerService } from '../../shared/services/fragment-scroller.service';
 import { FragmentManagerService } from '../../shared/services/fragment-manager.service';
+import { ProjectManagerService } from './services/project-manager.service';
+import { ProjectFilterComponent } from "./components/project-filter/project-filter.component";
+import { ActivatedRoute } from '@angular/router';
+import { ProjectFilterService } from './services/project-filter.service';
 
 @Component({
     selector: 'projects',
-    imports: [HeaderComponent, FooterComponent, ProjectComponent],
+    imports: [HeaderComponent, FooterComponent, ProjectComponent, ProjectFilterComponent],
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit, AfterContentChecked {
+  private _availableProjectCount: number = 0;
   private _projects!: Project[];
   private _projectsChanged: boolean = false;
   private _hasScrolledToFragment: boolean = false;
+  private _filterQueryParams: Set<string> = new Set();
 
   public requestedProjectId: string | null = null;
 
   // Lifecycle
 
   constructor(
-      private _projectLoaderService: ProjectLoaderService,
+      private _route: ActivatedRoute,
+      private _projectManagerService: ProjectManagerService,
+      private _projectFilterService: ProjectFilterService,
       private _fragmentScrollerService: FragmentScrollerService,
       private _fragmentManagerService: FragmentManagerService,
       private _renderer: Renderer2,
@@ -32,8 +39,28 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
   ) { }
 
   ngOnInit(): void {
-    this._projectLoaderService.projects$.subscribe((projects: Project[]) => {
+    this._route.queryParamMap.subscribe(params => {
+      const filterKeys = params.getAll('filter');
+      filterKeys.forEach(key => {
+        this._filterQueryParams.add(key);
+      });
+    });
+
+    this._projectManagerService.allProjects$.subscribe((projects: Project[]) => {
+      this._availableProjectCount = projects.length;
+    });
+    this._projectManagerService.filteredProjects$.subscribe((projects: Project[]) => {
       this.projects = projects;
+    });
+
+    this._projectFilterService.availablePropertyFilters$.subscribe((a) => {
+      // Apply filters from query params after available filters are loaded
+      this._filterQueryParams.forEach(key => {
+        const propertyFilter = this._projectFilterService.getPropertyFilterByKey(key);
+        if (propertyFilter) {
+          this._projectFilterService.enableFilter(propertyFilter);
+        }
+      });
     });
 
     this.requestedProjectId = this._fragmentManagerService.getFragment();
@@ -67,6 +94,10 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
       explicit change detection, and all of the other lifecycle methods don't pick up the changes either.
     */
     this._changeDetectorRef.detectChanges();
+  }
+
+  get availableProjectCount(): number {
+    return this._availableProjectCount;
   }
 
   // Methods

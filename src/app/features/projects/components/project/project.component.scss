@@ -20,16 +20,3 @@
     margin-left: -(variables.$project-panel-padding);
     margin-right: -(variables.$project-panel-padding);
 }
-
-.badge {
-    margin-bottom: 0.2rem;
-    margin-left: 0;
-    padding: variables.$button-sm-padding;
-    border-radius: variables.$border-radius;
-    font-size: variables.$button-sm-content-size;
-    line-height: 1;
-    vertical-align: middle;
-    outline: 1px solid variables.$light-color;
-    outline-offset: -(variables.$border-width);
-    color: variables.$light-color;
-}
