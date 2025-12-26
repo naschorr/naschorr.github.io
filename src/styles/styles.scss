@@ -20,7 +20,7 @@ html {
 }
 
 p:not(:last-child) {
-    margin-bottom: 0.375rem;    // mb-1.5
+    @apply mb-1;
 }
 
 img, .skeleton {

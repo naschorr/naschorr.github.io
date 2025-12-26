@@ -8,6 +8,8 @@ import { FragmentScrollerService } from '../../shared/services/fragment-scroller
 import { FragmentManagerService } from '../../shared/services/fragment-manager.service';
 import { ProjectManagerService } from './services/project-manager.service';
 import { ProjectFilterComponent } from "./components/project-filter/project-filter.component";
+import { ActivatedRoute } from '@angular/router';
+import { ProjectFilterService } from './services/project-filter.service';
 
 @Component({
     selector: 'projects',
@@ -20,13 +22,16 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
   private _projects!: Project[];
   private _projectsChanged: boolean = false;
   private _hasScrolledToFragment: boolean = false;
+  private _filterQueryParams: Set<string> = new Set();
 
   public requestedProjectId: string | null = null;
 
   // Lifecycle
 
   constructor(
+      private _route: ActivatedRoute,
       private _projectManagerService: ProjectManagerService,
+      private _projectFilterService: ProjectFilterService,
       private _fragmentScrollerService: FragmentScrollerService,
       private _fragmentManagerService: FragmentManagerService,
       private _renderer: Renderer2,
@@ -34,11 +39,28 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
   ) { }
 
   ngOnInit(): void {
+    this._route.queryParamMap.subscribe(params => {
+      const filterKeys = params.getAll('filter');
+      filterKeys.forEach(key => {
+        this._filterQueryParams.add(key);
+      });
+    });
+
     this._projectManagerService.allProjects$.subscribe((projects: Project[]) => {
       this._availableProjectCount = projects.length;
     });
     this._projectManagerService.filteredProjects$.subscribe((projects: Project[]) => {
       this.projects = projects;
+    });
+
+    this._projectFilterService.availablePropertyFilters$.subscribe((a) => {
+      // Apply filters from query params after available filters are loaded
+      this._filterQueryParams.forEach(key => {
+        const propertyFilter = this._projectFilterService.getPropertyFilterByKey(key);
+        if (propertyFilter) {
+          this._projectFilterService.enableFilter(propertyFilter);
+        }
+      });
     });
 
     this.requestedProjectId = this._fragmentManagerService.getFragment();

@@ -24,7 +24,6 @@ export class ProjectFilterService {
       // Reset data when projects change
       this._allProjects = projects;
       this._availablePropertyFiltersSubject.value.clear();
-      // TODO: This should really apply existing selected filters when projects change instead of clearing them.
       this._selectedPropertyFiltersSubject.value.clear();
 
       // Rebuild available filter data
@@ -38,8 +37,45 @@ export class ProjectFilterService {
 
       // Emit available filter data
       this._availablePropertyFiltersSubject.next(this._availablePropertyFiltersSubject.value);
-      this._filteredProjectsSubject.next(this._allProjects); // TODO: Same as above, this should keep existing filters.
+      this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
     });
+  }
+
+  // Getters for retrieving specific PropertyFilters (case insensitive)
+  public getPropertyFilterByCategoryName(category: string, name: string): PropertyFilter | null {
+    const categoryLower = category.toLowerCase();
+    const nameLower = name.toLowerCase();
+    
+    for (const [key, filterMap] of this._availablePropertyFiltersSubject.value.entries()) {
+      if (key.toLowerCase() === categoryLower) {
+        for (const [filterKey, filter] of filterMap.entries()) {
+          if (filter.name.toLowerCase() === nameLower) {
+            return filter;
+          }
+        }
+      }
+    }
+
+    return null;
+  }
+
+  public getPropertyFilterByKey(key: string): PropertyFilter | null {
+    const [category, name] = key.split('/');
+    return this.getPropertyFilterByCategoryName(category, name);
+  }
+
+  public enableFilter(propertyFilter: PropertyFilter): void {
+    this._selectedPropertyFiltersSubject.value.add(propertyFilter);
+
+    this._selectedPropertyFiltersSubject.next(this._selectedPropertyFiltersSubject.value);
+    this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
+  }
+
+  public disableFilter(propertyFilter: PropertyFilter): void {
+    this._selectedPropertyFiltersSubject.value.delete(propertyFilter);
+
+    this._selectedPropertyFiltersSubject.next(this._selectedPropertyFiltersSubject.value);
+    this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
   }
 
   public onToggleFilter(propertyFilter: PropertyFilter): void {
