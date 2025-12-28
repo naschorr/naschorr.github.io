@@ -19,6 +19,10 @@ html {
     line-height: 1.4;
 }
 
+.scrollbar-offset {
+    padding-right: calc(0.25rem * 3 + calc(100vw - 100cqw));
+}
+
 p:not(:last-child) {
     @apply mb-1;
 }

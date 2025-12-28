@@ -1,7 +1,7 @@
 <div class="bg-gradient-dark flex flex-col min-h-screen w-screen">
   <header title="Portfolio"></header>
 
-  <div class="flex flex-col xl:flex-row gap-3 m-3">
+  <div class="flex flex-col xl:flex-row gap-3 m-3 scrollbar-offset">
     <div id="primary-gutter" class="flex-1 shrink-[2] flex xl:justify-end">
       <project-filter></project-filter>
     </div>
@@ -11,7 +11,7 @@
         <project [project]="project" [flash]="requestedProjectId == project.id"></project>
       }
       @if (projects.length === 0) {
-        <div class="color-light text-center mt-6">
+        <div class="color-light text-center my-6">
           <span class="opacity-70">No projects match the selected filters.</span>
         </div>
       }
