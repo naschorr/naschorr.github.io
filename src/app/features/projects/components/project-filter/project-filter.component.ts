@@ -61,7 +61,7 @@ export class ProjectFilterComponent {
   }
 
   public onFilterClick(propertyFilter: PropertyFilter): void {
-    this._projectFilterService.onToggleFilter(propertyFilter);
+    this._projectFilterService.toggleFilter(propertyFilter);
   }
 
   public onExpandoClick(): void {

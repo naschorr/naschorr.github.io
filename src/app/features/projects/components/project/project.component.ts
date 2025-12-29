@@ -55,7 +55,7 @@ export class ProjectComponent {
   public onFilterHover(category: string, name: string): void {
     const propertyFilter = this._projectFilterService.getPropertyFilterByCategoryName(category, name);
     if (propertyFilter) {
-      this._projectFilterService.onToggleFilter(propertyFilter);
+      this._projectFilterService.toggleFilter(propertyFilter);
     }
   }
 

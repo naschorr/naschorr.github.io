@@ -78,7 +78,7 @@ export class ProjectFilterService {
     this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
   }
 
-  public onToggleFilter(propertyFilter: PropertyFilter): void {
+  public toggleFilter(propertyFilter: PropertyFilter): void {
     if (this._selectedPropertyFiltersSubject.value.has(propertyFilter)) {
       this._selectedPropertyFiltersSubject.value.delete(propertyFilter);
     } else {
