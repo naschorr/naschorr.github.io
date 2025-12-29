@@ -7,6 +7,6 @@
                 height="100%"
                 [alt]="imageAltText">
     </div>
-    <div    class="grow text-center mx-3 leading-none color-dark"
+    <div    class="{{textClasses.join(' ')}} grow text-center mx-3 leading-none color-dark"
             [ngStyle]="{'font-size': contentHeight}">{{text}}</div>
 </div>

@@ -15,6 +15,9 @@ export class ImageButtonComponent {
   public containerClasses: string[] = [];
 
   @Input()
+  public textClasses: string[] = [];
+
+  @Input()
   public contentHeight: string = "1.5rem";
 
   @Input()

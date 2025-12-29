@@ -1,5 +1,5 @@
-<div class="color-medium header-blurred w-full pointer-events-none scrollbar-offset">
-    <div class="container mx-auto flex justify-between">
+<div class="flex justify-center color-medium header-blurred w-full pointer-events-none scrollbar-offset">
+    <div class="container flex justify-between mx-4">
         <div class="flex items-center pointer-events-auto">
             <a  routerLink=""
                 class="h-6 w-6 mr-3 logo-container pseudo-border circular">
@@ -15,7 +15,8 @@
                                 contentHeight="1rem"
                                 imagePath="assets/images/icons/github-filled.png"
                                 imageAltText="GitHub logo"
-                                text="GitHub">
+                                text="GitHub"
+                                [textClasses]="['hidden', 'sm:inline']">
                 </image-button>
             </a>
 
@@ -25,7 +26,8 @@
                                 contentHeight="1rem"
                                 imagePath="assets/images/icons/terminal.png"
                                 imageAltText="Image of a computer terminal's `>_` prompt"
-                                text="Portfolio">
+                                text="Portfolio"
+                                [textClasses]="['hidden', 'sm:inline']">
                 </image-button>
             </a>
 
