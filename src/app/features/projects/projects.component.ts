@@ -66,6 +66,10 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
     this.requestedProjectId = this._fragmentManagerService.getFragment();
   }
 
+  ngOnDestroy(): void {
+    this._projectFilterService.clearFilters();
+  }
+
   ngAfterContentChecked(): void {
     this.handleProjectsChangeUpdate();
 

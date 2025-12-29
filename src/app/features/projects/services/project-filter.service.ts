@@ -89,6 +89,11 @@ export class ProjectFilterService {
     this._filteredProjectsSubject.next(this.applyFilters(this._allProjects));
   }
 
+  public clearFilters(): void {
+    this._selectedPropertyFiltersSubject.next(new Set());
+    this._filteredProjectsSubject.next(this._allProjects);
+  }
+
   private populatePropertyFilter(category: ProjectProperty, name: string) {
     let filterMap = this._availablePropertyFiltersSubject.value.get(category);
     if (!filterMap) {
