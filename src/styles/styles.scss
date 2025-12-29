@@ -176,30 +176,6 @@ a[routerLink] {
     transition: opacity variables.$animation-duration-fast ease-in-out;
 }
 
-.maskable {
-    height: 100%;
-    width: 100%;
-    mask-size: 100%;
-}
-.github-mask {
-    mask-image: url("../assets/images/icons/github.png");
-}
-.github-filled-mask {
-    mask-image: url("../assets/images/icons/github-filled.png");
-}
-.flask-mask {
-    mask-image: url("../assets/images/icons/flask.png");
-}
-.flask-filled-mask {
-    mask-image: url("../assets/images/icons/flask-filled.png");
-}
-.printer-mask {
-    mask-image: url("../assets/images/icons/3d-printer.png");
-}
-.printer-filled-mask {
-    mask-image: url("../assets/images/icons/3d-printer-filled.png");
-}
-
 .horizontal-rule {
     width: 100%;
     height: 0.1rem;
