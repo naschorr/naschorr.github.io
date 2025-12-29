@@ -1,37 +1,42 @@
 <div class="w-full">
     <div class="flex flex-row items-center justify-between">
-        <div class="color-light">
-            <h2 class="hidden xl:block">
+        <div class="hidden xl:flex flex-row justify-between gap-3">
+            <h2 class="color-light">
                 Filters
             </h2>
-            <div class="xl:hidden">
-                <button class="badge pseudo-border"
-                    [ngClass]="{
-                        '!mb-0': isCollapsed,
-                        'dark': isCollapsed && selectedPropertyFilters.size === 0,
-                        'light': isCollapsed && selectedPropertyFilters.size > 0 || !isCollapsed || selectedPropertyFilters.size > 0
-                    }"
-                    (click)="isCollapsed = !isCollapsed">
-                    Filters
-                </button>
-                @for (filter of selectedPropertyFilters; track filter; let f = $index) {
-                    <button class="badge dark pseudo-border last:mr-0"
-                        [ngClass]="{'!mb-0': isCollapsed}"
-                        (click)="onFilterClick(filter)">
-                        @switch (filter.name) {
-                            @case (projectFlavor.CODE) {
-                                Code
-                            }
-                            @case (projectFlavor.PRINT) {
-                                3D Print
-                            }
-                            @default {
-                                {{ filter.name }}
-                            }
+            <button class="badge light pseudo-border animate-opacity-fast !my-1"
+                [ngClass]="{'opacity-0 pointer-events-none': selectedPropertyFilters.size === 0}"
+                (click)="onClearClick()">
+                Clear All
+            </button>
+        </div>
+        <div class="xl:hidden">
+            <button class="badge pseudo-border"
+                [ngClass]="{
+                    '!mb-0': isCollapsed,
+                    'dark': isCollapsed && selectedPropertyFilters.size === 0,
+                    'light': isCollapsed && selectedPropertyFilters.size > 0 || !isCollapsed || selectedPropertyFilters.size > 0
+                }"
+                (click)="isCollapsed = !isCollapsed">
+                Filters
+            </button>
+            @for (filter of selectedPropertyFilters; track filter; let f = $index) {
+                <button class="badge dark pseudo-border last:mr-0"
+                    [ngClass]="{'!mb-0': isCollapsed}"
+                    (click)="onFilterClick(filter)">
+                    @switch (filter.name) {
+                        @case (projectFlavor.CODE) {
+                            Code
                         }
-                    </button>
-                }
-            </div>
+                        @case (projectFlavor.PRINT) {
+                            3D Print
+                        }
+                        @default {
+                            {{ filter.name }}
+                        }
+                    }
+                </button>
+            }
         </div>
     </div>
     <div class="filter-grid grid"

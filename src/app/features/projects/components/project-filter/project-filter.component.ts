@@ -64,7 +64,7 @@ export class ProjectFilterComponent {
     this._projectFilterService.toggleFilter(propertyFilter);
   }
 
-  public onExpandoClick(): void {
-    this.isCollapsed = !this.isCollapsed;
+  public onClearClick(): void {
+    this._projectFilterService.clearFilters();
   }
 }
