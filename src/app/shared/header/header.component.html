@@ -1,4 +1,4 @@
-<div class="color-medium header-blurred w-full pointer-events-none">
+<div class="color-medium header-blurred w-full pointer-events-none scrollbar-offset">
     <div class="container mx-auto flex justify-between">
         <div class="flex items-center pointer-events-auto">
             <a  routerLink=""
@@ -7,21 +7,28 @@
             </a>
             <h1 class="bg-gradient-light clip-text">{{ title }}</h1>
         </div>
-        <!-- todo: move all of these links to a single component, share with home page -->
-        <div class="flex items-center pointer-events-auto">
+        <div class="flex items-center pointer-events-auto gap-3">
+
             <a      href="https://github.com/naschorr"
-                    target="_blank"
-                    class="nav-container inline-block m-2"
-                    title="My GitHub">
-                <div class="bg-gradient-medium github-mask maskable nav-item"></div>
-                <div class="bg-gradient-light github-filled-mask maskable nav-item hoverable"></div>
+                    target="_blank">
+                <image-button   buttonFlavor="button-sm"
+                                contentHeight="1rem"
+                                imagePath="assets/images/icons/github-filled.png"
+                                imageAltText="GitHub logo"
+                                text="GitHub">
+                </image-button>
             </a>
+
             <a      routerLink="/portfolio"
-                    class="nav-container inline-block m-2"
-                    title="Projects">
-                <div class="bg-gradient-medium flask-mask maskable nav-item"></div>
-                <div class="bg-gradient-light flask-filled-mask maskable nav-item hoverable"></div>
+                    class="w-full">
+                <image-button   buttonFlavor="button-sm"
+                                contentHeight="1rem"
+                                imagePath="assets/images/icons/terminal.png"
+                                imageAltText="Image of a computer terminal's `>_` prompt"
+                                text="Portfolio">
+                </image-button>
             </a>
+
         </div>
     </div>
 </div>
