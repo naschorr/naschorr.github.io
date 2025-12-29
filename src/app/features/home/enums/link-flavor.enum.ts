@@ -1,5 +1,5 @@
 export enum LinkFlavor {
-    CODE = "code",
-    PORTFOLIO = "portfolio",
-    PRINT = "print"
+    GITHUB = "code",
+    CODE_PORTFOLIO = "code_portfolio",
+    PRINT_PORTFOLIO = "print_portfolio"
 }

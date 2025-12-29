@@ -19,14 +19,14 @@
 
 
         <div class="flex justify-center mt-5 md:mt-10">
-            <div class="w-full md:w-11/12 lg:w-9/12 xl:w-6/12 2xl:4/12 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="w-full md:w-11/12 lg:w-9/12 xl:w-6/12 2xl:w-4/12 grid grid-cols-1 md:grid-cols-3 gap-5">
 
                 <a      href="https://github.com/naschorr"
                         target="_blank"
                         class="w-full"
-                        (mouseover)="onLinkMouseOver(linkFlavorEnum.CODE)"
+                        (mouseover)="onLinkMouseOver(linkFlavorEnum.GITHUB)"
                         (mouseleave)="onLinkMouseExit()">
-                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.CODE ? ['active'] : []"
+                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.GITHUB ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/github-filled.png"
                                     imageAltText="GitHub logo"
@@ -35,27 +35,28 @@
                 </a>
 
                 <a      routerLink="/portfolio"
+                        [queryParams]="{'filter': 'flavor/code'}"
                         class="w-full"
-                        (mouseover)="onLinkMouseOver(linkFlavorEnum.PORTFOLIO)"
+                        (mouseover)="onLinkMouseOver(linkFlavorEnum.CODE_PORTFOLIO)"
                         (mouseleave)="onLinkMouseExit()">
-                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PORTFOLIO ? ['active'] : []"
+                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.CODE_PORTFOLIO ? ['active'] : []"
                                     contentHeight="1.25rem"
-                                    imagePath="assets/images/icons/flask-filled.png"
-                                    imageAltText="Filled in image of a flask used in scientific experiments"
-                                    text="Portfolio">
+                                    imagePath="assets/images/icons/terminal.png"
+                                    imageAltText="Image of a computer terminal's `>_` prompt"
+                                    text="Code">
                     </image-button>
                 </a>
 
-                <a      href="https://www.printables.com/@naschorr_134538"
-                        target="_blank"
+                <a      routerLink="/portfolio"
+                        [queryParams]="{'filter': 'flavor/3dprint'}"
                         class="w-full"
-                        (mouseover)="onLinkMouseOver(linkFlavorEnum.PRINT)"
+                        (mouseover)="onLinkMouseOver(linkFlavorEnum.PRINT_PORTFOLIO)"
                         (mouseleave)="onLinkMouseExit()">
-                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PRINT ? ['active'] : []"
+                    <image-button   [containerClasses]="activeLinkFlavor === linkFlavorEnum.PRINT_PORTFOLIO ? ['active'] : []"
                                     contentHeight="1.25rem"
                                     imagePath="assets/images/icons/3d-printer-filled.png"
                                     imageAltText="Filled in image of a 3d printer"
-                                    text="3D Printing">
+                                    text="3D Prints">
                     </image-button>
                 </a>
 
