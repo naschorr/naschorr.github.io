@@ -171,6 +171,16 @@ a[routerLink] {
     filter: variables.$dark-color-filter;
 }
 
+.outline {
+    outline-width: variables.$border-width/2;
+    outline-style: solid;
+    outline-offset: -(variables.$border-width/2);
+
+    &.dark {
+        outline-color: variables.$light-color;
+    }
+}
+
 .animate-opacity, 
 .animate-opacity-fast {
     transition: opacity variables.$animation-duration-fast ease-in-out;
@@ -237,6 +247,7 @@ ul li::before {
 .badge {
     @apply mr-2;
     @apply mb-2;
+    @apply outline;
     margin-top: 0;
     margin-left: 0;
     padding: variables.$button-sm-padding;
@@ -244,20 +255,17 @@ ul li::before {
     font-size: variables.$button-sm-content-size;
     line-height: 1;
     vertical-align: middle;
-    outline-width: 1px;
-    outline-style: solid;
-    outline-offset: -(variables.$border-width/2);
 
     &.light {
+        @extend .outline, .light;
         color: variables.$dark-color;
         background-color: variables.$light-color;
-        outline-color: variables.$light-color;
     }
 
     &.dark {
+        @extend .outline, .light;
         color: variables.$light-color;
         background-color: transparent; // Assuming normal dark background -- TODO: Update to play nice with darkreader?
-        outline-color: variables.$light-color;
     }
 }
 

@@ -9,6 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageButtonComponent {
   @Input()
+  public isDark: boolean = false;
+
+  @Input()
   public buttonFlavor: string = "button"
 
   @Input()
