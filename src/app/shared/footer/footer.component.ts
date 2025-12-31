@@ -9,14 +9,14 @@ import { Component, Input } from '@angular/core';
 })
 export class FooterComponent {
   @Input()
-  public isAbsolute: boolean = false;
+  public containerClasses: string[] = [];
   @Input()
-  public containerClasses: string = "color-light"
+  public isContainerSized: boolean = true;
 
   private _currentYear: number = new Date().getFullYear();
   private _infoExpanded: boolean = false;
 
-  // Getters
+  // Getters/Setters
 
   get currentYear(): number {
     return this._currentYear;

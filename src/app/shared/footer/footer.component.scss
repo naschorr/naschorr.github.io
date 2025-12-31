@@ -1,19 +1,9 @@
 @use "variables";
 
 :host {
-    display: flex;
-    justify-content: end;
-    flex-grow: 1;
-}
-
-.absolute {
-    position: absolute;
-    bottom: 0;
-}
-
-.footer {
-    font-size: 0.5rem;
-    opacity: 0.25;
+    @apply flex;
+    @apply justify-center;
+    @apply flex-grow;
 }
 
 .container > div {

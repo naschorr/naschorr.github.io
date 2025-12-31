@@ -6,7 +6,7 @@
       <project-filter></project-filter>
     </div>
 
-    <main class="container flex flex-col shrink-[1] min-w-0 gap-3 mx-auto xl:mx-0">
+    <main class="container flex flex-col shrink-[1] min-w-0 gap-3 mx-auto">
       @for (project of projects; track project; let i = $index) {
         <project [project]="project" [flash]="requestedProjectId == project.id"></project>
       }
@@ -20,5 +20,5 @@
     <div id="secondary-gutter" class="flex-1 shrink-[3]"></div>
   </div>
 
-  <footer containerClasses="container color-light mx-auto mt-3"></footer>
+  <footer [containerClasses]="['scrollbar-offset', 'mb-3']"></footer>
 </div>
