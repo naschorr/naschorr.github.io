@@ -60,7 +60,7 @@ export class ProjectFilterService {
   }
 
   public getPropertyFilterByKey(key: string): PropertyFilter | null {
-    const [category, name] = key.split('/');
+    const [category, name] = key.split('-');
     return this.getPropertyFilterByCategoryName(category, name);
   }
 
