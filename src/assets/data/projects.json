@@ -278,7 +278,7 @@
         ]
     },
     {
-        "id": "mtb-inflator-carrier",
+        "id": "mtb-inflator-carrier-magnetic",
         "flavor": "3dprint",
         "name": "CO2 Inflator Carrier for Mountain Bike Steer Tubes",
         "description": [
@@ -287,14 +287,14 @@
         ],
         "images": [
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/in_use.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/in_use.avif",
                 "description": [
                     "The inflator carrier in use, with just the handle poking out of the bottom of the mountain bike's steer tube."
                 ],
                 "altText": "A photo of the inflator carrier in use, with just the handle poking out of the bottom of the mountain bike's steer tube."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/assembly.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/assembly.avif",
                 "description": [
                     "A render of the completed assembly. On the left is the Bontrager inflator, clipped into it's holder. The holder is screwed onto the CO2 cartridge. The CO2 cartridge is magnetically attached to the CO2 cartridge mount, which is screwed into the compression plug assembly.",
                     "The total package is slim, easy to assemble, and easy to print."
@@ -302,14 +302,14 @@
                 "altText": "A photo of the entire CO2 inflator assembly with it's magnetic mount and compression plug for the steer tube."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/co2_inflator_holder.avif",
                 "description": [
                     "A close up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
                 ],
                 "altText": "A close photo up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/compression_plug_co2_mount.avif",
                 "description": [
                     "A close up of the CO2 cartridge mount and compression plug assembly.",
                     "During assembly, the compression plug's screw is tightened which brings the upper and lower \"cones\" together. This causes the wedges in between them to expand outward, driving the o-rings into the inside of the steer tube, and locking it in place."
