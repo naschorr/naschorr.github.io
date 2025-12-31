@@ -242,6 +242,42 @@
         ]
     },
     {
+        "id": "mtb-brake-spacer",
+        "flavor": "3dprint",
+        "name": "Disc Brake Spacer for Mountain Bikes",
+        "description": [
+            "Keep your bike's brake pads separated when removing the wheel with this simple spacer!",
+            "Designed for Shimano MT200 brakes, but should play nice with other mountain bike disc brakes."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/mtb-disc-brake-spacer/spacer.avif",
+                "description": [
+                    "The spacer itself, with the line clipped into the bottom hole."
+                ],
+                "altText": "A photo of the disc brake spacer lying in front of prototypes."
+            },
+            {
+                "url": "assets/images/projects/mtb-disc-brake-spacer/installed.avif",
+                "description": [
+                    "The spacer, installed into a mountain bike's rear caliper."
+                ],
+                "altText": "A photo of the disc brake spacer installed."
+            },
+            {
+                "url": "assets/images/projects/mtb-disc-brake-spacer/overlay.avif",
+                "description": [
+                    "The spacer, installed and with the line clipped in locking it in place. An overlay has been added to better illustrate what the the installation looks like."
+                ],
+                "altText": "A photo of the disc brake spacer installed, with an overlay of all the components."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion"
+        ]
+    },
+    {
         "id": "mtb-inflator-carrier",
         "flavor": "3dprint",
         "name": "CO2 Inflator Carrier for Mountain Bike Steer Tubes",
