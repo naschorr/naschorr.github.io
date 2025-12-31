@@ -12,4 +12,7 @@ import { ImageButtonComponent } from '../button/components/image-button/image-bu
 export class HeaderComponent {
   @Input()
   public title: string = "";
+  @Input()
+  public containerClasses: string[] = [];
 }
+  
