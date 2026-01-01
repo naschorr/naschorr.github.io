@@ -75,6 +75,59 @@
         ]
     },
     {
+        "id": "warthog",
+        "flavor": "code",
+        "name": "Warthog",
+        "description": [
+            "War Thunder Logger, or Warthog, is a data acquisition and analysis tool for War Thunder.",
+            "War Thunder is a multiplayer game, where it often feels like matchmaking will put you into frustrating matches very frequently. Warthog was created to help quantify those feelings and use data to see what's actually going on. It uses locally saved match replay data to quantify these results.",
+            "Since those replays expose extensive data, Warthog tries to look at everything to build a complete picture. It provides player performance graphs at different battle ratings, score distributions, heatmapped performance by battle rating and country, battle rating deltas, analysis of premium vehicle performance, and more!",
+            "Raw data analysis is performed in a Jupyter notebook, but with writeups being saved to the GitHub repository as well, <a href=\"https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md\">check out the analysis now!</a>."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/warthog/scatter_score_vs_br.avif",
+                "description": [
+                    "This is a graph of score versus battle rating.",
+                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                ],
+                "altText": "A scatter plot of score versus battle rating for my War Thunder matches. There's a clear downward trend of score as battle rating increases."
+            },
+            {
+                "url": "assets/images/projects/warthog/pie_tier_frequency.avif",
+                "description": [
+                    "This is a pie chart showing the frequency of battle rating tiers. Notice how many more (bad) uptiers there are compared to (good) downtiers.",
+                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                ],
+                "altText": "A pie chart showing the frequency of battle rating tiers for my War Thunder matches."
+            },
+            {
+                "url": "assets/images/projects/warthog/bar_tier_frequency_vs_br.avif",
+                "description": [
+                    "This is a bar chart showing the frequency of battle rating tiers versus battle rating.",
+                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                ],
+                "altText": "A bar chart showing the frequency of battle rating tiers versus battle rating for my War Thunder matches."
+            },
+            {
+                "url": "assets/images/projects/warthog/bar_tier_distribution.avif",
+                "description": [
+                    "This is a bar chart showing the distribution of battle rating tiers over time. Notice how rare the (good, green) downtiers are compared to the (bad, red) uptiers.",
+                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                ],
+                "altText": "A bar chart showing the distribution of battle rating tiers over time for my War Thunder matches."
+            }
+        ],
+        "url": "https://github.com/naschorr/warthog",
+        "technologies": [
+            "Python",
+            "Pydantic",
+            "NumPy",
+            "Jupyter",
+            "Claude Sonnet"
+        ]
+    },
+    {
         "id": "mail-to-sms",
         "flavor": "code",
         "name": "Mail To SMS",
