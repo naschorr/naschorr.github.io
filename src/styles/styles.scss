@@ -31,6 +31,13 @@ img, .skeleton {
     border-radius: variables.$border-radius;
 }
 
+a:not(:has(*)) {
+    @apply bg-gradient-feature-short;
+    @apply clip-text;
+    @apply font-semibold;
+    @apply underline-feature-gradient;
+}
+
 // Router Animations
 
 @keyframes enter {
