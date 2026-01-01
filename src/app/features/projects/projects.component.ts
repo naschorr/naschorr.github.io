@@ -10,6 +10,7 @@ import { ProjectManagerService } from './services/project-manager.service';
 import { ProjectFilterComponent } from "./components/project-filter/project-filter.component";
 import { ActivatedRoute } from '@angular/router';
 import { ProjectFilterService } from './services/project-filter.service';
+import { PropertyFilter } from './models/property-filter.model';
 
 @Component({
     selector: 'projects',
@@ -39,6 +40,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
   ) { }
 
   ngOnInit(): void {
+    // Get query params
     this._route.queryParamMap.subscribe(params => {
       const filterKeys = params.getAll('filter');
       filterKeys.forEach(key => {
@@ -46,6 +48,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
       });
     });
 
+    // Get projects and their count
     this._projectManagerService.allProjects$.subscribe((projects: Project[]) => {
       this._availableProjectCount = projects.length;
     });
@@ -53,14 +56,25 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
       this.projects = projects;
     });
 
-    this._projectFilterService.availablePropertyFilters$.subscribe((a) => {
-      // Apply filters from query params after available filters are loaded
-      this._filterQueryParams.forEach(key => {
-        const propertyFilter = this._projectFilterService.getPropertyFilterByKey(key);
-        if (propertyFilter) {
-          this._projectFilterService.enableFilter(propertyFilter);
-        }
-      });
+    // Apply filters from query params when available filters are first loaded
+    this._projectFilterService.availablePropertyFilters$.subscribe((filters) => {
+      if (filters.size > 0 && this._filterQueryParams.size > 0) {
+        // Collect filters to enable first
+        const filtersToEnable: PropertyFilter[] = [];
+        this._filterQueryParams.forEach(key => {
+          const propertyFilter = this._projectFilterService.getPropertyFilterByKey(key);
+          if (propertyFilter) {
+            filtersToEnable.push(propertyFilter);
+          }
+        });
+        // Clear params before enabling to prevent re-entrancy
+        this._filterQueryParams.clear();
+
+        // Now enable the filters
+        filtersToEnable.forEach(filter => {
+          this._projectFilterService.enableFilter(filter);
+        });
+      }
     });
 
     this.requestedProjectId = this._fragmentManagerService.getFragment();
