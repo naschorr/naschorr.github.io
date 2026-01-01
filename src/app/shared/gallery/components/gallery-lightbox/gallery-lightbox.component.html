@@ -20,7 +20,7 @@
       @if (!!activeImage) {
         <image-display [image]="activeImage" (fullResImageLoadedEvent)="onActiveImageLoaded()" [canLoadFullResImage]=true></image-display>
       }
-      <div class="description-container color-light container mx-auto mt-3 lg:mt-6 px-5 py-3">
+      <div class="description-container self-center color-light container mx-auto mt-3 lg:mt-6 px-5 py-3">
         @for (description of activeImage?.description; track description) {
           <p [innerHTML]="description"></p>
         }
