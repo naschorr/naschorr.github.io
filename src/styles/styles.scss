@@ -211,31 +211,6 @@ ul li::before {
     margin-top: 0.25em;
 }
 
-.nav-container {
-    position: relative;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-.nav-container .nav-item {
-    transition: opacity variables.$animation-duration-fast ease-in-out;
-}
-.nav-container .nav-item:not(.hoverable) {
-    opacity: 1;
-}
-.nav-container .nav-item:not(.hoverable):hover,
-.nav-container .nav-item:not(.hoverable).active {
-    opacity: 0;
-}
-.nav-container .nav-item.hoverable {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-}
-.nav-container .nav-item.hoverable:hover,
-.nav-container .nav-item.hoverable.active{
-    opacity: 1;
-}
-
 .button, .button-lg {
     display: flex;
     flex-direction: row;
@@ -426,9 +401,4 @@ ul li::before {
             black 100%
         );
     }
-}
-
-expando-button {
-    height: 1.25rem;
-    width: 1.25rem;
 }
