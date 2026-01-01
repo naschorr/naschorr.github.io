@@ -82,7 +82,7 @@
             "War Thunder Logger, or Warthog, is a data acquisition and analysis tool for War Thunder.",
             "War Thunder is a multiplayer game, where it often feels like matchmaking will put you into frustrating matches very frequently. Warthog was created to help quantify those feelings and use data to see what's actually going on. It uses locally saved match replay data to quantify these results.",
             "Since those replays expose extensive data, Warthog tries to look at everything to build a complete picture. It provides player performance graphs at different battle ratings, score distributions, heatmapped performance by battle rating and country, battle rating deltas, analysis of premium vehicle performance, and more!",
-            "Raw data analysis is performed in a Jupyter notebook, but with writeups being saved to the GitHub repository as well, <a href=\"https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md\">check out the analysis now!</a>."
+            "Raw data analysis is performed in a Jupyter notebook, though milestone write-ups are saved to the GitHub repository as well, <a href=\"https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md\">check out the analysis</a> now!"
         ],
         "images": [
             {
