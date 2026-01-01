@@ -25,7 +25,6 @@ export class ProjectFilterService {
     this._projectLoaderService.projects$.subscribe((projects) => {
       // Reset data when projects change
       this._allProjects = projects;
-      // Create new Map instances for property filters but preserve selected filters
       this._allPropertyFiltersSubject.next(new Map());
       this._availablePropertyFiltersSubject.next(new Map());
 
@@ -38,7 +37,18 @@ export class ProjectFilterService {
         });
       });
 
+      // Remap selected filters to use new PropertyFilter references
+      const oldSelectedFilters = new Set(this._selectedPropertyFiltersSubject.value);
+      const newSelectedFilters = new Set<PropertyFilter>();
+      oldSelectedFilters.forEach((oldFilter) => {
+        const newFilter = this.getPropertyFilterByCategoryName(oldFilter.category, oldFilter.name);
+        if (newFilter) {
+          newSelectedFilters.add(newFilter);
+        }
+      });
+      
       // Emit available filter data
+      this._selectedPropertyFiltersSubject.next(newSelectedFilters);
       this._allPropertyFiltersSubject.next(this._allPropertyFiltersSubject.value);
       this._filteredProjectsSubject.next(this.applyFiltersToProjects(this._allProjects));
       this._availablePropertyFiltersSubject.next(this.applyFiltersToPropertyFilters(this._filteredProjectsSubject.value));
