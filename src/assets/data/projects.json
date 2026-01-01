@@ -183,6 +183,50 @@
         ]
     },
     {
+        "id": "pressure-washer",
+        "flavor": "3dprint",
+        "name": "Portable Pressure Washer",
+        "description": [
+            "This is a portable, battery powered pressure washer designed to be compact and easy to use. Just pop in a tool battery, fill up the tank, and flip the switch to start cleaning!",
+            "I designed it for rinsing off my mountain bike at the trailhead, but it should be great for cleaning anything else too. As a bonus, it's super small and should fit in even the smallest car trunk."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/portable-pressure-washer/pressure_washer.avif",
+                "description": [
+                    "The pressure washer itself."
+                ],
+                "altText": "A photo of the portable pressure washer sitting on the ground."
+            },
+            {
+                "url": "assets/images/projects/portable-pressure-washer/in_action.avif",
+                "description": [
+                    "Cleaning off a mountain bike with the pressure washer."
+                ],
+                "altText": "A photo of the portable pressure washer being used to clean a mountain bike."
+            },
+            {
+                "url": "assets/images/projects/portable-pressure-washer/pressure_washer_with_bike.avif",
+                "description": [
+                    "The pressure washer sitting next to a clean bike.",
+                    "(29 inch wheels for scale)"
+                ],
+                "altText": "A photo of the portable pressure washer sitting next to a mountain bike."
+            },
+            {
+                "url": "assets/images/projects/portable-pressure-washer/progress.avif",
+                "description": [
+                    "The pressure washer (right) sitting next to an early prototype built from a garden sprayer and an air compressor (left)."
+                ],
+                "altText": "A photo of the portable pressure washer sitting next to an early prototype built from a garden sprayer and an air compressor."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion"
+        ]
+    },
+    {
         "id": "nixie-clock-case",
         "flavor": "3dprint",
         "name": "Minimal Nixie Tube Clock Case",
