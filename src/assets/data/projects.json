@@ -374,29 +374,37 @@
             "Autodesk Fusion"
         ]
     },
-        {
+    {
         "id": "mtb-inflator-carrier-fork-cork",
         "flavor": "3dprint",
-        "name": "Mountain Bike Magnetic CO2 Inflator Carrier",
+        "name": "Mountain Bike CO2 Inflator Carrier (Fork Cork)",
         "description": [
-            "Securely and safely carry a CO2 cartridge and inflator head within your mountain bike's steer tube using this <a href=\"\">Fork Cork</a> addon."
+            "Securely and safely carry a CO2 cartridge and a <a href=\"https://www.topeak.com/global/en/product/1420-NANO-AIRBOOSTER\">Topeak Nano Airbooster inflator</a> (or similar small inflator) within your mountain bike's steer tube using this 3D printed addon for your <a href=\"https://miles-wide.com/product/fork-cork/\">Fork Cork</a>.",
+            "Mountain bikes don't usually have a ton of storage space on them, so I designed this carrier to fit inside the normally wasted space of a bike's steer tube. As a bonus, this assembly holds the CO2 cartridge and inflator in place using magnets, so reinflating a tire on the trail is as simple as unscrewing the Fork Cork and popping the cartridge and inflator out!"
         ],
         "images": [
             {
                 "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif",
                 "description": [
-                    "The inflator carrier in use, with just the Fork Cork hanging out of the bottom of the mountain bike's steer tube."
+                    "The inflator carrier in use, with just the Fork Cork hanging out of the bottom of the mountain bike's steer tube. Note that the Fork Cork plugs the steer tube completely, so your cartridge and inflator stay clean."
                 ],
                 "altText": "A photo of the inflator carrier installed, with just the Fork Cork hanging out of the bottom of the mountain bike's steer tube."
             },
             {
                 "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/co2_inflator_holder.avif",
                 "description": [
-                    "The CO2 inflator carrier with magnetically attached CO2 cartridge and a mini inflator head attached to the top.",
-                    "From bottom to top: the Fork Cork, the magnetic adapter, the CO2 cartridge, the winged spacer, and the inflator head.",
-                    "The small winged piece between the cartridge and inflator ensures that the inflator can't fully thread ondo the cartridge and cause a premature leak."
+                    "The CO2 inflator carrier fully assembled, with a CO2 cartridge and mini inflator head attached."
                 ],
-                "altText": "A photo of the CO2 inflator assembly, with Fork Cork, magnetic adapter, CO2 cartridge, winged spacer, and inflator head."
+                "altText": "A photo of the CO2 inflator assembly"
+            },
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif",
+                "description": [
+                    "The CO2 inflator carrier assembly.",
+                    "From bottom to top: the Fork Cork (with base, screw, and rubber), the CO2 cartridge holder, the CO2 cartridge, the spacer, and the inflator head.",
+                    "The spacer that sits between the CO2 cartridge and inflator head ensures that the inflator can't fully thread onto the cartridge and cause a premature leak."
+                ],
+                "altText": "A render of the CO2 inflator assembly, with Fork Cork, CO2 cartridge holder, CO2 cartridge, spacer, and inflator head."
             }
         ],
         "url": null,
@@ -407,10 +415,10 @@
     {
         "id": "mtb-inflator-carrier-magnetic",
         "flavor": "3dprint",
-        "name": "Mountain Bike Magnetic CO2 Inflator Carrier",
+        "name": "Mountain Bike CO2 Inflator Carrier (Magnetic)",
         "description": [
-            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/'>Bontrager Air Rush Elite inflator</a> inside your <a href='https://www.sram.com/en/rockshox/series/recon'>RockShox Recon</a> steer tube (or potentially other forks with a 1.5\" tapered steer tube)!",
-            "Mountain bikes don't usually have a ton of storage space on them, so I designed this carrier to fit inside the normally wasted space of a bike's steer tube. As a bonus, this assembly holds the CO2 cartridge and inflator in place using magnets, so they're easy to reach if you need them in a hurry."
+            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/'>Bontrager Air Rush Elite inflator</a> inside your steer tube (designed for the RockShox Recon, but any other fork with a 1.5\" tapered tube should play nice!)",
+            "Superseded by my <a href=\"/#/portfolio#mtb-inflator-carrier-fork-cork\">Fork Cork based CO2 inflator carrier design</a> which is significantly more secure."
         ],
         "images": [
             {
