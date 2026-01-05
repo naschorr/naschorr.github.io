@@ -46,7 +46,7 @@ export class ProjectFilterService {
           newSelectedFilters.add(newFilter);
         }
       });
-      
+
       // Emit available filter data
       this._selectedPropertyFiltersSubject.next(newSelectedFilters);
       this._allPropertyFiltersSubject.next(this._allPropertyFiltersSubject.value);
@@ -59,7 +59,7 @@ export class ProjectFilterService {
   public getPropertyFilterByCategoryName(category: string, name: string): PropertyFilter | null {
     const categoryLower = category.toLowerCase();
     const nameLower = name.toLowerCase();
-    
+
     for (const [key, filterMap] of this._allPropertyFiltersSubject.value.entries()) {
       if (key.toLowerCase() === categoryLower) {
         for (const [filterKey, filter] of filterMap.entries()) {
@@ -148,7 +148,7 @@ export class ProjectFilterService {
     this._allProjects.forEach((project: Project) => {
       Object.values(ProjectProperty).forEach((category: string) => {
         const value = project[category as keyof Project];
-        
+
         // Normalize strings and lists of strings
         let normalizedValue: any[] = [];
         if (Array.isArray(value)) {
@@ -156,7 +156,7 @@ export class ProjectFilterService {
         } else if (value) {
           normalizedValue = [value];
         }
-        
+
         normalizedValue.forEach((val: any) => {
           const propertyFilter = this.getPropertyFilterByCategoryName(category, val);
           if (propertyFilter) {
@@ -168,6 +168,24 @@ export class ProjectFilterService {
 
     // Check each available filter to see if it would result in a non-empty list
     availablePropertyFilters.forEach((filter: PropertyFilter) => {
+      // Calculate how many projects in the current filtered set have this property
+      const matchingProjectCount = projects.filter((project: Project) => {
+        const value = project[filter.category as keyof Project];
+
+        // Normalize strings and lists of strings
+        let normalizedValue: any[] = [];
+        if (Array.isArray(value)) {
+          normalizedValue = value;
+        } else if (value) {
+          normalizedValue = [value];
+        }
+
+        return normalizedValue.some(name => filter.name == name);
+      }).length;
+
+      // Update the filter count to reflect the filtered projects
+      filter.count = matchingProjectCount;
+
       // Skip filters that are already selected (they're always available)
       if (currentFilters.has(filter)) {
         let categoryFilters = filteredFilters.get(filter.category);
@@ -182,11 +200,11 @@ export class ProjectFilterService {
       // Test if adding this filter would result in any projects
       const testFilters = new Set(currentFilters);
       testFilters.add(filter);
-      
+
       const wouldHaveResults = this._allProjects.some((project: Project) => {
         return Array.from(testFilters).every((testFilter: PropertyFilter) => {
           const value = project[testFilter.category as keyof Project];
-          
+
           // Normalize strings and lists of strings
           let normalizedValue = [];
           if (Array.isArray(value)) {
@@ -194,7 +212,7 @@ export class ProjectFilterService {
           } else {
             normalizedValue = [value];
           }
-          
+
           return normalizedValue.some(name => testFilter.name == name);
         });
       });

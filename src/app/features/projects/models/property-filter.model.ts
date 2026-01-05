@@ -25,6 +25,10 @@ export class PropertyFilter {
         return this._count;
     }
 
+    set count(value: number) {
+        this._count = value;
+    }
+
     public incrementCount(): void {
         this._count += 1;
     }
