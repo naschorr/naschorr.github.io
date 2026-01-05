@@ -82,14 +82,14 @@
             "War Thunder Logger, or Warthog, is a data acquisition and analysis tool for War Thunder.",
             "War Thunder is a multiplayer game, where it often feels like matchmaking will put you into frustrating matches very frequently. Warthog was created to help quantify those feelings and use data to see what's actually going on. It uses locally saved match replay data to quantify these results.",
             "Since those replays expose extensive data, Warthog tries to look at everything to build a complete picture. It provides player performance graphs at different battle ratings, score distributions, heatmapped performance by battle rating and country, battle rating deltas, analysis of premium vehicle performance, and more!",
-            "Raw data analysis is performed in a Jupyter notebook, though milestone write-ups are saved to the GitHub repository as well, <a href=\"https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md\">check out the analysis</a> now!"
+            "Raw data analysis is performed in a Jupyter notebook, though milestone write-ups are saved to the GitHub repository as well, <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>check out the analysis</a> now!"
         ],
         "images": [
             {
                 "url": "assets/images/projects/warthog/scatter_score_vs_br.avif",
                 "description": [
                     "This is a graph of score versus battle rating.",
-                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A scatter plot of score versus battle rating for my War Thunder matches. There's a clear downward trend of score as battle rating increases."
             },
@@ -97,7 +97,7 @@
                 "url": "assets/images/projects/warthog/pie_tier_frequency.avif",
                 "description": [
                     "This is a pie chart showing the frequency of battle rating tiers. Notice how many more (bad) uptiers there are compared to (good) downtiers.",
-                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A pie chart showing the frequency of battle rating tiers for my War Thunder matches."
             },
@@ -105,7 +105,7 @@
                 "url": "assets/images/projects/warthog/bar_tier_frequency_vs_br.avif",
                 "description": [
                     "This is a bar chart showing the frequency of battle rating tiers versus battle rating.",
-                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A bar chart showing the frequency of battle rating tiers versus battle rating for my War Thunder matches."
             },
@@ -113,7 +113,7 @@
                 "url": "assets/images/projects/warthog/bar_tier_distribution.avif",
                 "description": [
                     "This is a bar chart showing the distribution of battle rating tiers over time. Notice how rare the (good, green) downtiers are compared to the (bad, red) uptiers.",
-                    "See the <a href=\"https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md\">write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A bar chart showing the distribution of battle rating tiers over time for my War Thunder matches."
             }
@@ -379,7 +379,7 @@
         "flavor": "3dprint",
         "name": "Mountain Bike CO2 Inflator Carrier (Fork Cork)",
         "description": [
-            "Securely and safely carry a CO2 cartridge and a <a href=\"https://www.topeak.com/global/en/product/1420-NANO-AIRBOOSTER\">Topeak Nano Airbooster inflator</a> (or similar small inflator) within your mountain bike's steer tube using this 3D printed addon for your <a href=\"https://miles-wide.com/product/fork-cork/\">Fork Cork</a>.",
+            "Securely and safely carry a CO2 cartridge and a <a href='https://www.topeak.com/global/en/product/1420-NANO-AIRBOOSTER' target='_blank'>Topeak Nano Airbooster inflator</a> (or similar small inflator) within your mountain bike's steer tube using this 3D printed addon for your <a href='https://miles-wide.com/product/fork-cork/' target='_blank'>Fork Cork</a>.",
             "Mountain bikes don't usually have a ton of storage space on them, so I designed this carrier to fit inside the normally wasted space of a bike's steer tube. As a bonus, this assembly holds the CO2 cartridge and inflator in place using magnets, so reinflating a tire on the trail is as simple as unscrewing the Fork Cork and popping the cartridge and inflator out!"
         ],
         "images": [
@@ -417,8 +417,8 @@
         "flavor": "3dprint",
         "name": "Mountain Bike CO2 Inflator Carrier (Magnetic)",
         "description": [
-            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/'>Bontrager Air Rush Elite inflator</a> inside your steer tube (designed for the RockShox Recon, but any other fork with a 1.5\" tapered tube should play nice!)",
-            "Superseded by my <a href=\"/#/portfolio#mtb-inflator-carrier-fork-cork\">Fork Cork based CO2 inflator carrier design</a> which is significantly more secure."
+            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/' target='_blank'>Bontrager Air Rush Elite inflator</a> inside your steer tube (designed for the RockShox Recon, but any other fork with a 1.5\" tapered tube should play nice!)",
+            "Superseded by my <a href='/#/portfolio#mtb-inflator-carrier-fork-cork'>Fork Cork based CO2 inflator carrier design</a> which is significantly more secure."
         ],
         "images": [
             {
