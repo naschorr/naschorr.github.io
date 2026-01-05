@@ -89,7 +89,7 @@
                 "url": "assets/images/projects/warthog/scatter_score_vs_br.avif",
                 "description": [
                     "This is a graph of score versus battle rating.",
-                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A scatter plot of score versus battle rating for my War Thunder matches. There's a clear downward trend of score as battle rating increases."
             },
@@ -97,7 +97,7 @@
                 "url": "assets/images/projects/warthog/pie_tier_frequency.avif",
                 "description": [
                     "This is a pie chart showing the frequency of battle rating tiers. Notice how many more (bad) uptiers there are compared to (good) downtiers.",
-                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A pie chart showing the frequency of battle rating tiers for my War Thunder matches."
             },
@@ -105,7 +105,7 @@
                 "url": "assets/images/projects/warthog/bar_tier_frequency_vs_br.avif",
                 "description": [
                     "This is a bar chart showing the frequency of battle rating tiers versus battle rating.",
-                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A bar chart showing the frequency of battle rating tiers versus battle rating for my War Thunder matches."
             },
@@ -113,7 +113,7 @@
                 "url": "assets/images/projects/warthog/bar_tier_distribution.avif",
                 "description": [
                     "This is a bar chart showing the distribution of battle rating tiers over time. Notice how rare the (good, green) downtiers are compared to the (bad, red) uptiers.",
-                    "See the <a href='https://github.com/naschorr/warthog/edit/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
                 ],
                 "altText": "A bar chart showing the distribution of battle rating tiers over time for my War Thunder matches."
             }
