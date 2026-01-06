@@ -391,7 +391,7 @@
                 "altText": "A photo of the inflator carrier installed, with just the Fork Cork hanging out of the bottom of the mountain bike's steer tube."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/co2_inflator_holder.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif",
                 "description": [
                     "The CO2 inflator carrier fully assembled, with a CO2 cartridge and mini inflator head attached."
                 ],
@@ -417,7 +417,7 @@
         "flavor": "3dprint",
         "name": "Mountain Bike CO2 Inflator Carrier (Magnetic)",
         "description": [
-            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/' target='_blank'>Bontrager Air Rush Elite inflator</a> inside your steer tube (designed for the RockShox Recon, but any other fork with a 1.5\" tapered tube should play nice!)",
+            "Magnetically carry a CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/' target='_blank'>Bontrager Air Rush Elite inflator</a> inside your steer tube (designed for the RockShox Recon, but any other fork with a 1.5\" tapered tube should play nice!)",
             "Superseded by my <a href='/#/portfolio#mtb-inflator-carrier-fork-cork'>Fork Cork based CO2 inflator carrier design</a> which is significantly more secure."
         ],
         "images": [
@@ -437,19 +437,19 @@
                 "altText": "A photo of the entire CO2 inflator assembly with it's magnetic mount and compression plug for the steer tube."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/co2_inflator_holder.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.avif",
                 "description": [
                     "A close up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
                 ],
                 "altText": "A close photo up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/compression_plug_co2_mount.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/diagram.avif",
                 "description": [
-                    "A close up of the CO2 cartridge mount and compression plug assembly.",
-                    "During assembly, the compression plug's screw is tightened which brings the upper and lower \"cones\" together. This causes the wedges in between them to expand outward, driving the o-rings into the inside of the steer tube, and locking it in place."
+                    "The CO2 inflator carrier assembly inside the steer tube.",
+                    "From top to bottom: compression plug assembly, magnetic CO2 cartridge holder, CO2 cartridge (16g), inflator holder, inflator."
                 ],
-                "altText": "A close up of the CO2 cartridge mount and compression plug assembly."
+                "altText": "A render of the CO2 inflator assembly, with compression plug, magnetic CO2 cartridge holder, CO2 cartridge, inflator holder, and inflator."
             }
         ],
         "url": "https://www.printables.com/model/1153275",
