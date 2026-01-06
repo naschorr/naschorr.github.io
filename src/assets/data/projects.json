@@ -456,5 +456,34 @@
         "technologies": [
             "Autodesk Fusion"
         ]
+    },
+    {
+        "id": "os-crossover-board",
+        "flavor": "3dprint",
+        "name": "Overnight Sensations Bookshelf Speaker Crossover Board",
+        "description": [
+            "The <a href='https://sites.google.com/site/undefinition/bookshelf-speakers/diy-overnightsensations' target='_blank'>Overnight Sensations</a> are a popular DIY bookshelf speaker design, however getting the crossover board setup can be a pain if you don't have a PCB. This print solves that by providing an easy-to-print crossover board that parts can be zip tied to and then soldered together. It also has an embossed wiring diagram on the bottom to make soldering even easier.",
+            "Note that this is designed for the components listed in the <a href='https://www.parts-express.com/Overnight-Sensations-MT-Speaker-Pair-Kit-300-706' target='_blank'>Parts Express kit</a>, though it should be compatible with most other kits as well."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/os-crossover-board/board.avif",
+                "description": [
+                    "Here's the assembled crossover board, with all the parts zip tied and soldered in place."
+                ],
+                "altText": "The assembled crossover board."
+            },
+            {
+                "url": "assets/images/projects/os-crossover-board/wiring_guide.avif",
+                "description": [
+                    "An embossed wiring diagram on the bottom of the crossover board helps make soldering easier."
+                ],
+                "altText": "An embossed wiring diagram on the bottom of the crossover board."
+            }
+        ],
+        "url": "https://www.printables.com/model/388643",
+        "technologies": [
+            "Autodesk Fusion"
+        ]
     }
 ]
