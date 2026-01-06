@@ -400,8 +400,8 @@
             {
                 "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif",
                 "description": [
-                    "The CO2 inflator carrier assembly.",
-                    "From bottom to top: the Fork Cork (with base, screw, and rubber), the CO2 cartridge holder, the CO2 cartridge, the spacer, and the inflator head.",
+                    "The CO2 inflator carrier assembly inside the steer tube.",
+                    "From top to bottom: inflator, spacer, CO2 cartridge (16g), CO2 cartridge holder, and the Fork Cork bits (base, knob, and rubber).",
                     "The spacer that sits between the CO2 cartridge and inflator head ensures that the inflator can't fully thread onto the cartridge and cause a premature leak."
                 ],
                 "altText": "A render of the CO2 inflator assembly, with Fork Cork, CO2 cartridge holder, CO2 cartridge, spacer, and inflator head."
