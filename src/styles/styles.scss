@@ -194,7 +194,7 @@ a[routerLink] {
     }
 }
 
-.animate-opacity, 
+.animate-opacity,
 .animate-opacity-fast {
     transition: opacity variables.$animation-duration-fast ease-in-out;
 }
@@ -218,7 +218,8 @@ ul li::before {
     margin-top: 0.25em;
 }
 
-.button, .button-lg {
+.button,
+.button-lg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -226,10 +227,18 @@ ul li::before {
     border-radius: variables.$border-radius;
     padding: variables.$button-padding;
     cursor: pointer;
+
+    &:active {
+        transform: translateY(1px);
+    }
 }
 .button-sm {
     @extend .button;
     padding: variables.$button-sm-padding;
+}
+
+.circular {
+    border-radius: 50%;
 }
 
 .badge {

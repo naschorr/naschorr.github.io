@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GalleryManagerService } from '../../services/gallery-manager.service';
 import { ImageTextual } from '../../../../shared/models/image-textual.model';
 

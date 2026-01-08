@@ -1,6 +1,11 @@
 <div class="lighbox-container flex flex-col">
-  <div    class="close grow-0 self-end cursor-pointer"
-  (click)="onCloseClick()">×</div>
+  <div class="grow-0 self-end">
+    <icon-button
+      (click)="onCloseClick()"
+      [containerClasses]="['m-3']"
+      [iconName]="'close'">
+    </icon-button>
+  </div>
   <!-- Content panel for the lightbox -->
   <div class="gallery-container grow flex items-center">
     <!-- Prev navigation image for larger screens -->
