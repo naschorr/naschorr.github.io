@@ -1,17 +1,14 @@
 @use "variables";
 
 :host {
-    display: flex;
-    justify-content: end;
-    flex-grow: 1;
+    @apply flex;
+    @apply justify-center;
+    @apply flex-grow;
 }
 
-.absolute {
-    position: absolute;
-    bottom: 0;
-}
-
-.footer {
-    font-size: 0.5rem;
-    opacity: 0.25;
+.container > div {
+    @media (min-width: variables.$xl) {
+        padding-left: variables.$container-padding;
+        padding-right: variables.$container-padding;
+    }
 }

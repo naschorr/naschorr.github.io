@@ -1,6 +1,7 @@
 [
     {
         "id": "hawking",
+        "flavor": "code",
         "name": "Hawking",
         "description": [
             "Hawking is a retro text-to-speech bot for Discord that lets users interact with each other using the text-to-speech engine made famous by Stephen Hawking.",
@@ -21,6 +22,7 @@
     },
     {
         "id": "drgss",
+        "flavor": "code",
         "name": "Deep Rock Galactic Save Syncer",
         "description": [
             "Deep Rock Galactic (DRG) is an excellent co-op survival game, however it's got a major flaw: the game isn't cross platform. This makes it hard to play with friends who aren't on the same platform.",
@@ -73,7 +75,61 @@
         ]
     },
     {
+        "id": "warthog",
+        "flavor": "code",
+        "name": "Warthog",
+        "description": [
+            "War Thunder Logger, or Warthog, is a data acquisition and analysis tool for War Thunder.",
+            "War Thunder is a multiplayer game, where it often feels like matchmaking will put you into frustrating matches very frequently. Warthog was created to help quantify those feelings and use data to see what's actually going on. It uses locally saved match replay data to quantify these results.",
+            "Since those replays expose extensive data, Warthog tries to look at everything to build a complete picture. It provides player performance graphs at different battle ratings, score distributions, heatmapped performance by battle rating and country, battle rating deltas, analysis of premium vehicle performance, and more!",
+            "Raw data analysis is performed in a Jupyter notebook, though milestone write-ups are saved to the GitHub repository as well, <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>check out the analysis</a> now!"
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/warthog/scatter_score_vs_br.avif",
+                "description": [
+                    "This is a graph of score versus battle rating.",
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                ],
+                "altText": "A scatter plot of score versus battle rating for my War Thunder matches. There's a clear downward trend of score as battle rating increases."
+            },
+            {
+                "url": "assets/images/projects/warthog/pie_tier_frequency.avif",
+                "description": [
+                    "This is a pie chart showing the frequency of battle rating tiers. Notice how many more (bad) uptiers there are compared to (good) downtiers.",
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                ],
+                "altText": "A pie chart showing the frequency of battle rating tiers for my War Thunder matches."
+            },
+            {
+                "url": "assets/images/projects/warthog/bar_tier_frequency_vs_br.avif",
+                "description": [
+                    "This is a bar chart showing the frequency of battle rating tiers versus battle rating.",
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                ],
+                "altText": "A bar chart showing the frequency of battle rating tiers versus battle rating for my War Thunder matches."
+            },
+            {
+                "url": "assets/images/projects/warthog/bar_tier_distribution.avif",
+                "description": [
+                    "This is a bar chart showing the distribution of battle rating tiers over time. Notice how rare the (good, green) downtiers are compared to the (bad, red) uptiers.",
+                    "See the <a href='https://github.com/naschorr/warthog/blob/main/src/replay_data_explorer/analysis.md' target='_blank'>write up</a> for more details!"
+                ],
+                "altText": "A bar chart showing the distribution of battle rating tiers over time for my War Thunder matches."
+            }
+        ],
+        "url": "https://github.com/naschorr/warthog",
+        "technologies": [
+            "Python",
+            "Pydantic",
+            "NumPy",
+            "Jupyter",
+            "Claude Sonnet"
+        ]
+    },
+    {
         "id": "mail-to-sms",
+        "flavor": "code",
         "name": "Mail To SMS",
         "description": [
             "Programmatically send out SMS messages using email! Mail To SMS is simple to integrate, and offers an easy to use CLI to support scripting too."
@@ -88,14 +144,15 @@
     },
     {
         "id": "website",
+        "flavor": "code",
         "name": "nickschorr.com",
         "description": [
             "You're looking at it right now! This is my personal website which is used to show off what I've been working on, link to the places that host my projects, and serve as a playground for general webdev fun."
         ],
         "url": "https://github.com/naschorr/naschorr.github.io",
         "technologies": [
+            "Angular 20",
             "TypeScript",
-            "Angular 18",
             "Tailwind CSS",
             "npm CLI",
             "Cloudflare",
@@ -104,6 +161,7 @@
     },
     {
         "id": "spotify-scraper",
+        "flavor": "code",
         "name": "Spotify Scraper",
         "description": [
             "A Python API for getting the artist, song, and album art for the currently playing song on Spotify."
@@ -116,6 +174,7 @@
     },
     {
         "id": "parts-organizer",
+        "flavor": "3dprint",
         "name": "Small Parts Organizer Ecosystem",
         "description": [
             "Affordable, modular, customizable 3D printed small parts organizers!",
@@ -170,14 +229,59 @@
         ],
         "url": null,
         "technologies": [
-            "Autodesk Fusion 360",
+            "Autodesk Fusion",
             "OpenSCAD",
             "Python",
             "Pydantic"
         ]
     },
     {
+        "id": "pressure-washer",
+        "flavor": "3dprint",
+        "name": "Portable Pressure Washer",
+        "description": [
+            "This is a portable, battery powered pressure washer designed to be compact and easy to use. Just pop in a tool battery, fill up the tank, and flip the switch to start cleaning!",
+            "I designed it for rinsing off my mountain bike at the trailhead, but it should be great for cleaning anything else too. As a bonus, it's super small and should fit in even the smallest car trunk."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/portable-pressure-washer/pressure_washer.avif",
+                "description": [
+                    "The pressure washer itself."
+                ],
+                "altText": "A photo of the portable pressure washer sitting on the ground."
+            },
+            {
+                "url": "assets/images/projects/portable-pressure-washer/in_action.avif",
+                "description": [
+                    "Cleaning off a mountain bike with the pressure washer."
+                ],
+                "altText": "A photo of the portable pressure washer being used to clean a mountain bike."
+            },
+            {
+                "url": "assets/images/projects/portable-pressure-washer/pressure_washer_with_bike.avif",
+                "description": [
+                    "The pressure washer sitting next to a clean bike.",
+                    "(29 inch wheels for scale)"
+                ],
+                "altText": "A photo of the portable pressure washer sitting next to a mountain bike."
+            },
+            {
+                "url": "assets/images/projects/portable-pressure-washer/progress.avif",
+                "description": [
+                    "The pressure washer (right) sitting next to an early prototype built from a garden sprayer and an air compressor (left)."
+                ],
+                "altText": "A photo of the portable pressure washer sitting next to an early prototype built from a garden sprayer and an air compressor."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion"
+        ]
+    },
+    {
         "id": "nixie-clock-case",
+        "flavor": "3dprint",
         "name": "Minimal Nixie Tube Clock Case",
         "description": [
             "A small UK based company sells this excellent <a href='https://www.pvelectronics.co.uk/index.php?main_page=product_info&cPath=21&products_id=71' target='_blank'>DIY nixie tube clock kit</a> based around the IN-14 nixie tube. The problem is that their official case options don't really fit my vibe, so I decided to design my own!",
@@ -231,26 +335,101 @@
         ],
         "url": null,
         "technologies": [
-            "Autodesk Fusion 360"
+            "Autodesk Fusion"
         ]
     },
     {
-        "id": "mtb-inflator-carrier",
-        "name": "CO2 Inflator Carrier for Mountain Bike Steer Tubes",
+        "id": "mtb-brake-spacer",
+        "flavor": "3dprint",
+        "name": "Disc Brake Spacer for Mountain Bikes",
         "description": [
-            "Magnetically carry your 16g CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/'>Bontrager Air Rush Elite inflator</a> inside your <a href='https://www.sram.com/en/rockshox/series/recon'>RockShox Recon</a> steer tube (or potentially other forks with a 1.5\" tapered steer tube)!",
-            "Mountain bikes don't usually have a ton of storage space on them, so I designed this carrier to fit inside the normally wasted space of a bike's steer tube. As a bonus, this assembly holds the CO2 cartridge and inflator in place using magnets, so they're easy to reach if you need them in a hurry."
+            "Keep your bike's brake pads separated when removing the wheel with this simple spacer!",
+            "Designed for Shimano MT200 brakes, but should play nice with other mountain bike disc brakes."
         ],
         "images": [
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/in_use.avif",
+                "url": "assets/images/projects/mtb-disc-brake-spacer/spacer.avif",
+                "description": [
+                    "The spacer itself, with the line clipped into the bottom hole."
+                ],
+                "altText": "A photo of the disc brake spacer lying in front of prototypes."
+            },
+            {
+                "url": "assets/images/projects/mtb-disc-brake-spacer/installed.avif",
+                "description": [
+                    "The spacer, installed into a mountain bike's rear caliper."
+                ],
+                "altText": "A photo of the disc brake spacer installed."
+            },
+            {
+                "url": "assets/images/projects/mtb-disc-brake-spacer/overlay.avif",
+                "description": [
+                    "The spacer, installed and with the line clipped in locking it in place. An overlay has been added to better illustrate what the the installation looks like."
+                ],
+                "altText": "A photo of the disc brake spacer installed, with an overlay of all the components."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion"
+        ]
+    },
+    {
+        "id": "mtb-inflator-carrier-fork-cork",
+        "flavor": "3dprint",
+        "name": "Mountain Bike CO2 Inflator Carrier (Fork Cork)",
+        "description": [
+            "Securely and safely carry a CO2 cartridge and a <a href='https://www.topeak.com/global/en/product/1420-NANO-AIRBOOSTER' target='_blank'>Topeak Nano Airbooster inflator</a> (or similar small inflator) within your mountain bike's steer tube using this 3D printed addon for your <a href='https://miles-wide.com/product/fork-cork/' target='_blank'>Fork Cork</a>.",
+            "Mountain bikes don't usually have a ton of storage space on them, so I designed this carrier to fit inside the normally wasted space of a bike's steer tube. As a bonus, this assembly holds the CO2 cartridge and inflator in place using magnets, so reinflating a tire on the trail is as simple as unscrewing the Fork Cork and popping the cartridge and inflator out!"
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif",
+                "description": [
+                    "The inflator carrier in use, with just the Fork Cork hanging out of the bottom of the mountain bike's steer tube. Note that the Fork Cork plugs the steer tube completely, so your cartridge and inflator stay clean."
+                ],
+                "altText": "A photo of the inflator carrier installed, with just the Fork Cork hanging out of the bottom of the mountain bike's steer tube."
+            },
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif",
+                "description": [
+                    "The CO2 inflator carrier fully assembled, with a CO2 cartridge and mini inflator head attached."
+                ],
+                "altText": "A photo of the CO2 inflator assembly"
+            },
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif",
+                "description": [
+                    "The CO2 inflator carrier assembly inside the steer tube.",
+                    "From top to bottom: inflator, spacer, CO2 cartridge (16g), CO2 cartridge holder, and the Fork Cork bits (base, knob, and rubber).",
+                    "The spacer that sits between the CO2 cartridge and inflator head ensures that the inflator can't fully thread onto the cartridge and cause a premature leak."
+                ],
+                "altText": "A render of the CO2 inflator assembly, with Fork Cork, CO2 cartridge holder, CO2 cartridge, spacer, and inflator head."
+            }
+        ],
+        "url": null,
+        "technologies": [
+            "Autodesk Fusion"
+        ]
+    },
+    {
+        "id": "mtb-inflator-carrier-magnetic",
+        "flavor": "3dprint",
+        "name": "Mountain Bike CO2 Inflator Carrier (Magnetic)",
+        "description": [
+            "Magnetically carry a CO2 cartridge and <a href='https://www.trekbikes.com/us/en_US/equipment/bike-accessories/bike-pumps-accessories/bike-pumps/bontrager-air-rush-elite-co-inflator/p/24237/' target='_blank'>Bontrager Air Rush Elite inflator</a> inside your steer tube (designed for the RockShox Recon, but any other fork with a 1.5\" tapered tube should play nice!)",
+            "Superseded by my <a href='/#/portfolio#mtb-inflator-carrier-fork-cork'>Fork Cork based CO2 inflator carrier design</a> which is significantly more secure."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/in_use.avif",
                 "description": [
                     "The inflator carrier in use, with just the handle poking out of the bottom of the mountain bike's steer tube."
                 ],
                 "altText": "A photo of the inflator carrier in use, with just the handle poking out of the bottom of the mountain bike's steer tube."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/assembly.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/assembly.avif",
                 "description": [
                     "A render of the completed assembly. On the left is the Bontrager inflator, clipped into it's holder. The holder is screwed onto the CO2 cartridge. The CO2 cartridge is magnetically attached to the CO2 cartridge mount, which is screwed into the compression plug assembly.",
                     "The total package is slim, easy to assemble, and easy to print."
@@ -258,24 +437,53 @@
                 "altText": "A photo of the entire CO2 inflator assembly with it's magnetic mount and compression plug for the steer tube."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.avif",
                 "description": [
                     "A close up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
                 ],
                 "altText": "A close photo up of the CO2 inflator inside its holder, screwed onto the CO2 cartridge."
             },
             {
-                "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif",
+                "url": "assets/images/projects/mtb-inflator-carrier-magnetic/diagram.avif",
                 "description": [
-                    "A close up of the CO2 cartridge mount and compression plug assembly.",
-                    "During assembly, the compression plug's screw is tightened which brings the upper and lower \"cones\" together. This causes the wedges in between them to expand outward, driving the o-rings into the inside of the steer tube, and locking it in place."
+                    "The CO2 inflator carrier assembly inside the steer tube.",
+                    "From top to bottom: compression plug assembly, magnetic CO2 cartridge holder, CO2 cartridge (16g), inflator holder, inflator."
                 ],
-                "altText": "A close up of the CO2 cartridge mount and compression plug assembly."
+                "altText": "A render of the CO2 inflator assembly, with compression plug, magnetic CO2 cartridge holder, CO2 cartridge, inflator holder, and inflator."
             }
         ],
         "url": "https://www.printables.com/model/1153275",
         "technologies": [
-            "Autodesk Fusion 360"
+            "Autodesk Fusion"
+        ]
+    },
+    {
+        "id": "os-crossover-board",
+        "flavor": "3dprint",
+        "name": "Overnight Sensations Bookshelf Speaker Crossover Board",
+        "description": [
+            "The <a href='https://sites.google.com/site/undefinition/bookshelf-speakers/diy-overnightsensations' target='_blank'>Overnight Sensations</a> are a popular DIY bookshelf speaker design, however getting the crossover board setup can be a pain if you don't have a PCB. This print solves that by providing an easy-to-print crossover board that parts can be zip tied to and then soldered together. It also has an embossed wiring diagram on the bottom to make soldering even easier.",
+            "Note that this is designed for the components listed in the <a href='https://www.parts-express.com/Overnight-Sensations-MT-Speaker-Pair-Kit-300-706' target='_blank'>Parts Express kit</a>, though it should be compatible with most other kits as well."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/os-crossover-board/board.avif",
+                "description": [
+                    "Here's the assembled crossover board, with all the parts zip tied and soldered in place."
+                ],
+                "altText": "The assembled crossover board."
+            },
+            {
+                "url": "assets/images/projects/os-crossover-board/wiring_guide.avif",
+                "description": [
+                    "An embossed wiring diagram on the bottom of the crossover board helps make soldering easier."
+                ],
+                "altText": "An embossed wiring diagram on the bottom of the crossover board."
+            }
+        ],
+        "url": "https://www.printables.com/model/388643",
+        "technologies": [
+            "Autodesk Fusion"
         ]
     }
 ]

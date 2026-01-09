@@ -1,12 +1,24 @@
-
-<div class="flex flex-row {{buttonFlavor}} bg-gradient-light pseudo-border {{containerClasses.join(' ')}}">
-    <div    class="shrink"
-            [ngStyle]="{'height': contentHeight, 'width': contentHeight}">
-        <img    [src]="imagePath"
-                class="filter-dark-color"
-                height="100%"
-                [alt]="imageAltText">
+<div class="flex flex-row {{buttonFlavor}} pseudo-border {{containerClasses.join(' ')}}"
+    [ngClass]="{
+        'bg-gradient-light': !isDark,
+        'outline light': isDark
+    }">
+    <div class="shrink"
+        [ngStyle]="{'height': contentHeight, 'width': contentHeight}">
+        <img [src]="imagePath"
+            [ngClass]="{
+                'filter-dark-color': !isDark,
+                'filter-light-color': isDark
+            }"
+            height="100%"
+            [alt]="imageAltText">
     </div>
-    <div    class="grow text-center mx-3 leading-none color-dark"
-            [ngStyle]="{'font-size': contentHeight}">{{text}}</div>
+    <div class="{{textClasses.join(' ')}} grow text-center mx-3 leading-none"
+        [ngClass]="{
+            'color-dark': !isDark,
+            'color-light': isDark
+        }"
+        [ngStyle]="{'font-size': contentHeight}">
+        {{text}}
+    </div>
 </div>

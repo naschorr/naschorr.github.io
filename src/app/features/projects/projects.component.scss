@@ -1,3 +1,27 @@
 @use "variables";
 @use "mixins";
 @use "sass:color";
+
+$project-filter-max-width-xl: 22rem;
+$project-filter-min-width-xl: 16rem;
+
+project-filter {
+    @media (min-width: variables.$xl) {
+        max-width: $project-filter-max-width-xl;
+        min-width: $project-filter-min-width-xl;
+        @apply fixed;
+        @apply ml-6;
+        @apply mr-0;
+    }
+    @media (max-width: calc(variables.$xl - 1px)) {
+        // Weird behavior happens if we don't bump this media query down by 1px
+        @apply container;
+        @apply mx-auto;
+    }
+}
+
+#primary-gutter {
+    @media (min-width: variables.$xl) {
+        min-width: $project-filter-min-width-xl;
+    }
+}

@@ -4,6 +4,7 @@ import { Project } from '../models/project.model';
 import { Image } from '../../../shared/models/image.model';
 import { ImageTextual } from '../../../shared/models/image-textual.model';
 import { ImageLoaderService } from '../../../shared/services/image-loader.service';
+import { ProjectFlavor } from '../models/project-flavor.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -30,13 +31,12 @@ export class ProjectLoaderService {
       .then(response => response.json())
       .then(projects => {
         const projectModels = projects.map((project: any) => {
-          return new Project(
-            project.id,
-            project.name,
-            project.description,
-            project?.url ? new URL(project?.url) : null,
-            project?.funFacts,
-            project?.images?.map(
+          // Prebuild the more complex project model components...
+          const flavor = Object.values(ProjectFlavor).includes(project.flavor)
+            ? project.flavor as ProjectFlavor
+            : ProjectFlavor.CODE;
+
+          const images = project?.images?.map(
               (data: any) => {
                 const image = this._imageLoaderService.getImageByPath(data.url);
                 if (image) {
@@ -47,7 +47,17 @@ export class ProjectLoaderService {
               }
             ).filter(
               (image: Image | null) => image !== null
-            ),
+            )
+
+          // ...Then build the project model
+          return new Project(
+            project.id,
+            flavor,
+            project.name,
+            project.description,
+            project?.url ? new URL(project?.url) : null,
+            project?.funFacts,
+            images,
             project?.technologies
           );
         });

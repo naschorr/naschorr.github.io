@@ -1,0 +1,97 @@
+<div class="w-full">
+    <div class="flex flex-row items-center justify-between">
+        <div class="hidden xl:flex flex-row justify-between gap-3">
+            <h2 class="color-light">
+                Filters
+            </h2>
+            <button class="badge light pseudo-border animate-opacity-fast !my-1"
+                [ngClass]="{'opacity-0 pointer-events-none': selectedPropertyFilters.size === 0}"
+                (click)="onClearClick()">
+                Clear All
+            </button>
+        </div>
+        <div class="xl:hidden">
+            <button class="badge pseudo-border"
+                [ngClass]="{
+                    '!mb-0': isCollapsed,
+                    'dark': isCollapsed && selectedPropertyFilters.size === 0,
+                    'light': isCollapsed && selectedPropertyFilters.size > 0 || !isCollapsed || selectedPropertyFilters.size > 0
+                }"
+                (click)="isCollapsed = !isCollapsed">
+                Filters
+            </button>
+            @for (filter of selectedPropertyFilters; track filter; let f = $index) {
+                <button class="badge dark pseudo-border last:mr-0"
+                    [ngClass]="{'!mb-0': isCollapsed}"
+                    (click)="onFilterClick(filter)">
+                    @switch (filter.name) {
+                        @case (projectFlavor.CODE) {
+                            Code
+                        }
+                        @case (projectFlavor.PRINT) {
+                            3D Print
+                        }
+                        @default {
+                            {{ filter.name }}
+                        }
+                    }
+                </button>
+            }
+        </div>
+    </div>
+    <div class="filter-grid grid"
+        [ngClass]="isCollapsed ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'">
+        <div class="min-h-0"
+            [ngClass]="{'overflow-y-hidden': isCollapsed}">
+            <div class="color-light">
+                Project type:
+            </div>
+            @for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
+                <button class="badge pseudo-border last:mr-0"
+                    [ngClass]="selectedPropertyFilters.has(filter) ? 'light' : 'dark'"
+                    (click)="onFilterClick(filter)">
+                    <!-- TODO: dedupe this logic -->
+                    @switch (filter.name) {
+                        @case (projectFlavor.CODE) {
+                            Code
+                        }
+                        @case (projectFlavor.PRINT) {
+                            3D Print
+                        }
+                        @default {
+                            {{ filter.name | titlecase }}
+                        }
+                    }
+                </button>
+            }
+
+            @for (category of availablePropertyFilters.keys(); track category) {
+                @if (category !== projectProperty.FLAVOR) {
+                    <div class="color-light">
+                        {{ category | titlecase }}:
+                    </div>
+                    @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
+                        @if (filter.count > 1) {
+                            <button class="badge-container dark pseudo-border last:mr-0"
+                                (click)="onFilterClick(filter)">
+                                <div class="badge inline-block"
+                                    [ngClass]="selectedPropertyFilters.has(filter) ? 'light' : 'dark'">
+                                    {{ filter.name }}
+                                </div>
+                                <div class="inline-block">
+                                    {{ filter.count }}
+                                </div>
+                            </button>
+                        } @else {
+                            <button class="badge pseudo-border last:mr-0"
+                                [ngClass]="selectedPropertyFilters.has(filter) ? 'light' : 'dark'"
+                                (click)="onFilterClick(filter)">
+                                {{ filter.name }}
+                            </button>
+                        }
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

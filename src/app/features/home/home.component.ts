@@ -29,17 +29,17 @@ export class HomeComponent implements OnInit {
   constructor() {
     // Configure the tagline map
     this._taglineMap = {
-      [LinkFlavor.CODE]: [
+      [LinkFlavor.GITHUB]: [
         "writes code",
         "designs tools",
         "reads the docs"
       ],
-      [LinkFlavor.PORTFOLIO]: [
+      [LinkFlavor.CODE_PORTFOLIO]: [
         "develops projects",
         "solves problems",
         "builds solutions"
       ],
-      [LinkFlavor.PRINT]: [
+      [LinkFlavor.PRINT_PORTFOLIO]: [
         "designs solutions",
         "makes models",
         "prints prototypes"

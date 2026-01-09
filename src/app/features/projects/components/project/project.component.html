@@ -1,6 +1,6 @@
 @if (!!project) {
   <div
-    class="panel color-light mt-3"
+    class="panel color-light"
     [ngClass]="{'flash': flash}"
     (mouseover)="onProjectHover()"
     (click)="onProjectClick()">
@@ -66,11 +66,10 @@
       <div class="grow">
         <div>Tech used:</div>
         @for (technology of project.technologies; track technology; let t = $index) {
-          <div    class="badge inline-block select-none"
-                        [ngClass]="{
-                            'mr-0': t == project.technologies.length - 1,
-                            'mr-1': t < project.technologies.length - 1
-                        }">{{technology}}</div>
+          <button class="badge dark pseudo-border inline-block mr-1 last:mr-0"
+            (click)="onFilterHover('technologies', technology)">
+            {{technology}}
+        </button>
         }
       </div>
     </div>

@@ -1,0 +1,6 @@
+@use "variables";
+@use "mixins";
+
+.filter-grid {
+    transition: grid-template-rows variables.$animation-duration-fast ease-in-out
+}

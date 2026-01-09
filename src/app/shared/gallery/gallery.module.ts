@@ -4,6 +4,7 @@ import { GalleryInlineComponent } from './components/gallery-inline/gallery-inli
 import { GalleryLightboxComponent } from './components/gallery-lightbox/gallery-lightbox.component';
 import { GalleryManagerService } from './services/gallery-manager.service';
 import { ImageDisplayComponent } from './components/image-display/image-display.component';
+import { IconButtonComponent } from '../button/components/icon-button/icon-button.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ImageDisplayComponent } from './components/image-display/image-display.
     ImageDisplayComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IconButtonComponent
   ],
   exports: [
     GalleryInlineComponent

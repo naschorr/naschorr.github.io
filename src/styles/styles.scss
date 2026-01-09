@@ -19,12 +19,23 @@ html {
     line-height: 1.4;
 }
 
+.scrollbar-offset {
+    padding-right: calc(0.25rem * 3 + calc(100vw - 100cqw));
+}
+
 p:not(:last-child) {
-    margin-bottom: 0.375rem;    // mb-1.5
+    @apply mb-1;
 }
 
 img, .skeleton {
     border-radius: variables.$border-radius;
+}
+
+a:not(:has(*)) {
+    @apply bg-gradient-feature-short;
+    @apply clip-text;
+    @apply font-semibold;
+    @apply underline-feature-gradient;
 }
 
 // Router Animations
@@ -67,6 +78,10 @@ img, .skeleton {
     }
 }
 
+.text-xxs {
+    font-size: 0.5rem;
+}
+
 a[routerLink] {
     cursor: pointer;
 }
@@ -78,6 +93,34 @@ a[routerLink] {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
+    }
+}
+
+@media (min-width: variables.$sm) {
+    .container {
+        max-width: variables.$sm;
+    }
+}
+@media (min-width: variables.$md) {
+    .container {
+        max-width: variables.$md;
+    }
+}
+@media (min-width: variables.$lg) {
+    .container {
+        max-width: variables.$container-max-width;
+    }
+}
+@media (min-width: variables.$xl) {
+    .container {
+        max-width: variables.$container-max-width;
+        @apply mx-0;
+    }
+}
+@media (min-width: variables.$xxl) {
+    .container {
+        max-width: variables.$container-max-width;
+        @apply mx-0;
     }
 }
 
@@ -141,28 +184,19 @@ a[routerLink] {
     filter: variables.$dark-color-filter;
 }
 
-.maskable {
-    height: 100%;
-    width: 100%;
-    mask-size: 100%;
+.outline {
+    outline-width: variables.$border-width/2;
+    outline-style: solid;
+    outline-offset: -(variables.$border-width/2);
+
+    &.dark {
+        outline-color: variables.$light-color;
+    }
 }
-.github-mask {
-    mask-image: url("../assets/images/icons/github.png");
-}
-.github-filled-mask {
-    mask-image: url("../assets/images/icons/github-filled.png");
-}
-.flask-mask {
-    mask-image: url("../assets/images/icons/flask.png");
-}
-.flask-filled-mask {
-    mask-image: url("../assets/images/icons/flask-filled.png");
-}
-.printer-mask {
-    mask-image: url("../assets/images/icons/3d-printer.png");
-}
-.printer-filled-mask {
-    mask-image: url("../assets/images/icons/3d-printer-filled.png");
+
+.animate-opacity,
+.animate-opacity-fast {
+    transition: opacity variables.$animation-duration-fast ease-in-out;
 }
 
 .horizontal-rule {
@@ -184,32 +218,8 @@ ul li::before {
     margin-top: 0.25em;
 }
 
-.nav-container {
-    position: relative;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-.nav-container .nav-item {
-    transition: opacity variables.$animation-duration-fast ease-in-out;
-}
-.nav-container .nav-item:not(.hoverable) {
-    opacity: 1;
-}
-.nav-container .nav-item:not(.hoverable):hover,
-.nav-container .nav-item:not(.hoverable).active {
-    opacity: 0;
-}
-.nav-container .nav-item.hoverable {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-}
-.nav-container .nav-item.hoverable:hover,
-.nav-container .nav-item.hoverable.active{
-    opacity: 1;
-}
-
-.button, .button-lg {
+.button,
+.button-lg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -217,10 +227,61 @@ ul li::before {
     border-radius: variables.$border-radius;
     padding: variables.$button-padding;
     cursor: pointer;
+
+    &:active {
+        transform: translateY(1px);
+    }
 }
 .button-sm {
     @extend .button;
     padding: variables.$button-sm-padding;
+}
+
+.circular {
+    border-radius: 50%;
+}
+
+.badge {
+    @apply mr-2;
+    @apply mb-2;
+    @apply outline;
+    margin-top: 0;
+    margin-left: 0;
+    padding: variables.$button-sm-padding;
+    border-radius: variables.$border-radius;
+    font-size: variables.$button-sm-content-size;
+    line-height: 1;
+    vertical-align: middle;
+
+    &.light {
+        @extend .outline, .light;
+        color: variables.$dark-color;
+        background-color: variables.$light-color;
+    }
+
+    &.dark {
+        @extend .outline, .light;
+        color: variables.$light-color;
+        background-color: transparent; // Assuming normal dark background -- TODO: Update to play nice with darkreader?
+    }
+}
+
+.badge-container {
+    // Contains a .badge class with additional div content next to it
+
+    @extend .badge;
+    padding: 0;
+
+    .badge {
+        margin: 0;
+    }
+
+    .badge + div {
+        vertical-align: middle;
+        padding: variables.$button-sm-padding;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 .panel {

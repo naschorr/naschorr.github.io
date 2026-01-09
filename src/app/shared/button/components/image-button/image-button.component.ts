@@ -9,10 +9,16 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageButtonComponent {
   @Input()
+  public isDark: boolean = false;
+
+  @Input()
   public buttonFlavor: string = "button"
 
   @Input()
   public containerClasses: string[] = [];
+
+  @Input()
+  public textClasses: string[] = [];
 
   @Input()
   public contentHeight: string = "1.5rem";

@@ -1,18 +1,22 @@
-<div    class="footer {{ containerClasses }} flex w-full justify-between py-1"
-  [ngClass]="{'absolute': isAbsolute}">
-  <div class="flex flex-col justify-end">
-    <div class="select-none">Made with ❤</div>
-    <div class="select-none">© {{ currentYear }} Nick Schorr</div>
-  </div>
-  <div class="flex flex-col justify-end items-end">
-    <div    class="cursor-pointer"
-      title="Credits"
-    (click)="infoExpanded = !infoExpanded">🛈</div>
-    @if (infoExpanded) {
-      <span class="block select-none">Massive thanks to these sources:</span>
-      <a href="https://www.flaticon.com/free-icons/3d-print" title="3d print icons">3d print icons created by Freepik - Flaticon</a>
-      <a href="https://www.flaticon.com/free-icons/chemistry" title="chemistry icons">Chemistry icons created by Freepik - Flaticon</a>
-      <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Kalashnyk - Flaticon</a>
-    }
+<div class="flex justify-center w-full bottom-0 left-0 right-0 {{ containerClasses.join(' ') }} text-xxs opacity-25 color-light">
+  <div class="flex justify-between w-full mx-4"
+    [ngClass]="{'container': isContainerSized}">
+    <div class="flex flex-col justify-end select-none">
+      <div>Made with ❤</div>
+      <div>© {{ currentYear }} Nick Schorr</div>
+    </div>
+    <div class="flex flex-col justify-end items-end">
+      <div class="cursor-pointer"
+        title="Credits"
+        (click)="infoExpanded = !infoExpanded">
+        🛈
+      </div>
+      @if (infoExpanded) {
+        <span class="block select-none">Massive thanks to these sources:</span>
+        <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Kalashnyk - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by HideMaru - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/3d-print" title="3d print icons">3d print icons created by Freepik - Flaticon</a>
+      }
+    </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<div class="flex flex-row {{ buttonFlavor }} circular pseudo-border {{ containerClasses.join(' ') }} !p-1"
+    [ngClass]="{
+        'bg-gradient-light': !isDark,
+        'outline light': isDark
+    }">
+    <div class="flex justify-center items-center"
+        [ngClass]="{
+            'color-dark': !isDark,
+            'color-light': isDark
+        }"
+        [ngStyle]="{
+            'width': 'round(up, ' + iconSize + ', 2px)',
+            'height': 'round(up, ' + iconSize + ', 2px)'
+        }">
+        <mat-icon class="{{ iconClasses.join(' ') }}"
+            [ngStyle]="{
+                'font-size': 'calc(round(up, ' + iconSize + ', 2px) - 1px)',
+                'width': 'calc(round(up, ' + iconSize + ', 2px) - 2px)',
+                'height': 'calc(round(up, ' + iconSize + ', 2px) - 2px)'
+            }"
+            [fontIcon]="iconName"></mat-icon>
+    </div>
+</div>
