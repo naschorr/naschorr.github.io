@@ -1,13 +1,25 @@
 {
     "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
+            "widthPx": 246,
+            "heightPx": 150
+        },
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.avif",
             "widthPx": 1597,
             "heightPx": 972
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
+            "widthPx": 1920,
+            "heightPx": 1080
         },
         "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/button-explainer.thumbnail.avif",
-            "widthPx": 246,
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
+            "widthPx": 267,
             "heightPx": 150
         }
     },
@@ -23,88 +35,76 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
-            "widthPx": 267,
-            "heightPx": 150
-        },
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
-            "widthPx": 1920,
-            "heightPx": 1080
-        }
-    },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
-            "widthPx": 185,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
             "widthPx": 1032,
             "heightPx": 837
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
+            "widthPx": 185,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
-            "widthPx": 2090,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
             "widthPx": 261,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
+            "widthPx": 2090,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
-            "widthPx": 1409,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
             "widthPx": 176,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
+            "widthPx": 1409,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif",
-            "widthPx": 1612,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.thumbnail.avif",
             "widthPx": 202,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif",
+            "widthPx": 1612,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif",
-            "widthPx": 1484,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.thumbnail.avif",
             "widthPx": 186,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif",
+            "widthPx": 1484,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.thumbnail.avif",
-            "widthPx": 176,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.avif",
             "widthPx": 1407,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_open.thumbnail.avif",
+            "widthPx": 176,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m8n_m8s_double.avif": {
@@ -131,76 +131,136 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/mtb-inflator-carrier/assembly.avif": {
+    "assets/images/projects/mtb-disc-brake-spacer/installed.avif": {
         "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier/assembly.avif",
-            "widthPx": 1314,
-            "heightPx": 1018
+            "url": "assets/images/projects/mtb-disc-brake-spacer/installed.avif",
+            "widthPx": 1184,
+            "heightPx": 896
         },
         "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier/assembly.thumbnail.avif",
-            "widthPx": 194,
+            "url": "assets/images/projects/mtb-disc-brake-spacer/installed.thumbnail.avif",
+            "widthPx": 198,
             "heightPx": 150
         }
     },
-    "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.avif",
-            "widthPx": 925,
-            "heightPx": 1060
-        },
+    "assets/images/projects/mtb-disc-brake-spacer/overlay.avif": {
         "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier/co2_inflator_holder.thumbnail.avif",
-            "widthPx": 131,
+            "url": "assets/images/projects/mtb-disc-brake-spacer/overlay.thumbnail.avif",
+            "widthPx": 114,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/mtb-disc-brake-spacer/overlay.avif",
+            "widthPx": 908,
+            "heightPx": 1200
         }
     },
-    "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif": {
+    "assets/images/projects/mtb-disc-brake-spacer/spacer.avif": {
         "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.avif",
-            "widthPx": 875,
-            "heightPx": 1052
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier/compression_plug_co2_mount.thumbnail.avif",
-            "widthPx": 125,
-            "heightPx": 150
-        }
-    },
-    "assets/images/projects/mtb-inflator-carrier/in_use.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier/in_use.avif",
+            "url": "assets/images/projects/mtb-disc-brake-spacer/spacer.avif",
             "widthPx": 1594,
             "heightPx": 1200
         },
         "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier/in_use.thumbnail.avif",
+            "url": "assets/images/projects/mtb-disc-brake-spacer/spacer.thumbnail.avif",
             "widthPx": 199,
             "heightPx": 150
         }
     },
-    "assets/images/projects/nixie-clock/case_bottom.avif": {
+    "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.thumbnail.avif",
+            "widthPx": 164,
+            "heightPx": 150
+        },
         "fullRes": {
-            "url": "assets/images/projects/nixie-clock/case_bottom.avif",
-            "widthPx": 2044,
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif",
+            "widthPx": 1315,
+            "heightPx": 1200
+        }
+    },
+    "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif",
+            "widthPx": 1594,
             "heightPx": 1200
         },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.thumbnail.avif",
+            "widthPx": 112,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif",
+            "widthPx": 893,
+            "heightPx": 1200
+        }
+    },
+    "assets/images/projects/mtb-inflator-carrier-magnetic/assembly.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/assembly.thumbnail.avif",
+            "widthPx": 194,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/assembly.avif",
+            "widthPx": 1314,
+            "heightPx": 1018
+        }
+    },
+    "assets/images/projects/mtb-inflator-carrier-magnetic/diagram.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/diagram.avif",
+            "widthPx": 1362,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/diagram.thumbnail.avif",
+            "widthPx": 170,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/mtb-inflator-carrier-magnetic/in_use.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/in_use.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/in_use.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.avif",
+            "widthPx": 925,
+            "heightPx": 1060
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.thumbnail.avif",
+            "widthPx": 131,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/nixie-clock/case_bottom.avif": {
         "thumbnail": {
             "url": "assets/images/projects/nixie-clock/case_bottom.thumbnail.avif",
             "widthPx": 256,
             "heightPx": 150
-        }
-    },
-    "assets/images/projects/nixie-clock/case_bottom_inside.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/nixie-clock/case_bottom_inside.avif",
-            "widthPx": 2138,
-            "heightPx": 1200
         },
-        "thumbnail": {
-            "url": "assets/images/projects/nixie-clock/case_bottom_inside.thumbnail.avif",
-            "widthPx": 267,
-            "heightPx": 150
+        "fullRes": {
+            "url": "assets/images/projects/nixie-clock/case_bottom.avif",
+            "widthPx": 2044,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/nixie-clock/case_front.avif": {
@@ -213,6 +273,18 @@
             "url": "assets/images/projects/nixie-clock/case_front.thumbnail.avif",
             "widthPx": 255,
             "heightPx": 150
+        }
+    },
+    "assets/images/projects/nixie-clock/case_bottom_inside.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/nixie-clock/case_bottom_inside.thumbnail.avif",
+            "widthPx": 267,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/nixie-clock/case_bottom_inside.avif",
+            "widthPx": 2138,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/nixie-clock/case_rear.avif": {
@@ -249,6 +321,126 @@
             "url": "assets/images/projects/nixie-clock/parts_needed.avif",
             "widthPx": 2287,
             "heightPx": 1200
+        }
+    },
+    "assets/images/projects/os-crossover-board/board.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/os-crossover-board/board.avif",
+            "widthPx": 1920,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/os-crossover-board/board.thumbnail.avif",
+            "widthPx": 240,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/os-crossover-board/wiring_guide.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/os-crossover-board/wiring_guide.avif",
+            "widthPx": 1224,
+            "heightPx": 917
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/os-crossover-board/wiring_guide.thumbnail.avif",
+            "widthPx": 200,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/portable-pressure-washer/in_action.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/portable-pressure-washer/in_action.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/portable-pressure-washer/in_action.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        }
+    },
+    "assets/images/projects/portable-pressure-washer/pressure_washer.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/portable-pressure-washer/pressure_washer.avif",
+            "widthPx": 1362,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/portable-pressure-washer/pressure_washer.thumbnail.avif",
+            "widthPx": 170,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/portable-pressure-washer/pressure_washer_with_bike.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/portable-pressure-washer/pressure_washer_with_bike.thumbnail.avif",
+            "widthPx": 222,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/portable-pressure-washer/pressure_washer_with_bike.avif",
+            "widthPx": 1777,
+            "heightPx": 1200
+        }
+    },
+    "assets/images/projects/portable-pressure-washer/progress.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/portable-pressure-washer/progress.avif",
+            "widthPx": 1649,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/portable-pressure-washer/progress.thumbnail.avif",
+            "widthPx": 206,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/warthog/bar_tier_distribution.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/warthog/bar_tier_distribution.avif",
+            "widthPx": 1200,
+            "heightPx": 500
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/warthog/bar_tier_distribution.thumbnail.avif",
+            "widthPx": 360,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/warthog/bar_tier_frequency_vs_br.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/warthog/bar_tier_frequency_vs_br.avif",
+            "widthPx": 1200,
+            "heightPx": 500
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/warthog/bar_tier_frequency_vs_br.thumbnail.avif",
+            "widthPx": 360,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/warthog/pie_tier_frequency.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/warthog/pie_tier_frequency.thumbnail.avif",
+            "widthPx": 360,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/warthog/pie_tier_frequency.avif",
+            "widthPx": 1200,
+            "heightPx": 500
+        }
+    },
+    "assets/images/projects/warthog/scatter_score_vs_br.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/warthog/scatter_score_vs_br.avif",
+            "widthPx": 1200,
+            "heightPx": 500
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/warthog/scatter_score_vs_br.thumbnail.avif",
+            "widthPx": 360,
+            "heightPx": 150
         }
     }
 }
