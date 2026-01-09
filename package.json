@@ -5,7 +5,7 @@
     "ng": "ng",
     "prestart": "npm run image-resizer && npm run image-format-converter && npm run image-exif-cleaner && npm run generate-thumbnails && npm run image-metadata-processor",
     "start": "ng serve --host 0.0.0.0",
-    "prebuild": "npm run image-resizer && npm run image-format-converter && npm run image-exif-cleanun generate-thumbnails && npm run image-metadata-processor",
+    "prebuild": "npm run image-resizer && npm run image-format-converter && npm run image-exif-cleaner && npm run generate-thumbnails && npm run image-metadata-processor",
     "build": "ng build",
     "build-stats": "ng build --stats-json",
     "watch": "ng build --watch --configuration development",
