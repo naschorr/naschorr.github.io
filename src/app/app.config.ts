@@ -1,7 +1,8 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, RouterFeatures, withHashLocation, withViewTransitions } from '@angular/router';
+import { provideRouter, RouterFeatures, TitleStrategy, withHashLocation, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
+import { CustomTitleStrategy } from './shared/services/custom-title-strategy.service';
 
 // Expose a flag to denote if we're using hash routing
 export const USE_HASH_ROUTING = true;
@@ -19,6 +20,7 @@ export const APP_CONFIG: ApplicationConfig = {
     provideRouter(
       routes,
       ...ROUTER_FEATURES
-    )
+    ),
+    { provide: TitleStrategy, useClass: CustomTitleStrategy }
   ]
 };
