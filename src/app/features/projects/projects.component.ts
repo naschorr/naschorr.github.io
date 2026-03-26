@@ -1,11 +1,12 @@
 
-import { AfterContentChecked, Component, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { Project } from './models/project.model';
 import { ProjectComponent } from './components/project/project.component';
 import { FragmentScrollerService } from '../../shared/services/fragment-scroller.service';
 import { FragmentManagerService } from '../../shared/services/fragment-manager.service';
+import { BreakpointService, Breakpoint } from '../../shared/services/breakpoint.service';
 import { ProjectManagerService } from './services/project-manager.service';
 import { ProjectFilterComponent } from "./components/project-filter/project-filter.component";
 import { ActivatedRoute } from '@angular/router';
@@ -18,22 +19,26 @@ import { PropertyFilter } from './models/property-filter.model';
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent implements OnInit, AfterContentChecked {
+export class ProjectsComponent implements OnInit, AfterContentChecked, AfterViewInit, OnDestroy {
   private _availableProjectCount: number = 0;
   private _projects!: Project[];
   private _hasScrolledToFragment: boolean = false;
   private _filterQueryParams: Set<string> = new Set();
+  private _resizeObserver: ResizeObserver | null = null;
 
   public requestedProjectId: string | null = null;
+  public marginLeft: number | null = null;
+  public marginRight: number | null = null;
 
   // Lifecycle
 
   constructor(
-      private _route: ActivatedRoute,
-      private _projectManagerService: ProjectManagerService,
-      private _projectFilterService: ProjectFilterService,
-      private _fragmentScrollerService: FragmentScrollerService,
-      private _fragmentManagerService: FragmentManagerService
+    private _route: ActivatedRoute,
+    private _projectManagerService: ProjectManagerService,
+    private _projectFilterService: ProjectFilterService,
+    private _fragmentScrollerService: FragmentScrollerService,
+    private _fragmentManagerService: FragmentManagerService,
+    private _breakpointService: BreakpointService
   ) { }
 
   ngOnInit(): void {
@@ -77,8 +82,37 @@ export class ProjectsComponent implements OnInit, AfterContentChecked {
     this.requestedProjectId = this._fragmentManagerService.getFragment();
   }
 
+  ngAfterViewInit(): void {
+    const measure = () => {
+        // Only apply these gutter margins when we're at an XL or greater breakpoint (when it's less than that it uses a
+        // centered design that doesn't need this)
+        if (!this._breakpointService.isGreaterThanOrEqualTo(Breakpoint.XL)) {
+          this.marginLeft = null;
+          this.marginRight = null;
+          return;
+        }
+
+      const primaryGutterElement = document.getElementById('primary-gutter');
+      const secondaryGutterElement = document.getElementById('secondary-gutter');
+      this.marginLeft = primaryGutterElement ? Math.round(primaryGutterElement.getBoundingClientRect().width) : 0;
+      this.marginRight = secondaryGutterElement ? Math.round(secondaryGutterElement.getBoundingClientRect().width) : 0;
+    };
+
+    // Watch for window resizes
+    this._resizeObserver = new ResizeObserver(() => measure());
+    this._resizeObserver.observe(document.documentElement);
+
+    // Initial measurement
+    measure();
+  }
+
   ngOnDestroy(): void {
     this._projectFilterService.clearFilters();
+
+    if (this._resizeObserver) {
+      this._resizeObserver.disconnect();
+      this._resizeObserver = null;
+    }
   }
 
   ngAfterContentChecked(): void {

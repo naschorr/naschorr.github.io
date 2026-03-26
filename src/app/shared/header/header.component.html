@@ -1,5 +1,9 @@
 <div class="flex justify-center w-full {{ containerClasses.join(' ') }} header-blurred pointer-events-none color-light scrollbar-offset">
-    <div class="container flex justify-between mx-4">
+        <div class="container flex justify-between mx-4"
+            [ngStyle]="{
+                'margin-left': marginLeft != null ? marginLeft + 'px' : 'auto',
+                'margin-right': marginRight != null ? marginRight + 'px' : 'auto'
+            }">
         <div class="flex items-center pointer-events-auto">
             <a  routerLink=""
                 class="h-6 w-6 mr-3 logo-container pseudo-border circular">

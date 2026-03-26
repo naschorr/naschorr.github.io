@@ -9,8 +9,7 @@ project-filter {
     @media (min-width: variables.$xl) {
         max-width: $project-filter-max-width-xl;
         min-width: $project-filter-min-width-xl;
-        @apply fixed;
-        @apply ml-6;
+        @apply relative;
         @apply mr-0;
     }
     @media (max-width: calc(variables.$xl - 1px)) {
