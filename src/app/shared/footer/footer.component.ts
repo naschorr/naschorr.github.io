@@ -12,6 +12,10 @@ export class FooterComponent {
   public containerClasses: string[] = [];
   @Input()
   public isContainerSized: boolean = true;
+  @Input()
+  public marginLeft: number | null = null;
+  @Input()
+  public marginRight: number | null = null;
 
   private _currentYear: number = new Date().getFullYear();
   private _infoExpanded: boolean = false;

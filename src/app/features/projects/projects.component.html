@@ -1,5 +1,5 @@
 <div class="bg-gradient-dark flex flex-col min-h-screen w-screen">
-  <header title="Portfolio"></header>
+  <header [containerClasses]="['scrollbar-offset', 'px-3']" [marginLeft]="marginLeft" [marginRight]="marginRight" title="Portfolio"></header>
 
   <div class="flex flex-col xl:flex-row m-3 scrollbar-offset">
     <div id="primary-gutter" class="flex-1 shrink-[2] flex xl:justify-end xl:mr-3 mr-0 xl:mb-0 mb-3">
@@ -20,5 +20,5 @@
     <div id="secondary-gutter" class="flex-1 shrink-[3]"></div>
   </div>
 
-  <footer [containerClasses]="['scrollbar-offset', 'mb-3']"></footer>
+  <footer [containerClasses]="['scrollbar-offset', 'mb-3', 'px-3']" [marginLeft]="marginLeft" [marginRight]="marginRight"></footer>
 </div>

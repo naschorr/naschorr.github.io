@@ -4,7 +4,7 @@ import { map, startWith, distinctUntilChanged } from 'rxjs/operators';
 
 // Breakpoints in sync with: src\styles\_variables.scss
 // TODO: Update Tailwind to v4 and read breakpoints from the computed stylesheet
-enum Breakpoint {
+export enum Breakpoint {
   SM = 640,
   MD = 768,
   LG = 1024,
