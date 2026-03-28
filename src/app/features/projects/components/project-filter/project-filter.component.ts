@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { ProjectFilterService } from '../../services/project-filter.service';
 import { CommonModule } from '@angular/common';
 import { ProjectProperty } from '../../models/project-property.enum';
@@ -13,6 +13,12 @@ import { BreakpointService } from '../../../../shared/services/breakpoint.servic
   styleUrl: './project-filter.component.scss',
 })
 export class ProjectFilterComponent {
+  @Input()
+  public containerWidthPx: number | null = null;
+
+  @Input()
+  public rightPx: number | null = null;
+
   public projectProperty = ProjectProperty;
   public projectFlavor = ProjectFlavor;
   public isCollapsed = false;
@@ -38,6 +44,17 @@ export class ProjectFilterComponent {
         this.isCollapsed = true;
       }
     });
+  }
+
+  @HostBinding('style.width.px')
+  get hostWidthPx(): number | null {
+    // Pretty hacky, but it fixes the issue of the position: fixed filter overflowing it's parent.
+    return this.containerWidthPx;
+  }
+
+  @HostBinding('style.right.px')
+  get hostRightPx(): number | null {
+    return this.rightPx;
   }
 
   private sortFiltersByCount(filters: Map<string, Map<string, PropertyFilter>>): Map<string, Map<string, PropertyFilter>> {
