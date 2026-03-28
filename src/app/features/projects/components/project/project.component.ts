@@ -7,10 +7,11 @@ import { ImageButtonComponent } from '../../../../shared/button/components/image
 import { ProjectFilterService } from '../../services/project-filter.service';
 
 @Component({
-    selector: 'project',
-    imports: [CommonModule, GalleryModule, ImageButtonComponent],
-    templateUrl: './project.component.html',
-    styleUrl: './project.component.scss'
+  selector: 'project',
+  standalone: true,
+  imports: [CommonModule, GalleryModule, ImageButtonComponent],
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent {
   @Input()

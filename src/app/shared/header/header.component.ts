@@ -5,10 +5,11 @@ import { ImageButtonComponent } from '../button/components/image-button/image-bu
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'header',
-    imports: [RouterModule, LogoComponent, ImageButtonComponent, CommonModule],
-    templateUrl: './header.component.html',
-    styleUrl: './header.component.scss'
+  selector: 'header',
+  standalone: true,
+  imports: [RouterModule, LogoComponent, ImageButtonComponent, CommonModule],
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   @Input()

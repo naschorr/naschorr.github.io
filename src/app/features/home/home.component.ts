@@ -8,10 +8,11 @@ import { ImageButtonComponent } from '../../shared/button/components/image-butto
 import { LinkFlavor } from './enums/link-flavor.enum';
 
 @Component({
-    selector: 'home',
-    imports: [TextSwapperComponent, FooterComponent, RouterModule, LogoComponent, ImageButtonComponent],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.scss'
+  selector: 'home',
+  standalone: true,
+  imports: [TextSwapperComponent, FooterComponent, RouterModule, LogoComponent, ImageButtonComponent],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   private readonly TAGLINE_FLAVOR_COUNT!: number;
