@@ -8,11 +8,11 @@ import { PID } from '../../../libraries/pid.ts/pid'
 import { PIDContainer } from './models/pid-container'
 
 @Component({
-    selector: 'pid-playground',
-    templateUrl: './pid-playground.component.html',
-    styleUrl: './pid-playground.component.scss',
-    imports: [
-    RouterOutlet,
+  selector: 'pid-playground',
+  standalone: true,
+  templateUrl: './pid-playground.component.html',
+  styleUrls: ['./pid-playground.component.scss'],
+  imports: [
     NgxEchartsDirective
 ],
     providers: [
@@ -44,7 +44,7 @@ export class PidPlaygroundComponent implements OnInit {
   normalizePidOutput(pidOutput: number): number {
     const changesPerInterval = this.TIME_INTERVAL_SECONDS * this.MAX_CHANGES_PER_SECOND;
     const normalizedValue = pidOutput / changesPerInterval;
-  
+
     return Math.min(changesPerInterval, Math.max(-changesPerInterval, normalizedValue));
   }
 
@@ -56,7 +56,7 @@ export class PidPlaygroundComponent implements OnInit {
     for(const pidContainer of this.pidContainers) {
       pidContainer.adjustSetPoint(setPoint);
     }
-    
+
     let iteration = 0;
 
     console.log("START");

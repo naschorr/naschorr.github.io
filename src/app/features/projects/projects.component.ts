@@ -14,10 +14,11 @@ import { ProjectFilterService } from './services/project-filter.service';
 import { PropertyFilter } from './models/property-filter.model';
 
 @Component({
-    selector: 'projects',
-    imports: [HeaderComponent, FooterComponent, ProjectComponent, ProjectFilterComponent],
-    templateUrl: './projects.component.html',
-    styleUrl: './projects.component.scss'
+  selector: 'projects',
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent, ProjectComponent, ProjectFilterComponent],
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit, AfterContentChecked, AfterViewInit, OnDestroy {
   private _availableProjectCount: number = 0;

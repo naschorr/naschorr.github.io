@@ -3,9 +3,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'image-button',
-    imports: [CommonModule],
-    templateUrl: './image-button.component.html',
-    styleUrl: './image-button.component.scss'
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './image-button.component.html',
+  styleUrls: ['./image-button.component.scss']
 })
 export class ImageButtonComponent {
   @Input()

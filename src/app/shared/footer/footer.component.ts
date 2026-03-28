@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'footer',
-    imports: [CommonModule],
-    templateUrl: './footer.component.html',
-    styleUrl: './footer.component.scss'
+  selector: 'footer',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
   @Input()

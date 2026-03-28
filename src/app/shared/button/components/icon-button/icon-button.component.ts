@@ -4,9 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'icon-button',
+  standalone: true,
   imports: [CommonModule, MatIconModule],
   templateUrl: './icon-button.component.html',
-  styleUrl: './icon-button.component.scss',
+  styleUrls: ['./icon-button.component.scss'],
 })
 export class IconButtonComponent {
   @Input()

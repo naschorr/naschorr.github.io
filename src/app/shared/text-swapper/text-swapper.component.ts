@@ -3,9 +3,10 @@ import { AfterViewInit, ChangeDetectorRef, Component, Input, Renderer2 } from '@
 
 @Component({
     selector: 'text-swapper',
-    imports: [CommonModule],
-    templateUrl: './text-swapper.component.html',
-    styleUrl: './text-swapper.component.scss'
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './text-swapper.component.html',
+  styleUrls: ['./text-swapper.component.scss']
 })
 export class TextSwapperComponent implements AfterViewInit {
   @Input()

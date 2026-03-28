@@ -8,9 +8,10 @@ import { BreakpointService } from '../../../../shared/services/breakpoint.servic
 
 @Component({
   selector: 'project-filter',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './project-filter.component.html',
-  styleUrl: './project-filter.component.scss',
+  styleUrls: ['./project-filter.component.scss'],
 })
 export class ProjectFilterComponent {
   @Input()
