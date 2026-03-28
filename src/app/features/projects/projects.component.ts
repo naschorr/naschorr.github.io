@@ -29,6 +29,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
   public requestedProjectId: string | null = null;
   public marginLeft: number | null = null;
   public marginRight: number | null = null;
+  public marginLeftDistanceToScreenRightEdge: number | null = null;
 
   // Lifecycle
 
@@ -96,6 +97,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
       const secondaryGutterElement = document.getElementById('secondary-gutter');
       this.marginLeft = primaryGutterElement ? Math.round(primaryGutterElement.getBoundingClientRect().width) : 0;
       this.marginRight = secondaryGutterElement ? Math.round(secondaryGutterElement.getBoundingClientRect().width) : 0;
+      this.marginLeftDistanceToScreenRightEdge = primaryGutterElement ? Math.round(window.innerWidth - primaryGutterElement.getBoundingClientRect().right) : 0;
     };
 
     // Watch for window resizes

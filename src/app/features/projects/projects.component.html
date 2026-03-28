@@ -3,7 +3,7 @@
 
   <div class="flex flex-col xl:flex-row m-3 scrollbar-offset">
     <div id="primary-gutter" class="flex-1 shrink-[2] flex xl:justify-end xl:mr-3 mr-0 xl:mb-0 mb-3">
-      <project-filter></project-filter>
+      <project-filter [containerWidthPx]="marginLeft" [rightPx]="marginLeftDistanceToScreenRightEdge"></project-filter>
     </div>
 
     <main class="container flex flex-col shrink-[1] min-w-0 gap-3 mx-auto">
