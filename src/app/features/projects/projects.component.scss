@@ -11,17 +11,22 @@ $project-filter-min-width-xl: 16rem;
     }
 }
 
-project-filter {
+.project-filter-container {
     @media (min-width: variables.$xl) {
         max-width: $project-filter-max-width-xl;
         min-width: $project-filter-min-width-xl;
-        @apply fixed;
-        @apply left-3;  // The *-3 needs to be the same size as the rest of the layout margins and gaps.
-        @apply mr-0;
     }
     @media (max-width: calc(variables.$xl - 1px)) {
         // Weird behavior happens if we don't bump this media query down by 1px
         @apply container;
         @apply mx-auto;
+    }
+}
+
+project-filter {
+    @media (min-width: variables.$xl) {
+        // Sticky positioned using the height of the header + the 3 * 0.25 rem gap between the header and the content
+        position: sticky;
+        top: calc(var(--headerHeight) + 0.75rem);
     }
 }
