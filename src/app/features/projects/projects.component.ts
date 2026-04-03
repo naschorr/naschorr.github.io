@@ -12,11 +12,12 @@ import { ProjectFilterComponent } from "./components/project-filter/project-filt
 import { ActivatedRoute } from '@angular/router';
 import { ProjectFilterService } from './services/project-filter.service';
 import { PropertyFilter } from './models/property-filter.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'projects',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ProjectComponent, ProjectFilterComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent, ProjectComponent, ProjectFilterComponent],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
@@ -28,6 +29,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
   private _resizeObserver: ResizeObserver | null = null;
 
   public requestedProjectId: string | null = null;
+  public headerHeight: number = 0;
   public marginLeft: number | null = null;
   public marginRight: number | null = null;
   public marginLeftDistanceToScreenRightEdge: number | null = null;
@@ -88,11 +90,14 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
     const measure = () => {
         // Only apply these gutter margins when we're at an XL or greater breakpoint (when it's less than that it uses a
         // centered design that doesn't need this)
-        if (!this._breakpointService.isGreaterThanOrEqualTo(Breakpoint.XL)) {
+        if (!this.isXLOrGreater()) {
           this.marginLeft = null;
           this.marginRight = null;
           return;
         }
+
+      const headerElement = document.querySelector('header');
+      this.headerHeight = headerElement ? Math.round(headerElement.getBoundingClientRect().height) : 0;
 
       const primaryGutterElement = document.getElementById('primary-gutter');
       const secondaryGutterElement = document.getElementById('secondary-gutter');
@@ -141,5 +146,11 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
 
   get availableProjectCount(): number {
     return this._availableProjectCount;
+  }
+
+  // Methods
+
+  public isXLOrGreater(): boolean {
+    return this._breakpointService.isGreaterThanOrEqualTo(Breakpoint.XL);
   }
 }
