@@ -521,5 +521,55 @@
         "technologies": [
             "Autodesk Fusion"
         ]
+    },
+    {
+        "id": "sponge-holder",
+        "flavor": "3dprint",
+        "name": "Kitchen Sponge Holder",
+        "description": [
+            "Keep your kitchen countertop and sink area clean and tidy with this sponge holder and optional drip tray!",
+            "The exposed infill allows water to drain through which keeps your sponges dry. It's easy to print, and since the infill is a core design feature, it's super easy to customize right in your slicer. The example above uses gyroid infill at 15%."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/sponge-holder/sponge_on_holder_with_drip_tray.avif",
+                "description": [
+                    "The sponge holder with a sponge on it, sitting in the drip tray. The drip tray is nice for sinks that sit below the countertop, since it catches and redirects drips back into the sink."
+                ],
+                "altText": "A kitchen sponge holder with a sponge on it, sitting in the drip tray."
+            },
+            {
+                "url": "assets/images/projects/sponge-holder/empty_holder_with_drip_tray.avif",
+                "description": [
+                    "The sponge holder without a sponge, sitting in the drip tray."
+                ],
+                "altText": "A kitchen sponge holder without a sponge, sitting in the drip tray."
+            },
+            {
+                "url": "assets/images/projects/sponge-holder/sponge_on_holder.avif",
+                "description": [
+                    "The sponge holder with a sponge on it."
+                ],
+                "altText": "A kitchen sponge holder with a sponge on it."
+            },
+            {
+                "url": "assets/images/projects/sponge-holder/empty_holder.avif",
+                "description": [
+                    "The sponge holder without a sponge."
+                ],
+                "altText": "A kitchen sponge holder without a sponge."
+            },
+            {
+                "url": "assets/images/projects/sponge-holder/holder_infill_detail.avif",
+                "description": [
+                    "A close-up view of the sponge holder's infill pattern. Since the print doesn't have any top or bottom layers the infill is displayed as a core design element."
+                ],
+                "altText": "A close-up view of the sponge holder's infill pattern."
+            }
+        ],
+        "url": "https://www.printables.com/model/1695140",
+        "technologies": [
+            "Autodesk Fusion"
+        ]
     }
 ]

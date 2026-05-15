@@ -1,26 +1,26 @@
 {
     "assets/images/projects/cord-wrap/blender.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/cord-wrap/blender.avif",
-            "widthPx": 904,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/cord-wrap/blender.thumbnail.avif",
             "widthPx": 113,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/cord-wrap/blender.avif",
+            "widthPx": 904,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/cord-wrap/cord_wraps.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/cord-wrap/cord_wraps.thumbnail.avif",
-            "widthPx": 199,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/cord-wrap/cord_wraps.avif",
             "widthPx": 1594,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/cord-wrap/cord_wraps.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
         }
     },
     "assets/images/projects/cord-wrap/mixer_no_cord.avif": {
@@ -47,18 +47,6 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
-            "widthPx": 1920,
-            "heightPx": 1080
-        },
-        "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
-            "widthPx": 267,
-            "heightPx": 150
-        }
-    },
     "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif": {
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-missing-xbox-save.avif",
@@ -71,52 +59,64 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif": {
         "thumbnail": {
-            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
-            "widthPx": 185,
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.thumbnail.avif",
+            "widthPx": 267,
             "heightPx": 150
         },
+        "fullRes": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui-inspiration.avif",
+            "widthPx": 1920,
+            "heightPx": 1080
+        }
+    },
+    "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif": {
         "fullRes": {
             "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.avif",
             "widthPx": 1032,
             "heightPx": 837
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/deep-rock-galactic-save-syncer/ui.thumbnail.avif",
+            "widthPx": 185,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
-            "widthPx": 261,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.avif",
             "widthPx": 2090,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/bin_features.thumbnail.avif",
+            "widthPx": 261,
+            "heightPx": 150
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
-            "widthPx": 1409,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.thumbnail.avif",
             "widthPx": 176,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted.avif",
+            "widthPx": 1409,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif",
-            "widthPx": 1612,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.thumbnail.avif",
             "widthPx": 202,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/m3_assorted_top.avif",
+            "widthPx": 1612,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/m3s_16_lid_closed.avif": {
@@ -156,27 +156,27 @@
         }
     },
     "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.thumbnail.avif",
-            "widthPx": 238,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.avif",
             "widthPx": 1902,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/harbor-freight-storage-bin-upgrade/tag_removal.thumbnail.avif",
+            "widthPx": 238,
+            "heightPx": 150
         }
     },
     "assets/images/projects/mtb-disc-brake-spacer/installed.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/mtb-disc-brake-spacer/installed.avif",
-            "widthPx": 1184,
-            "heightPx": 896
-        },
         "thumbnail": {
             "url": "assets/images/projects/mtb-disc-brake-spacer/installed.thumbnail.avif",
             "widthPx": 198,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/mtb-disc-brake-spacer/installed.avif",
+            "widthPx": 1184,
+            "heightPx": 896
         }
     },
     "assets/images/projects/mtb-disc-brake-spacer/overlay.avif": {
@@ -203,6 +203,18 @@
             "heightPx": 150
         }
     },
+    "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        }
+    },
     "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif": {
         "fullRes": {
             "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/diagram.avif",
@@ -215,15 +227,15 @@
             "heightPx": 150
         }
     },
-    "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif": {
+    "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif": {
         "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.avif",
-            "widthPx": 1594,
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif",
+            "widthPx": 893,
             "heightPx": 1200
         },
         "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/in_use.thumbnail.avif",
-            "widthPx": 199,
+            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.thumbnail.avif",
+            "widthPx": 112,
             "heightPx": 150
         }
     },
@@ -237,18 +249,6 @@
             "url": "assets/images/projects/mtb-inflator-carrier-magnetic/assembly.thumbnail.avif",
             "widthPx": 194,
             "heightPx": 150
-        }
-    },
-    "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.thumbnail.avif",
-            "widthPx": 112,
-            "heightPx": 150
-        },
-        "fullRes": {
-            "url": "assets/images/projects/mtb-inflator-carrier-fork-cork/inflator_carrier.avif",
-            "widthPx": 893,
-            "heightPx": 1200
         }
     },
     "assets/images/projects/mtb-inflator-carrier-magnetic/diagram.avif": {
@@ -276,15 +276,15 @@
         }
     },
     "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.thumbnail.avif",
-            "widthPx": 131,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.avif",
             "widthPx": 925,
             "heightPx": 1060
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/mtb-inflator-carrier-magnetic/inflator_carrier.thumbnail.avif",
+            "widthPx": 131,
+            "heightPx": 150
         }
     },
     "assets/images/projects/nixie-clock/case_bottom.avif": {
@@ -324,27 +324,27 @@
         }
     },
     "assets/images/projects/nixie-clock/case_rear.avif": {
-        "thumbnail": {
-            "url": "assets/images/projects/nixie-clock/case_rear.thumbnail.avif",
-            "widthPx": 264,
-            "heightPx": 150
-        },
         "fullRes": {
             "url": "assets/images/projects/nixie-clock/case_rear.avif",
             "widthPx": 2114,
             "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/nixie-clock/case_rear.thumbnail.avif",
+            "widthPx": 264,
+            "heightPx": 150
         }
     },
     "assets/images/projects/nixie-clock/clock_installation.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/nixie-clock/clock_installation.avif",
-            "widthPx": 2567,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/nixie-clock/clock_installation.thumbnail.avif",
             "widthPx": 321,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/nixie-clock/clock_installation.avif",
+            "widthPx": 2567,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/nixie-clock/parts_needed.avif": {
@@ -396,15 +396,15 @@
         }
     },
     "assets/images/projects/portable-pressure-washer/pressure_washer.avif": {
-        "fullRes": {
-            "url": "assets/images/projects/portable-pressure-washer/pressure_washer.avif",
-            "widthPx": 1362,
-            "heightPx": 1200
-        },
         "thumbnail": {
             "url": "assets/images/projects/portable-pressure-washer/pressure_washer.thumbnail.avif",
             "widthPx": 170,
             "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/portable-pressure-washer/pressure_washer.avif",
+            "widthPx": 1362,
+            "heightPx": 1200
         }
     },
     "assets/images/projects/portable-pressure-washer/pressure_washer_with_bike.avif": {
@@ -428,6 +428,66 @@
         "thumbnail": {
             "url": "assets/images/projects/portable-pressure-washer/progress.thumbnail.avif",
             "widthPx": 206,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/sponge-holder/empty_holder.avif": {
+        "thumbnail": {
+            "url": "assets/images/projects/sponge-holder/empty_holder.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        },
+        "fullRes": {
+            "url": "assets/images/projects/sponge-holder/empty_holder.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        }
+    },
+    "assets/images/projects/sponge-holder/empty_holder_with_drip_tray.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/sponge-holder/empty_holder_with_drip_tray.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/sponge-holder/empty_holder_with_drip_tray.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/sponge-holder/holder_infill_detail.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/sponge-holder/holder_infill_detail.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/sponge-holder/holder_infill_detail.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/sponge-holder/sponge_on_holder.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/sponge-holder/sponge_on_holder.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/sponge-holder/sponge_on_holder.thumbnail.avif",
+            "widthPx": 199,
+            "heightPx": 150
+        }
+    },
+    "assets/images/projects/sponge-holder/sponge_on_holder_with_drip_tray.avif": {
+        "fullRes": {
+            "url": "assets/images/projects/sponge-holder/sponge_on_holder_with_drip_tray.avif",
+            "widthPx": 1594,
+            "heightPx": 1200
+        },
+        "thumbnail": {
+            "url": "assets/images/projects/sponge-holder/sponge_on_holder_with_drip_tray.thumbnail.avif",
+            "widthPx": 199,
             "heightPx": 150
         }
     },
