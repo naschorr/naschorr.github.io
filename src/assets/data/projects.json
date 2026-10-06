@@ -571,5 +571,48 @@
         "technologies": [
             "Autodesk Fusion"
         ]
+    },
+    {
+        "id": "capsule-lamp",
+        "flavor": "3dprint",
+        "name": "Capsule Lamp",
+        "description": [
+            "Add a touch of warm ambiance to your space with this modern lamp.",
+            "This capsule shaped lamp prints quickly, assembles with two screws, and provides light from a standard E12 candelabra lamp base. Add gels inside the shade to tint the light to whatever color you please."
+        ],
+        "images": [
+            {
+                "url": "assets/images/projects/capsule-lamp/lamp-lit-bright.avif",
+                "description": [
+                    "The lamp glowing warmly. Note that the lamp diffuser is printed in a cotton white filament, the color comes from orange and red gels placed inside it."
+                ],
+                "altText": "The capsule lamp glowing warmly, while still being illuminated itself."
+            },
+            {
+                "url": "assets/images/projects/capsule-lamp/lamp-lit-dark.avif",
+                "description": [
+                    "The lamp glowing warmly in the dark."
+                ],
+                "altText": "The capsule lamp glowing warmly."
+            },
+            {
+                "url": "assets/images/projects/capsule-lamp/lamp-gels.avif",
+                "description": [
+                    "A view inside the lamp, showing that gels can be added to tint the light."
+                ],
+                "altText": "A view inside the capsule lamp, showing that gels can be added to tint the light."
+            },
+            {
+                "url": "assets/images/projects/capsule-lamp/base-bottom.avif",
+                "description": [
+                    "A view of the bottom of the lamp's base."
+                ],
+                "altText": "A view of the bottom of the capsule lamp's base."
+            }
+        ],
+        "url": "https://www.printables.com/model/1867575",
+        "technologies": [
+            "Autodesk Fusion"
+        ]
     }
 ]
