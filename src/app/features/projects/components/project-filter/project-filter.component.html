@@ -20,7 +20,7 @@
                 (click)="isCollapsed = !isCollapsed">
                 Filters
             </button>
-            @for (filter of selectedPropertyFilters; track filter; let f = $index) {
+            @for (filter of selectedPropertyFilters; track filter.name; let f = $index) {
                 <button class="badge dark pseudo-border last:mr-0"
                     [ngClass]="{'!mb-0': isCollapsed}"
                     (click)="onFilterClick(filter)">
@@ -46,7 +46,7 @@
             <div class="color-light">
                 Project type:
             </div>
-            @for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter; let f = $index) {
+            @for (filter of availablePropertyFilters.get(projectProperty.FLAVOR)?.values(); track filter.name; let f = $index) {
                 <button class="badge pseudo-border last:mr-0"
                     [ngClass]="selectedPropertyFilters.has(filter) ? 'light' : 'dark'"
                     (click)="onFilterClick(filter)">
@@ -70,7 +70,7 @@
                     <div class="color-light">
                         {{ category | titlecase }}:
                     </div>
-                    @for (filter of availablePropertyFilters.get(category)!.values(); track filter; let f = $index) {
+                    @for (filter of availablePropertyFilters.get(category)!.values(); track filter.name; let f = $index) {
                         @if (filter.count > 1) {
                             <button class="badge-container dark pseudo-border last:mr-0"
                                 (click)="onFilterClick(filter)">

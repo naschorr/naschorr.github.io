@@ -28,14 +28,14 @@ $config: (
     )
 );
 
-@for $i from 1 through length($config) {
-    $key: list.nth(map-keys($config), $i);
+@for $i from 1 through list.length($config) {
+    $key: list.nth(map.keys($config), $i);
     $value: list.nth($config, $i);
 
     @media(min-width: $key) {
         .logo-container {
-            height: map-get($config, $key, "logo");
-            width: map-get($config, $key, "logo");
+            height: map.get($config, $key, "logo");
+            width: map.get($config, $key, "logo");
         }
 
         .name-container {
@@ -44,13 +44,13 @@ $config: (
                 https://stackoverflow.com/questions/28809771/left-space-on-first-letter-css
             */
             position: relative;
-            left: map-get($config, $key, "name-left-offset");
+            left: map.get($config, $key, "name-left-offset");
             color: variables.$light-text-color;
 
             .name {
                 font-style: normal;
                 font-weight: 900;
-                font-size: map-get($config, $key, "name");
+                font-size: map.get($config, $key, "name");
                 font-family: variables.$font-family, sans-serif;
                 line-height: 1;
             }
@@ -59,7 +59,7 @@ $config: (
         .tagline {
             font-style: normal;
             font-weight: normal;
-            font-size: map-get($config, $key, "tagline");;
+            font-size: map.get($config, $key, "tagline");;
             font-family: variables.$font-family, sans-serif;
             color: variables.$light-text-color;
         }

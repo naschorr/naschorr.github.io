@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Project } from '../models/project.model';
 import { Image } from '../../../shared/models/image.model';
@@ -17,7 +17,10 @@ export class ProjectLoaderService {
 
   // Lifecycle
 
-  constructor(private _imageLoaderService: ImageLoaderService) {
+  constructor(
+    private _imageLoaderService: ImageLoaderService,
+    private _ngZone: NgZone
+  ) {
     this.loadProjects();
     this._imageLoaderService.images$.subscribe(images => {
       this.loadProjects();
@@ -62,7 +65,7 @@ export class ProjectLoaderService {
           );
         });
 
-        this._projectsSubject.next(projectModels);
+        this._ngZone.run(() => this._projectsSubject.next(projectModels));
       });
   }
 }
