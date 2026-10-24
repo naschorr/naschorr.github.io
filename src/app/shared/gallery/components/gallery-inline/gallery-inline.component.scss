@@ -32,7 +32,7 @@
 }
 
 // Image sizing breakpoints for the gallery thumbnails
-@for $i from 1 through length(variables.$breakpoints) {
+@for $i from 1 through list.length(variables.$breakpoints) {
     $breakpoint: list.nth(variables.$breakpoints, $i);
     @media(min-width: $breakpoint) {
         .gallery-item {
