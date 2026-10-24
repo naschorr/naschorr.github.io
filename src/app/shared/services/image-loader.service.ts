@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Image } from '../models/image.model';
 
@@ -21,7 +21,7 @@ export class ImageLoaderService {
 
   // Lifecycle
 
-  constructor() {
+  constructor(private _ngZone: NgZone) {
     this.loadImages();
   }
 
@@ -33,7 +33,7 @@ export class ImageLoaderService {
 
   set images(images: ImageMap) {
     this._images = images;
-    this._imagesSubject.next(images);
+    this._ngZone.run(() => this._imagesSubject.next(images));
   }
 
   // Methods

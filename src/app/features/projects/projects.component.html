@@ -14,7 +14,7 @@
     </div>
 
     <main class="container flex flex-col shrink-[1] min-w-0 gap-3 mx-auto">
-      @for (project of projects; track project; let i = $index) {
+      @for (project of projects; track project.id; let i = $index) {
         <project [project]="project" [flash]="requestedProjectId == project.id"></project>
       }
       @if (projects.length === 0) {
