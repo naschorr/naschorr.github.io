@@ -1,5 +1,5 @@
 
-import { AfterContentChecked, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { Project } from './models/project.model';
@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent implements OnInit, AfterContentChecked, AfterViewInit, OnDestroy {
   private _availableProjectCount: number = 0;
-  private _projects!: Project[];
+  private _projects: Project[] = [];
   private _hasScrolledToFragment: boolean = false;
   private _filterQueryParams: Set<string> = new Set();
   private _resizeObserver: ResizeObserver | null = null;
@@ -42,7 +42,8 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
     private _projectFilterService: ProjectFilterService,
     private _fragmentScrollerService: FragmentScrollerService,
     private _fragmentManagerService: FragmentManagerService,
-    private _breakpointService: BreakpointService
+    private _breakpointService: BreakpointService,
+    private _changeDetectorRef: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -60,6 +61,7 @@ export class ProjectsComponent implements OnInit, AfterContentChecked, AfterView
     });
     this._projectManagerService.filteredProjects$.subscribe((projects: Project[]) => {
       this.projects = projects;
+      this._changeDetectorRef.markForCheck();
     });
 
     // Apply filters from query params when available filters are first loaded

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { ProjectFilterService } from '../../services/project-filter.service';
 import { CommonModule } from '@angular/common';
 import { ProjectProperty } from '../../models/project-property.enum';
@@ -22,14 +22,17 @@ export class ProjectFilterComponent {
 
   constructor(
     private _projectFilterService: ProjectFilterService,
-    private _breakpointService: BreakpointService
+    private _breakpointService: BreakpointService,
+    private _changeDetectorRef: ChangeDetectorRef
   ) {
     this._projectFilterService.availablePropertyFilters$.subscribe((filters) => {
       this.availablePropertyFilters = this.sortFiltersByCount(filters);
+      this._changeDetectorRef.markForCheck();
     });
 
     this._projectFilterService.selectedPropertyFilters$.subscribe((selectedFilters) => {
       this.selectedPropertyFilters = selectedFilters;
+      this._changeDetectorRef.markForCheck();
     });
 
     this._breakpointService.currentBreakpoint$.subscribe(() => {
